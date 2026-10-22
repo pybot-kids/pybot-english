@@ -304,6 +304,7 @@ course.html       The learning path map
 album.html        Stickers and the learning-days streak
 diploma.html      Printable zone diplomas (and a sample)
 faq.html          Questions for learners and grown-ups (credits at #credits)
+picks.html        Our picks: what María Ángel uses to practice English (KIDZ BOP)
 translator.html   Translator and type-and-listen tool
 styles.css        All styles (PyBot anatomy and moods included)
 script.js         Translations, PyBot, progress, rewards, backup

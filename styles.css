@@ -2285,6 +2285,59 @@ div.family-card small { color: var(--ink-soft); }
 a.extras-card { color: var(--ink); text-decoration: none; transition: transform 0.15s ease; }
 a.extras-card:hover { transform: translateY(-3px); }
 .extras-faq { --accent: var(--magenta); }
+.extras-picks { --accent: var(--violet); }
+.extras-strip .extras-grid { grid-template-columns: repeat(4, 1fr); }
+
+.picks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.pick-card {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  border: 2px solid var(--line);
+  border-top: 8px solid var(--magenta);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+.pick-icon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border: 3px solid var(--ink);
+  border-radius: 14px;
+  background: var(--magenta);
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+.pick-tag {
+  margin: 16px 0 4px;
+  color: var(--magenta-dark);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+.pick-card h2 { margin: 0; font-size: 1.35rem; }
+.pick-card p:not(.pick-tag) { flex: 1; margin: 10px 0 16px; color: var(--ink-soft); line-height: 1.6; }
+.pick-link,
+.picks-back { color: var(--cobalt-dark); font-weight: 800; }
+.picks-adults {
+  margin: 36px 0 24px;
+  padding: 22px 24px;
+  border: 2px dashed var(--magenta-mid);
+  border-radius: var(--radius);
+  background: var(--white);
+}
+.picks-adults h2 { margin: 0 0 8px; color: var(--magenta-dark); font-size: 1.25rem; }
+.picks-adults p { margin: 0; color: var(--ink-soft); line-height: 1.6; }
 
 .album-streak {
   display: flex;
@@ -3235,7 +3288,8 @@ a.extras-card:hover { transform: translateY(-3px); }
   .hero { grid-template-columns: 1fr; }
   .lesson-preview { grid-template-columns: 1fr; }
   .step-grid,
-  .extras-grid { grid-template-columns: 1fr; }
+  .extras-grid,
+  .extras-strip .extras-grid { grid-template-columns: 1fr; }
   .zone-list,
   .tool-grid { grid-template-columns: 1fr; }
   .course-intro { grid-template-columns: 1fr; }
