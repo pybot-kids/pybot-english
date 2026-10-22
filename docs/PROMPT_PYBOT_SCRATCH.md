@@ -6,15 +6,24 @@ Hola. Soy Sorey Garcia (GitHub: soreygarcia). Háblame en español. Quiero crear
 
 - **PyBot (Python)** — el original y la referencia de estrategia: `https://github.com/pybot-kids/pybot-kids.github.io` (público, sitio en `https://pybot-kids.github.io/`). Sitio estático en HTML/CSS/JS puro, sin compilación, bilingüe EN/ES, progreso local en el navegador, mascota PyBot hecha con HTML y CSS, zonas con rutas de páginas, álbum de stickers, rachas, diplomas, preguntas frecuentes, un PyBot pequeño acompañante, una cabecera con menú, créditos a Pyodide y botón ♥ a Patreon.
 - **PyBot English** — el hermano que hicimos en otra sesión, con la misma estrategia, para aprender inglés. Si existe el repositorio `pybot-kids/pybot-english` o `soreygarcia/pybot-english`, **úsalo como plantilla principal** (clónalo y adáptalo: es mucho más barato que reconstruir). Si no puedes acceder, reconstruye a partir de PyBot (Python) siguiendo las especificaciones de este prompt.
-- **Este proyecto (nombre por decidir)** — programación con bloques en Scratch, para niñas y niños de **8 a 10 años** (útil hasta ~12), hispanohablantes. Bilingüe EN/ES con **español por defecto** (como PyBot English).
+- **Este proyecto: PyBot Blocks** (nombre decidido) — una guía para aprender a usar Scratch, para niñas y niños de **8 a 10 años** (útil hasta ~12), hispanohablantes, **y para sus papás**. Bilingüe EN/ES con **español por defecto** (como PyBot English).
 
-## 2. Nombre y marcas (importante)
+## 2. Propósito y motivación (déjalo documentado en el README y en el plan)
 
-- "PyBot" es nuestra marca y se mantiene.
-- **"Scratch" es marca registrada** (Scratch Foundation / MIT). Lo que encontré: sin licencia no se puede usar para nombrar, promover ni respaldar un producto o servicio, y el gato de Scratch y sus personajes también están protegidos. **Verifica los términos actuales** (Terms of Use de scratch.mit.edu y el archivo TRADEMARK del repositorio oficial `scratch-gui`) antes de decidir.
-- Por eso el nombre del producto **no debe incluir "Scratch"**. Propónme de 4 a 5 opciones (por ejemplo **PyBot Blocks**, PyBot Bloques, PyBot Builds…) y usa **"PyBot Blocks"** como nombre provisional mientras decido. Dentro del sitio se puede decir "aprende a programar con Scratch" solo como referencia a la herramienta, con una nota visible: *"Scratch es un proyecto de la Scratch Foundation. PyBot Blocks no está afiliado ni respaldado por ella."* No uses el logo, el gato ni personajes de Scratch.
+- **Motivación:** en el colegio nuevo de María Ángel, Scratch es una materia. Ella ya lo aprendió en un curso pagado, y queremos que sus amigos también lo aprendan **sin gastar mucho dinero**. En el sitio no nombres el curso ni la empresa; di "en un curso" si hace falta.
+- **El vacío que llena:** Scratch publica mucho material, pero en la práctica a un niño y a sus papás les cuesta saber **por dónde empezar y en qué orden seguir**. PyBot Blocks les da **la ruta**: es casi un manual, pero muy simple, con pasos cortos, pruebas pequeñas y "cositas" para practicar.
+- **No reemplaza a Scratch: lo promueve.** La creación siempre ocurre **en el Scratch real** (`https://scratch.mit.edu`, o su app sin conexión). PyBot Blocks explica, guía, propone retos y revisa la comprensión; después manda a hacerlo en Scratch y celebra lo que el niño crea allá. Nunca imitamos ni reconstruimos el editor de Scratch.
+- **Para papás:** cada zona tiene una parte para adultos. Explica qué se aprende, cómo acompañar sin saber programar, cómo abrir Scratch y cómo crear una cuenta de forma segura (Scratch pide el correo de un adulto para menores de 13; verifica el proceso actual), y deja claro que una cuenta es opcional para practicar.
+- Por todo lo anterior, el ciclo de aprendizaje es algo como **Mira → Prueba aquí → Hazlo en Scratch**, y cada página de lección termina con un paso **"Hazlo en Scratch"** con instrucciones exactas y un reto corto.
 
-## 3. Identidad visual
+## 3. Nombre y marcas (importante)
+
+- El nombre es **PyBot Blocks**. "PyBot" es nuestra marca.
+- **"Scratch" es marca registrada** (Scratch Foundation / MIT). Lo que encontré: sin licencia no se puede usar para nombrar, promover ni respaldar un producto o servicio, y el gato de Scratch y sus personajes también están protegidos. **Verifica los términos actuales** (Terms of Use de scratch.mit.edu y el archivo TRADEMARK del repositorio oficial `scratch-gui`).
+- Dentro del sitio se puede decir "aprende a usar Scratch" solo como referencia a la herramienta, con una nota visible: *"Scratch es un proyecto de la Scratch Foundation. PyBot Blocks es una guía independiente: no está afiliada ni respaldada por ella."* No uses el logo, el gato ni personajes de Scratch.
+- **Capturas del editor de Scratch:** antes de usarlas, verifica bajo qué licencia y con qué crédito se permiten (los términos de Scratch indican una licencia CC BY-SA para su contenido; confírmalo). Si no está claro, usa bloques dibujados en HTML/CSS o con `scratchblocks`, y enlaces a Scratch.
+
+## 4. Identidad visual
 
 - **Paleta verde y azul**, que no se sienta ni "de niñas" ni "de niños". Propón tokens (tinta oscura para texto y contornos, verde, verde oscuro, azul, azul oscuro, cielo suave, amarillo sol para detalles, fondo claro y blanco) y **verifica el contraste AA** de cada combinación de texto con un script.
 - **Mascota: el mismo PyBot** (misma anatomía HTML/CSS y los mismos estados de ánimo del original), con la paleta nueva. En PyBot English, después de iterar, la usuaria eligió: **cabeza y brazos de un color, cuerpo de otro, y las bolitas de las manos amarillas** (también orejas, cuello y la luz de la antena). Propón aquí cabeza y brazos verdes, cuerpo azul y manos amarillas, y **muéstrame una captura antes de seguir**.
@@ -22,7 +31,7 @@ Hola. Soy Sorey Garcia (GitHub: soreygarcia). Háblame en español. Quiero crear
 - Tipografía: la misma pila del sistema que PyBot (Trebuchet MS, Avenir Next, Segoe UI). Sin fuentes externas.
 - Comportamiento de PyBot: **dulce, amable y animador**. Al tocarlo cambia de expresión y dice frases cortas y cálidas.
 
-## 4. Qué debe tener el sitio (paridad con PyBot English)
+## 5. Qué debe tener el sitio (paridad con PyBot English)
 
 Construye en `/home/user/<carpeta-del-proyecto>`, en archivos separados como en PyBot: `index.html`, `course.html`, `album.html`, `diploma.html`, `faq.html`, una página de herramienta (ver punto 6), `styles.css`, `script.js` (compartido) y `extras.js` (álbum, diploma, preguntas y herramienta).
 
@@ -48,8 +57,8 @@ Construye en `/home/user/<carpeta-del-proyecto>`, en archivos separados como en 
    - 🏁 Parada.
 3. **Álbum (`album.html`)**: stickers comunes (primer paso, 3 días seguidos, una semana, 10 días, uno por zona y trofeo final) y racha de días **que nunca castiga** cuando se falta un día.
 4. **Diploma (`diploma.html`)**: `?zone=<id del primer paso>` muestra el diploma de una zona terminada, y `?sample=1` muestra un ejemplo marcado; botón para imprimir.
-5. **Preguntas frecuentes (`faq.html`)**: para aprendices y para adultos. Incluye: qué es, cuenta (no hay), por dónde empezar, errores (son pistas), idioma, álbum, rachas, esconder al PyBot pequeño, por qué existe, la familia PyBot, dónde se guarda el progreso, si se puede perder, cambiar de navegador, copias viejas, qué datos se recogen (ninguno), por qué pide un nombre, empezar de cero, dispositivos, si es gratis, **cómo apoyar (Patreon)**, ayuda o soporte, licencia y **"¿Qué herramientas de otros usa?" con `id="credits"`**.
-6. **Página de herramienta** (el equivalente al "Traductor" de PyBot English). **Antes de construirla, propónme 2 opciones.** Por ejemplo: un visor que dibuja bloques a partir de texto con la librería `scratchblocks` (MIT, de Tim Radvan), o una guía para abrir y compartir proyectos en Scratch con enlaces.
+5. **Preguntas frecuentes (`faq.html`)**: para aprendices y para adultos. Incluye: qué es, cuenta (no hay), por dónde empezar, errores (son pistas), idioma, álbum, rachas, esconder al PyBot pequeño, por qué existe, la familia PyBot, dónde se guarda el progreso, si se puede perder, cambiar de navegador, copias viejas, qué datos se recogen (ninguno), por qué pide un nombre, empezar de cero, dispositivos, si es gratis, **"¿Esto reemplaza a Scratch?" (no: es una guía para usarlo)**, **"¿Necesito una cuenta de Scratch?"** (opcional, y cómo crearla con un adulto), **"¿Cómo acompaño a mi hijo si no sé programar?"**, **cómo apoyar (Patreon)**, ayuda o soporte, licencia y **"¿Qué herramientas de otros usa?" con `id="credits"`**.
+6. **Página de herramienta** (el equivalente al "Traductor" de PyBot English). **Antes de construirla, propónme 2 opciones.** La más alineada con el propósito: **"Empieza en Scratch"**, una guía paso a paso para niños y papás (abrir Scratch en el navegador o instalar la app sin conexión, crear cuenta con un adulto, recorrer las partes del editor, guardar y compartir), con enlaces al Scratch real. Otra opción: un visor que dibuja bloques a partir de texto con la librería `scratchblocks` (MIT, de Tim Radvan), útil para ver programas de ejemplo.
 7. **PyBot pequeño acompañante** (igual que en PyBot):
    - En la esquina; se arrastra y recuerda su lugar; sus ojos siguen el puntero.
    - Duerme si nadie lo toca y se marea si lo sacuden.
@@ -73,16 +82,16 @@ Construye en `/home/user/<carpeta-del-proyecto>`, en archivos separados como en 
 14. **`CONTENT_PLAN.md`** (en español, largo y robusto; **solo el plan, no el contenido**), con las mismas secciones que el plan de PyBot English:
     1. propósito y alcance;
     2. principios pedagógicos;
-    3. anatomía de una página de lección y catálogo de tipos de actividad (por ejemplo: ordenar bloques, ¿qué hace este programa?, encuentra el bloque que falta, arregla el programa de PyBot, predice antes de ejecutar, empareja bloque ↔ resultado);
+    3. anatomía de una página de lección (que siempre cierra con **"Hazlo en Scratch"**: pasos exactos en el editor real, un reto corto, qué debería pasar y qué revisar si no funciona) y catálogo de tipos de actividad (por ejemplo: ordenar bloques, ¿qué hace este programa?, encuentra el bloque que falta, arregla el programa de PyBot, predice antes de ejecutar, empareja bloque ↔ resultado, ¿dónde está este bloque en Scratch?);
     4. IDs y versiones de progreso;
-    5. plan zona por zona y página por página (objetivo, conceptos, bloques, actividades, actividad sin pantalla);
+    5. plan zona por zona y página por página (objetivo, conceptos, bloques, actividades, el reto "Hazlo en Scratch", la actividad sin pantalla y una nota para papás), alineado con lo que suele pedirse en Scratch en primaria;
     6. crecimiento futuro;
     7. páginas de apoyo (Mis bloques o glosario, guía para familias, Conoce a PyBot);
     8. recursos y créditos;
     9. fases con criterios de "listo" y checklist por página;
     10. pruebas con niños (observar, sin recoger datos).
 
-## 5. Lecciones aprendidas (no las repitas)
+## 6. Lecciones aprendidas (no las repitas)
 
 - Agrega `[hidden] { display: none !important; }` en el CSS: si no, los botones con `display` propio ignoran `hidden`.
 - Las zonas deben ser **amplias desde el principio**; temas muy pequeños hacen crecer el mapa sin control.
@@ -92,16 +101,16 @@ Construye en `/home/user/<carpeta-del-proyecto>`, en archivos separados como en 
 - En la página de herramienta, cualquier API del navegador puede no existir o quedarse colgada: pon tiempos límite y una alternativa.
 - El PyBot pequeño flota, así que en Playwright los clics sobre él necesitan `{ force: true }`.
 
-## 6. Entorno y entrega
+## 7. Entorno y entrega
 
 - **No puedes crear repositorios** desde la sesión (la API solo permite repos ya conectados). Construye local, haz `git init -b main` y commits pequeños con atribución. Al final pídeme crear un **repositorio vacío** (sugiere el nombre) y conéctalo con `add_repo` (acceso `push`) para subirlo.
 - **Vista previa:** publícala como Artifact desde una copia en el scratchpad (título de 2 a 4 palabras, sin guiones explicativos, y el resto de archivos con `files`). Avísame que en la vista previa no funcionan imprimir ni el micrófono, y que el PyBot pequeño solo aparece en ventanas anchas.
 - **Pruebas:** Playwright está instalado globalmente (`require(\`${npm root -g}/playwright\`)`). Prueba todas las páginas a 1280 px y a 390 px: sin errores de consola, sin desplazamiento horizontal y con la cabecera en una sola fila. Mira una captura por cambio importante, no más.
 - Desde el contenedor, el proxy bloquea descargas de Hugging Face y jsDelivr con curl; `npm view` y `npm pack` sí funcionan para revisar licencias de paquetes.
 
-## 7. Cómo trabajar (presupuesto limitado)
+## 8. Cómo trabajar (presupuesto limitado)
 
 - Sin subagentes ni workflows. Reutiliza código (de PyBot English si existe) en vez de reescribir.
 - Ediciones pequeñas en vez de reescribir archivos completos. Una sola verificación visual por cambio.
-- Al empezar, pregúntame solo lo indispensable, en un solo mensaje: el nombre (con tus opciones) y la confirmación de la paleta y la mascota (con captura). Si no respondo, sigue con los valores por defecto de este prompt.
+- Al empezar, pregúntame solo lo indispensable, en un solo mensaje: la confirmación de la paleta y la mascota (con captura). El nombre ya está decidido: PyBot Blocks. Si no respondo, sigue con los valores por defecto de este prompt.
 - Cierra con: ruta de la carpeta, enlace de la vista previa, lista de commits, lo que quedó pendiente y el paso para crear el repositorio.
