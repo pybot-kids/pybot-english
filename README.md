@@ -178,6 +178,9 @@ A collapsed **For adults: erase all progress** section on the home page offers t
 
 ## Learning path index
 
+The full content plan (what each page teaches, vocabulary, activity types, phases, and the "done" checklist) lives in [`CONTENT_PLAN.md`](CONTENT_PLAN.md).
+
+
 A short foundation, **six broad zones**, and a pit stop. English is wide, so the path grows **inside** zones, like PyBot's Python zones: each zone is a big theme with its own route of pages on the map, and the learner moves through that route before the next zone.
 
 **Growth rule:** a new topic becomes a new page in the route of the zone it belongs to. A new zone is added only for a theme no existing zone covers (for example, a future "Tell a story" zone for past tense). This keeps the map short even when the course grows.
@@ -242,6 +245,7 @@ python -m http.server 8000
 - [x] PyBot mascot in the new blue–magenta palette, with sweet moods and kind phrases
 - [x] Home page, learning path index, album, diploma, and FAQ (EN/ES)
 - [x] Progress, stickers, streaks, diplomas, backup, and reset on the PyBot scheme
+- [x] Long-term content plan ([`CONTENT_PLAN.md`](CONTENT_PLAN.md))
 - [ ] First lessons (zone 00)
 - [ ] Word list (“My words”) and the guide for families and teachers
 - [ ] Review with María Ángel and her friends
