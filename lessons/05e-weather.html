@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Di cómo está el día: soleado, lluvioso, con viento, frío o caliente." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>¿Cómo está el clima? — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="weather">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "weather",
+  "mood": "happy",
+  "title": {
+    "es": "¿Cómo está el clima?",
+    "en": "What's the weather like?"
+  },
+  "intro": {
+    "es": "Di cómo está el día: soleado, lluvioso, con viento, frío o caliente.",
+    "en": "Say what the day is like: sunny, rainy, windy, cold or hot."
+  },
+  "pybot": {
+    "es": "It's rainy! ☔ Me pongo mi chaqueta para no oxidarme.",
+    "en": "It's rainy! ☔ I wear my jacket so I don't rust."
+  },
+  "look": [
+    {
+      "icon": "☀️",
+      "word": "sunny",
+      "meaning": {
+        "es": "soleado",
+        "en": "soleado"
+      }
+    },
+    {
+      "icon": "🌧️",
+      "word": "rainy",
+      "meaning": {
+        "es": "lluvioso",
+        "en": "lluvioso"
+      }
+    },
+    {
+      "icon": "☁️",
+      "word": "cloudy",
+      "meaning": {
+        "es": "nublado",
+        "en": "nublado"
+      }
+    },
+    {
+      "icon": "💨",
+      "word": "windy",
+      "meaning": {
+        "es": "con viento",
+        "en": "con viento"
+      }
+    },
+    {
+      "icon": "❄️",
+      "word": "snowy",
+      "meaning": {
+        "es": "con nieve",
+        "en": "con nieve"
+      }
+    },
+    {
+      "icon": "🥵",
+      "word": "hot",
+      "meaning": {
+        "es": "caliente, hace calor",
+        "en": "caliente, hace calor"
+      }
+    },
+    {
+      "icon": "🥶",
+      "word": "cold",
+      "meaning": {
+        "es": "frío, hace frío",
+        "en": "frío, hace frío"
+      }
+    },
+    {
+      "icon": "🌦️",
+      "word": "What's the weather like?",
+      "meaning": {
+        "es": "¿cómo está el clima?",
+        "en": "¿cómo está el clima?"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "What's the weather like today?",
+        "meaning": {
+          "es": "¿Cómo está el clima hoy?",
+          "en": "¿Cómo está el clima hoy?"
+        }
+      },
+      {
+        "en": "It's sunny and hot.",
+        "meaning": {
+          "es": "Está soleado y hace calor.",
+          "en": "Está soleado y hace calor."
+        }
+      },
+      {
+        "en": "It's cold. Wear your jacket!",
+        "meaning": {
+          "es": "Hace frío. ¡Ponte la chaqueta!",
+          "en": "Hace frío. ¡Ponte la chaqueta!"
+        }
+      }
+    ],
+    "rule": {
+      "es": "Para el clima siempre empieza con “It's”: It's sunny. It's cold. En español decimos “hace frío”; en inglés, “it's cold”.",
+      "en": "For the weather always start with “It's”: It's sunny. It's cold."
+    }
+  },
+  "activities": [
+    {
+      "id": "weather-sunny",
+      "type": "choice",
+      "prompt": {
+        "es": "☀️ ¿Cómo está el día?",
+        "en": "☀️ What's the day like?"
+      },
+      "options": [
+        "sunny",
+        "rainy",
+        "snowy"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Brilla el sol.",
+        "en": "The sun is shining."
+      },
+      "why": {
+        "es": "“Sunny” es soleado.",
+        "en": "“Sunny.”"
+      }
+    },
+    {
+      "id": "weather-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Cómo está el clima?",
+        "en": "Listen. What's the weather like?"
+      },
+      "options": [
+        {
+          "es": "🌧️",
+          "en": "🌧️"
+        },
+        {
+          "es": "☀️",
+          "en": "☀️"
+        },
+        {
+          "es": "❄️",
+          "en": "❄️"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Necesitas un paraguas.",
+        "en": "You need an umbrella."
+      },
+      "why": {
+        "es": "“It's rainy”: está lluvioso.",
+        "en": "“It's rainy.”"
+      },
+      "listen": "It's rainy."
+    },
+    {
+      "id": "weather-cold",
+      "type": "choice",
+      "prompt": {
+        "es": "🥶 ¿Qué dices?",
+        "en": "🥶 What do you say?"
+      },
+      "options": [
+        "It's cold.",
+        "It's hot.",
+        "It's windy."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Estás temblando.",
+        "en": "You are shivering."
+      },
+      "why": {
+        "es": "“It's cold”: hace frío.",
+        "en": "“It's cold.”"
+      }
+    },
+    {
+      "id": "weather-gap",
+      "type": "choice",
+      "prompt": {
+        "es": "Completa la pregunta: “What's the ___ like?”",
+        "en": "Fill in the question: “What's the ___ like?”"
+      },
+      "options": [
+        "weather",
+        "sunny",
+        "morning"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Weather es el clima.",
+        "en": "You are asking about the weather."
+      },
+      "why": {
+        "es": "“What's the weather like?”",
+        "en": "“What's the weather like?”"
+      },
+      "show": "What's the ___ like?"
+    },
+    {
+      "id": "weather-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? “Cloudy” significa que hay muchas nubes.",
+        "en": "True or false? “Cloudy” means there are lots of clouds."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Cloud es nube.",
+        "en": "Cloud means nube."
+      },
+      "why": {
+        "es": "Verdadero: cloudy es nublado.",
+        "en": "True: cloudy."
+      }
+    },
+    {
+      "id": "weather-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma: “Está soleado y hace calor.”",
+        "en": "Build: “It's sunny and hot.”"
+      },
+      "tiles": [
+        "It's",
+        "sunny",
+        "and",
+        "hot."
+      ],
+      "hint": {
+        "es": "Empieza con It's.",
+        "en": "Start with It's."
+      },
+      "why": {
+        "es": "“It's sunny and hot.”",
+        "en": "“It's sunny and hot.”"
+      }
+    },
+    {
+      "id": "weather-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot tradujo “hace frío” como “It makes cold”. ¿Cómo se dice?",
+        "en": "🤖 PyBot wrote “It makes cold”. What's right?"
+      },
+      "options": [
+        "It's cold.",
+        "It makes cold.",
+        "It has cold."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "En inglés el clima va con “It's”.",
+        "en": "Weather goes with “It's”."
+      },
+      "why": {
+        "es": "¡Arreglado! It's cold.",
+        "en": "Fixed! It's cold."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "sunny",
+      "meaning": {
+        "es": "soleado",
+        "en": "soleado"
+      }
+    },
+    {
+      "en": "rainy",
+      "meaning": {
+        "es": "lluvioso",
+        "en": "lluvioso"
+      }
+    },
+    {
+      "en": "cloudy",
+      "meaning": {
+        "es": "nublado",
+        "en": "nublado"
+      }
+    },
+    {
+      "en": "windy",
+      "meaning": {
+        "es": "con viento",
+        "en": "con viento"
+      }
+    },
+    {
+      "en": "snowy",
+      "meaning": {
+        "es": "con nieve",
+        "en": "con nieve"
+      }
+    },
+    {
+      "en": "hot",
+      "meaning": {
+        "es": "caliente, hace calor",
+        "en": "caliente, hace calor"
+      }
+    },
+    {
+      "en": "cold",
+      "meaning": {
+        "es": "frío, hace frío",
+        "en": "frío, hace frío"
+      }
+    },
+    {
+      "en": "What's the weather like?",
+      "meaning": {
+        "es": "¿cómo está el clima?",
+        "en": "¿cómo está el clima?"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "El reporte del clima",
+      "en": "The weather report"
+    },
+    "text": {
+      "es": "Cada mañana, mira por la ventana y da el reporte como en la tele: “Good morning! Today it's cloudy and cold.”",
+      "en": "Every morning, look out the window and give the report like on TV: “Good morning! Today it's cloudy and cold.”"
+    },
+    "adult": {
+      "es": "pueden grabar el reporte en video para la familia, si quiere.",
+      "en": "you can film the report for the family, if they want."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

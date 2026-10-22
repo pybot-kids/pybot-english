@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Di qué hay en un lugar: una cosa o varias." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>There is, there are: hay — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="thereIs">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "thereIs",
+  "mood": "deciding",
+  "title": {
+    "es": "There is, there are: hay",
+    "en": "There is, there are"
+  },
+  "intro": {
+    "es": "Di qué hay en un lugar: una cosa o varias.",
+    "en": "Say what is in a place: one thing or many."
+  },
+  "pybot": {
+    "es": "There is a bed in my room… and there are two hundred screws! 🔩",
+    "en": "There is a bed in my room… and there are two hundred screws! 🔩"
+  },
+  "look": [
+    {
+      "icon": "🛏️",
+      "word": "there is a bed",
+      "meaning": {
+        "es": "hay una cama",
+        "en": "hay una cama"
+      }
+    },
+    {
+      "icon": "🪑",
+      "word": "there are two chairs",
+      "meaning": {
+        "es": "hay dos sillas",
+        "en": "hay dos sillas"
+      }
+    },
+    {
+      "icon": "❓",
+      "word": "is there…?",
+      "meaning": {
+        "es": "¿hay…?",
+        "en": "¿hay…?"
+      }
+    },
+    {
+      "icon": "✅",
+      "word": "yes, there is",
+      "meaning": {
+        "es": "sí, hay",
+        "en": "sí, hay"
+      }
+    },
+    {
+      "icon": "❌",
+      "word": "no, there isn't",
+      "meaning": {
+        "es": "no, no hay",
+        "en": "no, no hay"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "There is a bed in my room.",
+        "meaning": {
+          "es": "Hay una cama en mi cuarto.",
+          "en": "Hay una cama en mi cuarto."
+        }
+      },
+      {
+        "en": "There are three books on the table.",
+        "meaning": {
+          "es": "Hay tres libros en la mesa.",
+          "en": "Hay tres libros en la mesa."
+        }
+      },
+      {
+        "en": "Is there a cat? — Yes, there is.",
+        "meaning": {
+          "es": "¿Hay un gato? — Sí, hay.",
+          "en": "¿Hay un gato? — Sí, hay."
+        }
+      }
+    ],
+    "rule": {
+      "es": "There is + una cosa (a bed). There are + varias cosas (two chairs). En español las dos son “hay”.",
+      "en": "There is + one thing (a bed). There are + many things (two chairs)."
+    }
+  },
+  "activities": [
+    {
+      "id": "thereIs-one",
+      "type": "choice",
+      "prompt": {
+        "es": "🛏️ Hay una cama. ¿Cómo se dice?",
+        "en": "🛏️ There is one bed. How do you say it?"
+      },
+      "options": [
+        "There is a bed.",
+        "There are a bed.",
+        "It is bed."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es una sola cama.",
+        "en": "It's just one bed."
+      },
+      "why": {
+        "es": "Una cosa: “There is a bed.”",
+        "en": "One thing: “There is a bed.”"
+      }
+    },
+    {
+      "id": "thereIs-many",
+      "type": "choice",
+      "prompt": {
+        "es": "🪑🪑🪑 Completa: “There ___ three chairs.”",
+        "en": "🪑🪑🪑 Fill in: “There ___ three chairs.”"
+      },
+      "options": [
+        "are",
+        "is",
+        "am"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Son varias sillas.",
+        "en": "There are several chairs."
+      },
+      "why": {
+        "es": "Varias cosas: “There are three chairs.”",
+        "en": "Many things: “There are three chairs.”"
+      },
+      "show": "There ___ three chairs."
+    },
+    {
+      "id": "thereIs-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué hay?",
+        "en": "Listen. What is there?"
+      },
+      "options": [
+        {
+          "es": "🐱🐱",
+          "en": "🐱🐱"
+        },
+        {
+          "es": "🐱",
+          "en": "🐱"
+        },
+        {
+          "es": "🐶🐶",
+          "en": "🐶🐶"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Escuchaste “two” y “cats”.",
+        "en": "You heard “two” and “cats”."
+      },
+      "why": {
+        "es": "“There are two cats”: hay dos gatos.",
+        "en": "“There are two cats.”"
+      },
+      "listen": "There are two cats."
+    },
+    {
+      "id": "thereIs-answer",
+      "type": "choice",
+      "prompt": {
+        "es": "En la cocina no hay tele. Te preguntan “Is there a TV in the kitchen?”. ¿Qué respondes?",
+        "en": "There's no TV in the kitchen. “Is there a TV in the kitchen?” What do you answer?"
+      },
+      "options": [
+        "No, there isn't.",
+        "Yes, there is.",
+        "No, there are."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es un no.",
+        "en": "The answer is no."
+      },
+      "why": {
+        "es": "“No, there isn't”: no, no hay.",
+        "en": "“No, there isn't.”"
+      }
+    },
+    {
+      "id": "thereIs-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma: “Hay un gato debajo de la cama.”",
+        "en": "Build: “There is a cat under the bed.”"
+      },
+      "tiles": [
+        "There",
+        "is",
+        "a",
+        "cat",
+        "under the bed."
+      ],
+      "hint": {
+        "es": "Empieza con There is.",
+        "en": "Start with There is."
+      },
+      "why": {
+        "es": "“There is a cat under the bed.”",
+        "en": "“There is a cat under the bed.”"
+      }
+    },
+    {
+      "id": "thereIs-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? “There are” se usa con varias cosas.",
+        "en": "True or false? “There are” is for many things."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Piensa en “there are two chairs”.",
+        "en": "Think of “there are two chairs”."
+      },
+      "why": {
+        "es": "Verdadero.",
+        "en": "True."
+      }
+    },
+    {
+      "id": "thereIs-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot escribió “There is two windows”. ¿Cómo se escribe bien?",
+        "en": "🤖 PyBot wrote “There is two windows”. What's right?"
+      },
+      "options": [
+        "There are two windows.",
+        "There is two windows.",
+        "There are two window."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Son dos ventanas: varias.",
+        "en": "Two windows: many."
+      },
+      "why": {
+        "es": "¡Arreglado! There are two windows.",
+        "en": "Fixed! There are two windows."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "there is a bed",
+      "meaning": {
+        "es": "hay una cama",
+        "en": "hay una cama"
+      }
+    },
+    {
+      "en": "there are two chairs",
+      "meaning": {
+        "es": "hay dos sillas",
+        "en": "hay dos sillas"
+      }
+    },
+    {
+      "en": "is there…?",
+      "meaning": {
+        "es": "¿hay…?",
+        "en": "¿hay…?"
+      }
+    },
+    {
+      "en": "yes, there is",
+      "meaning": {
+        "es": "sí, hay",
+        "en": "sí, hay"
+      }
+    },
+    {
+      "en": "no, there isn't",
+      "meaning": {
+        "es": "no, no hay",
+        "en": "no, no hay"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Mi cuarto en inglés",
+      "en": "My room in English"
+    },
+    "text": {
+      "es": "Haz un recorrido por tu cuarto y cuenta lo que hay: “There is a bed. There are two windows. There is a teddy bear.”",
+      "en": "Give a tour of your room and say what's there: “There is a bed. There are two windows. There is a teddy bear.”"
+    },
+    "adult": {
+      "es": "pregunte “Is there a…?” y deje que responda “Yes, there is” o “No, there isn't”.",
+      "en": "ask “Is there a…?” and let them answer “Yes, there is” or “No, there isn't”."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

@@ -5,7 +5,7 @@
 ## 1. Propósito y alcance
 
 - **Para quién:** niñas y niños de 8 a 10 años (útil hasta ~12) que hablan español y empiezan inglés **desde cero**. Nació para que María Ángel pueda ayudar a sus amigas y amigos.
-- **Hasta dónde:** el camino actual cubre aproximadamente el nivel **Pre-A1 → A1** del Marco Común Europeo (MCER). Como referencia de vocabulario y temas se puede consultar la lista pública de *Cambridge English: Pre A1 Starters*, sin copiar sus materiales.
+- **Hasta dónde:** el camino actual cubre aproximadamente el nivel **Pre-A1 → A1**, y crece hacia **A2 básico** (ver la sección 5) del Marco Común Europeo (MCER). Como referencia de vocabulario y temas se puede consultar la lista pública de *Cambridge English: Pre A1 Starters*, sin copiar sus materiales.
 - **Qué NO es:** no es un curso de conversación ni evalúa la pronunciación. PyBot enseña **cómo suenan** las cosas; hablar se practica en casa con la familia y con amigas y amigos.
 - **Resultado esperado al final del camino:** el niño saluda y se presenta, deletrea su nombre, cuenta hasta 20, describe cosas por color, forma y tamaño, habla de su familia, su cuerpo, sus gustos y su día, y hace y entiende preguntas simples con *what, who, where, how many*.
 
@@ -153,15 +153,32 @@ Formato de cada página: **objetivo · vocabulario · estructura · actividades 
 
 | Tema nuevo | Va en | Ejemplos de páginas |
 |---|---|---|
-| Ropa y clima | 03 Colors & Things / 05 My Day | *I'm wearing…*, *It's sunny/rainy* |
-| Juguetes y posesivos | 03 Colors & Things | *my / your / his / her*, *It's Tom's ball* |
+| Ropa y clima ✅ | 03 Colors & Things / 05 My Day | *I'm wearing…* (03f `clothes`), *It's sunny/rainy* (05e `weather`) |
+| Posesivos ✅ | 03 Colors & Things | *my / your / his / her*, *It's Tom's ball* (03g `whoseIsIt`) |
 | Más animales y comidas | 04 Animals & Food | partes de animales, *some/any* básico |
-| La hora | 05 My Day | *What time is it? It's three o'clock.* |
-| *have got* / *there is / there are* | 06 Where is it? | *There is a bed in my room.* |
+| La hora ✅ | 05 My Day | *What time is it? It's three o'clock.* (05f `whatTime`) |
+| *there is / there are* ✅ | 06 Where is it? | *There is a bed in my room.* (06d `thereIs`); *have got* pasa a la zona 10 |
 | **Zona 07 — Right Now** ✅ | presente continuo | *What are you doing? I'm playing.* (publicada con 4 páginas) |
 | **Zona 08 — Fun & Free Time** ✅ | deportes, hobbies, *can* para pedir permiso | *Can I play?*, *Let's…* (publicada con 4 páginas y la parada 2) |
-| **Zona nueva 09 — Tell a story** | pasado simple básico | *Yesterday I played…*, verbos regulares y 8 irregulares frecuentes |
-| **Zona nueva 10 — My Town** | lugares, direcciones simples | *Go straight, turn left* |
+
+### Ruta hacia A2 básico (aprobada por Sorey el 2026-10-22)
+
+Después de la parada 2 el camino sigue por bloques de dos zonas y una parada. Cada bloque se publica en un PR propio.
+
+| Bloque | Zona | Tema | Ejemplos |
+|---|---|---|---|
+| 1 · Presente simple | 09 **Every Day** | presente simple en 3.ª persona, *does / doesn't*, *Do you…?*, frecuencia, contraste con el presente continuo | *She plays tennis. Does he like milk? I always…* |
+| | 10 **My Things** | *have / has got*, *some / any*, comprar en la tienda | *I've got a dog. Is there any milk?* |
+| | 🏁 Parada 3 | repaso 09–10 | |
+| 2 · Pasado simple | 11 **Tell a Story** | *was / were*, verbos regulares con *-ed*, *yesterday / last week* | *Yesterday I played…* |
+| | 12 **What Happened?** | unos 12 irregulares frecuentes, *Did you…?*, *didn't* | *I went to the park. Did you see it?* |
+| | 🏁 Parada 4 | repaso 11–12 | |
+| 3 · Futuro | 13 **Tomorrow** | *going to* (planes), *will* (predicciones), estaciones | *I'm going to visit grandma.* |
+| | 14 **My Town** | lugares, direcciones, *How much is it?* | *Go straight, turn left.* |
+| | 🏁 Parada 5 | repaso 13–14 | |
+| 4 · Comparar y conversar | 15 **Bigger & Better** | comparativos y superlativos | *A lion is bigger than a cat.* |
+| | 16 **Let's Talk** | *and / but / because*, *should*, mini historias que mezclan los tiempos | *I was tired because I played soccer.* |
+| | 🏆 Gran final A2 | repaso de todo el camino y diploma | |
 
 Cada zona nueva lleva su sticker, su diploma y, cada 2 a 4 zonas, una parada nueva. La parada 2 (zonas 07–08) ya está publicada; la autoevaluación de cada parada pregunta solo por las zonas desde la parada anterior.
 

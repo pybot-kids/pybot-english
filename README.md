@@ -180,8 +180,10 @@ Registered activity IDs (written by `tools/build-lessons.py`; each lesson's ids 
 - `colors` (Colors): `colors-red`, `colors-blue`, `colors-listen`, `colors-blue-brown`, `colors-odd`, `colors-fix`
 - `shapes` (Shapes): `shapes-circle`, `shapes-triangle`, `shapes-listen`, `shapes-heart`, `shapes-odd`, `shapes-fix`
 - `itIsRed` (It is red.): `itIsRed-order`, `itIsRed-fix`, `itIsRed-gap`, `itIsRed-read`, `itIsRed-true`, `itIsRed-listen`
+- `clothes` (Clothes): `clothes-socks`, `clothes-listen`, `clothes-gap`, `clothes-order`, `clothes-odd`, `clothes-true`, `clothes-fix`
 - `backpack` (My backpack): `backpack-pencil`, `backpack-ruler`, `backpack-listen`, `backpack-an`, `backpack-odd`, `backpack-fix`
 - `thisThat` (This or that?): `thisThat-near`, `thisThat-far`, `thisThat-order`, `thisThat-answer`, `thisThat-true`, `thisThat-fix`
+- `whoseIsIt` (Whose is it?): `whoseIsIt-my`, `whoseIsIt-his`, `whoseIsIt-her`, `whoseIsIt-name`, `whoseIsIt-listen`, `whoseIsIt-order`, `whoseIsIt-fix`
 - `animals` (Animals): `animals-rabbit`, `animals-lion`, `animals-listen-horse`, `animals-listen-duck`, `animals-odd`, `animals-fix`
 - `bigSmall` (Big or small?): `bigSmall-read`, `bigSmall-opposite`, `bigSmall-true`, `bigSmall-gap`, `bigSmall-order`, `bigSmall-fix`
 - `canCant` (It can fly!): `canCant-bird`, `canCant-true`, `canCant-read`, `canCant-order`, `canCant-gap`, `canCant-fix`
@@ -190,11 +192,14 @@ Registered activity IDs (written by `tools/build-lessons.py`; each lesson's ids 
 - `iDontLike` (I don't like…): `iDontLike-order`, `iDontLike-gap`, `iDontLike-answer`, `iDontLike-read`, `iDontLike-true`, `iDontLike-fix`
 - `days` (The days of the week): `days-listen`, `days-gap`, `days-weekend`, `days-capital`, `days-order`, `days-fix`
 - `dayParts` (Morning, afternoon and night): `dayParts-morning`, `dayParts-night`, `dayParts-gap`, `dayParts-listen`, `dayParts-true`, `dayParts-fix`
+- `weather` (What's the weather like?): `weather-sunny`, `weather-listen`, `weather-cold`, `weather-gap`, `weather-true`, `weather-order`, `weather-fix`
+- `whatTime` (What time is it?): `whatTime-three`, `whatTime-half`, `whatTime-listen`, `whatTime-gap`, `whatTime-order`, `whatTime-true`, `whatTime-fix`
 - `routine` (My routine): `routine-first`, `routine-listen`, `routine-gap`, `routine-order`, `routine-read`, `routine-fix`
 - `classWords` (Open, close, listen!): `classWords-sit`, `classWords-hand`, `classWords-open`, `classWords-odd`, `classWords-true`, `classWords-fix`
 - `questions` (What? Who? Where?): `questions-who`, `questions-where`, `questions-what`, `questions-how-old`, `questions-order`, `questions-fix`
 - `inOnUnder` (In, on, under): `inOnUnder-in`, `inOnUnder-listen`, `inOnUnder-true`, `inOnUnder-gap`, `inOnUnder-order`, `inOnUnder-fix`
 - `house` (Rooms in a house): `house-bed`, `house-kitchen`, `house-listen`, `house-true`, `house-odd`, `house-fix`
+- `thereIs` (There is, there are): `thereIs-one`, `thereIs-many`, `thereIs-listen`, `thereIs-answer`, `thereIs-order`, `thereIs-true`, `thereIs-fix`
 - `checkpoint1` (Show what you know: pit stop): `checkpoint1-hello`, `checkpoint1-spell`, `checkpoint1-number`, `checkpoint1-age`, `checkpoint1-family`, `checkpoint1-color`, `checkpoint1-an`, `checkpoint1-can`, `checkpoint1-like`, `checkpoint1-day`, `checkpoint1-class`, `checkpoint1-where`, `checkpoint1-intro`, `checkpoint1-like-order`
 - `whatAreYouDoing` (What are you doing?): `whatAreYouDoing-read`, `whatAreYouDoing-listen`, `whatAreYouDoing-order`, `whatAreYouDoing-gap`, `whatAreYouDoing-true`, `whatAreYouDoing-fix`
 - `addIng` (play → playing: adding “-ing”): `addIng-play`, `addIng-dance`, `addIng-run`, `addIng-swim`, `addIng-odd`, `addIng-fix`
@@ -258,10 +263,10 @@ Every page of the path is published. A future page starts with `soon: true` in `
 | 00 **Hello!** (before we start) | Hello and goodbye · How are you? · Look, listen, say | Greet, say goodbye, and learn how the site works |
 | 01 **Letters & Numbers** | The letters · Vowels · Spell your name · 1–10 · 11–20 · How many? | The alphabet and its sounds; count to 20 |
 | 02 **All About Me** | My name is… · I am 9. · My family · My body · Feelings · I feel happy. | Introduce yourself, your family, your body, and how you feel |
-| 03 **Colors & Things** | Colors · Shapes · It is red. · My backpack · This or that? | Describe things around you |
+| 03 **Colors & Things** | Colors · Shapes · It is red. · Clothes · My backpack · This or that? · Whose is it? | Describe things and clothes, and say whose they are |
 | 04 **Animals & Food** | Animals · Big or small? · It can fly! · Food and drinks · I like… · I don't like… | Animals, can / can't, food, and likes |
-| 05 **My Day** | The days · Morning, afternoon, night · My routine · Open, close, listen! | Days, routines, and classroom instructions |
-| 06 **Where is it?** | What? Who? Where? · In, on, under · Rooms in a house | Question words and place words |
+| 05 **My Day** | The days · Morning, afternoon, night · The weather · What time is it? · My routine · Open, close, listen! | Days, weather, telling the time, routines, and classroom instructions |
+| 06 **Where is it?** | What? Who? Where? · In, on, under · Rooms in a house · There is, there are | Question words, place words, and saying what is there |
 | 🏁 **Show what you know** (pit stop 1) | Review | Mixed review of zones 00–06, then a self-check and a diploma |
 | 07 **Right Now** | What are you doing? · play → playing · He, she, they · Are you…? | Present continuous: say what is happening now |
 | 08 **Fun & Free Time** | Sports · Hobbies · Can I play? · Let's play! | Sports and hobbies, like + -ing, asking for permission, invitations |
@@ -333,7 +338,7 @@ python -m http.server 8000
 - [x] Home page, learning path index, album, diploma, and FAQ (EN/ES)
 - [x] Progress, stickers, streaks, diplomas, backup, and reset on the PyBot scheme
 - [x] Long-term content plan ([`CONTENT_PLAN.md`](CONTENT_PLAN.md))
-- [x] Lesson engine and the whole path: zones 00–08 and two pit stops (43 pages, 281 activities)
+- [x] Lesson engine and the whole path: zones 00–08 and two pit stops (48 pages, 316 activities)
 - [ ] Word list (“My words”) and the guide for families and teachers
 - [ ] Review with María Ángel and her friends
 - [ ] GitHub Pages publication

@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Di de quién es cada cosa: mío, tuyo, de él, de ella, o de Tom." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>Whose is it? ¿De quién es? — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="whoseIsIt">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "whoseIsIt",
+  "mood": "curious",
+  "title": {
+    "es": "Whose is it? ¿De quién es?",
+    "en": "Whose is it?"
+  },
+  "intro": {
+    "es": "Di de quién es cada cosa: mío, tuyo, de él, de ella, o de Tom.",
+    "en": "Say who owns each thing: mine, yours, his, hers, or Tom's."
+  },
+  "pybot": {
+    "es": "Whose ball is it? It's Tom's ball. ¡Y este tornillo es mío!",
+    "en": "Whose ball is it? It's Tom's ball. And this screw is mine!"
+  },
+  "look": [
+    {
+      "icon": "🙋",
+      "word": "my",
+      "meaning": {
+        "es": "mi, mis",
+        "en": "mi, mis"
+      }
+    },
+    {
+      "icon": "👉",
+      "word": "your",
+      "meaning": {
+        "es": "tu, tus",
+        "en": "tu, tus"
+      }
+    },
+    {
+      "icon": "👦",
+      "word": "his",
+      "meaning": {
+        "es": "su (de él)",
+        "en": "su (de él)"
+      }
+    },
+    {
+      "icon": "👧",
+      "word": "her",
+      "meaning": {
+        "es": "su (de ella)",
+        "en": "su (de ella)"
+      }
+    },
+    {
+      "icon": "⚽",
+      "word": "Tom's ball",
+      "meaning": {
+        "es": "la pelota de Tom",
+        "en": "la pelota de Tom"
+      }
+    },
+    {
+      "icon": "❓",
+      "word": "whose?",
+      "meaning": {
+        "es": "¿de quién?",
+        "en": "¿de quién?"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "It's my ball.",
+        "meaning": {
+          "es": "Es mi pelota.",
+          "en": "Es mi pelota."
+        }
+      },
+      {
+        "en": "This is her book.",
+        "meaning": {
+          "es": "Este es el libro de ella.",
+          "en": "Este es el libro de ella."
+        }
+      },
+      {
+        "en": "Whose bag is it? It's Ana's.",
+        "meaning": {
+          "es": "¿De quién es la bolsa? Es de Ana.",
+          "en": "¿De quién es la bolsa? Es de Ana."
+        }
+      }
+    ],
+    "rule": {
+      "es": "Para decir de quién es algo: nombre + 's + cosa (Tom's ball). His es de él y her es de ella.",
+      "en": "To say who owns something: name + 's + thing (Tom's ball). His is for a boy, her for a girl."
+    }
+  },
+  "activities": [
+    {
+      "id": "whoseIsIt-my",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Cómo se dice “es mi libro”?",
+        "en": "How do you say it's your own book?"
+      },
+      "options": [
+        "It's my book.",
+        "It's your book.",
+        "It's her book."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "“My” es mío.",
+        "en": "“My” is for you."
+      },
+      "why": {
+        "es": "“It's my book.”",
+        "en": "“It's my book.”"
+      }
+    },
+    {
+      "id": "whoseIsIt-his",
+      "type": "choice",
+      "prompt": {
+        "es": "👦 El carro es de Leo. Completa: “It's ___ car.”",
+        "en": "👦 The car is Leo's. Fill in: “It's ___ car.”"
+      },
+      "options": [
+        "his",
+        "her",
+        "my"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Leo es un niño.",
+        "en": "Leo is a boy."
+      },
+      "why": {
+        "es": "“His car”: el carro de él.",
+        "en": "“His car.”"
+      },
+      "show": "It's ___ car."
+    },
+    {
+      "id": "whoseIsIt-her",
+      "type": "choice",
+      "prompt": {
+        "es": "👧 La mochila es de Sofía. ¿Cuál está bien?",
+        "en": "👧 The backpack is Sofía's. Which one is right?"
+      },
+      "options": [
+        "It's her backpack.",
+        "It's his backpack."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Sofía es una niña.",
+        "en": "Sofía is a girl."
+      },
+      "why": {
+        "es": "“Her backpack”: la mochila de ella.",
+        "en": "“Her backpack.”"
+      }
+    },
+    {
+      "id": "whoseIsIt-name",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Cómo se dice “la pelota de Tom”?",
+        "en": "How do you say the ball belongs to Tom?"
+      },
+      "options": [
+        "Tom's ball",
+        "ball of Tom",
+        "Tom ball"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Se pega 's al nombre.",
+        "en": "Add 's to the name."
+      },
+      "why": {
+        "es": "“Tom's ball.”",
+        "en": "“Tom's ball.”"
+      }
+    },
+    {
+      "id": "whoseIsIt-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha la pregunta. ¿Qué significa?",
+        "en": "Listen to the question. What does it mean?"
+      },
+      "options": [
+        {
+          "es": "¿De quién es el lápiz?",
+          "en": "Who owns the pencil?"
+        },
+        {
+          "es": "¿Dónde está el lápiz?",
+          "en": "Where is the pencil?"
+        },
+        {
+          "es": "¿Qué es eso?",
+          "en": "What is that?"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "“Whose” pregunta por el dueño.",
+        "en": "“Whose” asks about the owner."
+      },
+      "why": {
+        "es": "“Whose pencil is it?”: ¿de quién es el lápiz?",
+        "en": "“Whose pencil is it?”"
+      },
+      "listen": "Whose pencil is it?"
+    },
+    {
+      "id": "whoseIsIt-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma: “Es el lápiz de Ana.”",
+        "en": "Build: “It's Ana's pencil.”"
+      },
+      "tiles": [
+        "It's",
+        "Ana's",
+        "pencil."
+      ],
+      "hint": {
+        "es": "Primero de quién, luego la cosa.",
+        "en": "First who, then the thing."
+      },
+      "why": {
+        "es": "“It's Ana's pencil.”",
+        "en": "“It's Ana's pencil.”"
+      }
+    },
+    {
+      "id": "whoseIsIt-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot escribió “It's the ball of Tom”. ¿Cómo se dice en inglés?",
+        "en": "🤖 PyBot wrote “It's the ball of Tom”. What's right?"
+      },
+      "options": [
+        "It's Tom's ball.",
+        "It's the ball of Tom.",
+        "It's ball Tom."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "En inglés se usa 's.",
+        "en": "English uses 's."
+      },
+      "why": {
+        "es": "¡Arreglado! It's Tom's ball.",
+        "en": "Fixed! It's Tom's ball."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "my",
+      "meaning": {
+        "es": "mi, mis",
+        "en": "mi, mis"
+      }
+    },
+    {
+      "en": "your",
+      "meaning": {
+        "es": "tu, tus",
+        "en": "tu, tus"
+      }
+    },
+    {
+      "en": "his",
+      "meaning": {
+        "es": "su (de él)",
+        "en": "su (de él)"
+      }
+    },
+    {
+      "en": "her",
+      "meaning": {
+        "es": "su (de ella)",
+        "en": "su (de ella)"
+      }
+    },
+    {
+      "en": "Tom's ball",
+      "meaning": {
+        "es": "la pelota de Tom",
+        "en": "la pelota de Tom"
+      }
+    },
+    {
+      "en": "whose?",
+      "meaning": {
+        "es": "¿de quién?",
+        "en": "¿de quién?"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "¿De quién es?",
+      "en": "Whose is it?"
+    },
+    "text": {
+      "es": "Junta un zapato de cada persona de la casa. Pregunta “Whose shoe is it?” y respondan: “It's dad's!”.",
+      "en": "Collect one shoe from each person at home. Ask “Whose shoe is it?” and answer: “It's dad's!”."
+    },
+    "adult": {
+      "es": "ayúdele con el nombre + 's: mom's, grandma's.",
+      "en": "help with the name + 's: mom's, grandma's."
+    }
+  }
+}
+    </script>
+  </body>
+</html>
