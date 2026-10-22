@@ -1,0 +1,45 @@
+{
+  "versions": [
+    {
+      "version": 1,
+      "date": "2026-10-22",
+      "note": "Baseline: the learning path index, every step still coming soon and without activities.",
+      "steps": {
+        "helloGoodbye": [],
+        "howAreYou": [],
+        "lookListenSay": [],
+        "abcLetters": [],
+        "abcVowels": [],
+        "abcSpell": [],
+        "numbersTen": [],
+        "numbersTwenty": [],
+        "numbersHowMany": [],
+        "colors": [],
+        "shapes": [],
+        "itIsRed": [],
+        "myName": [],
+        "myAge": [],
+        "myFamily": [],
+        "myBody": [],
+        "feelings": [],
+        "iFeel": [],
+        "backpack": [],
+        "thisThat": [],
+        "classWords": [],
+        "animals": [],
+        "bigSmall": [],
+        "canCant": [],
+        "food": [],
+        "iLike": [],
+        "iDontLike": [],
+        "days": [],
+        "dayParts": [],
+        "routine": [],
+        "questions": [],
+        "inOnUnder": [],
+        "house": [],
+        "checkpoint1": []
+      }
+    }
+  ]
+}

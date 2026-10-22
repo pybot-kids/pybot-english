@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      id="meta-description"
+      name="description"
+      content="PyBot English ayuda a niñas y niños a dar sus primeros pasos en inglés con ideas pequeñas, pasos claros y frases amables."
+      data-i18n-content="meta.homeDescription"
+    />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>PyBot English — one word at a time</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body data-page="home">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <a class="nav-pill" href="course.html" data-i18n="nav.path">El camino</a>
+        <a class="nav-pill nav-album" href="album.html"><span aria-hidden="true">★</span> <span data-i18n="nav.album">Álbum</span></a>
+        <a class="nav-pill" href="faq.html" data-i18n="nav.faq">Preguntas</a>
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span aria-hidden="true">Aa</span>
+            <b data-i18n="hero.eyebrow">Una aventura en inglés</b>
+          </p>
+          <h1>
+            <span class="title-line" data-i18n="hero.titleStart">Inglés, una palabra</span>
+            <span data-i18n="hero.titleEnd">a la vez.</span>
+          </h1>
+          <p class="hero-intro" data-i18n="hero.intro">
+            PyBot aprende inglés contigo. Mira una palabra. Escúchala. Dila en voz alta.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="course.html" data-i18n="hero.start">Ver el camino</a>
+            <a class="button button-secondary" href="#first-mission">
+              <span data-i18n="hero.talk">Habla con PyBot</span>
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+          <ul class="trust-list" aria-label="Lo importante" data-i18n-aria-label="a11y.features">
+            <li><span aria-hidden="true">✓</span><b data-i18n="trust.accounts">Sin cuentas</b></li>
+            <li><span aria-hidden="true">✓</span><b data-i18n="trust.pace">A tu ritmo</b></li>
+            <li><span aria-hidden="true">✓</span><b data-i18n="trust.progress">Tu progreso se queda contigo</b></li>
+          </ul>
+        </div>
+
+        <div class="hero-stage">
+          <div class="spark spark-one" aria-hidden="true">A</div>
+          <div class="spark spark-two" aria-hidden="true">♥</div>
+          <div class="spark spark-three" aria-hidden="true">✦</div>
+
+          <div class="speech-bubble" aria-live="polite">
+            <span class="speech-kicker" data-i18n="pybot.says">PYBOT DICE</span>
+            <p lang="en" data-pybot-english>Hello! Nice to meet you.</p>
+            <p class="speech-help" data-pybot-help>¡Hola! Mucho gusto.</p>
+            <button class="speech-listen" type="button" data-pybot-listen>
+              <span aria-hidden="true">🔊</span>
+              <span data-i18n="pybot.listen">Escuchar</span>
+            </button>
+          </div>
+
+          <div class="pybot-wrap" data-mood="happy">
+            <button class="pybot-touch" type="button" data-pybot-touch aria-label="Saluda a PyBot" data-i18n-aria-label="pybot.touch"></button>
+            <div class="pybot" role="img" aria-label="PyBot está feliz y saluda" data-pybot-figure>
+              <div class="antenna" aria-hidden="true"><span></span></div>
+              <div class="ear ear-left" aria-hidden="true"></div>
+              <div class="ear ear-right" aria-hidden="true"></div>
+              <div class="bot-head">
+                <div class="bot-screen">
+                  <div class="brow brow-left" aria-hidden="true"></div>
+                  <div class="brow brow-right" aria-hidden="true"></div>
+                  <div class="eye eye-left" aria-hidden="true"><span></span></div>
+                  <div class="eye eye-right" aria-hidden="true"><span></span></div>
+                  <div class="cheek cheek-left" aria-hidden="true"></div>
+                  <div class="cheek cheek-right" aria-hidden="true"></div>
+                  <div class="mouth" aria-hidden="true"></div>
+                </div>
+              </div>
+              <div class="bot-neck" aria-hidden="true"></div>
+              <div class="arm arm-left" aria-hidden="true"><span class="hand"></span></div>
+              <div class="arm arm-right" aria-hidden="true"><span class="hand"></span></div>
+              <div class="bot-body">
+                <div class="chest-light" aria-hidden="true"></div>
+                <span class="chest-code" aria-hidden="true">Hi!</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="learner-name-card" data-name-panel>
+            <form class="learner-name-form" data-name-form novalidate>
+              <label for="learner-name" data-i18n="name.question">¿Cómo te gustaría que te llamara?</label>
+              <div class="learner-name-entry">
+                <input
+                  id="learner-name"
+                  name="learner-name"
+                  type="text"
+                  maxlength="24"
+                  autocomplete="nickname"
+                  placeholder="Nombre o apodo"
+                  data-i18n-placeholder="name.placeholder"
+                  aria-describedby="learner-name-note learner-name-error"
+                />
+                <button type="submit" data-i18n="name.save">¡Así me llamo!</button>
+              </div>
+              <p id="learner-name-note" class="learner-name-note" data-i18n="name.privateNote">Solo este navegador lo recordará.</p>
+              <p id="learner-name-error" class="learner-name-error" data-i18n="name.error" aria-live="polite" hidden>Escribe un nombre o un apodo.</p>
+              <button class="learner-name-forget" type="button" data-name-forget data-i18n="name.forget" hidden>Olvidar este nombre</button>
+            </form>
+
+            <div class="learner-name-saved" data-name-saved hidden>
+              <p><span data-i18n="name.savedPrefix">PyBot te llama</span> <strong data-learner-name></strong>.</p>
+              <button type="button" data-name-edit data-i18n="name.change">Cambiar</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="learning-loop" aria-labelledby="loop-title">
+        <div class="section-heading">
+          <p class="eyebrow eyebrow-magenta" data-i18n="loop.eyebrow">ASÍ APRENDEMOS</p>
+          <h2 id="loop-title"><span lang="en">Look. Listen. Say.</span></h2>
+          <p data-i18n="loop.intro">Una idea en cada página. Una cosa clara para hacer.</p>
+        </div>
+
+        <ol class="step-grid">
+          <li class="step-card step-blue">
+            <span class="step-number">1</span>
+            <div class="step-icon" aria-hidden="true">👀</div>
+            <h3><span lang="en">Look</span> · <span data-i18n="loop.step1Title">Mira</span></h3>
+            <p data-i18n="loop.step1Text">PyBot te muestra una palabra con un dibujo.</p>
+          </li>
+          <li class="step-card step-magenta">
+            <span class="step-number">2</span>
+            <div class="step-icon" aria-hidden="true">👂</div>
+            <h3><span lang="en">Listen</span> · <span data-i18n="loop.step2Title">Escucha</span></h3>
+            <p data-i18n="loop.step2Text">Presiona el botón y oye cómo suena.</p>
+          </li>
+          <li class="step-card step-sun">
+            <span class="step-number">3</span>
+            <div class="step-icon" aria-hidden="true">💬</div>
+            <h3><span lang="en">Say</span> · <span data-i18n="loop.step3Title">Dila</span></h3>
+            <p data-i18n="loop.step3Text">Repítela en voz alta. Luego úsala en una frase corta.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="lesson-preview" id="first-mission" aria-labelledby="preview-title">
+        <div class="preview-copy">
+          <p class="eyebrow eyebrow-magenta" data-i18n="preview.eyebrow">TU PRIMERA MISIÓN</p>
+          <h2 id="preview-title" data-i18n="preview.title">Dile algo amable a PyBot.</h2>
+          <p data-i18n="preview.text">Elige una frase. PyBot te responde en inglés. Escucha y repite.</p>
+          <div class="tiny-note">
+            <span class="tiny-note-icon" aria-hidden="true">♥</span>
+            <p>
+              <strong data-i18n="preview.noteStrong">¿Te equivocas?</strong>
+              <span data-i18n="preview.noteText">No pasa nada. Así se aprende un idioma.</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="phrase-window" aria-label="Frases amables" data-i18n-aria-label="a11y.phrases">
+          <div class="window-bar">
+            <span data-i18n="preview.windowTitle">Frases amables</span>
+            <span class="preview-tag" lang="en">KIND WORDS</span>
+          </div>
+          <ul class="phrase-options">
+            <li><button type="button" data-phrase="hello"><b lang="en">Hello, PyBot!</b><small data-i18n="phrase.helloHelp">¡Hola, PyBot!</small></button></li>
+            <li><button type="button" data-phrase="howAreYou"><b lang="en">How are you?</b><small data-i18n="phrase.howAreYouHelp">¿Cómo estás?</small></button></li>
+            <li><button type="button" data-phrase="thanks"><b lang="en">Thank you!</b><small data-i18n="phrase.thanksHelp">¡Gracias!</small></button></li>
+            <li><button type="button" data-phrase="friend"><b lang="en">You are my friend.</b><small data-i18n="phrase.friendHelp">Eres mi amigo.</small></button></li>
+            <li><button type="button" data-phrase="learning"><b lang="en">I'm learning English.</b><small data-i18n="phrase.learningHelp">Estoy aprendiendo inglés.</small></button></li>
+            <li><button type="button" data-phrase="goodbye"><b lang="en">See you soon!</b><small data-i18n="phrase.goodbyeHelp">¡Nos vemos pronto!</small></button></li>
+          </ul>
+          <div class="phrase-answer" role="status" aria-live="polite">
+            <span class="output-label" data-i18n="preview.answerLabel">PYBOT RESPONDE</span>
+            <p class="phrase-answer-english" lang="en" data-phrase-answer>…</p>
+            <p class="phrase-answer-help" data-phrase-answer-help data-i18n="preview.ready">Elige una frase para empezar.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="extras-strip" aria-labelledby="extras-title">
+        <div class="section-heading">
+          <p class="eyebrow eyebrow-magenta" data-i18n="extras.eyebrow">MÁS PARA TI</p>
+          <h2 id="extras-title" data-i18n="extras.title">Stickers, palabras e ideas</h2>
+          <p class="streak-note" data-streak hidden></p>
+        </div>
+        <ul class="extras-grid">
+          <li>
+            <a class="extras-card extras-album" href="album.html">
+              <span class="extras-icon" aria-hidden="true">★</span>
+              <b data-i18n="extras.album">Mi álbum</b>
+              <span data-i18n="extras.albumText">Tus stickers, diplomas y días de aprendizaje.</span>
+            </a>
+          </li>
+          <li>
+            <div class="extras-card extras-glossary">
+              <span class="extras-icon" aria-hidden="true">Aa</span>
+              <b data-i18n="extras.glossary">Mis palabras</b>
+              <span data-i18n="extras.glossaryText">Todas las palabras del camino, con dibujo y sonido.</span>
+              <small data-i18n="path.soon">Muy pronto</small>
+            </div>
+          </li>
+          <li>
+            <a class="extras-card extras-faq" href="faq.html">
+              <span class="extras-icon" aria-hidden="true">?</span>
+              <b data-i18n="extras.faq">Preguntas</b>
+              <span data-i18n="extras.faqText">Respuestas para ti y para los adultos que te acompañan.</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="local-first" id="your-progress" aria-label="Privacidad y progreso" data-i18n-aria-label="a11y.privacy">
+        <div class="local-icon" aria-hidden="true">🔒</div>
+        <div>
+          <p class="eyebrow" data-i18n="local.eyebrow">TU TRABAJO ES TUYO</p>
+          <h2 data-i18n="local.title">Sin cuenta. Tu progreso se queda aquí.</h2>
+          <p class="local-text" data-i18n="local.text">Este navegador recuerda lo que haces. La voz la pone tu propio dispositivo. Pide permiso a un adulto antes de borrar sus datos.</p>
+          <div class="backup-tools">
+            <strong data-i18n="backup.title">¿Vas a usar otro navegador?</strong>
+            <p data-i18n="backup.text">Guarda aquí una copia. Luego cárgala en el otro navegador.</p>
+            <div class="backup-actions">
+              <button type="button" data-backup-export data-i18n="backup.export">Guardar una copia</button>
+              <button type="button" data-backup-import data-i18n="backup.import">Cargar una copia</button>
+              <input type="file" accept=".json,application/json" data-backup-file hidden />
+            </div>
+            <p class="backup-status" role="status" aria-live="polite" data-backup-status></p>
+            <p class="backup-version"><span data-i18n="backup.versionLabel">Versión del progreso</span> <span data-progress-version>1</span></p>
+          </div>
+          <details class="reset-tools">
+            <summary data-i18n="reset.title">Para adultos: borrar todo el progreso</summary>
+            <p data-i18n="reset.text">Úsalo solo en una emergencia. Borra las actividades terminadas y el lugar en el camino en este navegador. El idioma y el nombre se quedan.</p>
+            <button type="button" data-progress-reset data-i18n="reset.button">Borrar todo el progreso</button>
+            <p class="backup-status" role="status" aria-live="polite" data-reset-status></p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#top" aria-label="PyBot English, volver arriba" data-i18n-aria-label="a11y.backTop">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <span class="footer-status" data-i18n="footer.status">Primer prototipo</span>
+      <p class="footer-story" data-i18n="footer.story">Nació de una idea de María Ángel: ella aprendió inglés por su cuenta y quiere ayudar a sus amigos a aprenderlo también.</p>
+      <p class="footer-credit">
+        <span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span>
+        <span data-i18n="footer.family">De la familia de</span> <a href="https://pybot-kids.github.io/" target="_blank" rel="noopener noreferrer">PyBot</a>.
+      </p>
+    </footer>
+  </body>
+</html>

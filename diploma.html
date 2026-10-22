@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      id="meta-description"
+      name="description"
+      content="Un diploma de PyBot English para imprimir cuando terminas una zona."
+      data-i18n-content="meta.diplomaDescription"
+    />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>Diploma — PyBot English</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <script src="extras.js" defer></script>
+  </head>
+  <body class="diploma-page" data-page="diploma">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <a class="nav-pill" href="course.html" data-i18n="nav.path">El camino</a>
+        <a class="nav-pill nav-album" href="album.html"><span aria-hidden="true">★</span> <span data-i18n="nav.album">Álbum</span></a>
+        <a class="nav-pill" href="faq.html" data-i18n="nav.faq">Preguntas</a>
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+      <main class="extras-main" id="main-content">
+      <header class="page-intro" data-diploma-intro hidden>
+        <p class="eyebrow eyebrow-magenta" data-i18n="diploma.eyebrow">TU DIPLOMA</p>
+        <h1 data-i18n="diploma.title">¡Lo lograste!</h1>
+        <p data-i18n="diploma.intro">Revisa tu nombre. Luego imprime tu diploma o guárdalo como PDF.</p>
+        <p class="diploma-sample-note" data-diploma-sample-note data-i18n="diploma.sampleNote" hidden>Este es un ejemplo. Tu diploma de verdad aparece cuando terminas una zona.</p>
+      </header>
+
+      <div class="diploma-tools" data-diploma-tools hidden>
+        <label class="diploma-name-field">
+          <span data-i18n="diploma.nameLabel">Nombre en el diploma</span>
+          <input type="text" maxlength="24" autocomplete="off" data-diploma-input placeholder="Tu nombre" data-i18n-placeholder="diploma.namePlaceholder" />
+        </label>
+      </div>
+
+      <article class="diploma" data-diploma hidden>
+        <span class="diploma-sample-stamp" data-diploma-stamp data-i18n="diploma.stamp" hidden>EJEMPLO</span>
+        <span class="diploma-brand"><span class="brand-mark" aria-hidden="true"><span></span></span> PyBot <em>English</em></span>
+        <p class="diploma-kicker" data-i18n="diploma.kicker">DIPLOMA</p>
+        <p class="diploma-heading" lang="en">Great job!</p>
+        <p class="diploma-line" data-i18n="diploma.line">Este diploma dice que</p>
+        <p class="diploma-name" data-diploma-name></p>
+        <p class="diploma-line" data-i18n="diploma.finished">terminó la zona de PyBot English</p>
+        <p class="diploma-zone"><span class="diploma-sticker" aria-hidden="true" data-diploma-sticker></span> <span lang="en" data-diploma-zone></span></p>
+        <div class="diploma-footer">
+          <p><span data-i18n="diploma.date">Fecha</span><b data-diploma-date></b></p>
+          <p><span data-i18n="diploma.signed">Firma</span><b>PyBot 🤖</b></p>
+          <p><span>PyBot English</span></p>
+        </div>
+      </article>
+
+      <p class="extras-actions" data-diploma-actions hidden>
+        <button class="is-primary" type="button" data-print data-i18n="diploma.print">Imprimir o guardar como PDF</button>
+        <a href="album.html" data-i18n="diploma.back">Volver a mi álbum</a>
+      </p>
+
+      <section class="diploma-missing" data-diploma-missing hidden>
+        <h1 data-i18n="diploma.missingTitle">Este diploma todavía te espera</h1>
+        <p data-diploma-missing-text></p>
+        <p class="extras-actions"><a class="is-primary" href="course.html" data-i18n="diploma.goPath">Ir al camino</a></p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="index.html" aria-label="PyBot English, volver arriba" data-i18n-aria-label="a11y.backTop">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <span class="footer-status" data-i18n="footer.status">Primer prototipo</span>
+      <p class="footer-story" data-i18n="footer.story">Nació de una idea de María Ángel: ella aprendió inglés por su cuenta y quiere ayudar a sus amigos a aprenderlo también.</p>
+      <p class="footer-credit">
+        <span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span>
+        <span data-i18n="footer.family">De la familia de</span> <a href="https://pybot-kids.github.io/" target="_blank" rel="noopener noreferrer">PyBot</a>.
+      </p>
+    </footer>
+  </body>
+</html>

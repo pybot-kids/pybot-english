@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      id="meta-description"
+      name="description"
+      content="Tus stickers de PyBot English, diplomas y días de aprendizaje."
+      data-i18n-content="meta.albumDescription"
+    />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>Mi álbum — PyBot English</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <script src="extras.js" defer></script>
+  </head>
+  <body class="album-page" data-page="album">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <a class="nav-pill" href="course.html" data-i18n="nav.path">El camino</a>
+        <a class="nav-pill nav-album" href="album.html"><span aria-hidden="true">★</span> <span data-i18n="nav.album">Álbum</span></a>
+        <a class="nav-pill" href="faq.html" data-i18n="nav.faq">Preguntas</a>
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+      <main class="extras-main" id="main-content">
+      <header class="page-intro">
+        <p class="eyebrow eyebrow-magenta" data-i18n="album.eyebrow">MI ÁLBUM</p>
+        <h1 data-i18n="album.title">Stickers y diplomas</h1>
+        <p data-i18n="album.intro">Termina actividades y zonas para llenar tu álbum.</p>
+      </header>
+
+      <section class="album-streak" aria-live="polite">
+        <span class="album-streak-icon" aria-hidden="true">🔥</span>
+        <p><span data-album-streak></span><small data-album-streak-note></small></p>
+      </section>
+
+      <h2 class="album-heading"><span data-i18n="album.stickers">Stickers</span> · <span data-sticker-count></span></h2>
+      <ul class="sticker-grid" data-sticker-grid></ul>
+
+      <p class="extras-actions">
+        <a href="diploma.html?sample=1" data-i18n="album.sample">Mira cómo se ve un diploma</a>
+        <a href="course.html" data-i18n="album.goPath">Ir al camino</a>
+      </p>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="index.html" aria-label="PyBot English, volver arriba" data-i18n-aria-label="a11y.backTop">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <span class="footer-status" data-i18n="footer.status">Primer prototipo</span>
+      <p class="footer-story" data-i18n="footer.story">Nació de una idea de María Ángel: ella aprendió inglés por su cuenta y quiere ayudar a sus amigos a aprenderlo también.</p>
+      <p class="footer-credit">
+        <span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span>
+        <span data-i18n="footer.family">De la familia de</span> <a href="https://pybot-kids.github.io/" target="_blank" rel="noopener noreferrer">PyBot</a>.
+      </p>
+    </footer>
+  </body>
+</html>
