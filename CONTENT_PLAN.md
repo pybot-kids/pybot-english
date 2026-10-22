@@ -167,9 +167,9 @@ Después de la parada 2 el camino sigue por bloques de dos zonas y una parada. C
 
 | Bloque | Zona | Tema | Ejemplos |
 |---|---|---|---|
-| 1 · Presente simple | 09 **Every Day** | presente simple en 3.ª persona, *does / doesn't*, *Do you…?*, frecuencia, contraste con el presente continuo | *She plays tennis. Does he like milk? I always…* |
-| | 10 **My Things** | *have / has got*, *some / any*, comprar en la tienda | *I've got a dog. Is there any milk?* |
-| | 🏁 Parada 3 | repaso 09–10 | |
+| 1 · Presente simple | 09 **Every Day** ✅ | presente simple en 3.ª persona, *does / doesn't*, *Do you…?*, frecuencia, contraste con el presente continuo | *She plays tennis. Does he like milk? I always…* |
+| | 10 **My Things** ✅ | *have / has got*, describir personas, *some / any*, comprar en la tienda | *I've got a dog. Is there any milk?* |
+| | 🏅 Parada 3 ✅ | repaso 09–10 | |
 | 2 · Pasado simple | 11 **Tell a Story** | *was / were*, verbos regulares con *-ed*, *yesterday / last week* | *Yesterday I played…* |
 | | 12 **What Happened?** | unos 12 irregulares frecuentes, *Did you…?*, *didn't* | *I went to the park. Did you see it?* |
 | | 🏁 Parada 4 | repaso 11–12 | |

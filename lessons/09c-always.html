@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Di qué tan seguido haces algo: siempre, casi siempre, a veces o nunca." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>Always, sometimes, never — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="always">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "always",
+  "mood": "counting",
+  "title": {
+    "es": "Always, sometimes, never",
+    "en": "Always, sometimes, never"
+  },
+  "intro": {
+    "es": "Di qué tan seguido haces algo: siempre, casi siempre, a veces o nunca.",
+    "en": "Say how often you do something: always, usually, sometimes or never."
+  },
+  "pybot": {
+    "es": "I always say hello. I never say no to a cookie! 🍪",
+    "en": "I always say hello. I never say no to a cookie! 🍪"
+  },
+  "look": [
+    {
+      "icon": "🟢",
+      "word": "always",
+      "meaning": {
+        "es": "siempre",
+        "en": "siempre"
+      }
+    },
+    {
+      "icon": "🔵",
+      "word": "usually",
+      "meaning": {
+        "es": "casi siempre",
+        "en": "casi siempre"
+      }
+    },
+    {
+      "icon": "🟡",
+      "word": "sometimes",
+      "meaning": {
+        "es": "a veces",
+        "en": "a veces"
+      }
+    },
+    {
+      "icon": "🔴",
+      "word": "never",
+      "meaning": {
+        "es": "nunca",
+        "en": "nunca"
+      }
+    },
+    {
+      "icon": "📅",
+      "word": "every day",
+      "meaning": {
+        "es": "todos los días",
+        "en": "todos los días"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "I always brush my teeth.",
+        "meaning": {
+          "es": "Siempre me lavo los dientes.",
+          "en": "Siempre me lavo los dientes."
+        }
+      },
+      {
+        "en": "She sometimes plays the piano.",
+        "meaning": {
+          "es": "Ella a veces toca el piano.",
+          "en": "Ella a veces toca el piano."
+        }
+      },
+      {
+        "en": "I never eat breakfast in bed.",
+        "meaning": {
+          "es": "Nunca desayuno en la cama.",
+          "en": "Nunca desayuno en la cama."
+        }
+      }
+    ],
+    "rule": {
+      "es": "Always, usually, sometimes y never van antes de la acción: I always play. Every day va al final: I play every day.",
+      "en": "Always, usually, sometimes and never go before the action: I always play. Every day goes at the end: I play every day."
+    }
+  },
+  "activities": [
+    {
+      "id": "always-never",
+      "type": "choice",
+      "prompt": {
+        "es": "🔴 ¿Qué significa “never”?",
+        "en": "🔴 What does “never” mean?"
+      },
+      "options": [
+        {
+          "es": "nunca",
+          "en": "not at all"
+        },
+        {
+          "es": "siempre",
+          "en": "all the time"
+        },
+        {
+          "es": "a veces",
+          "en": "some of the time"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es el rojo: cero veces.",
+        "en": "It's the red one: zero times."
+      },
+      "why": {
+        "es": "“Never” es nunca.",
+        "en": "“Never.”"
+      }
+    },
+    {
+      "id": "always-sometimes",
+      "type": "choice",
+      "prompt": {
+        "es": "Vas al parque unas veces sí y otras no. ¿Qué dices?",
+        "en": "You go to the park some days but not others. What do you say?"
+      },
+      "options": [
+        "I sometimes go to the park.",
+        "I always go to the park.",
+        "I never go to the park."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Unas veces sí y otras no.",
+        "en": "Some days yes, some no."
+      },
+      "why": {
+        "es": "“Sometimes”: a veces.",
+        "en": "“Sometimes.”"
+      }
+    },
+    {
+      "id": "always-gap",
+      "type": "choice",
+      "prompt": {
+        "es": "Completa: “I ___ brush my teeth.” (todos los días, sin falta)",
+        "en": "Fill in: “I ___ brush my teeth.” (every single day)"
+      },
+      "options": [
+        "always",
+        "never",
+        "sometimes"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Todos los días sin falta.",
+        "en": "Every single day."
+      },
+      "why": {
+        "es": "“I always brush my teeth.”",
+        "en": "“I always brush my teeth.”"
+      },
+      "show": "I ___ brush my teeth."
+    },
+    {
+      "id": "always-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué tan seguido?",
+        "en": "Listen. How often?"
+      },
+      "options": [
+        {
+          "es": "🔵 Casi siempre",
+          "en": "🔵 Usually"
+        },
+        {
+          "es": "🔴 Nunca",
+          "en": "🔴 Never"
+        },
+        {
+          "es": "🟢 Siempre",
+          "en": "🟢 Always"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Escuchaste “usually”.",
+        "en": "You heard “usually”."
+      },
+      "why": {
+        "es": "“I usually walk to school”: casi siempre camino al colegio.",
+        "en": "“I usually walk to school.”"
+      },
+      "listen": "I usually walk to school."
+    },
+    {
+      "id": "always-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma: “Ella siempre lee en la noche.”",
+        "en": "Build: “She always reads at night.”"
+      },
+      "tiles": [
+        "She",
+        "always",
+        "reads",
+        "at night."
+      ],
+      "hint": {
+        "es": "Always va antes de la acción.",
+        "en": "Always goes before the action."
+      },
+      "why": {
+        "es": "“She always reads at night.”",
+        "en": "“She always reads at night.”"
+      }
+    },
+    {
+      "id": "always-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? “Every day” va al final: I play every day.",
+        "en": "True or false? “Every day” goes at the end: I play every day."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Piensa en “I play every day”.",
+        "en": "Think of “I play every day”."
+      },
+      "why": {
+        "es": "Verdadero.",
+        "en": "True."
+      }
+    },
+    {
+      "id": "always-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot escribió “I play always soccer”. ¿Cómo se escribe bien?",
+        "en": "🤖 PyBot wrote “I play always soccer”. What's right?"
+      },
+      "options": [
+        "I always play soccer.",
+        "I play always soccer.",
+        "Always I soccer play."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Always va antes de play.",
+        "en": "Always goes before play."
+      },
+      "why": {
+        "es": "¡Arreglado! I always play soccer.",
+        "en": "Fixed! I always play soccer."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "always",
+      "meaning": {
+        "es": "siempre",
+        "en": "siempre"
+      }
+    },
+    {
+      "en": "usually",
+      "meaning": {
+        "es": "casi siempre",
+        "en": "casi siempre"
+      }
+    },
+    {
+      "en": "sometimes",
+      "meaning": {
+        "es": "a veces",
+        "en": "a veces"
+      }
+    },
+    {
+      "en": "never",
+      "meaning": {
+        "es": "nunca",
+        "en": "nunca"
+      }
+    },
+    {
+      "en": "every day",
+      "meaning": {
+        "es": "todos los días",
+        "en": "todos los días"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Semáforo de costumbres",
+      "en": "Habit traffic light"
+    },
+    "text": {
+      "es": "Dibuja un semáforo y di algo para cada color: “I always… I usually… I sometimes… I never…”.",
+      "en": "Draw a traffic light and say one thing for each color: “I always… I usually… I sometimes… I never…”."
+    },
+    "adult": {
+      "es": "cuente usted también las suyas; las respuestas chistosas ayudan a recordar.",
+      "en": "share yours too; funny answers help it stick."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

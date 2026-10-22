@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Describe a una persona: su pelo, sus ojos y cómo es." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>She&#x27;s got long hair. ¿Cómo es? — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="describePeople">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "describePeople",
+  "mood": "curious",
+  "title": {
+    "es": "She's got long hair. ¿Cómo es?",
+    "en": "She's got long hair."
+  },
+  "intro": {
+    "es": "Describe a una persona: su pelo, sus ojos y cómo es.",
+    "en": "Describe a person: hair, eyes and what they are like."
+  },
+  "pybot": {
+    "es": "I've got square eyes and no hair. ¡Muy moderno! 😎",
+    "en": "I've got square eyes and no hair. Very stylish! 😎"
+  },
+  "look": [
+    {
+      "icon": "💇",
+      "word": "long hair",
+      "meaning": {
+        "es": "pelo largo",
+        "en": "pelo largo"
+      }
+    },
+    {
+      "icon": "💈",
+      "word": "short hair",
+      "meaning": {
+        "es": "pelo corto",
+        "en": "pelo corto"
+      }
+    },
+    {
+      "icon": "👀",
+      "word": "blue eyes",
+      "meaning": {
+        "es": "ojos azules",
+        "en": "ojos azules"
+      }
+    },
+    {
+      "icon": "🧑‍🦱",
+      "word": "curly hair",
+      "meaning": {
+        "es": "pelo crespo",
+        "en": "pelo crespo"
+      }
+    },
+    {
+      "icon": "🦒",
+      "word": "tall",
+      "meaning": {
+        "es": "alto, alta",
+        "en": "alto, alta"
+      }
+    },
+    {
+      "icon": "🐭",
+      "word": "short",
+      "meaning": {
+        "es": "bajo, baja",
+        "en": "bajo, baja"
+      }
+    },
+    {
+      "icon": "😊",
+      "word": "kind",
+      "meaning": {
+        "es": "amable",
+        "en": "amable"
+      }
+    },
+    {
+      "icon": "🤸",
+      "word": "funny",
+      "meaning": {
+        "es": "chistoso, chistosa",
+        "en": "chistoso, chistosa"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "She's got long brown hair.",
+        "meaning": {
+          "es": "Ella tiene el pelo largo y café.",
+          "en": "Ella tiene el pelo largo y café."
+        }
+      },
+      {
+        "en": "He's tall and funny.",
+        "meaning": {
+          "es": "Él es alto y chistoso.",
+          "en": "Él es alto y chistoso."
+        }
+      },
+      {
+        "en": "My grandma has got blue eyes.",
+        "meaning": {
+          "es": "Mi abuela tiene ojos azules.",
+          "en": "Mi abuela tiene ojos azules."
+        }
+      }
+    ],
+    "rule": {
+      "es": "Pelo y ojos van con have got: She's got brown eyes. Cómo es la persona va con is: He's tall. El tamaño va antes del color: long brown hair.",
+      "en": "Hair and eyes go with have got: She's got brown eyes. What someone is like goes with is: He's tall. Size goes before color: long brown hair."
+    }
+  },
+  "activities": [
+    {
+      "id": "describePeople-hair",
+      "type": "choice",
+      "prompt": {
+        "es": "💇 ¿Cómo es su pelo?",
+        "en": "💇 What's her hair like?"
+      },
+      "options": [
+        "long hair",
+        "short hair",
+        "blue eyes"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Le llega a la espalda.",
+        "en": "It reaches her back."
+      },
+      "why": {
+        "es": "“Long hair”: pelo largo.",
+        "en": "“Long hair.”"
+      }
+    },
+    {
+      "id": "describePeople-eyes",
+      "type": "choice",
+      "prompt": {
+        "es": "Completa: “He's ___ green eyes.”",
+        "en": "Fill in: “He's ___ green eyes.”"
+      },
+      "options": [
+        "got",
+        "is",
+        "has"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "He's got = he has got.",
+        "en": "He's got = he has got."
+      },
+      "why": {
+        "es": "“He's got green eyes.”",
+        "en": "“He's got green eyes.”"
+      },
+      "show": "He's ___ green eyes."
+    },
+    {
+      "id": "describePeople-tall",
+      "type": "choice",
+      "prompt": {
+        "es": "🦒 Tu papá mide casi dos metros. ¿Cómo lo describes?",
+        "en": "🦒 Your dad is almost two meters tall. How do you describe him?"
+      },
+      "options": [
+        "He's tall.",
+        "He's got tall.",
+        "He's short."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Cómo es la persona: is.",
+        "en": "What he is like: is."
+      },
+      "why": {
+        "es": "“He's tall.”",
+        "en": "“He's tall.”"
+      }
+    },
+    {
+      "id": "describePeople-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Quién es?",
+        "en": "Listen. Who is it?"
+      },
+      "options": [
+        {
+          "es": "👧 Pelo corto y crespo",
+          "en": "👧 Short curly hair"
+        },
+        {
+          "es": "👩 Pelo largo y liso",
+          "en": "👩 Long straight hair"
+        },
+        {
+          "es": "👴 Sin pelo",
+          "en": "👴 No hair"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Escuchaste “short” y “curly”.",
+        "en": "You heard “short” and “curly”."
+      },
+      "why": {
+        "es": "“She's got short curly hair.”",
+        "en": "“She's got short curly hair.”"
+      },
+      "listen": "She's got short curly hair."
+    },
+    {
+      "id": "describePeople-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma: “Ella tiene el pelo largo y café.”",
+        "en": "Build: “She's got long brown hair.”"
+      },
+      "tiles": [
+        "She's",
+        "got",
+        "long",
+        "brown",
+        "hair."
+      ],
+      "hint": {
+        "es": "El tamaño va antes del color.",
+        "en": "Size before color."
+      },
+      "why": {
+        "es": "“She's got long brown hair.”",
+        "en": "“She's got long brown hair.”"
+      }
+    },
+    {
+      "id": "describePeople-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? “Kind” significa amable.",
+        "en": "True or false? “Kind” means nice to others."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es una palabra bonita para describir.",
+        "en": "It's a nice word to describe someone."
+      },
+      "why": {
+        "es": "Verdadero: kind es amable.",
+        "en": "True."
+      }
+    },
+    {
+      "id": "describePeople-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot escribió “She's got hair long”. ¿Cómo se escribe bien?",
+        "en": "🤖 PyBot wrote “She's got hair long”. What's right?"
+      },
+      "options": [
+        "She's got long hair.",
+        "She's got hair long.",
+        "She's long hair."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Como los colores: long va antes de hair.",
+        "en": "Like colors: long goes before hair."
+      },
+      "why": {
+        "es": "¡Arreglado! She's got long hair.",
+        "en": "Fixed! She's got long hair."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "long hair",
+      "meaning": {
+        "es": "pelo largo",
+        "en": "pelo largo"
+      }
+    },
+    {
+      "en": "short hair",
+      "meaning": {
+        "es": "pelo corto",
+        "en": "pelo corto"
+      }
+    },
+    {
+      "en": "blue eyes",
+      "meaning": {
+        "es": "ojos azules",
+        "en": "ojos azules"
+      }
+    },
+    {
+      "en": "curly hair",
+      "meaning": {
+        "es": "pelo crespo",
+        "en": "pelo crespo"
+      }
+    },
+    {
+      "en": "tall",
+      "meaning": {
+        "es": "alto, alta",
+        "en": "alto, alta"
+      }
+    },
+    {
+      "en": "short",
+      "meaning": {
+        "es": "bajo, baja",
+        "en": "bajo, baja"
+      }
+    },
+    {
+      "en": "kind",
+      "meaning": {
+        "es": "amable",
+        "en": "amable"
+      }
+    },
+    {
+      "en": "funny",
+      "meaning": {
+        "es": "chistoso, chistosa",
+        "en": "chistoso, chistosa"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "¿Quién es?",
+      "en": "Who is it?"
+    },
+    "text": {
+      "es": "Describe a alguien de la familia sin decir su nombre: “He's tall. He's got short black hair.”. Las demás personas adivinan.",
+      "en": "Describe someone in the family without saying the name: “He's tall. He's got short black hair.”. The others guess."
+    },
+    "adult": {
+      "es": "usen solo palabras amables al describir a alguien.",
+      "en": "use only kind words when describing someone."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

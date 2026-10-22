@@ -210,6 +210,15 @@ Registered activity IDs (written by `tools/build-lessons.py`; each lesson's ids 
 - `canIPlay` (Can I play?): `canIPlay-order`, `canIPlay-water`, `canIPlay-yes`, `canIPlay-listen`, `canIPlay-true`, `canIPlay-fix`
 - `letsPlay` (Let's play!): `letsPlay-dance`, `letsPlay-answer`, `letsPlay-listen`, `letsPlay-order`, `letsPlay-true`, `letsPlay-fix`
 - `checkpoint2` (Show what you know 2: pit stop): `checkpoint2-doing`, `checkpoint2-swim`, `checkpoint2-she`, `checkpoint2-are-you`, `checkpoint2-listen`, `checkpoint2-sport`, `checkpoint2-hobby`, `checkpoint2-can`, `checkpoint2-lets`, `checkpoint2-recycle-color`, `checkpoint2-recycle-where`, `checkpoint2-story`, `checkpoint2-invite`
+- `shePlays` (She plays): `shePlays-gap`, `shePlays-i`, `shePlays-goes`, `shePlays-listen`, `shePlays-order`, `shePlays-true`, `shePlays-fix`
+- `doYou` (Do you…? Does she…?): `doYou-do`, `doYou-does`, `doYou-answer`, `doYou-listen`, `doYou-order`, `doYou-true`, `doYou-fix`
+- `always` (Always, sometimes, never): `always-never`, `always-sometimes`, `always-gap`, `always-listen`, `always-order`, `always-true`, `always-fix`
+- `everyDayOrNow` (Every day or right now?): `everyDayOrNow-now`, `everyDayOrNow-habit`, `everyDayOrNow-which`, `everyDayOrNow-listen`, `everyDayOrNow-order`, `everyDayOrNow-true`, `everyDayOrNow-fix`
+- `haveGot` (I've got…): `haveGot-dog`, `haveGot-she`, `haveGot-answer`, `haveGot-listen`, `haveGot-order`, `haveGot-true`, `haveGot-fix`
+- `describePeople` (She's got long hair.): `describePeople-hair`, `describePeople-eyes`, `describePeople-tall`, `describePeople-listen`, `describePeople-order`, `describePeople-true`, `describePeople-fix`
+- `someAny` (Some or any?): `someAny-some`, `someAny-question`, `someAny-no`, `someAny-listen`, `someAny-order`, `someAny-true`, `someAny-fix`
+- `atTheShop` (At the shop): `atTheShop-ask`, `atTheShop-price`, `atTheShop-listen`, `atTheShop-here`, `atTheShop-order`, `atTheShop-true`, `atTheShop-fix`
+- `checkpoint3` (Show what you know 3: pit stop): `checkpoint3-plays`, `checkpoint3-does`, `checkpoint3-doesnt`, `checkpoint3-never`, `checkpoint3-now`, `checkpoint3-listen`, `checkpoint3-have`, `checkpoint3-any`, `checkpoint3-price`, `checkpoint3-recycle-weather`, `checkpoint3-recycle-time`, `checkpoint3-routine`, `checkpoint3-shop`
 <!-- activity-registry:end -->
 
 Storage rules (same as PyBot): only a learner-chosen name or nickname; never store typed answers, audio, or other personal data; a missing key means its default; storage failure never blocks a page; every page that stores progress has a labeled reset; backup includes only registered keys and is fully validated on import.
@@ -252,7 +261,7 @@ A collapsed **For adults: erase all progress** section on the home page offers t
 The full content plan (what each page teaches, vocabulary, activity types, phases, and the "done" checklist) lives in [`CONTENT_PLAN.md`](CONTENT_PLAN.md).
 
 
-A short foundation, **eight broad zones**, and two pit stops. English is wide, so the path grows **inside** zones, like PyBot's Python zones: each zone is a big theme with its own route of pages on the map, and the learner moves through that route before the next zone.
+A short foundation, **ten broad zones**, and three pit stops. English is wide, so the path grows **inside** zones, like PyBot's Python zones: each zone is a big theme with its own route of pages on the map, and the learner moves through that route before the next zone.
 
 **Growth rule:** a new topic becomes a new page in the route of the zone it belongs to. A new zone is added only for a theme no existing zone covers (for example, a future "Tell a story" zone for past tense). This keeps the map short even when the course grows.
 
@@ -271,6 +280,9 @@ Every page of the path is published. A future page starts with `soon: true` in `
 | 07 **Right Now** | What are you doing? · play → playing · He, she, they · Are you…? | Present continuous: say what is happening now |
 | 08 **Fun & Free Time** | Sports · Hobbies · Can I play? · Let's play! | Sports and hobbies, like + -ing, asking for permission, invitations |
 | 🎯 **Show what you know 2** (pit stop 2) | Review | Review of zones 07–08 with a little of the earlier path, then a self-check |
+| 09 **Every Day** | She plays · Do you…? Does she…? · Always, sometimes, never · Every day or now? | Present simple: he/she + -s, do/does questions and negatives, how often, habits vs. right now |
+| 10 **My Things** | I've got… · She's got long hair. · Some or any? · At the shop | have got, describing people, some/any, and shopping |
+| 🏅 **Show what you know 3** (pit stop 3) | Review | Review of zones 09–10 with a little of the earlier path, then a self-check |
 
 ## Lesson pages
 
@@ -338,7 +350,7 @@ python -m http.server 8000
 - [x] Home page, learning path index, album, diploma, and FAQ (EN/ES)
 - [x] Progress, stickers, streaks, diplomas, backup, and reset on the PyBot scheme
 - [x] Long-term content plan ([`CONTENT_PLAN.md`](CONTENT_PLAN.md))
-- [x] Lesson engine and the whole path: zones 00–08 and two pit stops (48 pages, 316 activities)
+- [x] Lesson engine and the whole path: zones 00–10 and three pit stops (57 pages, 385 activities)
 - [ ] Word list (“My words”) and the guide for families and teachers
 - [ ] Review with María Ángel and her friends
 - [ ] GitHub Pages publication

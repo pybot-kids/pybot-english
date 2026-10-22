@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pregunta y di que no con do y does." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>Do you…? Does she…? — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="doYou">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "doYou",
+  "mood": "curious",
+  "title": {
+    "es": "Do you…? Does she…?",
+    "en": "Do you…? Does she…?"
+  },
+  "intro": {
+    "es": "Pregunta y di que no con do y does.",
+    "en": "Ask questions and say no with do and does."
+  },
+  "pybot": {
+    "es": "Do you like robots? Yes, you do! 😄",
+    "en": "Do you like robots? Yes, you do! 😄"
+  },
+  "look": [
+    {
+      "icon": "❓",
+      "word": "Do you…?",
+      "meaning": {
+        "es": "¿tú…?",
+        "en": "¿tú…?"
+      }
+    },
+    {
+      "icon": "✅",
+      "word": "Yes, I do.",
+      "meaning": {
+        "es": "sí",
+        "en": "sí"
+      }
+    },
+    {
+      "icon": "❌",
+      "word": "No, I don't.",
+      "meaning": {
+        "es": "no",
+        "en": "no"
+      }
+    },
+    {
+      "icon": "👧",
+      "word": "Does she…?",
+      "meaning": {
+        "es": "¿ella…?",
+        "en": "¿ella…?"
+      }
+    },
+    {
+      "icon": "✅",
+      "word": "Yes, she does.",
+      "meaning": {
+        "es": "sí (ella)",
+        "en": "sí (ella)"
+      }
+    },
+    {
+      "icon": "🚫",
+      "word": "She doesn't…",
+      "meaning": {
+        "es": "ella no…",
+        "en": "ella no…"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "Do you like milk? — Yes, I do.",
+        "meaning": {
+          "es": "¿Te gusta la leche? — Sí.",
+          "en": "¿Te gusta la leche? — Sí."
+        }
+      },
+      {
+        "en": "Does he play tennis? — No, he doesn't.",
+        "meaning": {
+          "es": "¿Él juega tenis? — No.",
+          "en": "¿Él juega tenis? — No."
+        }
+      },
+      {
+        "en": "She doesn't like carrots.",
+        "meaning": {
+          "es": "A ella no le gustan las zanahorias.",
+          "en": "A ella no le gustan las zanahorias."
+        }
+      }
+    ],
+    "rule": {
+      "es": "Para preguntar: Do (con I, you, they) o Does (con he, she). Con does la acción pierde la “-s”: Does she play? She doesn't play.",
+      "en": "To ask: Do (with I, you, they) or Does (with he, she). With does the action loses its “-s”: Does she play? She doesn't play."
+    }
+  },
+  "activities": [
+    {
+      "id": "doYou-do",
+      "type": "choice",
+      "prompt": {
+        "es": "Completa: “___ you like pizza?”",
+        "en": "Fill in: “___ you like pizza?”"
+      },
+      "options": [
+        "Do",
+        "Does",
+        "Are"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Con “you” se usa do.",
+        "en": "Use do with “you”."
+      },
+      "why": {
+        "es": "“Do you like pizza?”",
+        "en": "“Do you like pizza?”"
+      },
+      "show": "___ you like pizza?"
+    },
+    {
+      "id": "doYou-does",
+      "type": "choice",
+      "prompt": {
+        "es": "👦 Completa: “___ he play tennis?”",
+        "en": "👦 Fill in: “___ he play tennis?”"
+      },
+      "options": [
+        "Does",
+        "Do",
+        "Is"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Con “he” se usa does.",
+        "en": "Use does with “he”."
+      },
+      "why": {
+        "es": "“Does he play tennis?”",
+        "en": "“Does he play tennis?”"
+      },
+      "show": "___ he play tennis?"
+    },
+    {
+      "id": "doYou-answer",
+      "type": "choice",
+      "prompt": {
+        "es": "Te preguntan “Do you like ice cream?” y te encanta. ¿Qué respondes?",
+        "en": "“Do you like ice cream?” You love it. What do you answer?"
+      },
+      "options": [
+        "Yes, I do.",
+        "Yes, I am.",
+        "Yes, I like."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Responde con do.",
+        "en": "Answer with do."
+      },
+      "why": {
+        "es": "“Yes, I do.”",
+        "en": "“Yes, I do.”"
+      }
+    },
+    {
+      "id": "doYou-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué significa?",
+        "en": "Listen. What does it mean?"
+      },
+      "options": [
+        {
+          "es": "A ella no le gusta la leche.",
+          "en": "She doesn't like milk."
+        },
+        {
+          "es": "A ella le gusta la leche.",
+          "en": "She likes milk."
+        },
+        {
+          "es": "¿Le gusta la leche?",
+          "en": "Does she like milk?"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Escuchaste “doesn't”.",
+        "en": "You heard “doesn't”."
+      },
+      "why": {
+        "es": "“She doesn't like milk.”",
+        "en": "“She doesn't like milk.”"
+      },
+      "listen": "She doesn't like milk."
+    },
+    {
+      "id": "doYou-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma: “¿Ella juega fútbol?”",
+        "en": "Build: “Does she play soccer?”"
+      },
+      "tiles": [
+        "Does",
+        "she",
+        "play",
+        "soccer?"
+      ],
+      "hint": {
+        "es": "Empieza con Does.",
+        "en": "Start with Does."
+      },
+      "why": {
+        "es": "“Does she play soccer?”",
+        "en": "“Does she play soccer?”"
+      }
+    },
+    {
+      "id": "doYou-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? Con “does” la acción no lleva “-s”: Does she play?",
+        "en": "True or false? After “does” the action has no “-s”: Does she play?"
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "La “-s” ya está en does.",
+        "en": "The “-s” is already in does."
+      },
+      "why": {
+        "es": "Verdadero: Does she play?",
+        "en": "True: Does she play?"
+      }
+    },
+    {
+      "id": "doYou-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot escribió “He don't like carrots”. ¿Cómo se escribe bien?",
+        "en": "🤖 PyBot wrote “He don't like carrots”. What's right?"
+      },
+      "options": [
+        "He doesn't like carrots.",
+        "He don't like carrots.",
+        "He doesn't likes carrots."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Con he: doesn't + acción sin “-s”.",
+        "en": "With he: doesn't + action without “-s”."
+      },
+      "why": {
+        "es": "¡Arreglado! He doesn't like carrots.",
+        "en": "Fixed! He doesn't like carrots."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "Do you…?",
+      "meaning": {
+        "es": "¿tú…?",
+        "en": "¿tú…?"
+      }
+    },
+    {
+      "en": "Yes, I do.",
+      "meaning": {
+        "es": "sí",
+        "en": "sí"
+      }
+    },
+    {
+      "en": "No, I don't.",
+      "meaning": {
+        "es": "no",
+        "en": "no"
+      }
+    },
+    {
+      "en": "Does she…?",
+      "meaning": {
+        "es": "¿ella…?",
+        "en": "¿ella…?"
+      }
+    },
+    {
+      "en": "Yes, she does.",
+      "meaning": {
+        "es": "sí (ella)",
+        "en": "sí (ella)"
+      }
+    },
+    {
+      "en": "She doesn't…",
+      "meaning": {
+        "es": "ella no…",
+        "en": "ella no…"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "La encuesta",
+      "en": "The survey"
+    },
+    "text": {
+      "es": "Haz una encuesta en tu casa: “Do you like broccoli?”. Luego cuenta los resultados: “Dad likes it. Mom doesn't like it.”.",
+      "en": "Run a survey at home: “Do you like broccoli?”. Then share the results: “Dad likes it. Mom doesn't like it.”."
+    },
+    "adult": {
+      "es": "respondan con “Yes, I do” o “No, I don't”.",
+      "en": "answer with “Yes, I do” or “No, I don't”."
+    }
+  }
+}
+    </script>
+  </body>
+</html>
