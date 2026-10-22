@@ -1,7 +1,7 @@
 // PyBot English — plain JavaScript, no build step.
 // The English being learned is never translated away: only the help around it changes.
 // Storage follows the same scheme as PyBot (pybot-kids.github.io) with its own
-// "pybotenglish." prefix, so both sites can share one domain without mixing progress.
+// "pybotenglish." prefix, so it never mixes with another PyBot site's progress.
 
 const STORAGE_PREFIX = "pybotenglish.";
 const LANGUAGE_KEY = "pybotenglish.language";

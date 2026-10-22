@@ -103,7 +103,7 @@ Construye en `/home/user/<carpeta-del-proyecto>`, en archivos separados como en 
 
 ## 7. Entorno y entrega
 
-- **No puedes crear repositorios** desde la sesión (la API solo permite repos ya conectados). Construye local, haz `git init -b main` y commits pequeños con atribución. Al final pídeme crear un **repositorio vacío** (sugiere el nombre) y conéctalo con `add_repo` (acceso `push`) para subirlo.
+- **No puedes crear repositorios** desde la sesión (la API solo permite repos ya conectados). Construye local, haz `git init -b main` y commits pequeños con atribución. Al final pídeme crear, como en PyBot English, una **organización de GitHub `pybot-blocks`** con un **repositorio público y vacío `pybot-blocks.github.io`**, para que el sitio quede en `https://pybot-blocks.github.io/` (sitio de organización en GitHub Pages, publicado desde `main` / raíz). Luego conéctalo con `add_repo` (acceso `push`) y súbelo; si el acceso falla, la app de Claude en GitHub debe tener permiso sobre esa organización.
 - **Vista previa:** publícala como Artifact desde una copia en el scratchpad (título de 2 a 4 palabras, sin guiones explicativos, y el resto de archivos con `files`). Avísame que en la vista previa no funcionan imprimir ni el micrófono, y que el PyBot pequeño solo aparece en ventanas anchas.
 - **Pruebas:** Playwright está instalado globalmente (`require(\`${npm root -g}/playwright\`)`). Prueba todas las páginas a 1280 px y a 390 px: sin errores de consola, sin desplazamiento horizontal y con la cabecera en una sola fila. Mira una captura por cambio importante, no más.
 - Desde el contenedor, el proxy bloquea descargas de Hugging Face y jsDelivr con curl; `npm view` y `npm pack` sí funcionan para revisar licencias de paquetes.

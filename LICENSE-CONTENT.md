@@ -10,6 +10,6 @@ You may share and adapt the content for any purpose, including commercially, as 
 
 Use a line like this wherever you reuse or adapt the material:
 
-> Based on [PyBot English](https://pybot-kids.github.io/pybot-english/) by Sorey Garcia, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Changes were made.
+> Based on [PyBot English](https://pybot-english.github.io/) by Sorey Garcia, licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Changes were made.
 
 If you copy the source code, keep the copyright and permission notice from [LICENSE](LICENSE) in your copy.

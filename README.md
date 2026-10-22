@@ -118,7 +118,7 @@ Same strategy as PyBot, so the menu can grow without breaking on phones: `arrang
 
 ### Local-first progress
 
-Progress uses **the same scheme as PyBot** with its own `pybotenglish.` prefix, so both sites can live on `pybot-kids.github.io` without mixing their progress.
+Progress uses **the same scheme as PyBot** with its own `pybotenglish.` prefix, so it can never mix with another PyBot site's progress, even if they ever share a domain.
 
 #### Local storage registry
 
@@ -226,6 +226,10 @@ tools/            progress-version.mjs
 THIRD_PARTY_NOTICES.md  Credits and terms for every outside component
 progress-versions.json
 ```
+
+## Publishing
+
+The site lives at **https://pybot-english.github.io/**, as a GitHub Pages organization site: the GitHub organization `pybot-english` holds the repository `pybot-english.github.io`, published from the `main` branch root (Settings → Pages → Deploy from a branch → `main` / `(root)`). This mirrors PyBot, whose site is the `pybot-kids.github.io` repository of the `pybot-kids` organization.
 
 ## Running it
 
