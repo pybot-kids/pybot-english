@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Las palabras que dicen que algo ya pasó." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>Yesterday, last week: ¿cuándo pasó? — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="yesterday">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "yesterday",
+  "mood": "counting",
+  "title": {
+    "es": "Yesterday, last week: ¿cuándo pasó?",
+    "en": "Yesterday, last week"
+  },
+  "intro": {
+    "es": "Las palabras que dicen que algo ya pasó.",
+    "en": "Words that say something already happened."
+  },
+  "pybot": {
+    "es": "Last night I watched the stars. ✨ ¡Conté 1.000!",
+    "en": "Last night I watched the stars. ✨ I counted 1,000!"
+  },
+  "look": [
+    {
+      "icon": "⏪",
+      "word": "yesterday",
+      "meaning": {
+        "es": "ayer",
+        "en": "ayer"
+      }
+    },
+    {
+      "icon": "🌙",
+      "word": "last night",
+      "meaning": {
+        "es": "anoche",
+        "en": "anoche"
+      }
+    },
+    {
+      "icon": "📅",
+      "word": "last week",
+      "meaning": {
+        "es": "la semana pasada",
+        "en": "la semana pasada"
+      }
+    },
+    {
+      "icon": "🎂",
+      "word": "last year",
+      "meaning": {
+        "es": "el año pasado",
+        "en": "el año pasado"
+      }
+    },
+    {
+      "icon": "⏳",
+      "word": "two days ago",
+      "meaning": {
+        "es": "hace dos días",
+        "en": "hace dos días"
+      }
+    },
+    {
+      "icon": "🌅",
+      "word": "this morning",
+      "meaning": {
+        "es": "esta mañana",
+        "en": "esta mañana"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "Yesterday I played with my cousin.",
+        "meaning": {
+          "es": "Ayer jugué con mi primo.",
+          "en": "Ayer jugué con mi primo."
+        }
+      },
+      {
+        "en": "We visited grandma last week.",
+        "meaning": {
+          "es": "Visitamos a la abuela la semana pasada.",
+          "en": "Visitamos a la abuela la semana pasada."
+        }
+      },
+      {
+        "en": "I was sick two days ago.",
+        "meaning": {
+          "es": "Estuve enferma hace dos días.",
+          "en": "Estuve enferma hace dos días."
+        }
+      }
+    ],
+    "rule": {
+      "es": "Last = pasado o pasada (last week, last night). Ago va DESPUÉS del tiempo: two days ago = hace dos días.",
+      "en": "Last = the one before (last week, last night). Ago goes AFTER the time: two days ago."
+    }
+  },
+  "activities": [
+    {
+      "id": "yesterday-meaning",
+      "type": "choice",
+      "prompt": {
+        "es": "⏪ ¿Qué significa “yesterday”?",
+        "en": "⏪ What does “yesterday” mean?"
+      },
+      "options": [
+        {
+          "es": "ayer",
+          "en": "the day before today"
+        },
+        {
+          "es": "mañana",
+          "en": "the day after today"
+        },
+        {
+          "es": "hoy",
+          "en": "this day"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es el día antes de hoy.",
+        "en": "The day before today."
+      },
+      "why": {
+        "es": "“Yesterday” es ayer.",
+        "en": "“Yesterday.”"
+      }
+    },
+    {
+      "id": "yesterday-last",
+      "type": "choice",
+      "prompt": {
+        "es": "Completa: “I visited my aunt ___ week.”",
+        "en": "Fill in: “I visited my aunt ___ week.”"
+      },
+      "options": [
+        "last",
+        "ago",
+        "yesterday"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "La semana pasada.",
+        "en": "The week before this one."
+      },
+      "why": {
+        "es": "“Last week.”",
+        "en": "“Last week.”"
+      },
+      "show": "I visited my aunt ___ week."
+    },
+    {
+      "id": "yesterday-ago",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Cómo se dice “hace tres días”?",
+        "en": "How do you say three days before today?"
+      },
+      "options": [
+        "three days ago",
+        "ago three days",
+        "last three days"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Ago va al final.",
+        "en": "Ago goes at the end."
+      },
+      "why": {
+        "es": "“Three days ago.”",
+        "en": "“Three days ago.”"
+      }
+    },
+    {
+      "id": "yesterday-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Cuándo pasó?",
+        "en": "Listen. When did it happen?"
+      },
+      "options": [
+        {
+          "es": "🌙 Anoche",
+          "en": "🌙 Last night"
+        },
+        {
+          "es": "⏪ Ayer",
+          "en": "⏪ Yesterday"
+        },
+        {
+          "es": "🎂 El año pasado",
+          "en": "🎂 Last year"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Escuchaste “night”.",
+        "en": "You heard “night”."
+      },
+      "why": {
+        "es": "“Last night”: anoche.",
+        "en": "“Last night.”"
+      },
+      "listen": "I watched TV last night."
+    },
+    {
+      "id": "yesterday-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma: “Ayer cociné pasta.”",
+        "en": "Build: “Yesterday I cooked pasta.”"
+      },
+      "tiles": [
+        "Yesterday",
+        "I",
+        "cooked",
+        "pasta."
+      ],
+      "hint": {
+        "es": "Empieza con cuándo.",
+        "en": "Start with when."
+      },
+      "why": {
+        "es": "“Yesterday I cooked pasta.”",
+        "en": "“Yesterday I cooked pasta.”"
+      }
+    },
+    {
+      "id": "yesterday-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? Con “yesterday” la acción va en pasado.",
+        "en": "True or false? With “yesterday” the action is in the past."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Ayer ya pasó.",
+        "en": "Yesterday is over."
+      },
+      "why": {
+        "es": "Verdadero: yesterday I played.",
+        "en": "True: yesterday I played."
+      }
+    },
+    {
+      "id": "yesterday-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot escribió “Yesterday I play soccer”. ¿Cómo se escribe bien?",
+        "en": "🤖 PyBot wrote “Yesterday I play soccer”. What's right?"
+      },
+      "options": [
+        "Yesterday I played soccer.",
+        "Yesterday I play soccer.",
+        "Yesterday I playing soccer."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Yesterday pide pasado.",
+        "en": "Yesterday needs the past."
+      },
+      "why": {
+        "es": "¡Arreglado! Yesterday I played soccer.",
+        "en": "Fixed! Yesterday I played soccer."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "yesterday",
+      "meaning": {
+        "es": "ayer",
+        "en": "ayer"
+      }
+    },
+    {
+      "en": "last night",
+      "meaning": {
+        "es": "anoche",
+        "en": "anoche"
+      }
+    },
+    {
+      "en": "last week",
+      "meaning": {
+        "es": "la semana pasada",
+        "en": "la semana pasada"
+      }
+    },
+    {
+      "en": "last year",
+      "meaning": {
+        "es": "el año pasado",
+        "en": "el año pasado"
+      }
+    },
+    {
+      "en": "two days ago",
+      "meaning": {
+        "es": "hace dos días",
+        "en": "hace dos días"
+      }
+    },
+    {
+      "en": "this morning",
+      "meaning": {
+        "es": "esta mañana",
+        "en": "esta mañana"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "El diario de ayer",
+      "en": "Yesterday's diary"
+    },
+    "text": {
+      "es": "Escribe o dibuja tres cosas que hiciste ayer y léelas: “Yesterday I played. Yesterday I cooked with mom.”.",
+      "en": "Write or draw three things you did yesterday and read them: “Yesterday I played. Yesterday I cooked with mom.”."
+    },
+    "adult": {
+      "es": "ayúdele a recordar qué hicieron juntos.",
+      "en": "help them remember what you did together."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

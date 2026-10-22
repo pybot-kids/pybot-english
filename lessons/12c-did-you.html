@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pregunta qué hicieron otras personas con did." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>Did you…? ¿Lo hiciste? — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="didYou">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "didYou",
+  "mood": "curious",
+  "title": {
+    "es": "Did you…? ¿Lo hiciste?",
+    "en": "Did you…?"
+  },
+  "intro": {
+    "es": "Pregunta qué hicieron otras personas con did.",
+    "en": "Ask what other people did with did."
+  },
+  "pybot": {
+    "es": "Did you have fun? Yes, I did! 🎉",
+    "en": "Did you have fun? Yes, I did! 🎉"
+  },
+  "look": [
+    {
+      "icon": "❓",
+      "word": "Did you…?",
+      "meaning": {
+        "es": "¿tú…? (en pasado)",
+        "en": "¿tú…? (en pasado)"
+      }
+    },
+    {
+      "icon": "✅",
+      "word": "Yes, I did.",
+      "meaning": {
+        "es": "sí",
+        "en": "sí"
+      }
+    },
+    {
+      "icon": "❌",
+      "word": "No, I didn't.",
+      "meaning": {
+        "es": "no",
+        "en": "no"
+      }
+    },
+    {
+      "icon": "👧",
+      "word": "Did she…?",
+      "meaning": {
+        "es": "¿ella…? (en pasado)",
+        "en": "¿ella…? (en pasado)"
+      }
+    },
+    {
+      "icon": "🔍",
+      "word": "What did you do?",
+      "meaning": {
+        "es": "¿qué hiciste?",
+        "en": "¿qué hiciste?"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "Did you go to the park? — Yes, I did.",
+        "meaning": {
+          "es": "¿Fuiste al parque? — Sí.",
+          "en": "¿Fuiste al parque? — Sí."
+        }
+      },
+      {
+        "en": "Did she like the movie? — No, she didn't.",
+        "meaning": {
+          "es": "¿Le gustó la película? — No.",
+          "en": "¿Le gustó la película? — No."
+        }
+      },
+      {
+        "en": "What did you do yesterday?",
+        "meaning": {
+          "es": "¿Qué hiciste ayer?",
+          "en": "¿Qué hiciste ayer?"
+        }
+      }
+    ],
+    "rule": {
+      "es": "Did sirve para todas las personas. Después de did la acción vuelve a su forma normal: Did you go? (no “Did you went?”).",
+      "en": "Did works for everyone. After did the action goes back to normal: Did you go? (not “Did you went?”)."
+    }
+  },
+  "activities": [
+    {
+      "id": "didYou-gap",
+      "type": "choice",
+      "prompt": {
+        "es": "Completa: “___ you see the cat?”",
+        "en": "Fill in: “___ you see the cat?”"
+      },
+      "options": [
+        "Did",
+        "Do",
+        "Was"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Pregunta en pasado: did.",
+        "en": "Past question: did."
+      },
+      "why": {
+        "es": "“Did you see the cat?”",
+        "en": "“Did you see the cat?”"
+      },
+      "show": "___ you see the cat?"
+    },
+    {
+      "id": "didYou-base",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Cuál pregunta está bien?",
+        "en": "Which question is right?"
+      },
+      "options": [
+        "Did you eat?",
+        "Did you ate?",
+        "Did you eated?"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Después de did, la acción normal.",
+        "en": "After did, the normal action."
+      },
+      "why": {
+        "es": "“Did you eat?”",
+        "en": "“Did you eat?”"
+      }
+    },
+    {
+      "id": "didYou-answer",
+      "type": "choice",
+      "prompt": {
+        "es": "Te preguntan “Did you play soccer?” y no jugaste. ¿Qué respondes?",
+        "en": "“Did you play soccer?” You didn't. What do you answer?"
+      },
+      "options": [
+        "No, I didn't.",
+        "No, I don't.",
+        "No, I wasn't."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Responde con did.",
+        "en": "Answer with did."
+      },
+      "why": {
+        "es": "“No, I didn't.”",
+        "en": "“No, I didn't.”"
+      }
+    },
+    {
+      "id": "didYou-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha la pregunta. ¿Qué significa?",
+        "en": "Listen to the question. What does it mean?"
+      },
+      "options": [
+        {
+          "es": "¿Qué hiciste el sábado?",
+          "en": "What did you do on Saturday?"
+        },
+        {
+          "es": "¿Qué haces los sábados?",
+          "en": "What do you do on Saturdays?"
+        },
+        {
+          "es": "¿Qué estás haciendo?",
+          "en": "What are you doing?"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Escuchaste “did”: pasado.",
+        "en": "You heard “did”: past."
+      },
+      "why": {
+        "es": "“What did you do on Saturday?”",
+        "en": "“What did you do on Saturday?”"
+      },
+      "listen": "What did you do on Saturday?"
+    },
+    {
+      "id": "didYou-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma: “¿Ella fue al colegio?”",
+        "en": "Build: “Did she go to school?”"
+      },
+      "tiles": [
+        "Did",
+        "she",
+        "go",
+        "to school?"
+      ],
+      "hint": {
+        "es": "Empieza con Did.",
+        "en": "Start with Did."
+      },
+      "why": {
+        "es": "“Did she go to school?”",
+        "en": "“Did she go to school?”"
+      }
+    },
+    {
+      "id": "didYou-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? “Did” se usa con I, you, he, she y they.",
+        "en": "True or false? “Did” works with I, you, he, she and they."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "En pasado no hay “does”.",
+        "en": "There's no “does” in the past."
+      },
+      "why": {
+        "es": "Verdadero.",
+        "en": "True."
+      }
+    },
+    {
+      "id": "didYou-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot preguntó “Did you went to the beach?”. ¿Cómo se pregunta bien?",
+        "en": "🤖 PyBot asked “Did you went to the beach?”. What's right?"
+      },
+      "options": [
+        "Did you go to the beach?",
+        "Did you went to the beach?",
+        "Do you went to the beach?"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Did ya dice que es pasado.",
+        "en": "Did already says it's past."
+      },
+      "why": {
+        "es": "¡Arreglado! Did you go to the beach?",
+        "en": "Fixed! Did you go to the beach?"
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "Did you…?",
+      "meaning": {
+        "es": "¿tú…? (en pasado)",
+        "en": "¿tú…? (en pasado)"
+      }
+    },
+    {
+      "en": "Yes, I did.",
+      "meaning": {
+        "es": "sí",
+        "en": "sí"
+      }
+    },
+    {
+      "en": "No, I didn't.",
+      "meaning": {
+        "es": "no",
+        "en": "no"
+      }
+    },
+    {
+      "en": "Did she…?",
+      "meaning": {
+        "es": "¿ella…? (en pasado)",
+        "en": "¿ella…? (en pasado)"
+      }
+    },
+    {
+      "en": "What did you do?",
+      "meaning": {
+        "es": "¿qué hiciste?",
+        "en": "¿qué hiciste?"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "El reportero",
+      "en": "The reporter"
+    },
+    "text": {
+      "es": "Sé reportera o reportero: pregunta a tu familia “What did you do today?” y “Did you have fun?” con un micrófono de juguete.",
+      "en": "Be a reporter: ask your family “What did you do today?” and “Did you have fun?” with a toy microphone."
+    },
+    "adult": {
+      "es": "respondan con frases cortas en pasado: “I went to work.”",
+      "en": "answer with short past sentences: “I went to work.”"
+    }
+  }
+}
+    </script>
+  </body>
+</html>

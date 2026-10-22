@@ -219,6 +219,15 @@ Registered activity IDs (written by `tools/build-lessons.py`; each lesson's ids 
 - `someAny` (Some or any?): `someAny-some`, `someAny-question`, `someAny-no`, `someAny-listen`, `someAny-order`, `someAny-true`, `someAny-fix`
 - `atTheShop` (At the shop): `atTheShop-ask`, `atTheShop-price`, `atTheShop-listen`, `atTheShop-here`, `atTheShop-order`, `atTheShop-true`, `atTheShop-fix`
 - `checkpoint3` (Show what you know 3: pit stop): `checkpoint3-plays`, `checkpoint3-does`, `checkpoint3-doesnt`, `checkpoint3-never`, `checkpoint3-now`, `checkpoint3-listen`, `checkpoint3-have`, `checkpoint3-any`, `checkpoint3-price`, `checkpoint3-recycle-weather`, `checkpoint3-recycle-time`, `checkpoint3-routine`, `checkpoint3-shop`
+- `wasWere` (Was, were): `wasWere-i`, `wasWere-they`, `wasWere-listen`, `wasWere-answer`, `wasWere-order`, `wasWere-true`, `wasWere-fix`
+- `addEd` (play → played): `addEd-play`, `addEd-dance`, `addEd-study`, `addEd-listen`, `addEd-order`, `addEd-true`, `addEd-fix`
+- `yesterday` (Yesterday, last week): `yesterday-meaning`, `yesterday-last`, `yesterday-ago`, `yesterday-listen`, `yesterday-order`, `yesterday-true`, `yesterday-fix`
+- `myStory` (First, then, finally): `myStory-first`, `myStory-finally`, `myStory-which`, `myStory-listen`, `myStory-order`, `myStory-true`, `myStory-fix`
+- `wentAte` (went, ate, saw): `wentAte-go`, `wentAte-eat`, `wentAte-saw`, `wentAte-listen`, `wentAte-order`, `wentAte-true`, `wentAte-fix`
+- `morePast` (made, took, ran): `morePast-make`, `morePast-buy`, `morePast-swim`, `morePast-listen`, `morePast-order`, `morePast-true`, `morePast-fix`
+- `didYou` (Did you…?): `didYou-gap`, `didYou-base`, `didYou-answer`, `didYou-listen`, `didYou-order`, `didYou-true`, `didYou-fix`
+- `didnt` (I didn't…): `didnt-gap`, `didnt-base`, `didnt-meaning`, `didnt-listen`, `didnt-order`, `didnt-true`, `didnt-fix`
+- `checkpoint4` (Show what you know 4: pit stop): `checkpoint4-was`, `checkpoint4-were`, `checkpoint4-ed`, `checkpoint4-ago`, `checkpoint4-went`, `checkpoint4-bought`, `checkpoint4-listen`, `checkpoint4-did`, `checkpoint4-didnt`, `checkpoint4-tense`, `checkpoint4-recycle-has`, `checkpoint4-story`, `checkpoint4-question`
 <!-- activity-registry:end -->
 
 Storage rules (same as PyBot): only a learner-chosen name or nickname; never store typed answers, audio, or other personal data; a missing key means its default; storage failure never blocks a page; every page that stores progress has a labeled reset; backup includes only registered keys and is fully validated on import.
@@ -261,7 +270,7 @@ A collapsed **For adults: erase all progress** section on the home page offers t
 The full content plan (what each page teaches, vocabulary, activity types, phases, and the "done" checklist) lives in [`CONTENT_PLAN.md`](CONTENT_PLAN.md).
 
 
-A short foundation, **ten broad zones**, and three pit stops. English is wide, so the path grows **inside** zones, like PyBot's Python zones: each zone is a big theme with its own route of pages on the map, and the learner moves through that route before the next zone.
+A short foundation, **twelve broad zones**, and four pit stops. English is wide, so the path grows **inside** zones, like PyBot's Python zones: each zone is a big theme with its own route of pages on the map, and the learner moves through that route before the next zone.
 
 **Growth rule:** a new topic becomes a new page in the route of the zone it belongs to. A new zone is added only for a theme no existing zone covers (for example, a future "Tell a story" zone for past tense). This keeps the map short even when the course grows.
 
@@ -283,6 +292,9 @@ Every page of the path is published. A future page starts with `soon: true` in `
 | 09 **Every Day** | She plays · Do you…? Does she…? · Always, sometimes, never · Every day or now? | Present simple: he/she + -s, do/does questions and negatives, how often, habits vs. right now |
 | 10 **My Things** | I've got… · She's got long hair. · Some or any? · At the shop | have got, describing people, some/any, and shopping |
 | 🏅 **Show what you know 3** (pit stop 3) | Review | Review of zones 09–10 with a little of the earlier path, then a self-check |
+| 11 **Tell a Story** | Was, were · play → played · Yesterday, last week · First, then, finally | Past simple: was/were, regular -ed verbs, past time words, telling a story in order |
+| 12 **What Happened?** | went, ate, saw · made, took, ran · Did you…? · I didn't… | Past simple: 12 common irregular verbs, did questions, didn't |
+| 🌟 **Show what you know 4** (pit stop 4) | Review | Review of zones 11–12 with a little of the earlier path, then a self-check |
 
 ## Lesson pages
 
@@ -351,7 +363,7 @@ python -m http.server 8000
 - [x] Home page, learning path index, album, diploma, and FAQ (EN/ES)
 - [x] Progress, stickers, streaks, diplomas, backup, and reset on the PyBot scheme
 - [x] Long-term content plan ([`CONTENT_PLAN.md`](CONTENT_PLAN.md))
-- [x] Lesson engine and the whole path: zones 00–10 and three pit stops (57 pages, 385 activities)
+- [x] Lesson engine and the whole path: zones 00–12 and four pit stops (66 pages, 454 activities)
 - [ ] Word list (“My words”) and the guide for families and teachers
 - [ ] Review with María Ángel and her friends
 - [ ] GitHub Pages publication
