@@ -202,8 +202,8 @@ Cada zona nueva lleva su sticker, su diploma y, cada 3 o 4 zonas, una parada nue
 - [ ] Ningún micrófono ni evaluación del habla
 - [ ] Créditos al día si se agregó algo externo
 
-## 9. Prueba con niños
+## 9. Prueba con niñas y niños
 
 - Sesiones cortas de 15–20 minutos, con un adulto que **observa** sin ayudar de entrada.
-- Se anota dónde dudan, qué tocan primero y qué no entienden. No se graba a los niños ni se recogen sus datos.
+- Se anota dónde dudan, qué tocan primero y qué no entienden. No se graba a nadie ni se recogen datos.
 - Cada hallazgo se convierte en un cambio pequeño: una palabra más simple, una pista mejor o una actividad menos.
