@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Compara lo que haces siempre con lo que estás haciendo ahora." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>¿Todos los días o ahora mismo? — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="everyDayOrNow">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "everyDayOrNow",
+  "mood": "thinking",
+  "title": {
+    "es": "¿Todos los días o ahora mismo?",
+    "en": "Every day or right now?"
+  },
+  "intro": {
+    "es": "Compara lo que haces siempre con lo que estás haciendo ahora.",
+    "en": "Compare what you always do with what you are doing now."
+  },
+  "pybot": {
+    "es": "Every day I clean. Right now I'm dancing! 💃",
+    "en": "Every day I clean. Right now I'm dancing! 💃"
+  },
+  "look": [
+    {
+      "icon": "📅",
+      "word": "I play every day.",
+      "meaning": {
+        "es": "juego todos los días",
+        "en": "juego todos los días"
+      }
+    },
+    {
+      "icon": "⏱️",
+      "word": "I'm playing now.",
+      "meaning": {
+        "es": "estoy jugando ahora",
+        "en": "estoy jugando ahora"
+      }
+    },
+    {
+      "icon": "📅",
+      "word": "She reads every night.",
+      "meaning": {
+        "es": "ella lee todas las noches",
+        "en": "ella lee todas las noches"
+      }
+    },
+    {
+      "icon": "⏱️",
+      "word": "She's reading now.",
+      "meaning": {
+        "es": "ella está leyendo ahora",
+        "en": "ella está leyendo ahora"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "I walk to school every day, but today I'm riding my bike.",
+        "meaning": {
+          "es": "Camino al colegio todos los días, pero hoy voy en bici.",
+          "en": "Camino al colegio todos los días, pero hoy voy en bici."
+        }
+      },
+      {
+        "en": "What do you do on Saturdays? — I play soccer.",
+        "meaning": {
+          "es": "¿Qué haces los sábados? — Juego fútbol.",
+          "en": "¿Qué haces los sábados? — Juego fútbol."
+        }
+      }
+    ],
+    "rule": {
+      "es": "Lo que haces siempre: I play. Lo que pasa ahora mismo: I'm playing (zona 07). Every day, always y on Saturdays avisan que es costumbre; now y right now, que es ahora.",
+      "en": "Habits: I play. Happening now: I'm playing (zone 07). Every day, always and on Saturdays mean a habit; now and right now mean now."
+    }
+  },
+  "activities": [
+    {
+      "id": "everyDayOrNow-now",
+      "type": "choice",
+      "prompt": {
+        "es": "⏱️ Completa: “Look! Ana ___ now.”",
+        "en": "⏱️ Fill in: “Look! Ana ___ now.”"
+      },
+      "options": [
+        "is dancing",
+        "dances",
+        "dance"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Está pasando ahora: is + -ing.",
+        "en": "It's happening now: is + -ing."
+      },
+      "why": {
+        "es": "“Ana is dancing now.”",
+        "en": "“Ana is dancing now.”"
+      },
+      "show": "Look! Ana ___ now."
+    },
+    {
+      "id": "everyDayOrNow-habit",
+      "type": "choice",
+      "prompt": {
+        "es": "📅 Completa: “I ___ milk every morning.”",
+        "en": "📅 Fill in: “I ___ milk every morning.”"
+      },
+      "options": [
+        "drink",
+        "am drinking",
+        "drinks"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Every morning es costumbre.",
+        "en": "Every morning is a habit."
+      },
+      "why": {
+        "es": "“I drink milk every morning.”",
+        "en": "“I drink milk every morning.”"
+      },
+      "show": "I ___ milk every morning."
+    },
+    {
+      "id": "everyDayOrNow-which",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Cuál habla de ahora mismo?",
+        "en": "Which one is about right now?"
+      },
+      "options": [
+        "He's sleeping.",
+        "He sleeps at nine.",
+        "He always sleeps late."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Busca la “-ing”.",
+        "en": "Look for “-ing”."
+      },
+      "why": {
+        "es": "“He's sleeping”: está durmiendo ahora.",
+        "en": "“He's sleeping” is now."
+      }
+    },
+    {
+      "id": "everyDayOrNow-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Es costumbre o es ahora?",
+        "en": "Listen. Is it a habit or now?"
+      },
+      "options": [
+        {
+          "es": "📅 Costumbre",
+          "en": "📅 Habit"
+        },
+        {
+          "es": "⏱️ Ahora",
+          "en": "⏱️ Now"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Escuchaste “on Saturdays”.",
+        "en": "You heard “on Saturdays”."
+      },
+      "why": {
+        "es": "“I swim on Saturdays”: es costumbre.",
+        "en": "“I swim on Saturdays”: a habit."
+      },
+      "listen": "I swim on Saturdays."
+    },
+    {
+      "id": "everyDayOrNow-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma: “¿Qué estás haciendo?”",
+        "en": "Build: “What are you doing?”"
+      },
+      "tiles": [
+        "What",
+        "are",
+        "you",
+        "doing?"
+      ],
+      "hint": {
+        "es": "Es una pregunta de ahora mismo.",
+        "en": "It's a right-now question."
+      },
+      "why": {
+        "es": "“What are you doing?”",
+        "en": "“What are you doing?”"
+      }
+    },
+    {
+      "id": "everyDayOrNow-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? “Right now” va con -ing: I'm reading right now.",
+        "en": "True or false? “Right now” goes with -ing: I'm reading right now."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Ahora mismo = -ing.",
+        "en": "Right now = -ing."
+      },
+      "why": {
+        "es": "Verdadero.",
+        "en": "True."
+      }
+    },
+    {
+      "id": "everyDayOrNow-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot escribió “I'm going to school every day”. ¿Qué es más natural?",
+        "en": "🤖 PyBot wrote “I'm going to school every day”. What sounds right?"
+      },
+      "options": [
+        "I go to school every day.",
+        "I'm going to school every day.",
+        "I goes to school every day."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Every day es costumbre: sin -ing.",
+        "en": "Every day is a habit: no -ing."
+      },
+      "why": {
+        "es": "¡Arreglado! I go to school every day.",
+        "en": "Fixed! I go to school every day."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "I play every day.",
+      "meaning": {
+        "es": "juego todos los días",
+        "en": "juego todos los días"
+      }
+    },
+    {
+      "en": "I'm playing now.",
+      "meaning": {
+        "es": "estoy jugando ahora",
+        "en": "estoy jugando ahora"
+      }
+    },
+    {
+      "en": "She reads every night.",
+      "meaning": {
+        "es": "ella lee todas las noches",
+        "en": "ella lee todas las noches"
+      }
+    },
+    {
+      "en": "She's reading now.",
+      "meaning": {
+        "es": "ella está leyendo ahora",
+        "en": "ella está leyendo ahora"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Siempre y hoy",
+      "en": "Always and today"
+    },
+    "text": {
+      "es": "En la cena, di una cosa que haces siempre y una que estás haciendo hoy diferente: “I always eat rice, but today I'm eating pasta!”.",
+      "en": "At dinner, say one thing you always do and one thing you're doing differently today: “I always eat rice, but today I'm eating pasta!”."
+    },
+    "adult": {
+      "es": "hagan lo mismo y comparen.",
+      "en": "do the same and compare."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

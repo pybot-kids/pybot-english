@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Di si hay algo en la nevera: some para decir que sí, any para preguntar o decir que no." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>Some or any? ¿Hay algo? — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="someAny">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "someAny",
+  "mood": "deciding",
+  "title": {
+    "es": "Some or any? ¿Hay algo?",
+    "en": "Some or any?"
+  },
+  "intro": {
+    "es": "Di si hay algo en la nevera: some para decir que sí, any para preguntar o decir que no.",
+    "en": "Say what's in the fridge: some to say yes, any to ask or say no."
+  },
+  "pybot": {
+    "es": "Is there any oil? Yes! There is some oil… para mis tornillos. 🔩",
+    "en": "Is there any oil? Yes! There is some oil… for my screws. 🔩"
+  },
+  "look": [
+    {
+      "icon": "🥚",
+      "word": "some eggs",
+      "meaning": {
+        "es": "unos huevos, algunos huevos",
+        "en": "unos huevos, algunos huevos"
+      }
+    },
+    {
+      "icon": "🥛",
+      "word": "some milk",
+      "meaning": {
+        "es": "algo de leche",
+        "en": "algo de leche"
+      }
+    },
+    {
+      "icon": "❓",
+      "word": "any…?",
+      "meaning": {
+        "es": "¿algo de…?, ¿hay…?",
+        "en": "¿algo de…?, ¿hay…?"
+      }
+    },
+    {
+      "icon": "🚫",
+      "word": "not any",
+      "meaning": {
+        "es": "nada de, ningún",
+        "en": "nada de, ningún"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "There are some apples.",
+        "meaning": {
+          "es": "Hay unas manzanas.",
+          "en": "Hay unas manzanas."
+        }
+      },
+      {
+        "en": "Is there any milk?",
+        "meaning": {
+          "es": "¿Hay leche?",
+          "en": "¿Hay leche?"
+        }
+      },
+      {
+        "en": "There isn't any bread.",
+        "meaning": {
+          "es": "No hay pan.",
+          "en": "No hay pan."
+        }
+      }
+    ],
+    "rule": {
+      "es": "Some cuando hay algo (frases con sí). Any para preguntar y cuando no hay (frases con no).",
+      "en": "Some when there is something (yes sentences). Any in questions and when there's nothing (no sentences)."
+    }
+  },
+  "activities": [
+    {
+      "id": "someAny-some",
+      "type": "choice",
+      "prompt": {
+        "es": "🍎🍎🍎 Completa: “There are ___ apples.”",
+        "en": "🍎🍎🍎 Fill in: “There are ___ apples.”"
+      },
+      "options": [
+        "some",
+        "any"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Sí hay manzanas.",
+        "en": "There are apples."
+      },
+      "why": {
+        "es": "“There are some apples.”",
+        "en": "“There are some apples.”"
+      },
+      "show": "There are ___ apples."
+    },
+    {
+      "id": "someAny-question",
+      "type": "choice",
+      "prompt": {
+        "es": "Completa la pregunta: “Is there ___ juice?”",
+        "en": "Fill in the question: “Is there ___ juice?”"
+      },
+      "options": [
+        "any",
+        "some"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es una pregunta.",
+        "en": "It's a question."
+      },
+      "why": {
+        "es": "“Is there any juice?”",
+        "en": "“Is there any juice?”"
+      },
+      "show": "Is there ___ juice?"
+    },
+    {
+      "id": "someAny-no",
+      "type": "choice",
+      "prompt": {
+        "es": "🍞❌ Se acabó el pan. ¿Qué dices?",
+        "en": "🍞❌ The bread is gone. What do you say?"
+      },
+      "options": [
+        "There isn't any bread.",
+        "There isn't some bread.",
+        "There is any bread."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Con “no” va any.",
+        "en": "Use any with “no”."
+      },
+      "why": {
+        "es": "“There isn't any bread.”",
+        "en": "“There isn't any bread.”"
+      }
+    },
+    {
+      "id": "someAny-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué hay?",
+        "en": "Listen. What is there?"
+      },
+      "options": [
+        {
+          "es": "🥚 Huevos",
+          "en": "🥚 Eggs"
+        },
+        {
+          "es": "🥛 Leche",
+          "en": "🥛 Milk"
+        },
+        {
+          "es": "🍞 Pan",
+          "en": "🍞 Bread"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Escuchaste “eggs”.",
+        "en": "You heard “eggs”."
+      },
+      "why": {
+        "es": "“There are some eggs”: hay unos huevos.",
+        "en": "“There are some eggs.”"
+      },
+      "listen": "There are some eggs in the fridge."
+    },
+    {
+      "id": "someAny-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma: “¿Hay leche?”",
+        "en": "Build: “Is there any milk?”"
+      },
+      "tiles": [
+        "Is",
+        "there",
+        "any",
+        "milk?"
+      ],
+      "hint": {
+        "es": "Empieza con Is there.",
+        "en": "Start with Is there."
+      },
+      "why": {
+        "es": "“Is there any milk?”",
+        "en": "“Is there any milk?”"
+      }
+    },
+    {
+      "id": "someAny-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? En las preguntas se usa “any”.",
+        "en": "True or false? Questions use “any”."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Piensa en “Is there any milk?”.",
+        "en": "Think of “Is there any milk?”."
+      },
+      "why": {
+        "es": "Verdadero.",
+        "en": "True."
+      }
+    },
+    {
+      "id": "someAny-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot escribió “I've got any cookies”. Tiene galletas. ¿Cómo se escribe bien?",
+        "en": "🤖 PyBot wrote “I've got any cookies”. It has cookies. What's right?"
+      },
+      "options": [
+        "I've got some cookies.",
+        "I've got any cookies.",
+        "I haven't got some cookies."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Sí tiene: some.",
+        "en": "It has them: some."
+      },
+      "why": {
+        "es": "¡Arreglado! I've got some cookies.",
+        "en": "Fixed! I've got some cookies."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "some eggs",
+      "meaning": {
+        "es": "unos huevos, algunos huevos",
+        "en": "unos huevos, algunos huevos"
+      }
+    },
+    {
+      "en": "some milk",
+      "meaning": {
+        "es": "algo de leche",
+        "en": "algo de leche"
+      }
+    },
+    {
+      "en": "any…?",
+      "meaning": {
+        "es": "¿algo de…?, ¿hay…?",
+        "en": "¿algo de…?, ¿hay…?"
+      }
+    },
+    {
+      "en": "not any",
+      "meaning": {
+        "es": "nada de, ningún",
+        "en": "nada de, ningún"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Revisa la nevera",
+      "en": "Check the fridge"
+    },
+    "text": {
+      "es": "Abre la nevera con alguien y digan qué hay y qué no: “There is some milk. There aren't any eggs.”.",
+      "en": "Open the fridge with someone and say what's there and what isn't: “There is some milk. There aren't any eggs.”."
+    },
+    "adult": {
+      "es": "pueden armar la lista del mercado en inglés.",
+      "en": "you can write the shopping list in English."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

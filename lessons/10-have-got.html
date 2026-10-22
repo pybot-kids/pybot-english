@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Di lo que tienes: mascotas, juguetes, hermanos." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>I&#x27;ve got… Lo que tengo — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="haveGot">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "haveGot",
+  "mood": "welcoming",
+  "title": {
+    "es": "I've got… Lo que tengo",
+    "en": "I've got…"
+  },
+  "intro": {
+    "es": "Di lo que tienes: mascotas, juguetes, hermanos.",
+    "en": "Say what you have: pets, toys, brothers and sisters."
+  },
+  "pybot": {
+    "es": "I've got two antennas and a big heart. 💙",
+    "en": "I've got two antennas and a big heart. 💙"
+  },
+  "look": [
+    {
+      "icon": "🐶",
+      "word": "I've got a dog.",
+      "meaning": {
+        "es": "tengo un perro",
+        "en": "tengo un perro"
+      }
+    },
+    {
+      "icon": "🚲",
+      "word": "you've got a bike",
+      "meaning": {
+        "es": "tienes una bicicleta",
+        "en": "tienes una bicicleta"
+      }
+    },
+    {
+      "icon": "🐱",
+      "word": "she's got a cat",
+      "meaning": {
+        "es": "ella tiene un gato",
+        "en": "ella tiene un gato"
+      }
+    },
+    {
+      "icon": "❓",
+      "word": "Have you got…?",
+      "meaning": {
+        "es": "¿tienes…?",
+        "en": "¿tienes…?"
+      }
+    },
+    {
+      "icon": "✅",
+      "word": "Yes, I have.",
+      "meaning": {
+        "es": "sí, tengo",
+        "en": "sí, tengo"
+      }
+    },
+    {
+      "icon": "❌",
+      "word": "No, I haven't.",
+      "meaning": {
+        "es": "no, no tengo",
+        "en": "no, no tengo"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "I've got a brother.",
+        "meaning": {
+          "es": "Tengo un hermano.",
+          "en": "Tengo un hermano."
+        }
+      },
+      {
+        "en": "He's got a red bike.",
+        "meaning": {
+          "es": "Él tiene una bicicleta roja.",
+          "en": "Él tiene una bicicleta roja."
+        }
+      },
+      {
+        "en": "Have you got a pet? — Yes, I have.",
+        "meaning": {
+          "es": "¿Tienes mascota? — Sí, tengo.",
+          "en": "¿Tienes mascota? — Sí, tengo."
+        }
+      }
+    ],
+    "rule": {
+      "es": "I've got = I have got (tengo). Con he y she: he's got / she's got = has got. Ojo: aquí “she's” no es “she is”.",
+      "en": "I've got = I have got. With he and she: he's got / she's got = has got. Careful: here “she's” isn't “she is”."
+    }
+  },
+  "activities": [
+    {
+      "id": "haveGot-dog",
+      "type": "choice",
+      "prompt": {
+        "es": "🐶 ¿Cómo dices que tienes un perro?",
+        "en": "🐶 How do you say you have a dog?"
+      },
+      "options": [
+        "I've got a dog.",
+        "I'm a dog.",
+        "I've a got dog."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "I've got + la cosa.",
+        "en": "I've got + the thing."
+      },
+      "why": {
+        "es": "“I've got a dog.”",
+        "en": "“I've got a dog.”"
+      }
+    },
+    {
+      "id": "haveGot-she",
+      "type": "choice",
+      "prompt": {
+        "es": "👧🐱 Completa: “She ___ got a cat.”",
+        "en": "👧🐱 Fill in: “She ___ got a cat.”"
+      },
+      "options": [
+        "has",
+        "have",
+        "is"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Con she se usa has.",
+        "en": "Use has with she."
+      },
+      "why": {
+        "es": "“She has got a cat” = she's got a cat.",
+        "en": "“She has got a cat.”"
+      },
+      "show": "She ___ got a cat."
+    },
+    {
+      "id": "haveGot-answer",
+      "type": "choice",
+      "prompt": {
+        "es": "Te preguntan “Have you got a bike?” y no tienes. ¿Qué respondes?",
+        "en": "“Have you got a bike?” You don't have one. What do you answer?"
+      },
+      "options": [
+        "No, I haven't.",
+        "No, I don't got.",
+        "No, I'm not."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Responde con have.",
+        "en": "Answer with have."
+      },
+      "why": {
+        "es": "“No, I haven't.”",
+        "en": "“No, I haven't.”"
+      }
+    },
+    {
+      "id": "haveGot-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué tiene?",
+        "en": "Listen. What has he got?"
+      },
+      "options": [
+        {
+          "es": "🐢",
+          "en": "🐢"
+        },
+        {
+          "es": "🐶",
+          "en": "🐶"
+        },
+        {
+          "es": "🐰",
+          "en": "🐰"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es lento y tiene caparazón.",
+        "en": "It's slow and has a shell."
+      },
+      "why": {
+        "es": "“He's got a turtle”: él tiene una tortuga.",
+        "en": "“He's got a turtle.”"
+      },
+      "listen": "He's got a turtle."
+    },
+    {
+      "id": "haveGot-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma: “¿Tienes un hermano?”",
+        "en": "Build: “Have you got a brother?”"
+      },
+      "tiles": [
+        "Have",
+        "you",
+        "got",
+        "a brother?"
+      ],
+      "hint": {
+        "es": "Empieza con Have.",
+        "en": "Start with Have."
+      },
+      "why": {
+        "es": "“Have you got a brother?”",
+        "en": "“Have you got a brother?”"
+      }
+    },
+    {
+      "id": "haveGot-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? En “She's got a cat”, she's significa “she has”.",
+        "en": "True or false? In “She's got a cat”, she's means “she has”."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Mira la palabra got.",
+        "en": "Look at the word got."
+      },
+      "why": {
+        "es": "Verdadero: she has got.",
+        "en": "True: she has got."
+      }
+    },
+    {
+      "id": "haveGot-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot escribió “I have got nine years”. ¿Cómo se dice la edad?",
+        "en": "🤖 PyBot wrote “I have got nine years”. How do you say your age?"
+      },
+      "options": [
+        "I'm nine.",
+        "I have got nine years.",
+        "I've got nine."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "La edad va con “I'm” (zona 02).",
+        "en": "Age goes with “I'm” (zone 02)."
+      },
+      "why": {
+        "es": "¡Arreglado! I'm nine.",
+        "en": "Fixed! I'm nine."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "I've got a dog.",
+      "meaning": {
+        "es": "tengo un perro",
+        "en": "tengo un perro"
+      }
+    },
+    {
+      "en": "you've got a bike",
+      "meaning": {
+        "es": "tienes una bicicleta",
+        "en": "tienes una bicicleta"
+      }
+    },
+    {
+      "en": "she's got a cat",
+      "meaning": {
+        "es": "ella tiene un gato",
+        "en": "ella tiene un gato"
+      }
+    },
+    {
+      "en": "Have you got…?",
+      "meaning": {
+        "es": "¿tienes…?",
+        "en": "¿tienes…?"
+      }
+    },
+    {
+      "en": "Yes, I have.",
+      "meaning": {
+        "es": "sí, tengo",
+        "en": "sí, tengo"
+      }
+    },
+    {
+      "en": "No, I haven't.",
+      "meaning": {
+        "es": "no, no tengo",
+        "en": "no, no tengo"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Mis tesoros",
+      "en": "My treasures"
+    },
+    "text": {
+      "es": "Muestra tres cosas tuyas y preséntalas: “I've got a teddy bear. I've got a blue ball.”. Luego pregunta: “Have you got a…?”.",
+      "en": "Show three of your things and present them: “I've got a teddy bear. I've got a blue ball.”. Then ask: “Have you got a…?”."
+    },
+    "adult": {
+      "es": "respondan “Yes, I have” o “No, I haven't”.",
+      "en": "answer “Yes, I have” or “No, I haven't”."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

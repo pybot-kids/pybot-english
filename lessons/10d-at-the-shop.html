@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pide algo con amabilidad, pregunta el precio y da las gracias." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>At the shop: en la tienda — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="atTheShop">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "atTheShop",
+  "mood": "happy",
+  "title": {
+    "es": "At the shop: en la tienda",
+    "en": "At the shop"
+  },
+  "intro": {
+    "es": "Pide algo con amabilidad, pregunta el precio y da las gracias.",
+    "en": "Ask for something kindly, ask the price and say thank you."
+  },
+  "pybot": {
+    "es": "Can I have a banana, please? How much is it? ¡Pago con tornillos! 🔩",
+    "en": "Can I have a banana, please? How much is it? I pay in screws! 🔩"
+  },
+  "look": [
+    {
+      "icon": "🙋",
+      "word": "Can I have…, please?",
+      "meaning": {
+        "es": "¿me da…, por favor?",
+        "en": "¿me da…, por favor?"
+      }
+    },
+    {
+      "icon": "💲",
+      "word": "How much is it?",
+      "meaning": {
+        "es": "¿cuánto cuesta?",
+        "en": "¿cuánto cuesta?"
+      }
+    },
+    {
+      "icon": "💵",
+      "word": "It's two dollars.",
+      "meaning": {
+        "es": "cuesta dos dólares",
+        "en": "cuesta dos dólares"
+      }
+    },
+    {
+      "icon": "🤲",
+      "word": "Here you are.",
+      "meaning": {
+        "es": "aquí tiene",
+        "en": "aquí tiene"
+      }
+    },
+    {
+      "icon": "🙏",
+      "word": "Thank you!",
+      "meaning": {
+        "es": "¡gracias!",
+        "en": "¡gracias!"
+      }
+    },
+    {
+      "icon": "🏪",
+      "word": "shop",
+      "meaning": {
+        "es": "tienda",
+        "en": "tienda"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "Can I have an apple, please?",
+        "meaning": {
+          "es": "¿Me da una manzana, por favor?",
+          "en": "¿Me da una manzana, por favor?"
+        }
+      },
+      {
+        "en": "How much is it? — It's one dollar.",
+        "meaning": {
+          "es": "¿Cuánto cuesta? — Cuesta un dólar.",
+          "en": "¿Cuánto cuesta? — Cuesta un dólar."
+        }
+      },
+      {
+        "en": "Here you are. — Thank you!",
+        "meaning": {
+          "es": "Aquí tiene. — ¡Gracias!",
+          "en": "Aquí tiene. — ¡Gracias!"
+        }
+      }
+    ],
+    "rule": {
+      "es": "Para pedir: Can I have… please? (como en la zona 08). Para el precio: How much is it? — It's + el precio.",
+      "en": "To ask for something: Can I have… please? (like zone 08). For the price: How much is it? — It's + the price."
+    }
+  },
+  "activities": [
+    {
+      "id": "atTheShop-ask",
+      "type": "choice",
+      "prompt": {
+        "es": "🍌 Quieres un banano. ¿Qué dices?",
+        "en": "🍌 You want a banana. What do you say?"
+      },
+      "options": [
+        "Can I have a banana, please?",
+        "Banana now!",
+        "Where is a banana?"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Pide con amabilidad.",
+        "en": "Ask kindly."
+      },
+      "why": {
+        "es": "“Can I have a banana, please?”",
+        "en": "“Can I have a banana, please?”"
+      }
+    },
+    {
+      "id": "atTheShop-price",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Cómo preguntas el precio?",
+        "en": "How do you ask the price?"
+      },
+      "options": [
+        "How much is it?",
+        "How many is it?",
+        "How old is it?"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Much es para dinero.",
+        "en": "Much is for money."
+      },
+      "why": {
+        "es": "“How much is it?”: ¿cuánto cuesta?",
+        "en": "“How much is it?”"
+      }
+    },
+    {
+      "id": "atTheShop-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Cuánto cuesta?",
+        "en": "Listen. How much is it?"
+      },
+      "options": [
+        {
+          "es": "$3",
+          "en": "$3"
+        },
+        {
+          "es": "$13",
+          "en": "$13"
+        },
+        {
+          "es": "$30",
+          "en": "$30"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Escuchaste “three”.",
+        "en": "You heard “three”."
+      },
+      "why": {
+        "es": "“It's three dollars.”",
+        "en": "“It's three dollars.”"
+      },
+      "listen": "It's three dollars."
+    },
+    {
+      "id": "atTheShop-here",
+      "type": "choice",
+      "prompt": {
+        "es": "El señor de la tienda te da la manzana y dice algo. ¿Qué es?",
+        "en": "The shopkeeper gives you the apple and says something. What is it?"
+      },
+      "options": [
+        "Here you are.",
+        "Good night.",
+        "I'm nine."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Te está entregando algo.",
+        "en": "They're handing you something."
+      },
+      "why": {
+        "es": "“Here you are”: aquí tiene.",
+        "en": "“Here you are.”"
+      }
+    },
+    {
+      "id": "atTheShop-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma: “¿Me da un jugo, por favor?”",
+        "en": "Build: “Can I have a juice, please?”"
+      },
+      "tiles": [
+        "Can",
+        "I",
+        "have",
+        "a juice,",
+        "please?"
+      ],
+      "hint": {
+        "es": "Empieza con Can I.",
+        "en": "Start with Can I."
+      },
+      "why": {
+        "es": "“Can I have a juice, please?”",
+        "en": "“Can I have a juice, please?”"
+      }
+    },
+    {
+      "id": "atTheShop-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? Después de recibir algo se dice “Thank you!”.",
+        "en": "True or false? After getting something you say “Thank you!”."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es lo amable.",
+        "en": "It's the kind thing."
+      },
+      "why": {
+        "es": "Verdadero.",
+        "en": "True."
+      }
+    },
+    {
+      "id": "atTheShop-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot preguntó el precio con “How many is it?”. ¿Qué debió decir?",
+        "en": "🤖 PyBot asked the price with “How many is it?”. What should it say?"
+      },
+      "options": [
+        "How much is it?",
+        "How many is it?",
+        "How is it?"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Para dinero: much.",
+        "en": "For money: much."
+      },
+      "why": {
+        "es": "¡Arreglado! How much is it?",
+        "en": "Fixed! How much is it?"
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "Can I have…, please?",
+      "meaning": {
+        "es": "¿me da…, por favor?",
+        "en": "¿me da…, por favor?"
+      }
+    },
+    {
+      "en": "How much is it?",
+      "meaning": {
+        "es": "¿cuánto cuesta?",
+        "en": "¿cuánto cuesta?"
+      }
+    },
+    {
+      "en": "It's two dollars.",
+      "meaning": {
+        "es": "cuesta dos dólares",
+        "en": "cuesta dos dólares"
+      }
+    },
+    {
+      "en": "Here you are.",
+      "meaning": {
+        "es": "aquí tiene",
+        "en": "aquí tiene"
+      }
+    },
+    {
+      "en": "Thank you!",
+      "meaning": {
+        "es": "¡gracias!",
+        "en": "¡gracias!"
+      }
+    },
+    {
+      "en": "shop",
+      "meaning": {
+        "es": "tienda",
+        "en": "tienda"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "La tiendita",
+      "en": "The little shop"
+    },
+    "text": {
+      "es": "Arma una tiendita con cosas de la casa y ponles precio. Una persona vende y otra compra: “Can I have…, please? How much is it?”.",
+      "en": "Set up a little shop with things from home and give them prices. One person sells and another buys: “Can I have…, please? How much is it?”."
+    },
+    "adult": {
+      "es": "sirve dinero de juguete o papelitos con números.",
+      "en": "toy money or paper notes with numbers work."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

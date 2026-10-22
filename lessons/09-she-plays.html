@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cuenta lo que otras personas hacen siempre. Con he, she o un nombre, la acción lleva “-s”." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>She plays: lo que hacen otras personas — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="shePlays">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "shePlays",
+  "mood": "happy",
+  "title": {
+    "es": "She plays: lo que hacen otras personas",
+    "en": "She plays"
+  },
+  "intro": {
+    "es": "Cuenta lo que otras personas hacen siempre. Con he, she o un nombre, la acción lleva “-s”.",
+    "en": "Say what other people do every day. With he, she or a name, the action takes “-s”."
+  },
+  "pybot": {
+    "es": "My friend Ana plays soccer. ¡Y yo juego a recargarme! 🔋",
+    "en": "My friend Ana plays soccer. And I play at recharging! 🔋"
+  },
+  "look": [
+    {
+      "icon": "⚽",
+      "word": "she plays",
+      "meaning": {
+        "es": "ella juega",
+        "en": "ella juega"
+      }
+    },
+    {
+      "icon": "🍕",
+      "word": "he likes",
+      "meaning": {
+        "es": "a él le gusta",
+        "en": "a él le gusta"
+      }
+    },
+    {
+      "icon": "📖",
+      "word": "she reads",
+      "meaning": {
+        "es": "ella lee",
+        "en": "ella lee"
+      }
+    },
+    {
+      "icon": "🏫",
+      "word": "he goes",
+      "meaning": {
+        "es": "él va",
+        "en": "él va"
+      }
+    },
+    {
+      "icon": "📺",
+      "word": "she watches",
+      "meaning": {
+        "es": "ella mira",
+        "en": "ella mira"
+      }
+    },
+    {
+      "icon": "🐶",
+      "word": "he has",
+      "meaning": {
+        "es": "él tiene",
+        "en": "él tiene"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "Ana plays soccer.",
+        "meaning": {
+          "es": "Ana juega fútbol.",
+          "en": "Ana juega fútbol."
+        }
+      },
+      {
+        "en": "My dad likes pizza.",
+        "meaning": {
+          "es": "A mi papá le gusta la pizza.",
+          "en": "A mi papá le gusta la pizza."
+        }
+      },
+      {
+        "en": "Tom goes to school.",
+        "meaning": {
+          "es": "Tom va al colegio.",
+          "en": "Tom va al colegio."
+        }
+      }
+    ],
+    "rule": {
+      "es": "Con I, you, we y they la acción va igual: I play. Con he, she, it o un nombre se agrega “-s”: she plays. Ojo: go → goes, watch → watches, have → has.",
+      "en": "With I, you, we and they the action stays the same: I play. With he, she, it or a name add “-s”: she plays. Careful: go → goes, watch → watches, have → has."
+    }
+  },
+  "activities": [
+    {
+      "id": "shePlays-gap",
+      "type": "choice",
+      "prompt": {
+        "es": "⚽ Completa: “Ana ___ soccer.”",
+        "en": "⚽ Fill in: “Ana ___ soccer.”"
+      },
+      "options": [
+        "plays",
+        "play",
+        "playing"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Ana es “she”: lleva “-s”.",
+        "en": "Ana is “she”: add “-s”."
+      },
+      "why": {
+        "es": "“Ana plays soccer.”",
+        "en": "“Ana plays soccer.”"
+      },
+      "show": "Ana ___ soccer."
+    },
+    {
+      "id": "shePlays-i",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Cuál está bien?",
+        "en": "Which one is right?"
+      },
+      "options": [
+        "I like pizza.",
+        "I likes pizza."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Con “I” no lleva “-s”.",
+        "en": "With “I”, no “-s”."
+      },
+      "why": {
+        "es": "“I like pizza.” La “-s” es solo para he, she, it.",
+        "en": "“I like pizza.” The “-s” is only for he, she, it."
+      }
+    },
+    {
+      "id": "shePlays-goes",
+      "type": "choice",
+      "prompt": {
+        "es": "🏫 Completa: “Tom ___ to school.”",
+        "en": "🏫 Fill in: “Tom ___ to school.”"
+      },
+      "options": [
+        "goes",
+        "gos",
+        "go"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Go se vuelve goes.",
+        "en": "Go becomes goes."
+      },
+      "why": {
+        "es": "“Tom goes to school.”",
+        "en": "“Tom goes to school.”"
+      },
+      "show": "Tom ___ to school."
+    },
+    {
+      "id": "shePlays-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué hace?",
+        "en": "Listen. What does she do?"
+      },
+      "options": [
+        {
+          "es": "📖",
+          "en": "📖"
+        },
+        {
+          "es": "⚽",
+          "en": "⚽"
+        },
+        {
+          "es": "📺",
+          "en": "📺"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Tiene que ver con un libro.",
+        "en": "It's about a book."
+      },
+      "why": {
+        "es": "“She reads books”: ella lee libros.",
+        "en": "“She reads books.”"
+      },
+      "listen": "She reads books."
+    },
+    {
+      "id": "shePlays-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma: “Mi mamá trabaja en un hospital.”",
+        "en": "Build: “My mom works in a hospital.”"
+      },
+      "tiles": [
+        "My mom",
+        "works",
+        "in",
+        "a hospital."
+      ],
+      "hint": {
+        "es": "Primero quién, luego la acción con “-s”.",
+        "en": "First who, then the action with “-s”."
+      },
+      "why": {
+        "es": "“My mom works in a hospital.”",
+        "en": "“My mom works in a hospital.”"
+      }
+    },
+    {
+      "id": "shePlays-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? “He has a dog” significa “él tiene un perro”.",
+        "en": "True or false? “He has a dog” means he owns a dog."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Have con he se vuelve has.",
+        "en": "Have with he becomes has."
+      },
+      "why": {
+        "es": "Verdadero.",
+        "en": "True."
+      }
+    },
+    {
+      "id": "shePlays-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot escribió “She watch TV”. ¿Cómo se escribe bien?",
+        "en": "🤖 PyBot wrote “She watch TV”. What's right?"
+      },
+      "options": [
+        "She watches TV.",
+        "She watch TV.",
+        "She watchs TV."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Watch termina en “ch”: agrega “-es”.",
+        "en": "Watch ends in “ch”: add “-es”."
+      },
+      "why": {
+        "es": "¡Arreglado! She watches TV.",
+        "en": "Fixed! She watches TV."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "she plays",
+      "meaning": {
+        "es": "ella juega",
+        "en": "ella juega"
+      }
+    },
+    {
+      "en": "he likes",
+      "meaning": {
+        "es": "a él le gusta",
+        "en": "a él le gusta"
+      }
+    },
+    {
+      "en": "she reads",
+      "meaning": {
+        "es": "ella lee",
+        "en": "ella lee"
+      }
+    },
+    {
+      "en": "he goes",
+      "meaning": {
+        "es": "él va",
+        "en": "él va"
+      }
+    },
+    {
+      "en": "she watches",
+      "meaning": {
+        "es": "ella mira",
+        "en": "ella mira"
+      }
+    },
+    {
+      "en": "he has",
+      "meaning": {
+        "es": "él tiene",
+        "en": "él tiene"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Mi familia todos los días",
+      "en": "My family every day"
+    },
+    "text": {
+      "es": "Elige a tres personas de tu casa y di una cosa que cada una hace siempre: “Mom drinks coffee. Dad reads. My sister sings.”.",
+      "en": "Pick three people at home and say one thing each one always does: “Mom drinks coffee. Dad reads. My sister sings.”."
+    },
+    "adult": {
+      "es": "escuche si se acuerda de la “-s”, pero sin corregir en voz alta.",
+      "en": "listen for the “-s”, but don't correct out loud."
+    }
+  }
+}
+    </script>
+  </body>
+</html>
