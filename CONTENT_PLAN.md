@@ -158,12 +158,12 @@ Formato de cada página: **objetivo · vocabulario · estructura · actividades 
 | Más animales y comidas | 04 Animals & Food | partes de animales, *some/any* básico |
 | La hora | 05 My Day | *What time is it? It's three o'clock.* |
 | *have got* / *there is / there are* | 06 Where is it? | *There is a bed in my room.* |
-| **Zona nueva 07 — Right now** | presente continuo | *What are you doing? I'm playing.* |
-| **Zona nueva 08 — Fun & Free Time** | deportes, hobbies, *can* para pedir permiso | *Can I play?*, *Let's…* |
+| **Zona 07 — Right Now** ✅ | presente continuo | *What are you doing? I'm playing.* (publicada con 4 páginas) |
+| **Zona 08 — Fun & Free Time** ✅ | deportes, hobbies, *can* para pedir permiso | *Can I play?*, *Let's…* (publicada con 4 páginas y la parada 2) |
 | **Zona nueva 09 — Tell a story** | pasado simple básico | *Yesterday I played…*, verbos regulares y 8 irregulares frecuentes |
 | **Zona nueva 10 — My Town** | lugares, direcciones simples | *Go straight, turn left* |
 
-Cada zona nueva lleva su sticker, su diploma y, cada 3 o 4 zonas, una parada nueva.
+Cada zona nueva lleva su sticker, su diploma y, cada 2 a 4 zonas, una parada nueva. La parada 2 (zonas 07–08) ya está publicada; la autoevaluación de cada parada pregunta solo por las zonas desde la parada anterior.
 
 ## 6. Páginas de apoyo que faltan
 

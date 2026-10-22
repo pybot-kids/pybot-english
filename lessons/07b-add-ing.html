@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Casi siempre solo se agrega “-ing”. Hay dos trucos para algunas palabras." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>play → playing: cómo agregar “-ing” — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="addIng">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "addIng",
+  "mood": "focused",
+  "title": {
+    "es": "play → playing: cómo agregar “-ing”",
+    "en": "play → playing: adding “-ing”"
+  },
+  "intro": {
+    "es": "Casi siempre solo se agrega “-ing”. Hay dos trucos para algunas palabras.",
+    "en": "Usually you just add “-ing”. There are two tricks for some words."
+  },
+  "pybot": {
+    "es": "Run → running: ¡la “n” se duplica de tanto correr!",
+    "en": "Run → running: the “n” doubles from all that running!"
+  },
+  "look": [
+    {
+      "icon": "➕",
+      "word": "play → playing",
+      "meaning": {
+        "es": "jugar → jugando",
+        "en": "jugar → jugando"
+      }
+    },
+    {
+      "icon": "📖",
+      "word": "read → reading",
+      "meaning": {
+        "es": "leer → leyendo",
+        "en": "leer → leyendo"
+      }
+    },
+    {
+      "icon": "🏃",
+      "word": "run → running",
+      "meaning": {
+        "es": "correr → corriendo (doble n)",
+        "en": "correr → corriendo (doble n)"
+      }
+    },
+    {
+      "icon": "🏊",
+      "word": "swim → swimming",
+      "meaning": {
+        "es": "nadar → nadando (doble m)",
+        "en": "nadar → nadando (doble m)"
+      }
+    },
+    {
+      "icon": "💃",
+      "word": "dance → dancing",
+      "meaning": {
+        "es": "bailar → bailando (sin e)",
+        "en": "bailar → bailando (sin e)"
+      }
+    },
+    {
+      "icon": "✍️",
+      "word": "write → writing",
+      "meaning": {
+        "es": "escribir → escribiendo (sin e)",
+        "en": "escribir → escribiendo (sin e)"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "I'm running.",
+        "meaning": {
+          "es": "Estoy corriendo.",
+          "en": "Estoy corriendo."
+        }
+      },
+      {
+        "en": "I'm dancing.",
+        "meaning": {
+          "es": "Estoy bailando.",
+          "en": "Estoy bailando."
+        }
+      }
+    ],
+    "rule": {
+      "es": "1) Casi siempre: + ing (play → playing). 2) Si termina en “e”, se quita la e (dance → dancing). 3) Palabras cortas como run y swim duplican la última letra (running, swimming).",
+      "en": "1) Usually: + ing (play → playing). 2) Ending in “e”: drop the e (dance → dancing). 3) Short words like run and swim double the last letter (running, swimming)."
+    }
+  },
+  "activities": [
+    {
+      "id": "addIng-play",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Cómo se escribe “play” con “-ing”?",
+        "en": "How do you write “play” with “-ing”?"
+      },
+      "options": [
+        "playing",
+        "plaing",
+        "playying"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Solo agrega “-ing”.",
+        "en": "Just add “-ing”."
+      },
+      "why": {
+        "es": "play + ing = playing.",
+        "en": "play + ing = playing."
+      }
+    },
+    {
+      "id": "addIng-dance",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Cómo se escribe “dance” con “-ing”?",
+        "en": "How do you write “dance” with “-ing”?"
+      },
+      "options": [
+        "dancing",
+        "danceing",
+        "dancking"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Termina en “e”: quítala.",
+        "en": "It ends in “e”: drop it."
+      },
+      "why": {
+        "es": "dance → dancing, sin la e.",
+        "en": "dance → dancing."
+      }
+    },
+    {
+      "id": "addIng-run",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Cómo se escribe “run” con “-ing”?",
+        "en": "How do you write “run” with “-ing”?"
+      },
+      "options": [
+        "running",
+        "runing",
+        "runeing"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es corta: duplica la última letra.",
+        "en": "It's short: double the last letter."
+      },
+      "why": {
+        "es": "run → running, con doble n.",
+        "en": "run → running."
+      }
+    },
+    {
+      "id": "addIng-swim",
+      "type": "choice",
+      "prompt": {
+        "es": "🏊 Completa: “I'm ___.”",
+        "en": "🏊 Fill in: “I'm ___.”"
+      },
+      "options": [
+        "swimming",
+        "swiming",
+        "swim"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Swim duplica la m.",
+        "en": "Swim doubles the m."
+      },
+      "why": {
+        "es": "“I'm swimming.”",
+        "en": "“I'm swimming.”"
+      },
+      "show": "I'm ___."
+    },
+    {
+      "id": "addIng-odd",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Cuál está MAL escrita?",
+        "en": "Which one is spelled WRONG?"
+      },
+      "options": [
+        "writeing",
+        "reading",
+        "playing",
+        "singing"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Write termina en “e”.",
+        "en": "Write ends in “e”."
+      },
+      "why": {
+        "es": "Se escribe “writing”, sin la e.",
+        "en": "It's “writing”."
+      }
+    },
+    {
+      "id": "addIng-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot escribió “I'm runing”. ¿Cómo se escribe bien?",
+        "en": "🤖 PyBot wrote “I'm runing”. What's right?"
+      },
+      "options": [
+        "I'm running.",
+        "I'm runing.",
+        "I'm runeing."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Falta una letra n.",
+        "en": "One n is missing."
+      },
+      "why": {
+        "es": "¡Arreglado! Running, con doble n.",
+        "en": "Fixed! Running."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "play → playing",
+      "meaning": {
+        "es": "jugar → jugando",
+        "en": "jugar → jugando"
+      }
+    },
+    {
+      "en": "read → reading",
+      "meaning": {
+        "es": "leer → leyendo",
+        "en": "leer → leyendo"
+      }
+    },
+    {
+      "en": "run → running",
+      "meaning": {
+        "es": "correr → corriendo (doble n)",
+        "en": "correr → corriendo (doble n)"
+      }
+    },
+    {
+      "en": "swim → swimming",
+      "meaning": {
+        "es": "nadar → nadando (doble m)",
+        "en": "nadar → nadando (doble m)"
+      }
+    },
+    {
+      "en": "dance → dancing",
+      "meaning": {
+        "es": "bailar → bailando (sin e)",
+        "en": "bailar → bailando (sin e)"
+      }
+    },
+    {
+      "en": "write → writing",
+      "meaning": {
+        "es": "escribir → escribiendo (sin e)",
+        "en": "escribir → escribiendo (sin e)"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Mímica con -ing",
+      "en": "Charades with -ing"
+    },
+    "text": {
+      "es": "Haz mímica de una acción (correr, nadar, bailar) y que tu familia adivine: “You're swimming!”.",
+      "en": "Act out an action (running, swimming, dancing) and let your family guess: “You're swimming!”."
+    },
+    "adult": {
+      "es": "si adivinan, que deletreen la palabra con -ing.",
+      "en": "if you guess, spell the -ing word too."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

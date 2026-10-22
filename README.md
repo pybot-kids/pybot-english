@@ -196,6 +196,15 @@ Registered activity IDs (written by `tools/build-lessons.py`; each lesson's ids 
 - `inOnUnder` (In, on, under): `inOnUnder-in`, `inOnUnder-listen`, `inOnUnder-true`, `inOnUnder-gap`, `inOnUnder-order`, `inOnUnder-fix`
 - `house` (Rooms in a house): `house-bed`, `house-kitchen`, `house-listen`, `house-true`, `house-odd`, `house-fix`
 - `checkpoint1` (Show what you know: pit stop): `checkpoint1-hello`, `checkpoint1-spell`, `checkpoint1-number`, `checkpoint1-age`, `checkpoint1-family`, `checkpoint1-color`, `checkpoint1-an`, `checkpoint1-can`, `checkpoint1-like`, `checkpoint1-day`, `checkpoint1-class`, `checkpoint1-where`, `checkpoint1-intro`, `checkpoint1-like-order`
+- `whatAreYouDoing` (What are you doing?): `whatAreYouDoing-read`, `whatAreYouDoing-listen`, `whatAreYouDoing-order`, `whatAreYouDoing-gap`, `whatAreYouDoing-true`, `whatAreYouDoing-fix`
+- `addIng` (play → playing: adding “-ing”): `addIng-play`, `addIng-dance`, `addIng-run`, `addIng-swim`, `addIng-odd`, `addIng-fix`
+- `heSheThey` (He, she, they: what others are doing): `heSheThey-she`, `heSheThey-they`, `heSheThey-listen`, `heSheThey-order`, `heSheThey-true`, `heSheThey-fix`
+- `areYou` (Are you…?): `areYou-order`, `areYou-yes`, `areYou-no`, `areYou-listen`, `areYou-she`, `areYou-fix`
+- `sports` (Sports): `sports-basketball`, `sports-listen`, `sports-gap`, `sports-bike`, `sports-true`, `sports-fix`
+- `hobbies` (Hobbies): `hobbies-paint`, `hobbies-listen`, `hobbies-gap`, `hobbies-order`, `hobbies-odd`, `hobbies-fix`
+- `canIPlay` (Can I play?): `canIPlay-order`, `canIPlay-water`, `canIPlay-yes`, `canIPlay-listen`, `canIPlay-true`, `canIPlay-fix`
+- `letsPlay` (Let's play!): `letsPlay-dance`, `letsPlay-answer`, `letsPlay-listen`, `letsPlay-order`, `letsPlay-true`, `letsPlay-fix`
+- `checkpoint2` (Show what you know 2: pit stop): `checkpoint2-doing`, `checkpoint2-swim`, `checkpoint2-she`, `checkpoint2-are-you`, `checkpoint2-listen`, `checkpoint2-sport`, `checkpoint2-hobby`, `checkpoint2-can`, `checkpoint2-lets`, `checkpoint2-recycle-color`, `checkpoint2-recycle-where`, `checkpoint2-story`, `checkpoint2-invite`
 <!-- activity-registry:end -->
 
 Storage rules (same as PyBot): only a learner-chosen name or nickname; never store typed answers, audio, or other personal data; a missing key means its default; storage failure never blocks a page; every page that stores progress has a labeled reset; backup includes only registered keys and is fully validated on import.
@@ -238,7 +247,7 @@ A collapsed **For adults: erase all progress** section on the home page offers t
 The full content plan (what each page teaches, vocabulary, activity types, phases, and the "done" checklist) lives in [`CONTENT_PLAN.md`](CONTENT_PLAN.md).
 
 
-A short foundation, **six broad zones**, and a pit stop. English is wide, so the path grows **inside** zones, like PyBot's Python zones: each zone is a big theme with its own route of pages on the map, and the learner moves through that route before the next zone.
+A short foundation, **eight broad zones**, and two pit stops. English is wide, so the path grows **inside** zones, like PyBot's Python zones: each zone is a big theme with its own route of pages on the map, and the learner moves through that route before the next zone.
 
 **Growth rule:** a new topic becomes a new page in the route of the zone it belongs to. A new zone is added only for a theme no existing zone covers (for example, a future "Tell a story" zone for past tense). This keeps the map short even when the course grows.
 
@@ -253,7 +262,10 @@ Every page of the path is published. A future page starts with `soon: true` in `
 | 04 **Animals & Food** | Animals · Big or small? · It can fly! · Food and drinks · I like… · I don't like… | Animals, can / can't, food, and likes |
 | 05 **My Day** | The days · Morning, afternoon, night · My routine · Open, close, listen! | Days, routines, and classroom instructions |
 | 06 **Where is it?** | What? Who? Where? · In, on, under · Rooms in a house | Question words and place words |
-| 🏁 **Show what you know** (pit stop) | Final review | Mixed review, then a self-check and a diploma |
+| 🏁 **Show what you know** (pit stop 1) | Review | Mixed review of zones 00–06, then a self-check and a diploma |
+| 07 **Right Now** | What are you doing? · play → playing · He, she, they · Are you…? | Present continuous: say what is happening now |
+| 08 **Fun & Free Time** | Sports · Hobbies · Can I play? · Let's play! | Sports and hobbies, like + -ing, asking for permission, invitations |
+| 🎯 **Show what you know 2** (pit stop 2) | Review | Review of zones 07–08 with a little of the earlier path, then a self-check |
 
 ## Lesson pages
 
@@ -262,7 +274,7 @@ Lessons follow the page anatomy in [`CONTENT_PLAN.md`](CONTENT_PLAN.md): Look an
 - **Data:** each zone's lessons live in `tools/lessons/zoneNN.py` as plain data (texts as `{es, en}`; plain strings are the English being learned).
 - **Pages:** `python3 tools/build-lessons.py` checks every lesson (6+ activities, ids prefixed with the step id, ES and EN for every text, valid answers) and writes `lessons/*.html`: a short shell with the lesson as JSON. The generated pages are committed, so the site still has no build step.
 - **Drawing:** `lesson.js` draws the page from that JSON, reuses PyBot's figure, stores answers with the progress scheme (`complete` / `review`), shows done / not tried / review counters, offers a page-only reset, marks the step done when every activity is complete, and lets stickers, diplomas and the little PyBot react.
-- **Activity types today:** `choice` (picture-word, listen-pick, read-pick, gap-fill, odd-one-out, true-false, fix-pybot) and `order` (tap tiles to build a sentence). The pit stop (`review: true`, `selfcheck: true`) skips Look and New words and ends with a self-check per zone (😀 / 🙂 / 🤔, stored in `pybotenglish.selfcheck`); zones marked 🤔 show **TO REVIEW** on the path.
+- **Activity types today:** `choice` (picture-word, listen-pick, read-pick, gap-fill, odd-one-out, true-false, fix-pybot) and `order` (tap tiles to build a sentence). A pit stop (`review: true`, `selfcheck: true`) skips Look and New words and ends with a self-check for the zones since the previous pit stop (😀 / 🙂 / 🤔, stored in `pybotenglish.selfcheck`); zones marked 🤔 show **TO REVIEW** on the path.
 - **Publishing a page:** add its data, run the builder, remove `soon: true` from its step in `pathSteps`, add its activity ids there and to the registry above, then run `node tools/progress-version.mjs --bump "what changed"`.
 
 The path map shows the building state: published pages are links, each zone shows its state (▶ Ready to start, 🚧 In progress · 2 of 6 ready while a zone is being built, or ★ Zone finished), and the course page shows how many pages of the whole path are ready (✅ when the path is complete).
@@ -321,7 +333,7 @@ python -m http.server 8000
 - [x] Home page, learning path index, album, diploma, and FAQ (EN/ES)
 - [x] Progress, stickers, streaks, diplomas, backup, and reset on the PyBot scheme
 - [x] Long-term content plan ([`CONTENT_PLAN.md`](CONTENT_PLAN.md))
-- [x] Lesson engine and the whole path: zones 00–06 and the pit stop (34 pages, 220 activities)
+- [x] Lesson engine and the whole path: zones 00–08 and two pit stops (43 pages, 281 activities)
 - [ ] Word list (“My words”) and the guide for families and teachers
 - [ ] Review with María Ángel and her friends
 - [ ] GitHub Pages publication

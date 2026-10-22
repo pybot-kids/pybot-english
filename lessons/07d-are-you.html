@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pregunta si alguien está haciendo algo y responde con Yes, I am o No, I&#x27;m not." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>Are you…? ¿Estás…? — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="areYou">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "areYou",
+  "mood": "deciding",
+  "title": {
+    "es": "Are you…? ¿Estás…?",
+    "en": "Are you…?"
+  },
+  "intro": {
+    "es": "Pregunta si alguien está haciendo algo y responde con Yes, I am o No, I'm not.",
+    "en": "Ask if someone is doing something and answer with Yes, I am or No, I'm not."
+  },
+  "pybot": {
+    "es": "Are you sleeping? No, I'm not! Estoy aquí contigo.",
+    "en": "Are you sleeping? No, I'm not! I'm here with you."
+  },
+  "look": [
+    {
+      "icon": "❓",
+      "word": "Are you…?",
+      "meaning": {
+        "es": "¿estás…?",
+        "en": "¿estás…?"
+      }
+    },
+    {
+      "icon": "👍",
+      "word": "Yes, I am.",
+      "meaning": {
+        "es": "sí.",
+        "en": "sí."
+      }
+    },
+    {
+      "icon": "👎",
+      "word": "No, I'm not.",
+      "meaning": {
+        "es": "no.",
+        "en": "no."
+      }
+    },
+    {
+      "icon": "❔",
+      "word": "Is she…?",
+      "meaning": {
+        "es": "¿está ella…?",
+        "en": "¿está ella…?"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "Are you reading?",
+        "meaning": {
+          "es": "¿Estás leyendo?",
+          "en": "¿Estás leyendo?"
+        }
+      },
+      {
+        "en": "Yes, I am.",
+        "meaning": {
+          "es": "Sí.",
+          "en": "Sí."
+        }
+      },
+      {
+        "en": "No, I'm not. I'm drawing.",
+        "meaning": {
+          "es": "No. Estoy dibujando.",
+          "en": "No. Estoy dibujando."
+        }
+      }
+    ],
+    "rule": {
+      "es": "Para preguntar, “are” va primero: Are you…? Para responder corto: Yes, I am / No, I'm not.",
+      "en": "To ask, “are” goes first: Are you…? Short answers: Yes, I am / No, I'm not."
+    }
+  },
+  "activities": [
+    {
+      "id": "areYou-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma la pregunta “¿Estás jugando?”.",
+        "en": "Build “Are you playing?”."
+      },
+      "tiles": [
+        "Are",
+        "you",
+        "playing?"
+      ],
+      "hint": {
+        "es": "Empieza con Are.",
+        "en": "Start with Are."
+      },
+      "why": {
+        "es": "“Are you playing?”",
+        "en": "“Are you playing?”"
+      }
+    },
+    {
+      "id": "areYou-yes",
+      "type": "choice",
+      "prompt": {
+        "es": "“Are you reading?” Estás leyendo. ¿Qué respondes?",
+        "en": "“Are you reading?” You are. What do you answer?"
+      },
+      "options": [
+        "Yes, I am.",
+        "Yes, I reading.",
+        "No, I'm not."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "La respuesta corta usa “am”.",
+        "en": "The short answer uses “am”."
+      },
+      "why": {
+        "es": "“Yes, I am.”",
+        "en": "“Yes, I am.”"
+      }
+    },
+    {
+      "id": "areYou-no",
+      "type": "choice",
+      "prompt": {
+        "es": "“Are you sleeping?” No estás durmiendo. ¿Qué respondes?",
+        "en": "“Are you sleeping?” You're not. What do you answer?"
+      },
+      "options": [
+        "No, I'm not.",
+        "No, I am.",
+        "Yes, I am."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es una respuesta negativa.",
+        "en": "It's a no."
+      },
+      "why": {
+        "es": "“No, I'm not.”",
+        "en": "“No, I'm not.”"
+      }
+    },
+    {
+      "id": "areYou-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha la pregunta. ¿Qué significa?",
+        "en": "Listen to the question. What does it mean?"
+      },
+      "options": [
+        {
+          "es": "¿Estás comiendo?",
+          "en": "Are you eating?"
+        },
+        {
+          "es": "¿Qué comes?",
+          "en": "What do you eat?"
+        },
+        {
+          "es": "¿Tienes hambre?",
+          "en": "Are you hungry?"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Escucha “eating”.",
+        "en": "Listen for “eating”."
+      },
+      "why": {
+        "es": "“Are you eating?”: ¿estás comiendo?",
+        "en": "“Are you eating?”"
+      },
+      "listen": "Are you eating?"
+    },
+    {
+      "id": "areYou-she",
+      "type": "choice",
+      "prompt": {
+        "es": "Completa: “___ she dancing?”",
+        "en": "Fill in: “___ she dancing?”"
+      },
+      "options": [
+        "Is",
+        "Are",
+        "Am"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Con she va “is”.",
+        "en": "With she use “is”."
+      },
+      "why": {
+        "es": "“Is she dancing?”",
+        "en": "“Is she dancing?”"
+      },
+      "show": "___ she dancing?"
+    },
+    {
+      "id": "areYou-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot preguntó “You are playing?” ¿Cómo se pregunta bien?",
+        "en": "🤖 PyBot asked “You are playing?” What's the right question?"
+      },
+      "options": [
+        "Are you playing?",
+        "You are playing?",
+        "Playing you are?"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "En la pregunta, “are” va primero.",
+        "en": "In questions, “are” goes first."
+      },
+      "why": {
+        "es": "¡Arreglado! Are you playing?",
+        "en": "Fixed! Are you playing?"
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "Are you…?",
+      "meaning": {
+        "es": "¿estás…?",
+        "en": "¿estás…?"
+      }
+    },
+    {
+      "en": "Yes, I am.",
+      "meaning": {
+        "es": "sí.",
+        "en": "sí."
+      }
+    },
+    {
+      "en": "No, I'm not.",
+      "meaning": {
+        "es": "no.",
+        "en": "no."
+      }
+    },
+    {
+      "en": "Is she…?",
+      "meaning": {
+        "es": "¿está ella…?",
+        "en": "¿está ella…?"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Adivina qué estoy haciendo",
+      "en": "Guess what I'm doing"
+    },
+    "text": {
+      "es": "Haz mímica y que tu familia pregunte: “Are you swimming?”. Responde “Yes, I am!” o “No, I'm not!” hasta que adivinen.",
+      "en": "Act something out and let your family ask: “Are you swimming?”. Answer “Yes, I am!” or “No, I'm not!” until they guess."
+    },
+    "adult": {
+      "es": "pregunten siempre con “Are you…?”.",
+      "en": "always ask with “Are you…?”."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

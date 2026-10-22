@@ -91,7 +91,7 @@ LESSONS = [
 
 # The pit stop: a mixed review of every zone, then a self-check with faces (no grades).
 CHECKPOINT = {
-    "file": "07-checkpoint",
+    "file": "pit1-checkpoint",
     "step": "checkpoint1",
     "review": True,
     "selfcheck": True,

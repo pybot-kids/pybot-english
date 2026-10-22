@@ -346,12 +346,41 @@ function storedSelfCheck() {
   return ratings;
 }
 
+// A pit stop reviews the zones since the previous pit stop.
+const isPitStop = (zone) => zone.id.startsWith("checkpoint");
+
+function pitStopZones(stepId) {
+  const zones = [];
+  for (const zone of pathZones) {
+    if (zone.steps.includes(stepId)) {
+      break;
+    }
+    if (isPitStop(zone)) {
+      zones.length = 0;
+    } else {
+      zones.push(zone);
+    }
+  }
+  return zones;
+}
+
+// The first pit stop's texts use "pit.*", the next ones "pit2.*", "pit3.*"…
+function pitStopKey(zone) {
+  const number = pathZones.slice(0, pathZones.indexOf(zone) + 1).filter(isPitStop).length;
+  return number === 1 ? "pit.concept" : `pit${number}.concept`;
+}
+
+// Zone numbers on the map skip pit stops: 00, 01… 06, 🏁, 07…
+function zoneNumber(zone) {
+  return pathZones.slice(0, pathZones.indexOf(zone)).filter((candidate) => !isPitStop(candidate)).length;
+}
+
 function buildSelfCheck() {
   const box = section("lesson.selfTitle", "lesson-selfcheck");
   box.append(el("p", "lesson-help", textFor("lesson.selfText")));
   const list = el("ul", "selfcheck-list");
   const ratings = storedSelfCheck();
-  pathZones.filter((zone) => !zone.steps.includes(lesson.step)).forEach((zone) => {
+  pitStopZones(lesson.step).forEach((zone) => {
     const id = zone.steps[0];
     const row = el("li", "selfcheck-row");
     const name = el("b", "", `${zone.icon} ${zone.name}`);
@@ -384,7 +413,6 @@ function renderLesson() {
   const main = document.querySelector("[data-lesson]");
   const step = stepById(lesson.step);
   const zone = pathZones.find((candidate) => candidate.steps.includes(lesson.step));
-  const zoneIndex = pathZones.indexOf(zone);
   const pageIndex = zone.steps.indexOf(lesson.step);
   document.title = `${pick(lesson.title)} — PyBot English`;
   main.replaceChildren();
@@ -394,7 +422,7 @@ function renderLesson() {
   const hero = el("header", "lesson-hero");
   const copy = el("div", "lesson-hero-copy");
   const crumb = el("p", "eyebrow eyebrow-magenta");
-  crumb.textContent = lesson.review ? `🏁 ${textFor("pit.concept")}` : `${textFor("lesson.zone").replace("{number}", String(zoneIndex).padStart(2, "0")).replace("{name}", zone.name)} · ${textFor("lesson.page").replace("{page}", String(pageIndex + 1)).replace("{total}", String(zone.steps.length))}`;
+  crumb.textContent = lesson.review ? `${zone.icon} ${textFor(pitStopKey(zone))}` : `${textFor("lesson.zone").replace("{number}", String(zoneNumber(zone)).padStart(2, "0")).replace("{name}", zone.name)} · ${textFor("lesson.page").replace("{page}", String(pageIndex + 1)).replace("{total}", String(zone.steps.length))}`;
   copy.append(crumb, el("h1", "", pick(lesson.title)), el("p", "lesson-intro", pick(lesson.intro)));
   const stage = el("div", "lesson-stage");
   const bubble = el("p", "lesson-bubble");

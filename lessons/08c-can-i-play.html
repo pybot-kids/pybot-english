@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pide permiso con amabilidad: “Can I…, please?”. Y responde: Yes, you can / Sorry, not now." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>Can I play? Pedir permiso — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="canIPlay">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "canIPlay",
+  "mood": "welcoming",
+  "title": {
+    "es": "Can I play? Pedir permiso",
+    "en": "Can I play?"
+  },
+  "intro": {
+    "es": "Pide permiso con amabilidad: “Can I…, please?”. Y responde: Yes, you can / Sorry, not now.",
+    "en": "Ask for permission kindly: “Can I…, please?”. Answer: Yes, you can / Sorry, not now."
+  },
+  "pybot": {
+    "es": "Can I play with you, please? ¡Prometo no hacer trampa!",
+    "en": "Can I play with you, please? I promise not to cheat!"
+  },
+  "look": [
+    {
+      "icon": "🙋",
+      "word": "Can I…?",
+      "meaning": {
+        "es": "¿puedo…?",
+        "en": "¿puedo…?"
+      }
+    },
+    {
+      "icon": "🙏",
+      "word": "please",
+      "meaning": {
+        "es": "por favor",
+        "en": "por favor"
+      }
+    },
+    {
+      "icon": "✅",
+      "word": "Yes, you can.",
+      "meaning": {
+        "es": "sí, puedes.",
+        "en": "sí, puedes."
+      }
+    },
+    {
+      "icon": "⏳",
+      "word": "Sorry, not now.",
+      "meaning": {
+        "es": "lo siento, ahora no.",
+        "en": "lo siento, ahora no."
+      }
+    },
+    {
+      "icon": "🎲",
+      "word": "Can I play?",
+      "meaning": {
+        "es": "¿puedo jugar?",
+        "en": "¿puedo jugar?"
+      }
+    },
+    {
+      "icon": "💧",
+      "word": "Can I have water, please?",
+      "meaning": {
+        "es": "¿me das agua, por favor?",
+        "en": "¿me das agua, por favor?"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "Can I play, please?",
+        "meaning": {
+          "es": "¿Puedo jugar, por favor?",
+          "en": "¿Puedo jugar, por favor?"
+        }
+      },
+      {
+        "en": "Yes, you can!",
+        "meaning": {
+          "es": "¡Sí, puedes!",
+          "en": "¡Sí, puedes!"
+        }
+      },
+      {
+        "en": "Can I go to the bathroom?",
+        "meaning": {
+          "es": "¿Puedo ir al baño?",
+          "en": "¿Puedo ir al baño?"
+        }
+      }
+    ],
+    "rule": {
+      "es": "Para pedir permiso: Can I + acción + please? “Please” lo hace amable. La acción va sin “-ing”: Can I play?",
+      "en": "To ask for permission: Can I + action + please? “Please” makes it kind. No “-ing”: Can I play?"
+    }
+  },
+  "activities": [
+    {
+      "id": "canIPlay-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma: “¿Puedo jugar, por favor?”",
+        "en": "Build: “Can I play, please?”"
+      },
+      "tiles": [
+        "Can",
+        "I",
+        "play,",
+        "please?"
+      ],
+      "hint": {
+        "es": "Empieza con Can.",
+        "en": "Start with Can."
+      },
+      "why": {
+        "es": "“Can I play, please?”",
+        "en": "“Can I play, please?”"
+      }
+    },
+    {
+      "id": "canIPlay-water",
+      "type": "choice",
+      "prompt": {
+        "es": "💧 Tienes sed. ¿Qué pides?",
+        "en": "💧 You're thirsty. What do you ask?"
+      },
+      "options": [
+        "Can I have water, please?",
+        "I water.",
+        "Water you can?"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Empieza con Can I.",
+        "en": "Start with Can I."
+      },
+      "why": {
+        "es": "“Can I have water, please?”",
+        "en": "“Can I have water, please?”"
+      }
+    },
+    {
+      "id": "canIPlay-yes",
+      "type": "choice",
+      "prompt": {
+        "es": "Tu amiga te pregunta “Can I play?” y quieres que juegue. ¿Qué respondes?",
+        "en": "Your friend asks “Can I play?” and you want her to. What do you say?"
+      },
+      "options": [
+        "Yes, you can!",
+        "Sorry, not now.",
+        "Goodbye!"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Le das permiso.",
+        "en": "You say yes."
+      },
+      "why": {
+        "es": "“Yes, you can!”",
+        "en": "“Yes, you can!”"
+      }
+    },
+    {
+      "id": "canIPlay-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué pide?",
+        "en": "Listen. What does the person ask for?"
+      },
+      "options": [
+        {
+          "es": "🚻 Ir al baño",
+          "en": "🚻 Go to the bathroom"
+        },
+        {
+          "es": "🎲 Jugar",
+          "en": "🎲 Play"
+        },
+        {
+          "es": "💧 Agua",
+          "en": "💧 Water"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Escucha “bathroom”.",
+        "en": "Listen for “bathroom”."
+      },
+      "why": {
+        "es": "“Can I go to the bathroom?”: ¿puedo ir al baño?",
+        "en": "“Can I go to the bathroom?”"
+      },
+      "listen": "Can I go to the bathroom, please?"
+    },
+    {
+      "id": "canIPlay-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? Agregar “please” hace la pregunta más amable.",
+        "en": "True or false? Adding “please” makes the question kinder."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Please es por favor.",
+        "en": "Please is por favor."
+      },
+      "why": {
+        "es": "Verdadero.",
+        "en": "True."
+      }
+    },
+    {
+      "id": "canIPlay-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot preguntó “I can play?”. ¿Cómo se pregunta bien?",
+        "en": "🤖 PyBot asked “I can play?”. What's the right question?"
+      },
+      "options": [
+        "Can I play?",
+        "I can play?",
+        "Can I playing?"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "En la pregunta, “Can” va primero.",
+        "en": "In questions, “Can” goes first."
+      },
+      "why": {
+        "es": "¡Arreglado! Can I play?",
+        "en": "Fixed! Can I play?"
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "Can I…?",
+      "meaning": {
+        "es": "¿puedo…?",
+        "en": "¿puedo…?"
+      }
+    },
+    {
+      "en": "please",
+      "meaning": {
+        "es": "por favor",
+        "en": "por favor"
+      }
+    },
+    {
+      "en": "Yes, you can.",
+      "meaning": {
+        "es": "sí, puedes.",
+        "en": "sí, puedes."
+      }
+    },
+    {
+      "en": "Sorry, not now.",
+      "meaning": {
+        "es": "lo siento, ahora no.",
+        "en": "lo siento, ahora no."
+      }
+    },
+    {
+      "en": "Can I play?",
+      "meaning": {
+        "es": "¿puedo jugar?",
+        "en": "¿puedo jugar?"
+      }
+    },
+    {
+      "en": "Can I have water, please?",
+      "meaning": {
+        "es": "¿me das agua, por favor?",
+        "en": "¿me das agua, por favor?"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Pide con please",
+      "en": "Ask with please"
+    },
+    "text": {
+      "es": "Hoy pide todo en inglés: “Can I have water, please?”, “Can I play, please?”.",
+      "en": "Today, ask for everything in English: “Can I have water, please?”, “Can I play, please?”."
+    },
+    "adult": {
+      "es": "respondan “Yes, you can!” o “Sorry, not now.” con cariño.",
+      "en": "answer “Yes, you can!” or “Sorry, not now.” kindly."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

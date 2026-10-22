@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Los deportes y juegos favoritos. En inglés se dice “I play soccer”, sin “el”." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>Deportes — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="sports">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "sports",
+  "mood": "determined",
+  "title": {
+    "es": "Deportes",
+    "en": "Sports"
+  },
+  "intro": {
+    "es": "Los deportes y juegos favoritos. En inglés se dice “I play soccer”, sin “el”.",
+    "en": "Favorite sports and games. In English you say “I play soccer”, with no “the”."
+  },
+  "pybot": {
+    "es": "I play soccer! Bueno… yo hago de portero porque soy cuadrado.",
+    "en": "I play soccer! Well… I'm the goalkeeper because I'm square."
+  },
+  "look": [
+    {
+      "icon": "⚽",
+      "word": "soccer",
+      "meaning": {
+        "es": "fútbol",
+        "en": "fútbol"
+      }
+    },
+    {
+      "icon": "🏀",
+      "word": "basketball",
+      "meaning": {
+        "es": "baloncesto",
+        "en": "baloncesto"
+      }
+    },
+    {
+      "icon": "🎾",
+      "word": "tennis",
+      "meaning": {
+        "es": "tenis",
+        "en": "tenis"
+      }
+    },
+    {
+      "icon": "🏐",
+      "word": "volleyball",
+      "meaning": {
+        "es": "voleibol",
+        "en": "voleibol"
+      }
+    },
+    {
+      "icon": "🏊",
+      "word": "swimming",
+      "meaning": {
+        "es": "natación",
+        "en": "natación"
+      }
+    },
+    {
+      "icon": "🚲",
+      "word": "ride a bike",
+      "meaning": {
+        "es": "montar en bicicleta",
+        "en": "montar en bicicleta"
+      }
+    },
+    {
+      "icon": "🛹",
+      "word": "skateboarding",
+      "meaning": {
+        "es": "patineta",
+        "en": "patineta"
+      }
+    },
+    {
+      "icon": "🏃",
+      "word": "tag",
+      "meaning": {
+        "es": "la lleva, la pega",
+        "en": "la lleva, la pega"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "I play soccer.",
+        "meaning": {
+          "es": "Juego fútbol.",
+          "en": "Juego fútbol."
+        }
+      },
+      {
+        "en": "I ride my bike.",
+        "meaning": {
+          "es": "Monto en mi bicicleta.",
+          "en": "Monto en mi bicicleta."
+        }
+      },
+      {
+        "en": "My favorite sport is basketball.",
+        "meaning": {
+          "es": "Mi deporte favorito es el baloncesto.",
+          "en": "Mi deporte favorito es el baloncesto."
+        }
+      }
+    ],
+    "rule": {
+      "es": "Para deportes con pelota: “I play” + el deporte, sin “the”: I play tennis. En inglés de Estados Unidos el fútbol es “soccer”; en Inglaterra, “football”.",
+      "en": "For ball sports: “I play” + the sport, no “the”: I play tennis. In American English it's “soccer”; in British English, “football”."
+    }
+  },
+  "activities": [
+    {
+      "id": "sports-basketball",
+      "type": "choice",
+      "prompt": {
+        "es": "🏀 ¿Qué deporte es?",
+        "en": "🏀 Which sport?"
+      },
+      "options": [
+        "basketball",
+        "soccer",
+        "tennis"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Se lanza la pelota a un aro.",
+        "en": "You throw the ball through a hoop."
+      },
+      "why": {
+        "es": "“Basketball” es baloncesto.",
+        "en": "“Basketball.”"
+      }
+    },
+    {
+      "id": "sports-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué deporte es?",
+        "en": "Listen. Which sport?"
+      },
+      "options": [
+        {
+          "es": "🎾",
+          "en": "🎾"
+        },
+        {
+          "es": "⚽",
+          "en": "⚽"
+        },
+        {
+          "es": "🏐",
+          "en": "🏐"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Se juega con raqueta.",
+        "en": "You play it with a racket."
+      },
+      "why": {
+        "es": "“Tennis” es tenis.",
+        "en": "“Tennis.”"
+      },
+      "listen": "tennis"
+    },
+    {
+      "id": "sports-gap",
+      "type": "choice",
+      "prompt": {
+        "es": "Completa: “I ___ soccer.”",
+        "en": "Fill in: “I ___ soccer.”"
+      },
+      "options": [
+        "play",
+        "ride",
+        "swim"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Con deportes de pelota se usa “play”.",
+        "en": "Ball sports use “play”."
+      },
+      "why": {
+        "es": "“I play soccer.”",
+        "en": "“I play soccer.”"
+      },
+      "show": "I ___ soccer."
+    },
+    {
+      "id": "sports-bike",
+      "type": "choice",
+      "prompt": {
+        "es": "🚲 ¿Cómo se dice “monto en bicicleta”?",
+        "en": "🚲 How do you say you ride a bike?"
+      },
+      "options": [
+        "I ride a bike.",
+        "I play a bike.",
+        "I swim a bike."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Para la bicicleta se usa “ride”.",
+        "en": "For bikes use “ride”."
+      },
+      "why": {
+        "es": "“I ride a bike.”",
+        "en": "“I ride a bike.”"
+      }
+    },
+    {
+      "id": "sports-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? En Estados Unidos el fútbol se llama “soccer”.",
+        "en": "True or false? In the US, fútbol is called “soccer”."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "En Inglaterra se dice football.",
+        "en": "In England it's football."
+      },
+      "why": {
+        "es": "Verdadero.",
+        "en": "True."
+      }
+    },
+    {
+      "id": "sports-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot escribió “I play the tennis”. ¿Cómo se escribe bien?",
+        "en": "🤖 PyBot wrote “I play the tennis”. What's right?"
+      },
+      "options": [
+        "I play tennis.",
+        "I play the tennis.",
+        "I tennis play."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Los deportes van sin “the”.",
+        "en": "Sports go without “the”."
+      },
+      "why": {
+        "es": "¡Arreglado! I play tennis.",
+        "en": "Fixed! I play tennis."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "soccer",
+      "meaning": {
+        "es": "fútbol",
+        "en": "fútbol"
+      }
+    },
+    {
+      "en": "basketball",
+      "meaning": {
+        "es": "baloncesto",
+        "en": "baloncesto"
+      }
+    },
+    {
+      "en": "tennis",
+      "meaning": {
+        "es": "tenis",
+        "en": "tenis"
+      }
+    },
+    {
+      "en": "volleyball",
+      "meaning": {
+        "es": "voleibol",
+        "en": "voleibol"
+      }
+    },
+    {
+      "en": "swimming",
+      "meaning": {
+        "es": "natación",
+        "en": "natación"
+      }
+    },
+    {
+      "en": "ride a bike",
+      "meaning": {
+        "es": "montar en bicicleta",
+        "en": "montar en bicicleta"
+      }
+    },
+    {
+      "en": "skateboarding",
+      "meaning": {
+        "es": "patineta",
+        "en": "patineta"
+      }
+    },
+    {
+      "en": "tag",
+      "meaning": {
+        "es": "la lleva, la pega",
+        "en": "la lleva, la pega"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Deporte en inglés",
+      "en": "Sports in English"
+    },
+    "text": {
+      "es": "Jueguen un rato a tu deporte favorito y narren en inglés: “I'm running! Pass! Goal!”.",
+      "en": "Play your favorite sport for a while and narrate in English: “I'm running! Pass! Goal!”."
+    },
+    "adult": {
+      "es": "se vale gritar “Goal!” bien fuerte.",
+      "en": "shouting “Goal!” loudly is allowed."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

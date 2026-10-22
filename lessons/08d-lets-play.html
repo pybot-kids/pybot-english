@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Invita a tus amigas y amigos con “Let&#x27;s…!” y responde con entusiasmo." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>Let&#x27;s play! ¡Vamos a jugar! — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="letsPlay">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "letsPlay",
+  "mood": "celebrating",
+  "title": {
+    "es": "Let's play! ¡Vamos a jugar!",
+    "en": "Let's play!"
+  },
+  "intro": {
+    "es": "Invita a tus amigas y amigos con “Let's…!” y responde con entusiasmo.",
+    "en": "Invite your friends with “Let's…!” and answer with energy."
+  },
+  "pybot": {
+    "es": "Let's play! Let's dance! Let's learn more English! 🎉",
+    "en": "Let's play! Let's dance! Let's learn more English! 🎉"
+  },
+  "look": [
+    {
+      "icon": "🙌",
+      "word": "Let's…!",
+      "meaning": {
+        "es": "¡vamos a…!",
+        "en": "¡vamos a…!"
+      }
+    },
+    {
+      "icon": "🎲",
+      "word": "Let's play!",
+      "meaning": {
+        "es": "¡vamos a jugar!",
+        "en": "¡vamos a jugar!"
+      }
+    },
+    {
+      "icon": "💃",
+      "word": "Let's dance!",
+      "meaning": {
+        "es": "¡vamos a bailar!",
+        "en": "¡vamos a bailar!"
+      }
+    },
+    {
+      "icon": "🚶",
+      "word": "Let's go!",
+      "meaning": {
+        "es": "¡vamos!",
+        "en": "¡vamos!"
+      }
+    },
+    {
+      "icon": "💡",
+      "word": "Good idea!",
+      "meaning": {
+        "es": "¡buena idea!",
+        "en": "¡buena idea!"
+      }
+    },
+    {
+      "icon": "👍",
+      "word": "OK!",
+      "meaning": {
+        "es": "¡listo!, ¡dale!",
+        "en": "¡listo!, ¡dale!"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "Let's play tag!",
+        "meaning": {
+          "es": "¡Juguemos a la lleva!",
+          "en": "¡Juguemos a la lleva!"
+        }
+      },
+      {
+        "en": "Good idea!",
+        "meaning": {
+          "es": "¡Buena idea!",
+          "en": "¡Buena idea!"
+        }
+      },
+      {
+        "en": "Let's go to the park!",
+        "meaning": {
+          "es": "¡Vamos al parque!",
+          "en": "¡Vamos al parque!"
+        }
+      }
+    ],
+    "rule": {
+      "es": "“Let's” invita a hacer algo juntos: Let's + acción. Para aceptar: Good idea! / OK! / Yes!",
+      "en": "“Let's” invites people to do something together: Let's + action. To accept: Good idea! / OK! / Yes!"
+    }
+  },
+  "activities": [
+    {
+      "id": "letsPlay-dance",
+      "type": "choice",
+      "prompt": {
+        "es": "💃 Quieres bailar con tus amigas. ¿Qué dices?",
+        "en": "💃 You want to dance with your friends. What do you say?"
+      },
+      "options": [
+        "Let's dance!",
+        "Can dance!",
+        "I dance you!"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Usa “Let's”.",
+        "en": "Use “Let's”."
+      },
+      "why": {
+        "es": "“Let's dance!”",
+        "en": "“Let's dance!”"
+      }
+    },
+    {
+      "id": "letsPlay-answer",
+      "type": "choice",
+      "prompt": {
+        "es": "Tu amigo dice “Let's play soccer!”. Quieres jugar. ¿Qué respondes?",
+        "en": "Your friend says “Let's play soccer!”. You want to. What do you say?"
+      },
+      "options": [
+        "Good idea!",
+        "Good night!",
+        "No, I'm not."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Aceptas la invitación.",
+        "en": "You accept."
+      },
+      "why": {
+        "es": "“Good idea!”: ¡buena idea!",
+        "en": "“Good idea!”"
+      }
+    },
+    {
+      "id": "letsPlay-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿A dónde quieren ir?",
+        "en": "Listen. Where do they want to go?"
+      },
+      "options": [
+        {
+          "es": "🌳 Al parque",
+          "en": "🌳 To the park"
+        },
+        {
+          "es": "🏫 Al colegio",
+          "en": "🏫 To school"
+        },
+        {
+          "es": "🛏️ A dormir",
+          "en": "🛏️ To bed"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Escucha “park”.",
+        "en": "Listen for “park”."
+      },
+      "why": {
+        "es": "“Let's go to the park!”",
+        "en": "“Let's go to the park!”"
+      },
+      "listen": "Let's go to the park!"
+    },
+    {
+      "id": "letsPlay-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma: “¡Vamos a jugar a la lleva!”",
+        "en": "Build: “Let's play tag!”"
+      },
+      "tiles": [
+        "Let's",
+        "play",
+        "tag!"
+      ],
+      "hint": {
+        "es": "Empieza con Let's.",
+        "en": "Start with Let's."
+      },
+      "why": {
+        "es": "“Let's play tag!”",
+        "en": "“Let's play tag!”"
+      }
+    },
+    {
+      "id": "letsPlay-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? “Let's go!” significa “¡vamos!”.",
+        "en": "True or false? “Let's go!” means “¡vamos!”."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Go es ir.",
+        "en": "Go is ir."
+      },
+      "why": {
+        "es": "Verdadero.",
+        "en": "True."
+      }
+    },
+    {
+      "id": "letsPlay-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot dijo “Let's playing!”. ¿Cómo se dice bien?",
+        "en": "🤖 PyBot said “Let's playing!”. What's right?"
+      },
+      "options": [
+        "Let's play!",
+        "Let's playing!",
+        "Let's plays!"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Después de Let's, sin “-ing”.",
+        "en": "After Let's, no “-ing”."
+      },
+      "why": {
+        "es": "¡Arreglado! Let's play!",
+        "en": "Fixed! Let's play!"
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "Let's…!",
+      "meaning": {
+        "es": "¡vamos a…!",
+        "en": "¡vamos a…!"
+      }
+    },
+    {
+      "en": "Let's play!",
+      "meaning": {
+        "es": "¡vamos a jugar!",
+        "en": "¡vamos a jugar!"
+      }
+    },
+    {
+      "en": "Let's dance!",
+      "meaning": {
+        "es": "¡vamos a bailar!",
+        "en": "¡vamos a bailar!"
+      }
+    },
+    {
+      "en": "Let's go!",
+      "meaning": {
+        "es": "¡vamos!",
+        "en": "¡vamos!"
+      }
+    },
+    {
+      "en": "Good idea!",
+      "meaning": {
+        "es": "¡buena idea!",
+        "en": "¡buena idea!"
+      }
+    },
+    {
+      "en": "OK!",
+      "meaning": {
+        "es": "¡listo!, ¡dale!",
+        "en": "¡listo!, ¡dale!"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Organiza un juego",
+      "en": "Organize a game"
+    },
+    "text": {
+      "es": "Invita a tu familia a jugar algo en inglés: “Let's play tag!”, “Let's dance!”. Gana quien responda “Good idea!” más rápido.",
+      "en": "Invite your family to play something in English: “Let's play tag!”, “Let's dance!”. Whoever says “Good idea!” fastest wins."
+    },
+    "adult": {
+      "es": "acepten con entusiasmo: “OK! Let's go!”",
+      "en": "accept with energy: “OK! Let's go!”"
+    }
+  }
+}
+    </script>
+  </body>
+</html>

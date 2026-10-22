@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Di lo que está haciendo otra persona: he (él), she (ella), they (ellos o ellas)." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>He, she, they: lo que hacen otras personas — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="heSheThey">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "heSheThey",
+  "mood": "welcoming",
+  "title": {
+    "es": "He, she, they: lo que hacen otras personas",
+    "en": "He, she, they: what others are doing"
+  },
+  "intro": {
+    "es": "Di lo que está haciendo otra persona: he (él), she (ella), they (ellos o ellas).",
+    "en": "Say what someone else is doing: he, she, they."
+  },
+  "pybot": {
+    "es": "She's reading. He's cooking. They're laughing. ¡Y yo los estoy mirando!",
+    "en": "She's reading. He's cooking. They're laughing. And I'm watching them!"
+  },
+  "look": [
+    {
+      "icon": "👦",
+      "word": "he is / he's",
+      "meaning": {
+        "es": "él está",
+        "en": "él está"
+      }
+    },
+    {
+      "icon": "👧",
+      "word": "she is / she's",
+      "meaning": {
+        "es": "ella está",
+        "en": "ella está"
+      }
+    },
+    {
+      "icon": "👫",
+      "word": "they are / they're",
+      "meaning": {
+        "es": "ellos o ellas están",
+        "en": "ellos o ellas están"
+      }
+    },
+    {
+      "icon": "🍳",
+      "word": "cooking",
+      "meaning": {
+        "es": "cocinando",
+        "en": "cocinando"
+      }
+    },
+    {
+      "icon": "😂",
+      "word": "laughing",
+      "meaning": {
+        "es": "riendo",
+        "en": "riendo"
+      }
+    },
+    {
+      "icon": "🚶",
+      "word": "walking",
+      "meaning": {
+        "es": "caminando",
+        "en": "caminando"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "She's reading.",
+        "meaning": {
+          "es": "Ella está leyendo.",
+          "en": "Ella está leyendo."
+        }
+      },
+      {
+        "en": "He's cooking.",
+        "meaning": {
+          "es": "Él está cocinando.",
+          "en": "Él está cocinando."
+        }
+      },
+      {
+        "en": "They're playing soccer.",
+        "meaning": {
+          "es": "Están jugando fútbol.",
+          "en": "Están jugando fútbol."
+        }
+      }
+    ],
+    "rule": {
+      "es": "Yo: I'm. Él: he's. Ella: she's. Ellos o ellas: they're. Después va la acción con “-ing”.",
+      "en": "I'm, he's, she's, they're, then the action with “-ing”."
+    }
+  },
+  "activities": [
+    {
+      "id": "heSheThey-she",
+      "type": "choice",
+      "prompt": {
+        "es": "👧📖 ¿Cómo se dice “ella está leyendo”?",
+        "en": "👧📖 How do you say she is reading?"
+      },
+      "options": [
+        "She's reading.",
+        "He's reading.",
+        "They're reading."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Ella = she.",
+        "en": "She = ella."
+      },
+      "why": {
+        "es": "“She's reading.”",
+        "en": "“She's reading.”"
+      }
+    },
+    {
+      "id": "heSheThey-they",
+      "type": "choice",
+      "prompt": {
+        "es": "👫⚽ Dos amigos juegan. Completa: “___ playing.”",
+        "en": "👫⚽ Two friends are playing. Fill in: “___ playing.”"
+      },
+      "options": [
+        "They're",
+        "He's",
+        "I'm"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Son dos personas.",
+        "en": "There are two people."
+      },
+      "why": {
+        "es": "“They're playing.”",
+        "en": "“They're playing.”"
+      },
+      "show": "___ playing."
+    },
+    {
+      "id": "heSheThey-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Quién está cocinando?",
+        "en": "Listen. Who is cooking?"
+      },
+      "options": [
+        {
+          "es": "👦 Él",
+          "en": "👦 He"
+        },
+        {
+          "es": "👧 Ella",
+          "en": "👧 She"
+        },
+        {
+          "es": "👫 Ellos",
+          "en": "👫 They"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Escucha la primera palabra.",
+        "en": "Listen to the first word."
+      },
+      "why": {
+        "es": "“He's cooking”: él está cocinando.",
+        "en": "“He's cooking.”"
+      },
+      "listen": "He's cooking."
+    },
+    {
+      "id": "heSheThey-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma: “Ellas están riendo.”",
+        "en": "Build: “They're laughing.”"
+      },
+      "tiles": [
+        "They're",
+        "laughing."
+      ],
+      "hint": {
+        "es": "Empieza con They're.",
+        "en": "Start with They're."
+      },
+      "why": {
+        "es": "“They're laughing.”",
+        "en": "“They're laughing.”"
+      }
+    },
+    {
+      "id": "heSheThey-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? “She” se usa para hablar de una niña o una mujer.",
+        "en": "True or false? “She” is for a girl or a woman."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "She = ella.",
+        "en": "She = ella."
+      },
+      "why": {
+        "es": "Verdadero.",
+        "en": "True."
+      }
+    },
+    {
+      "id": "heSheThey-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot escribió “They is walking”. ¿Cómo se escribe bien?",
+        "en": "🤖 PyBot wrote “They is walking”. What's right?"
+      },
+      "options": [
+        "They're walking.",
+        "They is walking.",
+        "They am walking."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Con they va “are”.",
+        "en": "With they use “are”."
+      },
+      "why": {
+        "es": "¡Arreglado! They're walking.",
+        "en": "Fixed! They're walking."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "he is / he's",
+      "meaning": {
+        "es": "él está",
+        "en": "él está"
+      }
+    },
+    {
+      "en": "she is / she's",
+      "meaning": {
+        "es": "ella está",
+        "en": "ella está"
+      }
+    },
+    {
+      "en": "they are / they're",
+      "meaning": {
+        "es": "ellos o ellas están",
+        "en": "ellos o ellas están"
+      }
+    },
+    {
+      "en": "cooking",
+      "meaning": {
+        "es": "cocinando",
+        "en": "cocinando"
+      }
+    },
+    {
+      "en": "laughing",
+      "meaning": {
+        "es": "riendo",
+        "en": "riendo"
+      }
+    },
+    {
+      "en": "walking",
+      "meaning": {
+        "es": "caminando",
+        "en": "caminando"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Reportero en casa",
+      "en": "Home reporter"
+    },
+    "text": {
+      "es": "Sé reportero o reportera: mira a tu familia y cuenta lo que hace cada persona: “Mom is cooking. My brother is reading.”",
+      "en": "Be a reporter: watch your family and say what each person is doing: “Mom is cooking. My brother is reading.”"
+    },
+    "adult": {
+      "es": "háganle caso al reportaje y aplaudan al final.",
+      "en": "listen to the report and clap at the end."
+    }
+  }
+}
+    </script>
+  </body>
+</html>
