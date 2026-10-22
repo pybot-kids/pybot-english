@@ -1,6 +1,6 @@
 # Third-party notices
 
-PyBot English bundles no third-party code, fonts, images, or audio. It uses features that already live in the learner's browser, and it links to one outside service. Each one is credited here and next to the place where it is used.
+PyBot English bundles no third-party code, fonts, images, or audio. It uses features that already live in the learner's browser, links to one outside service, and loads Google Analytics to count anonymous visits. Each one is credited here and next to the place where it is used.
 
 ## Browser voices (Web Speech API)
 
@@ -31,6 +31,17 @@ When neither the word list nor the browser can translate, the translator page sh
 - Google Translate is a trademark of Google LLC. It is used here only to name the service the link opens.
 
 Credited on the page: translator page.
+
+## Google Analytics
+
+The site counts anonymous page visits with Google Analytics 4 (the same property as PyBot). The `gtag.js` script loads from `https://www.googletagmanager.com/` on published pages only.
+
+- Service: https://marketingplatform.google.com/about/analytics/
+- Terms: https://marketingplatform.google.com/about/analytics/terms/us/
+- Ad storage, ad user data, ad personalization, and Google signals are turned off. The learner's name, answers, and progress are never sent. Google Analytics sets its own cookies.
+- Google Analytics is a trademark of Google LLC.
+
+Credited on the page: a note for adults on the home page, and the FAQ answers "What data does PyBot English collect?" and "What outside tools does PyBot English use?".
 
 ## PyBot
 

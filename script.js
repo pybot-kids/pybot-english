@@ -581,6 +581,7 @@ const translations = {
     "extras.faqText": "Respuestas para ti y para los adultos que te acompañan.",
     "local.eyebrow": "TU TRABAJO ES TUYO",
     "local.title": "Sin cuenta. Tu progreso se queda aquí.",
+    "local.analytics": "Para adultos: PyBot English cuenta visitas anónimas a las páginas con Google Analytics, sin anuncios ni personalización de anuncios. El nombre, las respuestas y el avance de quien aprende nunca se envían.",
     "local.text": "Este navegador recuerda lo que haces. La voz la pone tu propio dispositivo. Pide permiso a un adulto antes de borrar sus datos.",
     "backup.title": "¿Vas a usar otro navegador?",
     "backup.text": "Guarda aquí una copia. Luego cárgala en el otro navegador.",
@@ -811,6 +812,7 @@ const translations = {
     "extras.faqText": "Answers for you and for the grown-ups who help you.",
     "local.eyebrow": "YOUR WORK IS YOURS",
     "local.title": "No account. Your progress stays here.",
+    "local.analytics": "For grown-ups: PyBot English counts anonymous page visits with Google Analytics, with ads and ad personalization turned off. The learner's name, answers, and progress are never sent.",
     "local.text": "This browser remembers your work. The voice comes from your own device. Ask an adult before clearing its data.",
     "backup.title": "Moving to another browser?",
     "backup.text": "Save a backup file here. Then load it in the other browser.",
@@ -2600,6 +2602,41 @@ function arrangeHeader() {
   });
 }
 
+// ---------- Analytics (same Google Analytics 4 property as PyBot) ----------
+// Google Analytics 4 measurement ID shared with PyBot (pybot-kids.github.io); pages are told
+// apart by their address (/pybot-english/…). Leave it empty to turn analytics off.
+const GA_MEASUREMENT_ID = "G-H0PLZHW8CE";
+
+// Counts anonymous page visits only. Ads, Google signals, and ad personalization stay off,
+// and nothing the learner types or saves (name, answers, progress) is sent.
+function startAnalytics() {
+  if (!GA_MEASUREMENT_ID || !/^G-[A-Z0-9]+$/.test(GA_MEASUREMENT_ID)) return;
+  if (!/^https?:$/.test(window.location.protocol)) return;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function gtag() {
+    window.dataLayer.push(arguments);
+  };
+  window.gtag("consent", "default", {
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+    analytics_storage: "granted",
+  });
+  window.gtag("set", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  window.gtag("js", new Date());
+  window.gtag("config", GA_MEASUREMENT_ID, {
+    allow_google_signals: false,
+    allow_ad_personalization_signals: false,
+  });
+  document.querySelectorAll("[data-analytics-note]").forEach((note) => {
+    note.hidden = false;
+  });
+  const tag = document.createElement("script");
+  tag.async = true;
+  tag.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(GA_MEASUREMENT_ID)}`;
+  document.head.append(tag);
+}
+
 // ---------- Start ----------
 
 const scriptBaseUrl = document.currentScript?.src ?? window.location.href;
@@ -2626,4 +2663,5 @@ document.addEventListener("DOMContentLoaded", () => {
   languageRenderers.push(renderStreak, renderPathMap, renderFamily);
   setLanguage(currentLanguage, false);
   checkRewards();
+  startAnalytics();
 });

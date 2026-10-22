@@ -100,7 +100,7 @@ PyBot keeps its roles: shell (head, arms) in **cobalt**, body in **magenta**, ea
 
 ## Technical architecture
 
-A static site, like PyBot: plain HTML, CSS and JavaScript, no build step, hosted on GitHub Pages, no server, no database, no accounts, no analytics.
+A static site, like PyBot: plain HTML, CSS and JavaScript, no build step, hosted on GitHub Pages, no server, no database, no accounts. The only outside request is anonymous page-visit analytics (see **Analytics**).
 
 ### Third-party components and credit
 
@@ -110,7 +110,17 @@ Every outside component gets credit, the way PyBot credits Pyodide:
 - It is credited **next to the place where it is used**, in a small "♥" details block, and in the FAQ answer "What outside tools does PyBot English use?".
 - It is used only under a license or terms compatible with the project, never implies affiliation, and is never bundled without its required notices.
 
-Today that covers the browser voices (Web Speech API), the browser translator (Translator API, by Google in Chrome), and the Google Translate link. PyBot English bundles no outside code, fonts, images, or audio.
+Today that covers the browser voices (Web Speech API), the browser translator (Translator API, by Google in Chrome), the Google Translate link, and Google Analytics. PyBot English bundles no outside code, fonts, images, or audio.
+
+### Analytics
+
+Like PyBot, the site counts anonymous page visits with Google Analytics 4, using **the same property and measurement ID as PyBot** (`G-H0PLZHW8CE`, web stream "Pybot For Kids"); visits to this site are told apart by their address (`/pybot-english/…`). It is set up in one place, `GA_MEASUREMENT_ID` in `script.js`; an empty ID turns analytics off.
+
+- Ad storage, ad user data, ad personalization, and Google signals are turned off. GA4 does not log or store IP addresses.
+- Only standard page-view data is sent (page address, title, language, device type). The learner's name, answers, and progress in `localStorage` are never sent.
+- Analytics does not run when a page is opened from a local file.
+- The home page shows a short note for adults whenever analytics is on, and the FAQ explains it.
+- Google Analytics sets its own `_ga` cookies. They are not part of the storage registry and are not included in backups.
 
 ### Shared header
 
