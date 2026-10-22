@@ -4,9 +4,9 @@
 
 ## 1. Propósito y alcance
 
-- **Para quién:** niñas y niños de 8 a 10 años (útil hasta ~12) que hablan español y empiezan inglés **desde cero**. Nació para que María Ángel pueda ayudar a sus amigos.
+- **Para quién:** niñas y niños de 8 a 10 años (útil hasta ~12) que hablan español y empiezan inglés **desde cero**. Nació para que María Ángel pueda ayudar a sus amigas y amigos.
 - **Hasta dónde:** el camino actual cubre aproximadamente el nivel **Pre-A1 → A1** del Marco Común Europeo (MCER). Como referencia de vocabulario y temas se puede consultar la lista pública de *Cambridge English: Pre A1 Starters*, sin copiar sus materiales.
-- **Qué NO es:** no es un curso de conversación ni evalúa la pronunciación. PyBot enseña **cómo suenan** las cosas; hablar se practica en casa con la familia y los amigos.
+- **Qué NO es:** no es un curso de conversación ni evalúa la pronunciación. PyBot enseña **cómo suenan** las cosas; hablar se practica en casa con la familia y con amigas y amigos.
 - **Resultado esperado al final del camino:** el niño saluda y se presenta, deletrea su nombre, cuenta hasta 20, describe cosas por color, forma y tamaño, habla de su familia, su cuerpo, sus gustos y su día, y hace y entiende preguntas simples con *what, who, where, how many*.
 
 ## 2. Principios pedagógicos (resumen operativo)
@@ -183,10 +183,10 @@ Cada zona nueva lleva su sticker, su diploma y, cada 3 o 4 zonas, una parada nue
 
 | Fase | Entrega | Listo cuando… |
 |---|---|---|
-| A | Plantilla de lección + zona 00 completa + flujo de audio | Las 3 páginas cumplen la checklist; el niño termina la zona 00 sin ayuda |
-| B | Zonas 01 y 02 | Ídem, más la prueba con María Ángel y 2–3 amigos (observación, sin recoger datos) |
-| C | Zonas 03 y 04 + "Mis palabras" | Ídem; "Mis palabras" lista todo lo publicado |
-| D | Zonas 05 y 06 + parada + diploma final | Ídem; el camino completo se puede terminar |
+| A | Plantilla de lección + zona 00 completa + flujo de audio (✅ plantilla y zona 00; falta el audio pregenerado) | Las 3 páginas cumplen la checklist; el niño termina la zona 00 sin ayuda |
+| B | Zonas 01 y 02 (✅ contenido; falta la prueba con niñas y niños) | Ídem, más la prueba con María Ángel y 2–3 amigas o amigos (observación, sin recoger datos) |
+| C | Zonas 03 y 04 (✅) + "Mis palabras" | Ídem; "Mis palabras" lista todo lo publicado |
+| D | Zonas 05 y 06 + parada + diploma final (✅) | Ídem; el camino completo se puede terminar |
 | E | Guía para familias + Conoce a PyBot + revisión de accesibilidad | Auditoría a11y, varios navegadores, móvil |
 | F | Crecimiento (sección 5) | Una zona o página a la vez, con la misma checklist |
 

@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Son las mismas 26 letras, pero suenan distinto. Aprende las que más confunden." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>Las letras en inglés tienen otro nombre — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="abcLetters">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "abcLetters",
+  "mood": "curious",
+  "title": {
+    "es": "Las letras en inglés tienen otro nombre",
+    "en": "English letters have different names"
+  },
+  "intro": {
+    "es": "Son las mismas 26 letras, pero suenan distinto. Aprende las que más confunden.",
+    "en": "Same 26 letters, different names. Learn the ones that confuse people most."
+  },
+  "pybot": {
+    "es": "¡A, B, C! La «E» en inglés suena «i». ¡Sorpresa!",
+    "en": "A, B, C! The letter E sounds like «ee». Surprise!"
+  },
+  "look": [
+    {
+      "icon": "🅰️",
+      "word": "A",
+      "meaning": {
+        "es": "suena «ei»",
+        "en": "suena «ei»"
+      }
+    },
+    {
+      "icon": "📧",
+      "word": "E",
+      "meaning": {
+        "es": "suena «i»",
+        "en": "suena «i»"
+      }
+    },
+    {
+      "icon": "ℹ️",
+      "word": "I",
+      "meaning": {
+        "es": "suena «ai»",
+        "en": "suena «ai»"
+      }
+    },
+    {
+      "icon": "🟢",
+      "word": "G",
+      "meaning": {
+        "es": "suena «yi»",
+        "en": "suena «yi»"
+      }
+    },
+    {
+      "icon": "🕹️",
+      "word": "J",
+      "meaning": {
+        "es": "suena «yei»",
+        "en": "suena «yei»"
+      }
+    },
+    {
+      "icon": "🏨",
+      "word": "H",
+      "meaning": {
+        "es": "suena «eich»",
+        "en": "suena «eich»"
+      }
+    },
+    {
+      "icon": "🪀",
+      "word": "Y",
+      "meaning": {
+        "es": "suena «uai»",
+        "en": "suena «uai»"
+      }
+    },
+    {
+      "icon": "🌊",
+      "word": "W",
+      "meaning": {
+        "es": "suena «dabliu»",
+        "en": "suena «dabliu»"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "A, B, C, D, E, F, G",
+        "meaning": {
+          "es": "A, B, C, D, E, F, G",
+          "en": "A, B, C, D, E, F, G"
+        }
+      },
+      {
+        "en": "The alphabet has 26 letters.",
+        "meaning": {
+          "es": "El abecedario tiene 26 letras.",
+          "en": "El abecedario tiene 26 letras."
+        }
+      }
+    ],
+    "rule": {
+      "es": "Las letras se escriben igual que en español, pero se dicen distinto. Escúchalas con 🔊 y repítelas.",
+      "en": "Letters look the same as in Spanish but are said differently. Listen with 🔊 and repeat."
+    }
+  },
+  "activities": [
+    {
+      "id": "abcLetters-listen-e",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué letra es?",
+        "en": "Listen. Which letter is it?"
+      },
+      "options": [
+        "E",
+        "I",
+        "A"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Suena como la «i» del español.",
+        "en": "It sounds like Spanish «i»."
+      },
+      "why": {
+        "es": "Es la E: en inglés suena «i».",
+        "en": "It's E."
+      },
+      "listen": "E"
+    },
+    {
+      "id": "abcLetters-listen-i",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha otra. ¿Qué letra es?",
+        "en": "Listen to another. Which letter?"
+      },
+      "options": [
+        "I",
+        "E",
+        "Y"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Suena «ai».",
+        "en": "It sounds like «eye»."
+      },
+      "why": {
+        "es": "Es la I: suena «ai».",
+        "en": "It's I."
+      },
+      "listen": "I"
+    },
+    {
+      "id": "abcLetters-listen-g",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha con atención. ¿Qué letra es?",
+        "en": "Listen carefully. Which letter?"
+      },
+      "options": [
+        "G",
+        "J",
+        "H"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Suena «yi», no «yei».",
+        "en": "It sounds like «jee», not «jay»."
+      },
+      "why": {
+        "es": "Es la G: suena «yi».",
+        "en": "It's G."
+      },
+      "listen": "G"
+    },
+    {
+      "id": "abcLetters-h",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Cómo suena la letra «H» en inglés?",
+        "en": "How does the letter H sound in English?"
+      },
+      "options": [
+        {
+          "es": "«eich»",
+          "en": "«aitch»"
+        },
+        {
+          "es": "«ache»",
+          "en": "«ache» (Spanish)"
+        },
+        {
+          "es": "«yi»",
+          "en": "«jee»"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "No es como en español.",
+        "en": "It's not the Spanish name."
+      },
+      "why": {
+        "es": "La H se dice «eich».",
+        "en": "H is «aitch»."
+      }
+    },
+    {
+      "id": "abcLetters-order",
+      "type": "order",
+      "prompt": {
+        "es": "Pon las letras en orden.",
+        "en": "Put the letters in order."
+      },
+      "tiles": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "hint": {
+        "es": "Empieza con la A.",
+        "en": "Start with A."
+      },
+      "why": {
+        "es": "¡A, B, C, D! Así empieza el abecedario.",
+        "en": "A, B, C, D! That's how the alphabet starts."
+      }
+    },
+    {
+      "id": "abcLetters-no-enye",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? El inglés tiene la letra «Ñ».",
+        "en": "True or false? English has the letter Ñ."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 1,
+      "hint": {
+        "es": "Cuenta: el inglés tiene 26 letras.",
+        "en": "English has 26 letters."
+      },
+      "why": {
+        "es": "Falso: la «ñ» es solo del español.",
+        "en": "False: «ñ» is only in Spanish."
+      }
+    },
+    {
+      "id": "abcLetters-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot dice que la «J» en inglés suena «jota». ¿Cómo suena de verdad?",
+        "en": "🤖 PyBot says J sounds «jota». What does it really sound like?"
+      },
+      "options": [
+        {
+          "es": "«yei»",
+          "en": "«jay»"
+        },
+        {
+          "es": "«jota»",
+          "en": "«jota»"
+        },
+        {
+          "es": "«yi»",
+          "en": "«jee»"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Rima con «hey».",
+        "en": "It rhymes with «hey»."
+      },
+      "why": {
+        "es": "¡Gracias! La J se dice «yei».",
+        "en": "Thanks! J is «jay»."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "A",
+      "meaning": {
+        "es": "suena «ei»",
+        "en": "suena «ei»"
+      }
+    },
+    {
+      "en": "E",
+      "meaning": {
+        "es": "suena «i»",
+        "en": "suena «i»"
+      }
+    },
+    {
+      "en": "I",
+      "meaning": {
+        "es": "suena «ai»",
+        "en": "suena «ai»"
+      }
+    },
+    {
+      "en": "G",
+      "meaning": {
+        "es": "suena «yi»",
+        "en": "suena «yi»"
+      }
+    },
+    {
+      "en": "J",
+      "meaning": {
+        "es": "suena «yei»",
+        "en": "suena «yei»"
+      }
+    },
+    {
+      "en": "H",
+      "meaning": {
+        "es": "suena «eich»",
+        "en": "suena «eich»"
+      }
+    },
+    {
+      "en": "Y",
+      "meaning": {
+        "es": "suena «uai»",
+        "en": "suena «uai»"
+      }
+    },
+    {
+      "en": "W",
+      "meaning": {
+        "es": "suena «dabliu»",
+        "en": "suena «dabliu»"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Canta el abecedario",
+      "en": "Sing the alphabet"
+    },
+    "text": {
+      "es": "Busca la canción del abecedario en inglés y cántala con tu familia. Fíjate bien en la E, la I y la J.",
+      "en": "Find the English alphabet song and sing it with your family. Pay attention to E, I and J."
+    },
+    "adult": {
+      "es": "canten juntos, lento. No importa equivocarse.",
+      "en": "sing together, slowly. Mistakes don't matter."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

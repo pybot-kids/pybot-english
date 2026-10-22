@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="En inglés las vocales pueden sonar distinto. Escucha una palabra para cada una." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>Vocales: a, e, i, o, u — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="abcVowels">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "abcVowels",
+  "mood": "surprised",
+  "title": {
+    "es": "Vocales: a, e, i, o, u",
+    "en": "Vowels: a, e, i, o, u"
+  },
+  "intro": {
+    "es": "En inglés las vocales pueden sonar distinto. Escucha una palabra para cada una.",
+    "en": "In English vowels can sound different. Listen to one word for each."
+  },
+  "pybot": {
+    "es": "¡Apple, egg, igloo! Cada vocal tiene su palabra.",
+    "en": "Apple, egg, igloo! Each vowel has a word."
+  },
+  "look": [
+    {
+      "icon": "🍎",
+      "word": "apple",
+      "meaning": {
+        "es": "manzana",
+        "en": "manzana"
+      }
+    },
+    {
+      "icon": "🥚",
+      "word": "egg",
+      "meaning": {
+        "es": "huevo",
+        "en": "huevo"
+      }
+    },
+    {
+      "icon": "🧊",
+      "word": "igloo",
+      "meaning": {
+        "es": "iglú",
+        "en": "iglú"
+      }
+    },
+    {
+      "icon": "🍊",
+      "word": "orange",
+      "meaning": {
+        "es": "naranja",
+        "en": "naranja"
+      }
+    },
+    {
+      "icon": "☂️",
+      "word": "umbrella",
+      "meaning": {
+        "es": "paraguas",
+        "en": "paraguas"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "A is for apple.",
+        "meaning": {
+          "es": "La A es de apple (manzana).",
+          "en": "La A es de apple (manzana)."
+        }
+      },
+      {
+        "en": "U is for umbrella.",
+        "meaning": {
+          "es": "La U es de umbrella (paraguas).",
+          "en": "La U es de umbrella (paraguas)."
+        }
+      }
+    ],
+    "rule": {
+      "es": "Las vocales en inglés no siempre suenan como en español. Por eso escuchar es tan importante.",
+      "en": "English vowels don't always sound like Spanish ones. That's why listening matters so much."
+    }
+  },
+  "activities": [
+    {
+      "id": "abcVowels-listen-apple",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué es?",
+        "en": "Listen. What is it?"
+      },
+      "options": [
+        {
+          "es": "🍎 manzana",
+          "en": "🍎 apple"
+        },
+        {
+          "es": "🥚 huevo",
+          "en": "🥚 egg"
+        },
+        {
+          "es": "☂️ paraguas",
+          "en": "☂️ umbrella"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es una fruta roja.",
+        "en": "It's a red fruit."
+      },
+      "why": {
+        "es": "“Apple” es manzana.",
+        "en": "“Apple” is manzana."
+      },
+      "listen": "apple"
+    },
+    {
+      "id": "abcVowels-listen-umbrella",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué es?",
+        "en": "Listen. What is it?"
+      },
+      "options": [
+        {
+          "es": "🍊 naranja",
+          "en": "🍊 orange"
+        },
+        {
+          "es": "☂️ paraguas",
+          "en": "☂️ umbrella"
+        },
+        {
+          "es": "🧊 iglú",
+          "en": "🧊 igloo"
+        }
+      ],
+      "answer": 1,
+      "hint": {
+        "es": "Lo usas cuando llueve.",
+        "en": "You use it when it rains."
+      },
+      "why": {
+        "es": "“Umbrella” es paraguas.",
+        "en": "“Umbrella” is paraguas."
+      },
+      "listen": "umbrella"
+    },
+    {
+      "id": "abcVowels-gap-a",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Qué letra falta?",
+        "en": "Which letter is missing?"
+      },
+      "options": [
+        "a",
+        "e",
+        "u"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es la primera vocal.",
+        "en": "It's the first vowel."
+      },
+      "why": {
+        "es": "¡Apple! Empieza con A.",
+        "en": "Apple starts with A."
+      },
+      "show": "_pple 🍎"
+    },
+    {
+      "id": "abcVowels-gap-e",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Qué letra falta?",
+        "en": "Which letter is missing?"
+      },
+      "options": [
+        "e",
+        "i",
+        "o"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Huevo empieza con la segunda vocal.",
+        "en": "Think of the second vowel."
+      },
+      "why": {
+        "es": "¡Egg! Empieza con E.",
+        "en": "Egg starts with E."
+      },
+      "show": "_gg 🥚"
+    },
+    {
+      "id": "abcVowels-o",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Qué palabra empieza con la vocal O?",
+        "en": "Which word starts with the vowel O?"
+      },
+      "options": [
+        "orange",
+        "egg",
+        "igloo"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es una fruta.",
+        "en": "It's a fruit."
+      },
+      "why": {
+        "es": "“Orange” empieza con O.",
+        "en": "“Orange” starts with O."
+      }
+    },
+    {
+      "id": "abcVowels-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? “Egg” empieza con la letra E.",
+        "en": "True or false? “Egg” starts with E."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Mira la primera letra: e-g-g.",
+        "en": "Look at the first letter."
+      },
+      "why": {
+        "es": "Verdadero: e-g-g.",
+        "en": "True: e-g-g."
+      }
+    },
+    {
+      "id": "abcVowels-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot escribió “umbreya”. ¿Cómo se escribe bien?",
+        "en": "🤖 PyBot wrote “umbreya”. What's the right spelling?"
+      },
+      "options": [
+        "umbrella",
+        "umbreya",
+        "ombrella"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Tiene dos letras L.",
+        "en": "It has two L's."
+      },
+      "why": {
+        "es": "¡Arreglado! u-m-b-r-e-l-l-a.",
+        "en": "Fixed! u-m-b-r-e-l-l-a."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "apple",
+      "meaning": {
+        "es": "manzana",
+        "en": "manzana"
+      }
+    },
+    {
+      "en": "egg",
+      "meaning": {
+        "es": "huevo",
+        "en": "huevo"
+      }
+    },
+    {
+      "en": "igloo",
+      "meaning": {
+        "es": "iglú",
+        "en": "iglú"
+      }
+    },
+    {
+      "en": "orange",
+      "meaning": {
+        "es": "naranja",
+        "en": "naranja"
+      }
+    },
+    {
+      "en": "umbrella",
+      "meaning": {
+        "es": "paraguas",
+        "en": "paraguas"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Busca vocales en casa",
+      "en": "Find vowels at home"
+    },
+    "text": {
+      "es": "Busca algo en casa para cada vocal en inglés: an Apple, an Egg… Dilo en voz alta.",
+      "en": "Find something at home for each vowel in English: an Apple, an Egg… Say it out loud."
+    },
+    "adult": {
+      "es": "si no encuentran algo, dibújenlo.",
+      "en": "if you can't find something, draw it."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

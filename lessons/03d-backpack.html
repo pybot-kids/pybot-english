@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Las cosas de tu mochila. Y un truco: “an” va antes de sonido de vocal." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>Mi mochila — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="backpack">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "backpack",
+  "mood": "happy",
+  "title": {
+    "es": "Mi mochila",
+    "en": "My backpack"
+  },
+  "intro": {
+    "es": "Las cosas de tu mochila. Y un truco: “an” va antes de sonido de vocal.",
+    "en": "Things in your backpack. A tip: use “an” before a vowel sound."
+  },
+  "pybot": {
+    "es": "¿Qué hay en mi backpack? A pencil, a book… ¡y un tornillo!",
+    "en": "What's in my backpack? A pencil, a book… and a screw!"
+  },
+  "look": [
+    {
+      "icon": "✏️",
+      "word": "pencil",
+      "meaning": {
+        "es": "lápiz",
+        "en": "lápiz"
+      }
+    },
+    {
+      "icon": "🖊️",
+      "word": "pen",
+      "meaning": {
+        "es": "esfero, bolígrafo",
+        "en": "esfero, bolígrafo"
+      }
+    },
+    {
+      "icon": "📕",
+      "word": "book",
+      "meaning": {
+        "es": "libro",
+        "en": "libro"
+      }
+    },
+    {
+      "icon": "📓",
+      "word": "notebook",
+      "meaning": {
+        "es": "cuaderno",
+        "en": "cuaderno"
+      }
+    },
+    {
+      "icon": "🧽",
+      "word": "eraser",
+      "meaning": {
+        "es": "borrador",
+        "en": "borrador"
+      }
+    },
+    {
+      "icon": "📏",
+      "word": "ruler",
+      "meaning": {
+        "es": "regla",
+        "en": "regla"
+      }
+    },
+    {
+      "icon": "✂️",
+      "word": "scissors",
+      "meaning": {
+        "es": "tijeras",
+        "en": "tijeras"
+      }
+    },
+    {
+      "icon": "🎒",
+      "word": "backpack",
+      "meaning": {
+        "es": "mochila",
+        "en": "mochila"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "a pencil, a book",
+        "meaning": {
+          "es": "un lápiz, un libro",
+          "en": "un lápiz, un libro"
+        }
+      },
+      {
+        "en": "an eraser",
+        "meaning": {
+          "es": "un borrador",
+          "en": "un borrador"
+        }
+      },
+      {
+        "en": "My backpack is blue.",
+        "meaning": {
+          "es": "Mi mochila es azul.",
+          "en": "Mi mochila es azul."
+        }
+      }
+    ],
+    "rule": {
+      "es": "“A” antes de sonido de consonante (a pencil). “An” antes de sonido de vocal (an eraser).",
+      "en": "“A” before a consonant sound (a pencil). “An” before a vowel sound (an eraser)."
+    }
+  },
+  "activities": [
+    {
+      "id": "backpack-pencil",
+      "type": "choice",
+      "prompt": {
+        "es": "✏️ ¿Qué es?",
+        "en": "✏️ What is it?"
+      },
+      "options": [
+        "pencil",
+        "ruler",
+        "book"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Escribes y borras con él.",
+        "en": "You write with it."
+      },
+      "why": {
+        "es": "“Pencil” es lápiz.",
+        "en": "“Pencil.”"
+      }
+    },
+    {
+      "id": "backpack-ruler",
+      "type": "choice",
+      "prompt": {
+        "es": "📏 ¿Qué es?",
+        "en": "📏 What is it?"
+      },
+      "options": [
+        "ruler",
+        "pen",
+        "scissors"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Mide líneas rectas.",
+        "en": "It measures lines."
+      },
+      "why": {
+        "es": "“Ruler” es regla.",
+        "en": "“Ruler.”"
+      }
+    },
+    {
+      "id": "backpack-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué es?",
+        "en": "Listen. What is it?"
+      },
+      "options": [
+        {
+          "es": "📓",
+          "en": "📓"
+        },
+        {
+          "es": "📕",
+          "en": "📕"
+        },
+        {
+          "es": "✏️",
+          "en": "✏️"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es para escribir tareas.",
+        "en": "You write homework in it."
+      },
+      "why": {
+        "es": "“Notebook” es cuaderno.",
+        "en": "“Notebook.”"
+      },
+      "listen": "notebook"
+    },
+    {
+      "id": "backpack-an",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Cuál va con “an”?",
+        "en": "Which one goes with “an”?"
+      },
+      "options": [
+        "eraser",
+        "pencil",
+        "book"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Empieza con sonido de vocal.",
+        "en": "It starts with a vowel sound."
+      },
+      "why": {
+        "es": "“An eraser”: e es vocal.",
+        "en": "“An eraser.”"
+      }
+    },
+    {
+      "id": "backpack-odd",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Cuál NO va en la mochila del colegio?",
+        "en": "Which one doesn't belong in a school backpack?"
+      },
+      "options": [
+        "oven",
+        "pen",
+        "book",
+        "ruler"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Uno sirve para cocinar.",
+        "en": "One is for cooking."
+      },
+      "why": {
+        "es": "“Oven” es un horno: ¡no cabe en la mochila! 😄",
+        "en": "An oven doesn't fit in a backpack! 😄"
+      }
+    },
+    {
+      "id": "backpack-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot escribió “a eraser”. ¿Cómo se escribe bien?",
+        "en": "🤖 PyBot wrote “a eraser”. What's right?"
+      },
+      "options": [
+        "an eraser",
+        "a eraser",
+        "the a eraser"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Eraser empieza con vocal.",
+        "en": "Eraser starts with a vowel."
+      },
+      "why": {
+        "es": "¡Arreglado! An eraser.",
+        "en": "Fixed! An eraser."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "pencil",
+      "meaning": {
+        "es": "lápiz",
+        "en": "lápiz"
+      }
+    },
+    {
+      "en": "pen",
+      "meaning": {
+        "es": "esfero, bolígrafo",
+        "en": "esfero, bolígrafo"
+      }
+    },
+    {
+      "en": "book",
+      "meaning": {
+        "es": "libro",
+        "en": "libro"
+      }
+    },
+    {
+      "en": "notebook",
+      "meaning": {
+        "es": "cuaderno",
+        "en": "cuaderno"
+      }
+    },
+    {
+      "en": "eraser",
+      "meaning": {
+        "es": "borrador",
+        "en": "borrador"
+      }
+    },
+    {
+      "en": "ruler",
+      "meaning": {
+        "es": "regla",
+        "en": "regla"
+      }
+    },
+    {
+      "en": "scissors",
+      "meaning": {
+        "es": "tijeras",
+        "en": "tijeras"
+      }
+    },
+    {
+      "en": "backpack",
+      "meaning": {
+        "es": "mochila",
+        "en": "mochila"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Vacía la mochila en inglés",
+      "en": "Empty your backpack in English"
+    },
+    "text": {
+      "es": "Saca una por una las cosas de tu mochila y nómbralas en inglés: “a pencil, a book, an eraser…”.",
+      "en": "Take things out of your backpack one by one and name them: “a pencil, a book, an eraser…”."
+    },
+    "adult": {
+      "es": "si falta alguna palabra, búsquenla en el Traductor de PyBot English.",
+      "en": "if a word is missing, look it up in PyBot English's Translator."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

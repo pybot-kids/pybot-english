@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Preséntate y pregunta el nombre de otra persona." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>My name is… ¿Cómo te llamas? — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="myName">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "myName",
+  "mood": "welcoming",
+  "title": {
+    "es": "My name is… ¿Cómo te llamas?",
+    "en": "My name is…"
+  },
+  "intro": {
+    "es": "Preséntate y pregunta el nombre de otra persona.",
+    "en": "Introduce yourself and ask someone's name."
+  },
+  "pybot": {
+    "es": "Hello! My name is PyBot. What's your name?",
+    "en": "Hello! My name is PyBot. What's your name?"
+  },
+  "look": [
+    {
+      "icon": "🏷️",
+      "word": "my name is…",
+      "meaning": {
+        "es": "me llamo…",
+        "en": "me llamo…"
+      }
+    },
+    {
+      "icon": "🙋",
+      "word": "I'm…",
+      "meaning": {
+        "es": "soy…",
+        "en": "soy…"
+      }
+    },
+    {
+      "icon": "❓",
+      "word": "what's your name?",
+      "meaning": {
+        "es": "¿cómo te llamas?",
+        "en": "¿cómo te llamas?"
+      }
+    },
+    {
+      "icon": "🤝",
+      "word": "nice to meet you",
+      "meaning": {
+        "es": "mucho gusto",
+        "en": "mucho gusto"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "What's your name?",
+        "meaning": {
+          "es": "¿Cómo te llamas?",
+          "en": "¿Cómo te llamas?"
+        }
+      },
+      {
+        "en": "My name is Ana.",
+        "meaning": {
+          "es": "Me llamo Ana.",
+          "en": "Me llamo Ana."
+        }
+      },
+      {
+        "en": "Nice to meet you!",
+        "meaning": {
+          "es": "¡Mucho gusto!",
+          "en": "¡Mucho gusto!"
+        }
+      }
+    ],
+    "rule": {
+      "es": "Puedes decir “My name is Ana” o, más corto, “I'm Ana”. Las dos sirven.",
+      "en": "You can say “My name is Ana” or, shorter, “I'm Ana”."
+    }
+  },
+  "activities": [
+    {
+      "id": "myName-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma: “Me llamo PyBot.”",
+        "en": "Build: “My name is PyBot.”"
+      },
+      "tiles": [
+        "My",
+        "name",
+        "is",
+        "PyBot."
+      ],
+      "hint": {
+        "es": "Empieza con My.",
+        "en": "Start with My."
+      },
+      "why": {
+        "es": "“My name is PyBot.”",
+        "en": "“My name is PyBot.”"
+      }
+    },
+    {
+      "id": "myName-gap",
+      "type": "choice",
+      "prompt": {
+        "es": "Completa: “What's your ___?”",
+        "en": "Fill in: “What's your ___?”"
+      },
+      "options": [
+        "name",
+        "morning",
+        "bye"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Preguntas cómo se llama.",
+        "en": "You're asking what they're called."
+      },
+      "why": {
+        "es": "“What's your name?”: ¿cómo te llamas?",
+        "en": "“What's your name?”"
+      },
+      "show": "What's your ___?"
+    },
+    {
+      "id": "myName-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué significa?",
+        "en": "Listen. What does it mean?"
+      },
+      "options": [
+        {
+          "es": "🤝 Mucho gusto",
+          "en": "🤝 Mucho gusto"
+        },
+        {
+          "es": "👋 Adiós",
+          "en": "👋 Adiós"
+        },
+        {
+          "es": "🌙 Buenas noches",
+          "en": "🌙 Buenas noches"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Se dice al conocer a alguien.",
+        "en": "You say it when you meet someone."
+      },
+      "why": {
+        "es": "“Nice to meet you”: mucho gusto.",
+        "en": "“Nice to meet you.”"
+      },
+      "listen": "Nice to meet you!"
+    },
+    {
+      "id": "myName-answer",
+      "type": "choice",
+      "prompt": {
+        "es": "Te preguntan “What's your name?”. ¿Qué respondes?",
+        "en": "Someone asks “What's your name?”. What do you answer?"
+      },
+      "options": [
+        "My name is Ana.",
+        "I'm fine.",
+        "Good night."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Responde con tu nombre.",
+        "en": "Answer with your name."
+      },
+      "why": {
+        "es": "“My name is Ana.”",
+        "en": "“My name is Ana.”"
+      }
+    },
+    {
+      "id": "myName-same",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? “I'm Ana” y “My name is Ana” significan lo mismo.",
+        "en": "True or false? “I'm Ana” and “My name is Ana” mean the same."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Las dos dicen tu nombre.",
+        "en": "Both say your name."
+      },
+      "why": {
+        "es": "Verdadero: las dos sirven para presentarte.",
+        "en": "True: both introduce you."
+      }
+    },
+    {
+      "id": "myName-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot escribió “My name are PyBot”. ¿Cómo se escribe bien?",
+        "en": "🤖 PyBot wrote “My name are PyBot”. What's right?"
+      },
+      "options": [
+        "My name is PyBot.",
+        "My name am PyBot.",
+        "My is name PyBot."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Con “name” va “is”.",
+        "en": "With “name” use “is”."
+      },
+      "why": {
+        "es": "¡Arreglado! My name IS PyBot.",
+        "en": "Fixed! My name IS PyBot."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "my name is…",
+      "meaning": {
+        "es": "me llamo…",
+        "en": "me llamo…"
+      }
+    },
+    {
+      "en": "I'm…",
+      "meaning": {
+        "es": "soy…",
+        "en": "soy…"
+      }
+    },
+    {
+      "en": "what's your name?",
+      "meaning": {
+        "es": "¿cómo te llamas?",
+        "en": "¿cómo te llamas?"
+      }
+    },
+    {
+      "en": "nice to meet you",
+      "meaning": {
+        "es": "mucho gusto",
+        "en": "mucho gusto"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Presenta a un peluche",
+      "en": "Introduce a stuffed toy"
+    },
+    "text": {
+      "es": "Toma un peluche y preséntalo en inglés: “Hello! My name is Teddy. Nice to meet you!”.",
+      "en": "Grab a stuffed toy and introduce it in English: “Hello! My name is Teddy. Nice to meet you!”."
+    },
+    "adult": {
+      "es": "respondan “Nice to meet you!” al peluche.",
+      "en": "answer the toy with “Nice to meet you!”."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Lo que haces cada día, en orden: levantarte, vestirte, desayunar…" />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>Mi rutina — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="routine">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "routine",
+  "mood": "focused",
+  "title": {
+    "es": "Mi rutina",
+    "en": "My routine"
+  },
+  "intro": {
+    "es": "Lo que haces cada día, en orden: levantarte, vestirte, desayunar…",
+    "en": "What you do every day, in order: wake up, get dressed, eat breakfast…"
+  },
+  "pybot": {
+    "es": "I wake up, I eat breakfast… ¡y yo me recargo! 🔋",
+    "en": "I wake up, I eat breakfast… and I recharge! 🔋"
+  },
+  "look": [
+    {
+      "icon": "⏰",
+      "word": "I wake up",
+      "meaning": {
+        "es": "me despierto",
+        "en": "me despierto"
+      }
+    },
+    {
+      "icon": "👕",
+      "word": "I get dressed",
+      "meaning": {
+        "es": "me visto",
+        "en": "me visto"
+      }
+    },
+    {
+      "icon": "🥣",
+      "word": "I eat breakfast",
+      "meaning": {
+        "es": "desayuno",
+        "en": "desayuno"
+      }
+    },
+    {
+      "icon": "🏫",
+      "word": "I go to school",
+      "meaning": {
+        "es": "voy al colegio",
+        "en": "voy al colegio"
+      }
+    },
+    {
+      "icon": "⚽",
+      "word": "I play",
+      "meaning": {
+        "es": "juego",
+        "en": "juego"
+      }
+    },
+    {
+      "icon": "🛏️",
+      "word": "I go to bed",
+      "meaning": {
+        "es": "me acuesto",
+        "en": "me acuesto"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "I wake up at seven.",
+        "meaning": {
+          "es": "Me despierto a las siete.",
+          "en": "Me despierto a las siete."
+        }
+      },
+      {
+        "en": "I go to school.",
+        "meaning": {
+          "es": "Voy al colegio.",
+          "en": "Voy al colegio."
+        }
+      }
+    ],
+    "rule": {
+      "es": "Para tu rutina usa “I” y la acción tal cual: I wake up, I play, I go to bed.",
+      "en": "For your routine use “I” plus the action: I wake up, I play."
+    }
+  },
+  "activities": [
+    {
+      "id": "routine-first",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Qué haces primero en la mañana?",
+        "en": "What do you do first in the morning?"
+      },
+      "options": [
+        "I wake up.",
+        "I go to bed.",
+        "I go to school."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Antes de todo, abres los ojos.",
+        "en": "Before anything, you open your eyes."
+      },
+      "why": {
+        "es": "Primero: “I wake up.”",
+        "en": "First: “I wake up.”"
+      }
+    },
+    {
+      "id": "routine-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué hace?",
+        "en": "Listen. What is the person doing?"
+      },
+      "options": [
+        {
+          "es": "🥣",
+          "en": "🥣"
+        },
+        {
+          "es": "🛏️",
+          "en": "🛏️"
+        },
+        {
+          "es": "🏫",
+          "en": "🏫"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es una comida.",
+        "en": "It's a meal."
+      },
+      "why": {
+        "es": "“I eat breakfast”: desayuno.",
+        "en": "“I eat breakfast.”"
+      },
+      "listen": "I eat breakfast."
+    },
+    {
+      "id": "routine-gap",
+      "type": "choice",
+      "prompt": {
+        "es": "Completa: “I go to ___.” 🏫",
+        "en": "Fill in: “I go to ___.” 🏫"
+      },
+      "options": [
+        "school",
+        "breakfast",
+        "dressed"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es donde estudias.",
+        "en": "Where you study."
+      },
+      "why": {
+        "es": "“I go to school.”",
+        "en": "“I go to school.”"
+      },
+      "show": "I go to ___."
+    },
+    {
+      "id": "routine-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma: “Me acuesto.”",
+        "en": "Build: “I go to bed.”"
+      },
+      "tiles": [
+        "I",
+        "go",
+        "to",
+        "bed."
+      ],
+      "hint": {
+        "es": "Empieza con I.",
+        "en": "Start with I."
+      },
+      "why": {
+        "es": "“I go to bed.”",
+        "en": "“I go to bed.”"
+      }
+    },
+    {
+      "id": "routine-read",
+      "type": "choice",
+      "prompt": {
+        "es": "Lee: “I get dressed.” ¿Qué hace?",
+        "en": "Read: “I get dressed.” What does it show?"
+      },
+      "options": [
+        {
+          "es": "👕",
+          "en": "👕"
+        },
+        {
+          "es": "⚽",
+          "en": "⚽"
+        },
+        {
+          "es": "🥣",
+          "en": "🥣"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Tiene que ver con ropa.",
+        "en": "It's about clothes."
+      },
+      "why": {
+        "es": "👕: se viste.",
+        "en": "👕: getting dressed."
+      }
+    },
+    {
+      "id": "routine-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot escribió “I wakes up”. ¿Cómo se escribe bien?",
+        "en": "🤖 PyBot wrote “I wakes up”. What's right?"
+      },
+      "options": [
+        "I wake up.",
+        "I wakes up.",
+        "I waking up."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Con “I” no lleva “-s”.",
+        "en": "With “I”, no “-s”."
+      },
+      "why": {
+        "es": "¡Arreglado! I wake up.",
+        "en": "Fixed! I wake up."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "I wake up",
+      "meaning": {
+        "es": "me despierto",
+        "en": "me despierto"
+      }
+    },
+    {
+      "en": "I get dressed",
+      "meaning": {
+        "es": "me visto",
+        "en": "me visto"
+      }
+    },
+    {
+      "en": "I eat breakfast",
+      "meaning": {
+        "es": "desayuno",
+        "en": "desayuno"
+      }
+    },
+    {
+      "en": "I go to school",
+      "meaning": {
+        "es": "voy al colegio",
+        "en": "voy al colegio"
+      }
+    },
+    {
+      "en": "I play",
+      "meaning": {
+        "es": "juego",
+        "en": "juego"
+      }
+    },
+    {
+      "en": "I go to bed",
+      "meaning": {
+        "es": "me acuesto",
+        "en": "me acuesto"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Mi día en dibujos",
+      "en": "My day in pictures"
+    },
+    "text": {
+      "es": "Dibuja tu rutina en 4 o 5 cuadritos y cuéntala en inglés: “I wake up. I eat breakfast…”.",
+      "en": "Draw your routine in 4 or 5 boxes and tell it in English: “I wake up. I eat breakfast…”."
+    },
+    "adult": {
+      "es": "pídanle que se la cuente a alguien más de la familia.",
+      "en": "ask them to tell it to someone else in the family."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

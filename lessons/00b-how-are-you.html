@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pregunta cómo está alguien y responde con amabilidad." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>How are you? ¿Cómo estás? — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="howAreYou">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "howAreYou",
+  "mood": "curious",
+  "title": {
+    "es": "How are you? ¿Cómo estás?",
+    "en": "How are you?"
+  },
+  "intro": {
+    "es": "Pregunta cómo está alguien y responde con amabilidad.",
+    "en": "Ask how someone is and answer kindly."
+  },
+  "pybot": {
+    "es": "Hello! How are you? Yo estoy muy bien, ¡gracias por preguntar!",
+    "en": "Hello! How are you? I'm great, thanks for asking!"
+  },
+  "look": [
+    {
+      "icon": "❓",
+      "word": "how are you?",
+      "meaning": {
+        "es": "¿cómo estás?",
+        "en": "¿cómo estás?"
+      }
+    },
+    {
+      "icon": "🙂",
+      "word": "I'm fine",
+      "meaning": {
+        "es": "estoy bien",
+        "en": "estoy bien"
+      }
+    },
+    {
+      "icon": "😄",
+      "word": "I'm good",
+      "meaning": {
+        "es": "estoy bien (contento)",
+        "en": "estoy bien"
+      }
+    },
+    {
+      "icon": "👌",
+      "word": "I'm OK",
+      "meaning": {
+        "es": "estoy más o menos bien",
+        "en": "estoy más o menos"
+      }
+    },
+    {
+      "icon": "💛",
+      "word": "thank you",
+      "meaning": {
+        "es": "gracias",
+        "en": "gracias"
+      }
+    },
+    {
+      "icon": "🔁",
+      "word": "and you?",
+      "meaning": {
+        "es": "¿y tú?",
+        "en": "¿y tú?"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "How are you?",
+        "meaning": {
+          "es": "¿Cómo estás?",
+          "en": "¿Cómo estás?"
+        }
+      },
+      {
+        "en": "I'm fine, thank you. And you?",
+        "meaning": {
+          "es": "Estoy bien, gracias. ¿Y tú?",
+          "en": "Estoy bien, gracias. ¿Y tú?"
+        }
+      },
+      {
+        "en": "I'm good!",
+        "meaning": {
+          "es": "¡Estoy bien!",
+          "en": "¡Estoy bien!"
+        }
+      }
+    ],
+    "rule": {
+      "es": "En inglés la pregunta va así: How + are + you? Y la respuesta empieza con “I'm” (yo estoy).",
+      "en": "The question goes: How + are + you? The answer starts with “I'm”."
+    }
+  },
+  "activities": [
+    {
+      "id": "howAreYou-order-question",
+      "type": "order",
+      "prompt": {
+        "es": "Arma la pregunta “¿Cómo estás?”.",
+        "en": "Build the question “How are you?”."
+      },
+      "tiles": [
+        "How",
+        "are",
+        "you?"
+      ],
+      "hint": {
+        "es": "Empieza con “How”.",
+        "en": "Start with “How”."
+      },
+      "why": {
+        "es": "“How are you?” significa ¿cómo estás?",
+        "en": "“How are you?” is how you ask how someone is."
+      }
+    },
+    {
+      "id": "howAreYou-gap",
+      "type": "choice",
+      "prompt": {
+        "es": "Completa: “I'm ___, thank you.”",
+        "en": "Fill in: “I'm ___, thank you.”"
+      },
+      "show": "I'm ___, thank you.",
+      "options": [
+        "fine",
+        "goodbye",
+        "morning"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Buscas una palabra que diga cómo estás.",
+        "en": "You need a word that says how you are."
+      },
+      "why": {
+        "es": "“I'm fine, thank you” significa estoy bien, gracias.",
+        "en": "“I'm fine, thank you” is a kind answer."
+      }
+    },
+    {
+      "id": "howAreYou-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Cómo está la persona?",
+        "en": "Listen. How is the person?"
+      },
+      "listen": "I'm fine, thank you.",
+      "options": [
+        {
+          "es": "🙂 Está bien",
+          "en": "🙂 Fine"
+        },
+        {
+          "es": "👋 Se está despidiendo",
+          "en": "👋 Saying goodbye"
+        },
+        {
+          "es": "🌙 Se va a dormir",
+          "en": "🌙 Going to bed"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Escucha la palabra “fine”.",
+        "en": "Listen for the word “fine”."
+      },
+      "why": {
+        "es": "Dijo “I'm fine”: está bien.",
+        "en": "They said “I'm fine”."
+      }
+    },
+    {
+      "id": "howAreYou-answer",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot te pregunta “How are you?”. ¿Cuál es una buena respuesta?",
+        "en": "🤖 PyBot asks you “How are you?”. Which is a good answer?"
+      },
+      "options": [
+        "I'm good, thank you!",
+        "Good night!",
+        "See you!"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "La respuesta empieza con “I'm”.",
+        "en": "The answer starts with “I'm”."
+      },
+      "why": {
+        "es": "“I'm good, thank you!” responde cómo estás.",
+        "en": "“I'm good, thank you!” answers the question."
+      }
+    },
+    {
+      "id": "howAreYou-odd",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Cuál NO es una forma de decir cómo estás?",
+        "en": "Which one is NOT a way to say how you are?"
+      },
+      "options": [
+        "I'm fine",
+        "I'm good",
+        "I'm OK",
+        "Goodbye"
+      ],
+      "answer": 3,
+      "hint": {
+        "es": "Una de ellas es una despedida.",
+        "en": "One of them is a way to say bye."
+      },
+      "why": {
+        "es": "“Goodbye” es para irte, no para decir cómo estás.",
+        "en": "“Goodbye” is for leaving."
+      }
+    },
+    {
+      "id": "howAreYou-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot escribió “How you are?”. ¿Cómo se escribe bien?",
+        "en": "🤖 PyBot wrote “How you are?”. What is right?"
+      },
+      "options": [
+        "How are you?",
+        "Are how you?",
+        "You how are?"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Recuerda: How + are + you?",
+        "en": "Remember: How + are + you?"
+      },
+      "why": {
+        "es": "¡Arreglado! En la pregunta, “are” va antes de “you”.",
+        "en": "Fixed! In the question, “are” comes before “you”."
+      }
+    },
+    {
+      "id": "howAreYou-and-you",
+      "type": "choice",
+      "prompt": {
+        "es": "Tu amiga responde “I'm good”. ¿Qué le preguntas tú de vuelta?",
+        "en": "Your friend says “I'm good”. What do you ask back?"
+      },
+      "options": [
+        "And you?",
+        "Good morning!",
+        "Bye!"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Quieres saber cómo está ella también.",
+        "en": "You want to know how she is too."
+      },
+      "why": {
+        "es": "“And you?” significa ¿y tú?",
+        "en": "“And you?” turns the question around."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "how are you?",
+      "meaning": {
+        "es": "¿cómo estás?",
+        "en": "¿cómo estás?"
+      }
+    },
+    {
+      "en": "I'm fine",
+      "meaning": {
+        "es": "estoy bien",
+        "en": "estoy bien"
+      }
+    },
+    {
+      "en": "I'm good",
+      "meaning": {
+        "es": "estoy bien",
+        "en": "estoy bien"
+      }
+    },
+    {
+      "en": "I'm OK",
+      "meaning": {
+        "es": "estoy más o menos",
+        "en": "estoy más o menos"
+      }
+    },
+    {
+      "en": "thank you",
+      "meaning": {
+        "es": "gracias",
+        "en": "gracias"
+      }
+    },
+    {
+      "en": "and you?",
+      "meaning": {
+        "es": "¿y tú?",
+        "en": "¿y tú?"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Pregunta “How are you?”",
+      "en": "Ask “How are you?”"
+    },
+    "text": {
+      "es": "Pregúntale “How are you?” a alguien de tu casa. Enséñale a responder: “I'm fine, thank you. And you?”.",
+      "en": "Ask someone at home “How are you?”. Teach them to answer: “I'm fine, thank you. And you?”."
+    },
+    "adult": {
+      "es": "dejen que la niña o el niño sea quien enseña. Equivocarse está bien.",
+      "en": "let the child be the teacher. Mistakes are fine."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

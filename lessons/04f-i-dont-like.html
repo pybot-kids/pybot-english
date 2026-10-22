@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Di lo que no te gusta y pregunta a otras personas con “Do you like…?”." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>I don&#x27;t like… Lo que no me gusta — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="iDontLike">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "iDontLike",
+  "mood": "thinking",
+  "title": {
+    "es": "I don't like… Lo que no me gusta",
+    "en": "I don't like…"
+  },
+  "intro": {
+    "es": "Di lo que no te gusta y pregunta a otras personas con “Do you like…?”.",
+    "en": "Say what you don't like and ask others with “Do you like…?”."
+  },
+  "pybot": {
+    "es": "I don't like rain. ¡Me oxida! Do you like rain?",
+    "en": "I don't like rain. It makes me rusty! Do you like rain?"
+  },
+  "look": [
+    {
+      "icon": "👎",
+      "word": "I don't like…",
+      "meaning": {
+        "es": "no me gusta…",
+        "en": "no me gusta…"
+      }
+    },
+    {
+      "icon": "❓",
+      "word": "Do you like…?",
+      "meaning": {
+        "es": "¿te gusta…?",
+        "en": "¿te gusta…?"
+      }
+    },
+    {
+      "icon": "👍",
+      "word": "Yes, I do.",
+      "meaning": {
+        "es": "sí (me gusta).",
+        "en": "sí (me gusta)."
+      }
+    },
+    {
+      "icon": "🙅",
+      "word": "No, I don't.",
+      "meaning": {
+        "es": "no (no me gusta).",
+        "en": "no (no me gusta)."
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "I don't like milk.",
+        "meaning": {
+          "es": "No me gusta la leche.",
+          "en": "No me gusta la leche."
+        }
+      },
+      {
+        "en": "Do you like pizza?",
+        "meaning": {
+          "es": "¿Te gusta la pizza?",
+          "en": "¿Te gusta la pizza?"
+        }
+      },
+      {
+        "en": "Yes, I do!",
+        "meaning": {
+          "es": "¡Sí!",
+          "en": "¡Sí!"
+        }
+      }
+    ],
+    "rule": {
+      "es": "Para decir que no: “I don't like”, nunca “I no like”. Para responder: Yes, I do / No, I don't.",
+      "en": "To say no: “I don't like”, never “I no like”. To answer: Yes, I do / No, I don't."
+    }
+  },
+  "activities": [
+    {
+      "id": "iDontLike-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma: “No me gusta la leche.”",
+        "en": "Build: “I don't like milk.”"
+      },
+      "tiles": [
+        "I",
+        "don't",
+        "like",
+        "milk."
+      ],
+      "hint": {
+        "es": "Empieza con I.",
+        "en": "Start with I."
+      },
+      "why": {
+        "es": "“I don't like milk.”",
+        "en": "“I don't like milk.”"
+      }
+    },
+    {
+      "id": "iDontLike-gap",
+      "type": "choice",
+      "prompt": {
+        "es": "Completa: “I ___ like rice.”",
+        "en": "Fill in: “I ___ like rice.”"
+      },
+      "options": [
+        "don't",
+        "no",
+        "not"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es una palabra con apóstrofo.",
+        "en": "It has an apostrophe."
+      },
+      "why": {
+        "es": "“I don't like rice.”",
+        "en": "“I don't like rice.”"
+      },
+      "show": "I ___ like rice."
+    },
+    {
+      "id": "iDontLike-answer",
+      "type": "choice",
+      "prompt": {
+        "es": "Te preguntan “Do you like pizza?” y te encanta. ¿Qué respondes?",
+        "en": "Someone asks “Do you like pizza?” and you love it. What do you say?"
+      },
+      "options": [
+        "Yes, I do!",
+        "Yes, I like.",
+        "Yes, I am."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Se responde con “do”.",
+        "en": "Answer with “do”."
+      },
+      "why": {
+        "es": "“Yes, I do!”",
+        "en": "“Yes, I do!”"
+      }
+    },
+    {
+      "id": "iDontLike-read",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Qué significa “No, I don't”?",
+        "en": "What does “No, I don't” mean?"
+      },
+      "options": [
+        {
+          "es": "No (no me gusta)",
+          "en": "No, I don't like it"
+        },
+        {
+          "es": "Sí, me gusta",
+          "en": "Yes, I like it"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Tiene “no” y “don't”.",
+        "en": "It has “no” and “don't”."
+      },
+      "why": {
+        "es": "Significa que no le gusta.",
+        "en": "It means they don't like it."
+      }
+    },
+    {
+      "id": "iDontLike-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? “I don't like” significa “no me gusta”.",
+        "en": "True or false? “I don't like” means “no me gusta”."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Don't es para decir que no.",
+        "en": "Don't makes it negative."
+      },
+      "why": {
+        "es": "Verdadero.",
+        "en": "True."
+      }
+    },
+    {
+      "id": "iDontLike-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot escribió “I no like eggs”. ¿Cómo se escribe bien?",
+        "en": "🤖 PyBot wrote “I no like eggs”. What's right?"
+      },
+      "options": [
+        "I don't like eggs.",
+        "I not like eggs.",
+        "I no like eggs."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Se usa “don't”.",
+        "en": "Use “don't”."
+      },
+      "why": {
+        "es": "¡Arreglado! I don't like eggs.",
+        "en": "Fixed! I don't like eggs."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "I don't like…",
+      "meaning": {
+        "es": "no me gusta…",
+        "en": "no me gusta…"
+      }
+    },
+    {
+      "en": "Do you like…?",
+      "meaning": {
+        "es": "¿te gusta…?",
+        "en": "¿te gusta…?"
+      }
+    },
+    {
+      "en": "Yes, I do.",
+      "meaning": {
+        "es": "sí (me gusta).",
+        "en": "sí (me gusta)."
+      }
+    },
+    {
+      "en": "No, I don't.",
+      "meaning": {
+        "es": "no (no me gusta).",
+        "en": "no (no me gusta)."
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Tabla de gustos",
+      "en": "Likes chart"
+    },
+    "text": {
+      "es": "Haz una tabla con comidas y anota 🙂 o 🙁 para cada persona de tu casa preguntando “Do you like…?”.",
+      "en": "Make a chart of foods and mark 🙂 or 🙁 for each person at home by asking “Do you like…?”."
+    },
+    "adult": {
+      "es": "respondan con “Yes, I do” o “No, I don't”.",
+      "en": "answer “Yes, I do” or “No, I don't”."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

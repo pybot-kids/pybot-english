@@ -21,7 +21,7 @@ const BACKUP_SCHEMA_VERSION = 1;
 // every PR that adds, renames, or removes a step or activity id
 // (`node tools/progress-version.mjs --bump`), and add a migration below when an
 // id is renamed or removed.
-const PROGRESS_VERSION = 1;
+const PROGRESS_VERSION = 3;
 const PROGRESS_VERSION_KEY = "pybotenglish.progress.version";
 const BACKUP_MAX_BYTES = 100_000;
 // Preferences and the name survive an emergency progress reset.
@@ -33,40 +33,362 @@ const DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
 // Each step lists its activities. `soon: true` marks a step whose lesson page
 // is not written yet; remove it when the page ships.
 const pathSteps = [
-  { id: "helloGoodbye", page: "helloGoodbye", href: "lessons/00-hello-goodbye.html", soon: true, activities: [] },
-  { id: "howAreYou", page: "howAreYou", href: "lessons/00b-how-are-you.html", soon: true, activities: [] },
-  { id: "lookListenSay", page: "lookListenSay", href: "lessons/00c-look-listen-say.html", soon: true, activities: [] },
-  { id: "abcLetters", page: "abcLetters", href: "lessons/01-abc-letters.html", soon: true, activities: [] },
-  { id: "abcVowels", page: "abcVowels", href: "lessons/01b-abc-vowels.html", soon: true, activities: [] },
-  { id: "abcSpell", page: "abcSpell", href: "lessons/01c-abc-spell.html", soon: true, activities: [] },
-  { id: "numbersTen", page: "numbersTen", href: "lessons/01d-numbers-ten.html", soon: true, activities: [] },
-  { id: "numbersTwenty", page: "numbersTwenty", href: "lessons/01e-numbers-twenty.html", soon: true, activities: [] },
-  { id: "numbersHowMany", page: "numbersHowMany", href: "lessons/01f-numbers-how-many.html", soon: true, activities: [] },
-  { id: "myName", page: "myName", href: "lessons/02-my-name.html", soon: true, activities: [] },
-  { id: "myAge", page: "myAge", href: "lessons/02b-my-age.html", soon: true, activities: [] },
-  { id: "myFamily", page: "myFamily", href: "lessons/02c-my-family.html", soon: true, activities: [] },
-  { id: "myBody", page: "myBody", href: "lessons/02d-my-body.html", soon: true, activities: [] },
-  { id: "feelings", page: "feelings", href: "lessons/02e-feelings.html", soon: true, activities: [] },
-  { id: "iFeel", page: "iFeel", href: "lessons/02f-i-feel.html", soon: true, activities: [] },
-  { id: "colors", page: "colors", href: "lessons/03-colors.html", soon: true, activities: [] },
-  { id: "shapes", page: "shapes", href: "lessons/03b-shapes.html", soon: true, activities: [] },
-  { id: "itIsRed", page: "itIsRed", href: "lessons/03c-it-is-red.html", soon: true, activities: [] },
-  { id: "backpack", page: "backpack", href: "lessons/03d-backpack.html", soon: true, activities: [] },
-  { id: "thisThat", page: "thisThat", href: "lessons/03e-this-that.html", soon: true, activities: [] },
-  { id: "animals", page: "animals", href: "lessons/04-animals.html", soon: true, activities: [] },
-  { id: "bigSmall", page: "bigSmall", href: "lessons/04b-big-small.html", soon: true, activities: [] },
-  { id: "canCant", page: "canCant", href: "lessons/04c-can-cant.html", soon: true, activities: [] },
-  { id: "food", page: "food", href: "lessons/04d-food.html", soon: true, activities: [] },
-  { id: "iLike", page: "iLike", href: "lessons/04e-i-like.html", soon: true, activities: [] },
-  { id: "iDontLike", page: "iDontLike", href: "lessons/04f-i-dont-like.html", soon: true, activities: [] },
-  { id: "days", page: "days", href: "lessons/05-days.html", soon: true, activities: [] },
-  { id: "dayParts", page: "dayParts", href: "lessons/05b-day-parts.html", soon: true, activities: [] },
-  { id: "routine", page: "routine", href: "lessons/05c-routine.html", soon: true, activities: [] },
-  { id: "classWords", page: "classWords", href: "lessons/05d-class-words.html", soon: true, activities: [] },
-  { id: "questions", page: "questions", href: "lessons/06-questions.html", soon: true, activities: [] },
-  { id: "inOnUnder", page: "inOnUnder", href: "lessons/06b-in-on-under.html", soon: true, activities: [] },
-  { id: "house", page: "house", href: "lessons/06c-house.html", soon: true, activities: [] },
-  { id: "checkpoint1", page: "checkpoint1", href: "lessons/07-checkpoint.html", soon: true, activities: [] },
+  { id: "helloGoodbye", page: "helloGoodbye", href: "lessons/00-hello-goodbye.html",
+    activities: [
+      "helloGoodbye-arrive",
+      "helloGoodbye-listen-morning",
+      "helloGoodbye-hi-bye",
+      "helloGoodbye-night",
+      "helloGoodbye-true-false",
+      "helloGoodbye-fix",
+      "helloGoodbye-see-you",
+    ],
+  },
+  { id: "howAreYou", page: "howAreYou", href: "lessons/00b-how-are-you.html",
+    activities: [
+      "howAreYou-order-question",
+      "howAreYou-gap",
+      "howAreYou-listen",
+      "howAreYou-answer",
+      "howAreYou-odd",
+      "howAreYou-fix",
+      "howAreYou-and-you",
+    ],
+  },
+  { id: "lookListenSay", page: "lookListenSay", href: "lessons/00c-look-listen-say.html",
+    activities: [
+      "lookListenSay-listen-button",
+      "lookListenSay-slow-button",
+      "lookListenSay-listen-look",
+      "lookListenSay-listen-listen",
+      "lookListenSay-order",
+      "lookListenSay-no-grades",
+      "lookListenSay-album",
+    ],
+  },
+  { id: "abcLetters", page: "abcLetters", href: "lessons/01-abc-letters.html",
+    activities: [
+      "abcLetters-listen-e",
+      "abcLetters-listen-i",
+      "abcLetters-listen-g",
+      "abcLetters-h",
+      "abcLetters-order",
+      "abcLetters-no-enye",
+      "abcLetters-fix",
+    ],
+  },
+  { id: "abcVowels", page: "abcVowels", href: "lessons/01b-abc-vowels.html",
+    activities: [
+      "abcVowels-listen-apple",
+      "abcVowels-listen-umbrella",
+      "abcVowels-gap-a",
+      "abcVowels-gap-e",
+      "abcVowels-o",
+      "abcVowels-true",
+      "abcVowels-fix",
+    ],
+  },
+  { id: "abcSpell", page: "abcSpell", href: "lessons/01c-abc-spell.html",
+    activities: [
+      "abcSpell-cat",
+      "abcSpell-dog",
+      "abcSpell-listen",
+      "abcSpell-dog-choice",
+      "abcSpell-gap",
+      "abcSpell-ask",
+      "abcSpell-fix",
+    ],
+  },
+  { id: "numbersTen", page: "numbersTen", href: "lessons/01d-numbers-ten.html",
+    activities: [
+      "numbersTen-listen-seven",
+      "numbersTen-listen-three",
+      "numbersTen-count",
+      "numbersTen-gap",
+      "numbersTen-odd",
+      "numbersTen-order",
+      "numbersTen-fix",
+    ],
+  },
+  { id: "numbersTwenty", page: "numbersTwenty", href: "lessons/01e-numbers-twenty.html",
+    activities: [
+      "numbersTwenty-listen-fifteen",
+      "numbersTwenty-listen-thirteen",
+      "numbersTwenty-sum",
+      "numbersTwenty-gap",
+      "numbersTwenty-true",
+      "numbersTwenty-order",
+      "numbersTwenty-fix",
+    ],
+  },
+  { id: "numbersHowMany", page: "numbersHowMany", href: "lessons/01f-numbers-how-many.html",
+    activities: [
+      "numbersHowMany-cats",
+      "numbersHowMany-gap",
+      "numbersHowMany-order",
+      "numbersHowMany-listen",
+      "numbersHowMany-read",
+      "numbersHowMany-fix",
+    ],
+  },
+  { id: "myName", page: "myName", href: "lessons/02-my-name.html",
+    activities: [
+      "myName-order",
+      "myName-gap",
+      "myName-listen",
+      "myName-answer",
+      "myName-same",
+      "myName-fix",
+    ],
+  },
+  { id: "myAge", page: "myAge", href: "lessons/02b-my-age.html",
+    activities: [
+      "myAge-listen",
+      "myAge-order",
+      "myAge-gap",
+      "myAge-answer",
+      "myAge-true",
+      "myAge-fix",
+    ],
+  },
+  { id: "myFamily", page: "myFamily", href: "lessons/02c-my-family.html",
+    activities: [
+      "myFamily-grandma",
+      "myFamily-listen",
+      "myFamily-gap",
+      "myFamily-odd",
+      "myFamily-order",
+      "myFamily-fix",
+    ],
+  },
+  { id: "myBody", page: "myBody", href: "lessons/02d-my-body.html",
+    activities: [
+      "myBody-nose",
+      "myBody-ear-eye",
+      "myBody-gap",
+      "myBody-true",
+      "myBody-order",
+      "myBody-fix",
+    ],
+  },
+  { id: "feelings", page: "feelings", href: "lessons/02e-feelings.html",
+    activities: [
+      "feelings-sad",
+      "feelings-tired",
+      "feelings-listen",
+      "feelings-odd",
+      "feelings-read",
+      "feelings-fix",
+    ],
+  },
+  { id: "iFeel", page: "iFeel", href: "lessons/02f-i-feel.html",
+    activities: [
+      "iFeel-order",
+      "iFeel-gap",
+      "iFeel-read",
+      "iFeel-answer",
+      "iFeel-true",
+      "iFeel-fix",
+    ],
+  },
+  { id: "colors", page: "colors", href: "lessons/03-colors.html",
+    activities: [
+      "colors-red",
+      "colors-blue",
+      "colors-listen",
+      "colors-blue-brown",
+      "colors-odd",
+      "colors-fix",
+    ],
+  },
+  { id: "shapes", page: "shapes", href: "lessons/03b-shapes.html",
+    activities: [
+      "shapes-circle",
+      "shapes-triangle",
+      "shapes-listen",
+      "shapes-heart",
+      "shapes-odd",
+      "shapes-fix",
+    ],
+  },
+  { id: "itIsRed", page: "itIsRed", href: "lessons/03c-it-is-red.html",
+    activities: [
+      "itIsRed-order",
+      "itIsRed-fix",
+      "itIsRed-gap",
+      "itIsRed-read",
+      "itIsRed-true",
+      "itIsRed-listen",
+    ],
+  },
+  { id: "backpack", page: "backpack", href: "lessons/03d-backpack.html",
+    activities: [
+      "backpack-pencil",
+      "backpack-ruler",
+      "backpack-listen",
+      "backpack-an",
+      "backpack-odd",
+      "backpack-fix",
+    ],
+  },
+  { id: "thisThat", page: "thisThat", href: "lessons/03e-this-that.html",
+    activities: [
+      "thisThat-near",
+      "thisThat-far",
+      "thisThat-order",
+      "thisThat-answer",
+      "thisThat-true",
+      "thisThat-fix",
+    ],
+  },
+  { id: "animals", page: "animals", href: "lessons/04-animals.html",
+    activities: [
+      "animals-rabbit",
+      "animals-lion",
+      "animals-listen-horse",
+      "animals-listen-duck",
+      "animals-odd",
+      "animals-fix",
+    ],
+  },
+  { id: "bigSmall", page: "bigSmall", href: "lessons/04b-big-small.html",
+    activities: [
+      "bigSmall-read",
+      "bigSmall-opposite",
+      "bigSmall-true",
+      "bigSmall-gap",
+      "bigSmall-order",
+      "bigSmall-fix",
+    ],
+  },
+  { id: "canCant", page: "canCant", href: "lessons/04c-can-cant.html",
+    activities: [
+      "canCant-bird",
+      "canCant-true",
+      "canCant-read",
+      "canCant-order",
+      "canCant-gap",
+      "canCant-fix",
+    ],
+  },
+  { id: "food", page: "food", href: "lessons/04d-food.html",
+    activities: [
+      "food-banana",
+      "food-milk",
+      "food-listen",
+      "food-drink",
+      "food-eat-drink",
+      "food-fix",
+    ],
+  },
+  { id: "iLike", page: "iLike", href: "lessons/04e-i-like.html",
+    activities: [
+      "iLike-order",
+      "iLike-gap",
+      "iLike-read",
+      "iLike-true",
+      "iLike-listen",
+      "iLike-fix",
+    ],
+  },
+  { id: "iDontLike", page: "iDontLike", href: "lessons/04f-i-dont-like.html",
+    activities: [
+      "iDontLike-order",
+      "iDontLike-gap",
+      "iDontLike-answer",
+      "iDontLike-read",
+      "iDontLike-true",
+      "iDontLike-fix",
+    ],
+  },
+  { id: "days", page: "days", href: "lessons/05-days.html",
+    activities: [
+      "days-listen",
+      "days-gap",
+      "days-weekend",
+      "days-capital",
+      "days-order",
+      "days-fix",
+    ],
+  },
+  { id: "dayParts", page: "dayParts", href: "lessons/05b-day-parts.html",
+    activities: [
+      "dayParts-morning",
+      "dayParts-night",
+      "dayParts-gap",
+      "dayParts-listen",
+      "dayParts-true",
+      "dayParts-fix",
+    ],
+  },
+  { id: "routine", page: "routine", href: "lessons/05c-routine.html",
+    activities: [
+      "routine-first",
+      "routine-listen",
+      "routine-gap",
+      "routine-order",
+      "routine-read",
+      "routine-fix",
+    ],
+  },
+  { id: "classWords", page: "classWords", href: "lessons/05d-class-words.html",
+    activities: [
+      "classWords-sit",
+      "classWords-hand",
+      "classWords-open",
+      "classWords-odd",
+      "classWords-true",
+      "classWords-fix",
+    ],
+  },
+  { id: "questions", page: "questions", href: "lessons/06-questions.html",
+    activities: [
+      "questions-who",
+      "questions-where",
+      "questions-what",
+      "questions-how-old",
+      "questions-order",
+      "questions-fix",
+    ],
+  },
+  { id: "inOnUnder", page: "inOnUnder", href: "lessons/06b-in-on-under.html",
+    activities: [
+      "inOnUnder-in",
+      "inOnUnder-listen",
+      "inOnUnder-true",
+      "inOnUnder-gap",
+      "inOnUnder-order",
+      "inOnUnder-fix",
+    ],
+  },
+  { id: "house", page: "house", href: "lessons/06c-house.html",
+    activities: [
+      "house-bed",
+      "house-kitchen",
+      "house-listen",
+      "house-true",
+      "house-odd",
+      "house-fix",
+    ],
+  },
+  { id: "checkpoint1", page: "checkpoint1", href: "lessons/07-checkpoint.html",
+    activities: [
+      "checkpoint1-hello",
+      "checkpoint1-spell",
+      "checkpoint1-number",
+      "checkpoint1-age",
+      "checkpoint1-family",
+      "checkpoint1-color",
+      "checkpoint1-an",
+      "checkpoint1-can",
+      "checkpoint1-like",
+      "checkpoint1-day",
+      "checkpoint1-class",
+      "checkpoint1-where",
+      "checkpoint1-intro",
+      "checkpoint1-like-order",
+    ],
+  },
 ];
 
 // Zone names are English on purpose: they are part of what the learner learns.
@@ -171,7 +493,7 @@ const translations = {
     "loop.step3Text": "Repítela en voz alta. Luego practícala en casa con tu familia.",
     "practice.eyebrow": "PRACTICA EN CASA",
     "practice.title": "El inglés se aprende hablando con tu gente.",
-    "practice.intro": "PyBot te enseña cómo suena cada palabra. Hablar se practica en casa: con mamá, papá, tus hermanos y tus amigos.",
+    "practice.intro": "PyBot te enseña cómo suena cada palabra. Hablar se practica en casa: con tu familia y con tus amigas y amigos.",
     "practice.teachTitle": "Tú enseñas",
     "practice.teachText": "Enséñale una palabra nueva a alguien de tu casa. Toquen 🔊 y escúchenla juntos.",
     "practice.echoTitle": "El juego del eco",
@@ -199,10 +521,15 @@ const translations = {
     "path.titleEnd": "Luego 6 zonas y una parada.",
     "path.intro": "Cada zona es un tema grande con su propio camino de páginas. Ve despacio y toca una palabra para escucharla.",
     "path.rule": "Una idea. Un paso claro.",
-    "path.allSoon": "Las lecciones llegan muy pronto.",
+    "path.allSoon": "Empieza por la zona 00.",
     "path.start": "Empezar →",
     "path.continue": "Sigue aquí →",
     "path.soon": "Muy pronto",
+    "path.toReview": "🔁 PARA REPASAR",
+    "path.zoneReady": "🚧 En progreso · {ready} de {total} listas",
+    "path.zoneOpen": "▶ Lista para empezar",
+    "path.complete": "✅ El camino está completo: {total} páginas para aprender a tu ritmo.",
+    "path.building": "🚧 Camino en construcción: {ready} de {total} páginas listas. Las demás llegan pronto.",
     "path.zoneDone": "★ Zona terminada",
     "path.diploma": "Ver diploma",
     "status.done": "HECHO",
@@ -254,6 +581,7 @@ const translations = {
     "extras.faqText": "Respuestas para ti y para los adultos que te acompañan.",
     "local.eyebrow": "TU TRABAJO ES TUYO",
     "local.title": "Sin cuenta. Tu progreso se queda aquí.",
+    "local.analytics": "Para adultos: PyBot English cuenta visitas anónimas a las páginas con Google Analytics, sin anuncios ni personalización de anuncios. El nombre, las respuestas y el avance de quien aprende nunca se envían.",
     "local.text": "Este navegador recuerda lo que haces. La voz la pone tu propio dispositivo. Pide permiso a un adulto antes de borrar sus datos.",
     "backup.title": "¿Vas a usar otro navegador?",
     "backup.text": "Guarda aquí una copia. Luego cárgala en el otro navegador.",
@@ -300,7 +628,7 @@ const translations = {
     "badge.allZonesHint": "Termina todas las zonas.",
     "footer.line": "Pasos pequeños. Inglés de verdad.",
     "footer.status": "Primer prototipo",
-    "footer.story": "Nació de una idea de María Ángel: ella aprendió inglés por su cuenta y quiere ayudar a sus amigos a aprenderlo también.",
+    "footer.story": "Nació de una idea de María Ángel: ella aprendió inglés por su cuenta y quiere ayudar a sus amigas y amigos a aprenderlo también.",
     "footer.credit": "© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.",
     "footer.family": "De la familia de",
     "family.eyebrow": "LA FAMILIA PYBOT",
@@ -396,7 +724,7 @@ const translations = {
     "loop.step3Text": "Say it out loud. Then practice it at home with your family.",
     "practice.eyebrow": "PRACTICE AT HOME",
     "practice.title": "You learn English by talking with your people.",
-    "practice.intro": "PyBot shows you how each word sounds. Speaking is practiced at home: with mom, dad, your brothers and sisters, and your friends.",
+    "practice.intro": "PyBot shows you how each word sounds. Speaking is practiced at home: with your family and your friends.",
     "practice.teachTitle": "You teach",
     "practice.teachText": "Teach a new word to someone at home. Press 🔊 and listen to it together.",
     "practice.echoTitle": "The echo game",
@@ -424,10 +752,15 @@ const translations = {
     "path.titleEnd": "Then 6 zones and a pit stop.",
     "path.intro": "Each zone is a big theme with its own path of pages. Go slowly and tap a word to hear it.",
     "path.rule": "One idea. One clear next step.",
-    "path.allSoon": "Lessons are coming soon.",
+    "path.allSoon": "Start with zone 00.",
     "path.start": "Start →",
     "path.continue": "Continue here →",
     "path.soon": "Coming soon",
+    "path.toReview": "🔁 TO REVIEW",
+    "path.zoneReady": "🚧 In progress · {ready} of {total} ready",
+    "path.zoneOpen": "▶ Ready to start",
+    "path.complete": "✅ The path is complete: {total} pages to learn at your own pace.",
+    "path.building": "🚧 Path under construction: {ready} of {total} pages ready. The rest are coming soon.",
     "path.zoneDone": "★ Zone finished",
     "path.diploma": "See diploma",
     "status.done": "DONE",
@@ -479,6 +812,7 @@ const translations = {
     "extras.faqText": "Answers for you and for the grown-ups who help you.",
     "local.eyebrow": "YOUR WORK IS YOURS",
     "local.title": "No account. Your progress stays here.",
+    "local.analytics": "For grown-ups: PyBot English counts anonymous page visits with Google Analytics, with ads and ad personalization turned off. The learner's name, answers, and progress are never sent.",
     "local.text": "This browser remembers your work. The voice comes from your own device. Ask an adult before clearing its data.",
     "backup.title": "Moving to another browser?",
     "backup.text": "Save a backup file here. Then load it in the other browser.",
@@ -547,7 +881,7 @@ const pybotGreetings = [
   { mood: "curious", en: "Do you want to learn one word?", es: "¿Quieres aprender una palabra?" },
   { mood: "welcoming", en: "I'm happy you are here.", es: "Me alegra que estés aquí." },
   { mood: "encouraging", en: "Mistakes are okay. Try again!", es: "Equivocarse está bien. ¡Inténtalo otra vez!" },
-  { mood: "wink", en: "Learning with friends is fun.", es: "Aprender con amigos es divertido." },
+  { mood: "wink", en: "Learning with friends is fun.", es: "Aprender con amigas y amigos es divertido." },
   { mood: "celebrating", en: "You are doing great!", es: "¡Lo estás haciendo muy bien!" },
 ];
 
@@ -1322,8 +1656,16 @@ function renderPathMap() {
   const visited = storedList(PATH_VISITED_KEY);
   const doneZones = zoneProgress().done;
 
+  // The path is being built: published pages become links, the rest stay "coming soon".
   document.querySelectorAll("[data-path-step]").forEach((item) => {
     const step = stepById(item.dataset.pathStep);
+    if (!step.soon && !item.querySelector("a")) {
+      const link = document.createElement("a");
+      link.href = new URL(step.href, scriptBaseUrl).href;
+      link.append(...item.childNodes);
+      item.append(link);
+      item.classList.add("is-ready");
+    }
     let status = item.querySelector("[data-path-status]");
     if (!status) {
       status = document.createElement("small");
@@ -1344,19 +1686,50 @@ function renderPathMap() {
       return;
     }
     const isDone = doneZones.has(zone);
-    const isSoon = zone.steps.every((id) => stepById(id).soon);
-    label.dataset.i18n = isDone ? "path.zoneDone" : "path.soon";
-    label.textContent = textFor(label.dataset.i18n);
-    label.hidden = !isDone && !isSoon;
+    const ready = zone.steps.filter((id) => !stepById(id).soon).length;
+    if (isDone) {
+      label.textContent = textFor("path.zoneDone");
+    } else if (ready === 0) {
+      label.textContent = textFor("path.soon");
+    } else if (ready === zone.steps.length) {
+      label.textContent = textFor("path.zoneOpen");
+    } else {
+      label.textContent = textFor("path.zoneReady").replace("{ready}", String(ready)).replace("{total}", String(zone.steps.length));
+    }
+    label.classList.toggle("is-building", !isDone && ready > 0 && ready < zone.steps.length);
+    label.classList.toggle("is-ready", !isDone && ready === zone.steps.length);
     card.classList.toggle("is-done", isDone);
+    card.classList.toggle("is-open", ready > 0);
+    // Zones the learner chose to review at a pit stop.
+    const toReview = (readStored(SELF_CHECK_KEY) ?? "").split(",").includes(`${zone.steps[0]}:review`);
+    let reviewBadge = card.querySelector("[data-zone-review]");
+    if (toReview && !reviewBadge) {
+      reviewBadge = document.createElement("span");
+      reviewBadge.className = "zone-review";
+      reviewBadge.dataset.zoneReview = "";
+      card.querySelector(".zone-copy").prepend(reviewBadge);
+    }
+    if (reviewBadge) {
+      reviewBadge.hidden = !toReview;
+      reviewBadge.textContent = textFor("path.toReview");
+    }
+  });
+
+  const readyCount = pathSteps.filter((step) => !step.soon).length;
+  document.querySelectorAll("[data-path-progress]").forEach((element) => {
+    element.textContent = readyCount === pathSteps.length
+      ? textFor("path.complete").replace("{total}", String(pathSteps.length))
+      : textFor("path.building").replace("{ready}", String(readyCount)).replace("{total}", String(pathSteps.length));
+    element.classList.toggle("is-complete", readyCount === pathSteps.length);
   });
 
   if (continueNote) {
-    const next = stepById(current) ?? pathSteps.find((step) => !step.soon);
-    if (next && !next.soon) {
+    const saved = stepById(current);
+    const next = saved && !saved.soon ? saved : pathSteps.find((step) => !step.soon);
+    if (next) {
       continueNote.replaceChildren(Object.assign(document.createElement("a"), {
-        href: next.href,
-        textContent: textFor(current ? "path.continue" : "path.start"),
+        href: new URL(next.href, scriptBaseUrl).href,
+        textContent: textFor(saved && !saved.soon ? "path.continue" : "path.start"),
       }));
     }
   }
@@ -1678,15 +2051,10 @@ function updateBuddyButton() {
   buddy?.querySelector(".buddy-hide")?.setAttribute("aria-label", textFor("buddy.hide"));
 }
 
-function createBuddy() {
-  const element = document.createElement("div");
-  element.className = "pybot-buddy";
-  element.hidden = true;
-  element.innerHTML = `
-    <p class="buddy-bubble" aria-hidden="true"></p>
-    <button class="buddy-hide" type="button">×</button>
-    <div class="buddy-body" aria-hidden="true">
-      <div class="pybot-wrap" data-mood="welcoming">
+// PyBot's HTML/CSS anatomy, shared by the little companion and the lesson pages.
+function pybotFigureHTML(mood = "happy") {
+  return `
+      <div class="pybot-wrap" data-mood="${mood}">
         <div class="pybot">
           <div class="antenna"><span></span></div>
           <div class="ear ear-left"></div>
@@ -1710,7 +2078,17 @@ function createBuddy() {
             <span class="chest-code">Hi!</span>
           </div>
         </div>
-      </div>
+      </div>`;
+}
+
+function createBuddy() {
+  const element = document.createElement("div");
+  element.className = "pybot-buddy";
+  element.hidden = true;
+  element.innerHTML = `
+    <p class="buddy-bubble" aria-hidden="true"></p>
+    <button class="buddy-hide" type="button">×</button>
+    <div class="buddy-body" aria-hidden="true">${pybotFigureHTML("welcoming")}
     </div>`;
   element.querySelector(".buddy-hide").addEventListener("click", () => {
     setBuddyEnabled(false);
@@ -2224,6 +2602,41 @@ function arrangeHeader() {
   });
 }
 
+// ---------- Analytics (same Google Analytics 4 property as PyBot) ----------
+// Google Analytics 4 measurement ID shared with PyBot (pybot-kids.github.io); pages are told
+// apart by their address (/pybot-english/…). Leave it empty to turn analytics off.
+const GA_MEASUREMENT_ID = "G-H0PLZHW8CE";
+
+// Counts anonymous page visits only. Ads, Google signals, and ad personalization stay off,
+// and nothing the learner types or saves (name, answers, progress) is sent.
+function startAnalytics() {
+  if (!GA_MEASUREMENT_ID || !/^G-[A-Z0-9]+$/.test(GA_MEASUREMENT_ID)) return;
+  if (!/^https?:$/.test(window.location.protocol)) return;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function gtag() {
+    window.dataLayer.push(arguments);
+  };
+  window.gtag("consent", "default", {
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+    analytics_storage: "granted",
+  });
+  window.gtag("set", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  window.gtag("js", new Date());
+  window.gtag("config", GA_MEASUREMENT_ID, {
+    allow_google_signals: false,
+    allow_ad_personalization_signals: false,
+  });
+  document.querySelectorAll("[data-analytics-note]").forEach((note) => {
+    note.hidden = false;
+  });
+  const tag = document.createElement("script");
+  tag.async = true;
+  tag.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(GA_MEASUREMENT_ID)}`;
+  document.head.append(tag);
+}
+
 // ---------- Start ----------
 
 const scriptBaseUrl = document.currentScript?.src ?? window.location.href;
@@ -2250,4 +2663,5 @@ document.addEventListener("DOMContentLoaded", () => {
   languageRenderers.push(renderStreak, renderPathMap, renderFamily);
   setLanguage(currentLanguage, false);
   checkRewards();
+  startAnalytics();
 });

@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Conoce los botones y los pasos de cada lección. Luego, ¡a jugar!" />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>Look, listen, say: así se aprende aquí — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="lookListenSay">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "lookListenSay",
+  "mood": "starry",
+  "title": {
+    "es": "Look, listen, say: así se aprende aquí",
+    "en": "Look, listen, say: how learning works here"
+  },
+  "intro": {
+    "es": "Conoce los botones y los pasos de cada lección. Luego, ¡a jugar!",
+    "en": "Meet the buttons and the steps of each lesson. Then, let's play!"
+  },
+  "pybot": {
+    "es": "Look, listen, say! Con esos tres pasos aprendo cada palabra nueva.",
+    "en": "Look, listen, say! With those three steps I learn every new word."
+  },
+  "look": [
+    {
+      "icon": "👀",
+      "word": "look",
+      "meaning": {
+        "es": "mira",
+        "en": "mira"
+      }
+    },
+    {
+      "icon": "👂",
+      "word": "listen",
+      "meaning": {
+        "es": "escucha",
+        "en": "escucha"
+      }
+    },
+    {
+      "icon": "💬",
+      "word": "say",
+      "meaning": {
+        "es": "di, dilo",
+        "en": "di"
+      }
+    },
+    {
+      "icon": "🔁",
+      "word": "repeat",
+      "meaning": {
+        "es": "repite",
+        "en": "repite"
+      }
+    },
+    {
+      "icon": "👍",
+      "word": "yes",
+      "meaning": {
+        "es": "sí",
+        "en": "sí"
+      }
+    },
+    {
+      "icon": "👎",
+      "word": "no",
+      "meaning": {
+        "es": "no",
+        "en": "no"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "Look!",
+        "meaning": {
+          "es": "¡Mira!",
+          "en": "¡Mira!"
+        }
+      },
+      {
+        "en": "Listen and repeat.",
+        "meaning": {
+          "es": "Escucha y repite.",
+          "en": "Escucha y repite."
+        }
+      },
+      {
+        "en": "Say it!",
+        "meaning": {
+          "es": "¡Dilo!",
+          "en": "¡Dilo!"
+        }
+      }
+    ],
+    "rule": {
+      "es": "Cada lección sigue el mismo orden: mira, escucha, dilo en voz alta, revisa con actividades y practica en casa.",
+      "en": "Every lesson follows the same order: look, listen, say it out loud, check with activities, and practice at home."
+    }
+  },
+  "activities": [
+    {
+      "id": "lookListenSay-listen-button",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Qué botón tocas para escuchar una palabra?",
+        "en": "Which button do you press to hear a word?"
+      },
+      "options": [
+        {
+          "es": "🔊",
+          "en": "🔊"
+        },
+        {
+          "es": "★",
+          "en": "★"
+        },
+        {
+          "es": "?",
+          "en": "?"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es el del parlante.",
+        "en": "It's the speaker."
+      },
+      "why": {
+        "es": "🔊 dice la palabra en inglés.",
+        "en": "🔊 says the word in English."
+      }
+    },
+    {
+      "id": "lookListenSay-slow-button",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Y si quieres oírla más despacio?",
+        "en": "And if you want to hear it slower?"
+      },
+      "options": [
+        {
+          "es": "🐢",
+          "en": "🐢"
+        },
+        {
+          "es": "🔊",
+          "en": "🔊"
+        },
+        {
+          "es": "♥",
+          "en": "♥"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es un animal muy lento.",
+        "en": "It's a very slow animal."
+      },
+      "why": {
+        "es": "La tortuga 🐢 dice la palabra despacio.",
+        "en": "The turtle 🐢 says the word slowly."
+      }
+    },
+    {
+      "id": "lookListenSay-listen-look",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué significa?",
+        "en": "Listen. What does it mean?"
+      },
+      "listen": "look",
+      "options": [
+        {
+          "es": "👀 Mirar",
+          "en": "👀 Mirar"
+        },
+        {
+          "es": "👂 Escuchar",
+          "en": "👂 Escuchar"
+        },
+        {
+          "es": "💬 Decir",
+          "en": "💬 Decir"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Se usa con los ojos.",
+        "en": "You do it with your eyes."
+      },
+      "why": {
+        "es": "“Look” significa mira.",
+        "en": "“Look” means mira."
+      }
+    },
+    {
+      "id": "lookListenSay-listen-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha otra. ¿Qué significa?",
+        "en": "Listen to another one. What does it mean?"
+      },
+      "listen": "listen",
+      "options": [
+        {
+          "es": "👀 Mirar",
+          "en": "👀 Mirar"
+        },
+        {
+          "es": "👂 Escuchar",
+          "en": "👂 Escuchar"
+        },
+        {
+          "es": "👍 Sí",
+          "en": "👍 Sí"
+        }
+      ],
+      "answer": 1,
+      "hint": {
+        "es": "Se usa con los oídos.",
+        "en": "You do it with your ears."
+      },
+      "why": {
+        "es": "“Listen” significa escucha.",
+        "en": "“Listen” means escucha."
+      }
+    },
+    {
+      "id": "lookListenSay-order",
+      "type": "order",
+      "prompt": {
+        "es": "Ordena los pasos de cada lección.",
+        "en": "Put the lesson steps in order."
+      },
+      "tiles": [
+        "Look,",
+        "listen,",
+        "say!"
+      ],
+      "hint": {
+        "es": "Primero miras.",
+        "en": "First you look."
+      },
+      "why": {
+        "es": "Así es: look, listen, say!",
+        "en": "That's it: look, listen, say!"
+      }
+    },
+    {
+      "id": "lookListenSay-no-grades",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? PyBot te pone nota cuando hablas.",
+        "en": "True or false? PyBot grades you when you speak."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 1,
+      "hint": {
+        "es": "PyBot no usa el micrófono.",
+        "en": "PyBot doesn't use the microphone."
+      },
+      "why": {
+        "es": "Falso: nadie te califica. Hablas en voz alta y practicas en casa.",
+        "en": "False: nobody grades you. You speak out loud and practice at home."
+      }
+    },
+    {
+      "id": "lookListenSay-album",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Dónde ves tus stickers y diplomas?",
+        "en": "Where do you see your stickers and diplomas?"
+      },
+      "options": [
+        {
+          "es": "★ Álbum",
+          "en": "★ Album"
+        },
+        {
+          "es": "Aa Traductor",
+          "en": "Aa Translator"
+        },
+        {
+          "es": "? Preguntas",
+          "en": "? Questions"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Tiene una estrella.",
+        "en": "It has a star."
+      },
+      "why": {
+        "es": "En el ★ Álbum guardas tus stickers. ¡Al terminar esta zona ganas uno!",
+        "en": "Your stickers live in the ★ Album. Finish this zone to earn one!"
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "look",
+      "meaning": {
+        "es": "mira",
+        "en": "mira"
+      }
+    },
+    {
+      "en": "listen",
+      "meaning": {
+        "es": "escucha",
+        "en": "escucha"
+      }
+    },
+    {
+      "en": "say",
+      "meaning": {
+        "es": "di",
+        "en": "di"
+      }
+    },
+    {
+      "en": "repeat",
+      "meaning": {
+        "es": "repite",
+        "en": "repite"
+      }
+    },
+    {
+      "en": "yes",
+      "meaning": {
+        "es": "sí",
+        "en": "sí"
+      }
+    },
+    {
+      "en": "no",
+      "meaning": {
+        "es": "no",
+        "en": "no"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Juega “PyBot dice”",
+      "en": "Play “PyBot says”"
+    },
+    "text": {
+      "es": "Una persona dice “Look!”, “Listen!” o “Say hello!” y las demás hacen la acción: miran, ponen la mano en la oreja o dicen hello.",
+      "en": "One person says “Look!”, “Listen!” or “Say hello!” and the others act it out: look, put a hand to the ear, or say hello."
+    },
+    "adult": {
+      "es": "no hace falta saber inglés: toquen 🔊 para oír cada orden antes de jugar.",
+      "en": "you don't need to know English: press 🔊 to hear each command before playing."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

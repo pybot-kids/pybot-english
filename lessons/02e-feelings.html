@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Nombra cómo te sientes. Mira las caras de PyBot: ¡también siente cosas!" />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>Emociones — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="feelings">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "feelings",
+  "mood": "surprised",
+  "title": {
+    "es": "Emociones",
+    "en": "Feelings"
+  },
+  "intro": {
+    "es": "Nombra cómo te sientes. Mira las caras de PyBot: ¡también siente cosas!",
+    "en": "Name how you feel. Look at PyBot's faces: it feels things too!"
+  },
+  "pybot": {
+    "es": "Hoy estoy happy. ¿Y tú cómo estás?",
+    "en": "Today I'm happy. How about you?"
+  },
+  "look": [
+    {
+      "icon": "😀",
+      "word": "happy",
+      "meaning": {
+        "es": "feliz",
+        "en": "feliz"
+      }
+    },
+    {
+      "icon": "😢",
+      "word": "sad",
+      "meaning": {
+        "es": "triste",
+        "en": "triste"
+      }
+    },
+    {
+      "icon": "😴",
+      "word": "tired",
+      "meaning": {
+        "es": "cansado, cansada",
+        "en": "cansado, cansada"
+      }
+    },
+    {
+      "icon": "😠",
+      "word": "angry",
+      "meaning": {
+        "es": "enojado, enojada",
+        "en": "enojado, enojada"
+      }
+    },
+    {
+      "icon": "😨",
+      "word": "scared",
+      "meaning": {
+        "es": "asustado, asustada",
+        "en": "asustado, asustada"
+      }
+    },
+    {
+      "icon": "🍽️",
+      "word": "hungry",
+      "meaning": {
+        "es": "con hambre",
+        "en": "con hambre"
+      }
+    },
+    {
+      "icon": "🤩",
+      "word": "excited",
+      "meaning": {
+        "es": "emocionado, emocionada",
+        "en": "emocionado, emocionada"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "I'm happy!",
+        "meaning": {
+          "es": "¡Estoy feliz!",
+          "en": "¡Estoy feliz!"
+        }
+      },
+      {
+        "en": "I'm hungry.",
+        "meaning": {
+          "es": "Tengo hambre.",
+          "en": "Tengo hambre."
+        }
+      },
+      {
+        "en": "Are you tired?",
+        "meaning": {
+          "es": "¿Estás cansado o cansada?",
+          "en": "¿Estás cansado o cansada?"
+        }
+      }
+    ],
+    "rule": {
+      "es": "Para decir cómo te sientes: “I'm” y la emoción. ¡Sirve igual para niñas y niños!",
+      "en": "To say how you feel: “I'm” plus the feeling. Same for everyone!"
+    }
+  },
+  "activities": [
+    {
+      "id": "feelings-sad",
+      "type": "choice",
+      "prompt": {
+        "es": "😢 ¿Cómo se siente?",
+        "en": "😢 How does it feel?"
+      },
+      "options": [
+        "sad",
+        "happy",
+        "hungry"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Está llorando.",
+        "en": "It's crying."
+      },
+      "why": {
+        "es": "“Sad” es triste.",
+        "en": "“Sad.”"
+      }
+    },
+    {
+      "id": "feelings-tired",
+      "type": "choice",
+      "prompt": {
+        "es": "😴 ¿Cómo se siente?",
+        "en": "😴 How does it feel?"
+      },
+      "options": [
+        "tired",
+        "excited",
+        "angry"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Tiene sueño.",
+        "en": "It's sleepy."
+      },
+      "why": {
+        "es": "“Tired” es cansado.",
+        "en": "“Tired.”"
+      }
+    },
+    {
+      "id": "feelings-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué cara es?",
+        "en": "Listen. Which face?"
+      },
+      "options": [
+        {
+          "es": "😠",
+          "en": "😠"
+        },
+        {
+          "es": "😀",
+          "en": "😀"
+        },
+        {
+          "es": "😴",
+          "en": "😴"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es una emoción fuerte, de enojo.",
+        "en": "A strong, mad feeling."
+      },
+      "why": {
+        "es": "“Angry” es enojado.",
+        "en": "“Angry.”"
+      },
+      "listen": "angry"
+    },
+    {
+      "id": "feelings-odd",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Cuál NO es una emoción?",
+        "en": "Which one is NOT a feeling?"
+      },
+      "options": [
+        "table",
+        "happy",
+        "sad",
+        "tired"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Una es un mueble.",
+        "en": "One is furniture."
+      },
+      "why": {
+        "es": "“Table” es mesa.",
+        "en": "“Table” is a table."
+      }
+    },
+    {
+      "id": "feelings-read",
+      "type": "choice",
+      "prompt": {
+        "es": "Lee: “I'm hungry.” ¿Qué le pasa?",
+        "en": "Read: “I'm hungry.” What's going on?"
+      },
+      "options": [
+        {
+          "es": "🍽️ Quiere comer",
+          "en": "🍽️ Wants to eat"
+        },
+        {
+          "es": "😴 Tiene sueño",
+          "en": "😴 Is sleepy"
+        },
+        {
+          "es": "😢 Está triste",
+          "en": "😢 Is sad"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "“Hungry” tiene que ver con comida.",
+        "en": "“Hungry” is about food."
+      },
+      "why": {
+        "es": "“I'm hungry”: tengo hambre.",
+        "en": "“I'm hungry.”"
+      }
+    },
+    {
+      "id": "feelings-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot está feliz 🤩 pero escribió “I'm sad”. ¿Qué debió escribir?",
+        "en": "🤖 PyBot is happy 🤩 but wrote “I'm sad”. What should it write?"
+      },
+      "options": [
+        "I'm happy!",
+        "I'm tired.",
+        "I'm angry."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Está feliz.",
+        "en": "It's happy."
+      },
+      "why": {
+        "es": "¡Arreglado! I'm happy!",
+        "en": "Fixed! I'm happy!"
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "happy",
+      "meaning": {
+        "es": "feliz",
+        "en": "feliz"
+      }
+    },
+    {
+      "en": "sad",
+      "meaning": {
+        "es": "triste",
+        "en": "triste"
+      }
+    },
+    {
+      "en": "tired",
+      "meaning": {
+        "es": "cansado, cansada",
+        "en": "cansado, cansada"
+      }
+    },
+    {
+      "en": "angry",
+      "meaning": {
+        "es": "enojado, enojada",
+        "en": "enojado, enojada"
+      }
+    },
+    {
+      "en": "scared",
+      "meaning": {
+        "es": "asustado, asustada",
+        "en": "asustado, asustada"
+      }
+    },
+    {
+      "en": "hungry",
+      "meaning": {
+        "es": "con hambre",
+        "en": "con hambre"
+      }
+    },
+    {
+      "en": "excited",
+      "meaning": {
+        "es": "emocionado, emocionada",
+        "en": "emocionado, emocionada"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Adivina la emoción",
+      "en": "Guess the feeling"
+    },
+    "text": {
+      "es": "Dibuja caritas o haz gestos con la cara, y que tu familia adivine la emoción en inglés.",
+      "en": "Draw faces or make faces, and let your family guess the feeling in English."
+    },
+    "adult": {
+      "es": "hablar de emociones también ayuda a entenderlas.",
+      "en": "talking about feelings also helps understand them."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

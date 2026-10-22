@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Círculos, cuadrados, triángulos… ¡las formas están por todas partes!" />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>Las formas — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="shapes">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "shapes",
+  "mood": "curious",
+  "title": {
+    "es": "Las formas",
+    "en": "Shapes"
+  },
+  "intro": {
+    "es": "Círculos, cuadrados, triángulos… ¡las formas están por todas partes!",
+    "en": "Circles, squares, triangles… shapes are everywhere!"
+  },
+  "pybot": {
+    "es": "Mi pantalla es casi un square con esquinas redondas.",
+    "en": "My screen is almost a square with round corners."
+  },
+  "look": [
+    {
+      "icon": "⚪",
+      "word": "circle",
+      "meaning": {
+        "es": "círculo",
+        "en": "círculo"
+      }
+    },
+    {
+      "icon": "◼️",
+      "word": "square",
+      "meaning": {
+        "es": "cuadrado",
+        "en": "cuadrado"
+      }
+    },
+    {
+      "icon": "🔺",
+      "word": "triangle",
+      "meaning": {
+        "es": "triángulo",
+        "en": "triángulo"
+      }
+    },
+    {
+      "icon": "⭐",
+      "word": "star",
+      "meaning": {
+        "es": "estrella",
+        "en": "estrella"
+      }
+    },
+    {
+      "icon": "❤️",
+      "word": "heart",
+      "meaning": {
+        "es": "corazón",
+        "en": "corazón"
+      }
+    },
+    {
+      "icon": "▬",
+      "word": "rectangle",
+      "meaning": {
+        "es": "rectángulo",
+        "en": "rectángulo"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "It's a circle.",
+        "meaning": {
+          "es": "Es un círculo.",
+          "en": "Es un círculo."
+        }
+      },
+      {
+        "en": "A star has five points.",
+        "meaning": {
+          "es": "Una estrella tiene cinco puntas.",
+          "en": "Una estrella tiene cinco puntas."
+        }
+      }
+    ],
+    "rule": {
+      "es": "Para decir qué forma tiene algo: “It's a…” y la forma.",
+      "en": "To say a shape: “It's a…” plus the shape."
+    }
+  },
+  "activities": [
+    {
+      "id": "shapes-circle",
+      "type": "choice",
+      "prompt": {
+        "es": "⚪ ¿Qué forma es?",
+        "en": "⚪ Which shape?"
+      },
+      "options": [
+        "circle",
+        "square",
+        "star"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es redonda.",
+        "en": "It's round."
+      },
+      "why": {
+        "es": "“Circle” es círculo.",
+        "en": "“Circle.”"
+      }
+    },
+    {
+      "id": "shapes-triangle",
+      "type": "choice",
+      "prompt": {
+        "es": "🔺 ¿Qué forma es?",
+        "en": "🔺 Which shape?"
+      },
+      "options": [
+        "triangle",
+        "heart",
+        "rectangle"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Tiene tres lados.",
+        "en": "It has three sides."
+      },
+      "why": {
+        "es": "“Triangle”.",
+        "en": "“Triangle.”"
+      }
+    },
+    {
+      "id": "shapes-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué forma es?",
+        "en": "Listen. Which shape?"
+      },
+      "options": [
+        {
+          "es": "◼️",
+          "en": "◼️"
+        },
+        {
+          "es": "⭐",
+          "en": "⭐"
+        },
+        {
+          "es": "❤️",
+          "en": "❤️"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Tiene cuatro lados iguales.",
+        "en": "Four equal sides."
+      },
+      "why": {
+        "es": "“Square” es cuadrado.",
+        "en": "“Square.”"
+      },
+      "listen": "square"
+    },
+    {
+      "id": "shapes-heart",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? Un “heart” es un corazón ❤️.",
+        "en": "True or false? A “heart” is ❤️."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Mira el dibujo.",
+        "en": "Look at the picture."
+      },
+      "why": {
+        "es": "Verdadero: heart es corazón.",
+        "en": "True."
+      }
+    },
+    {
+      "id": "shapes-odd",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Cuál NO es una forma?",
+        "en": "Which one is NOT a shape?"
+      },
+      "options": [
+        "dog",
+        "circle",
+        "square",
+        "star"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Uno ladra.",
+        "en": "One barks."
+      },
+      "why": {
+        "es": "“Dog” es perro.",
+        "en": "“Dog” is an animal."
+      }
+    },
+    {
+      "id": "shapes-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot dice que 🔺 es un “square”. ¿Qué es de verdad?",
+        "en": "🤖 PyBot says 🔺 is a “square”. What is it really?"
+      },
+      "options": [
+        "triangle",
+        "circle",
+        "square"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Cuenta los lados: tres.",
+        "en": "Count the sides: three."
+      },
+      "why": {
+        "es": "¡Arreglado! Es un triangle.",
+        "en": "Fixed! It's a triangle."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "circle",
+      "meaning": {
+        "es": "círculo",
+        "en": "círculo"
+      }
+    },
+    {
+      "en": "square",
+      "meaning": {
+        "es": "cuadrado",
+        "en": "cuadrado"
+      }
+    },
+    {
+      "en": "triangle",
+      "meaning": {
+        "es": "triángulo",
+        "en": "triángulo"
+      }
+    },
+    {
+      "en": "star",
+      "meaning": {
+        "es": "estrella",
+        "en": "estrella"
+      }
+    },
+    {
+      "en": "heart",
+      "meaning": {
+        "es": "corazón",
+        "en": "corazón"
+      }
+    },
+    {
+      "en": "rectangle",
+      "meaning": {
+        "es": "rectángulo",
+        "en": "rectángulo"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Caza de formas",
+      "en": "Shape hunt"
+    },
+    "text": {
+      "es": "Busca formas en la cocina: el plato es un circle, la ventana es un rectangle… ¿cuántas encuentras?",
+      "en": "Hunt for shapes in the kitchen: the plate is a circle, the window is a rectangle… how many can you find?"
+    },
+    "adult": {
+      "es": "ayuden a nombrar en inglés lo que encuentren.",
+      "en": "help name what they find in English."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

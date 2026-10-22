@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Nombra a las personas de tu familia y preséntalas con “This is my…”." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>Mi familia — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="myFamily">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "myFamily",
+  "mood": "welcoming",
+  "title": {
+    "es": "Mi familia",
+    "en": "My family"
+  },
+  "intro": {
+    "es": "Nombra a las personas de tu familia y preséntalas con “This is my…”.",
+    "en": "Name your family and introduce them with “This is my…”."
+  },
+  "pybot": {
+    "es": "This is my family! Bueno… mi familia son los otros PyBots.",
+    "en": "This is my family! Well… the other PyBots."
+  },
+  "look": [
+    {
+      "icon": "👩",
+      "word": "mom",
+      "meaning": {
+        "es": "mamá",
+        "en": "mamá"
+      }
+    },
+    {
+      "icon": "👨",
+      "word": "dad",
+      "meaning": {
+        "es": "papá",
+        "en": "papá"
+      }
+    },
+    {
+      "icon": "👦",
+      "word": "brother",
+      "meaning": {
+        "es": "hermano",
+        "en": "hermano"
+      }
+    },
+    {
+      "icon": "👧",
+      "word": "sister",
+      "meaning": {
+        "es": "hermana",
+        "en": "hermana"
+      }
+    },
+    {
+      "icon": "👵",
+      "word": "grandma",
+      "meaning": {
+        "es": "abuela",
+        "en": "abuela"
+      }
+    },
+    {
+      "icon": "👴",
+      "word": "grandpa",
+      "meaning": {
+        "es": "abuelo",
+        "en": "abuelo"
+      }
+    },
+    {
+      "icon": "👶",
+      "word": "baby",
+      "meaning": {
+        "es": "bebé",
+        "en": "bebé"
+      }
+    },
+    {
+      "icon": "👨‍👩‍👧‍👦",
+      "word": "family",
+      "meaning": {
+        "es": "familia",
+        "en": "familia"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "This is my mom.",
+        "meaning": {
+          "es": "Esta es mi mamá.",
+          "en": "Esta es mi mamá."
+        }
+      },
+      {
+        "en": "This is my brother.",
+        "meaning": {
+          "es": "Este es mi hermano.",
+          "en": "Este es mi hermano."
+        }
+      }
+    ],
+    "rule": {
+      "es": "Para presentar a alguien: “This is my…” y el nombre de la persona de la familia.",
+      "en": "To introduce someone: “This is my…” plus the family word."
+    }
+  },
+  "activities": [
+    {
+      "id": "myFamily-grandma",
+      "type": "choice",
+      "prompt": {
+        "es": "👵 ¿Quién es?",
+        "en": "👵 Who is it?"
+      },
+      "options": [
+        "grandma",
+        "grandpa",
+        "baby"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es la mamá de tu mamá o de tu papá.",
+        "en": "Your mom's or dad's mom."
+      },
+      "why": {
+        "es": "“Grandma” es abuela.",
+        "en": "“Grandma.”"
+      }
+    },
+    {
+      "id": "myFamily-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Quién es?",
+        "en": "Listen. Who is it?"
+      },
+      "options": [
+        {
+          "es": "👦 hermano",
+          "en": "👦 brother"
+        },
+        {
+          "es": "👧 hermana",
+          "en": "👧 sister"
+        },
+        {
+          "es": "👶 bebé",
+          "en": "👶 baby"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es un niño de tu familia.",
+        "en": "A boy in your family."
+      },
+      "why": {
+        "es": "“Brother” es hermano.",
+        "en": "“Brother.”"
+      },
+      "listen": "brother"
+    },
+    {
+      "id": "myFamily-gap",
+      "type": "choice",
+      "prompt": {
+        "es": "👨 Completa: “This is my ___.”",
+        "en": "👨 Fill in: “This is my ___.”"
+      },
+      "options": [
+        "dad",
+        "mom",
+        "sister"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es papá.",
+        "en": "It's your father."
+      },
+      "why": {
+        "es": "“This is my dad.”",
+        "en": "“This is my dad.”"
+      },
+      "show": "This is my ___."
+    },
+    {
+      "id": "myFamily-odd",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Cuál NO es de la familia?",
+        "en": "Which one is NOT family?"
+      },
+      "options": [
+        "apple",
+        "mom",
+        "dad",
+        "sister"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Una se come.",
+        "en": "You can eat one of them."
+      },
+      "why": {
+        "es": "“Apple” es una fruta.",
+        "en": "“Apple” is a fruit."
+      }
+    },
+    {
+      "id": "myFamily-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma: “Esta es mi mamá.”",
+        "en": "Build: “This is my mom.”"
+      },
+      "tiles": [
+        "This",
+        "is",
+        "my",
+        "mom."
+      ],
+      "hint": {
+        "es": "Empieza con This.",
+        "en": "Start with This."
+      },
+      "why": {
+        "es": "“This is my mom.”",
+        "en": "“This is my mom.”"
+      }
+    },
+    {
+      "id": "myFamily-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot señaló a la abuela 👵 y dijo “This is my grandpa”. ¿Qué debió decir?",
+        "en": "🤖 PyBot pointed at grandma 👵 and said “This is my grandpa”. What should it say?"
+      },
+      "options": [
+        "This is my grandma.",
+        "This is my baby.",
+        "This is my dad."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Ella es la abuela.",
+        "en": "She's the grandmother."
+      },
+      "why": {
+        "es": "¡Arreglado! Grandma es abuela.",
+        "en": "Fixed! Grandma."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "mom",
+      "meaning": {
+        "es": "mamá",
+        "en": "mamá"
+      }
+    },
+    {
+      "en": "dad",
+      "meaning": {
+        "es": "papá",
+        "en": "papá"
+      }
+    },
+    {
+      "en": "brother",
+      "meaning": {
+        "es": "hermano",
+        "en": "hermano"
+      }
+    },
+    {
+      "en": "sister",
+      "meaning": {
+        "es": "hermana",
+        "en": "hermana"
+      }
+    },
+    {
+      "en": "grandma",
+      "meaning": {
+        "es": "abuela",
+        "en": "abuela"
+      }
+    },
+    {
+      "en": "grandpa",
+      "meaning": {
+        "es": "abuelo",
+        "en": "abuelo"
+      }
+    },
+    {
+      "en": "baby",
+      "meaning": {
+        "es": "bebé",
+        "en": "bebé"
+      }
+    },
+    {
+      "en": "family",
+      "meaning": {
+        "es": "familia",
+        "en": "familia"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Presenta a tu familia",
+      "en": "Introduce your family"
+    },
+    "text": {
+      "es": "Con fotos o dibujos, presenta a tu familia: “This is my mom. This is my brother.”",
+      "en": "With photos or drawings, introduce your family: “This is my mom. This is my brother.”"
+    },
+    "adult": {
+      "es": "toda familia es distinta; usen las palabras que les sirvan.",
+      "en": "every family is different; use the words that fit yours."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

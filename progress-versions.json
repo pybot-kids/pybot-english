@@ -40,6 +40,366 @@
         "house": [],
         "checkpoint1": []
       }
+    },
+    {
+      "version": 2,
+      "date": "2026-10-22",
+      "note": "Zone 00 (Hello!) published: 3 pages with 21 activities",
+      "steps": {
+        "helloGoodbye": [
+          "helloGoodbye-arrive",
+          "helloGoodbye-listen-morning",
+          "helloGoodbye-hi-bye",
+          "helloGoodbye-night",
+          "helloGoodbye-true-false",
+          "helloGoodbye-fix",
+          "helloGoodbye-see-you"
+        ],
+        "howAreYou": [
+          "howAreYou-order-question",
+          "howAreYou-gap",
+          "howAreYou-listen",
+          "howAreYou-answer",
+          "howAreYou-odd",
+          "howAreYou-fix",
+          "howAreYou-and-you"
+        ],
+        "lookListenSay": [
+          "lookListenSay-listen-button",
+          "lookListenSay-slow-button",
+          "lookListenSay-listen-look",
+          "lookListenSay-listen-listen",
+          "lookListenSay-order",
+          "lookListenSay-no-grades",
+          "lookListenSay-album"
+        ],
+        "abcLetters": [],
+        "abcVowels": [],
+        "abcSpell": [],
+        "numbersTen": [],
+        "numbersTwenty": [],
+        "numbersHowMany": [],
+        "myName": [],
+        "myAge": [],
+        "myFamily": [],
+        "myBody": [],
+        "feelings": [],
+        "iFeel": [],
+        "colors": [],
+        "shapes": [],
+        "itIsRed": [],
+        "backpack": [],
+        "thisThat": [],
+        "animals": [],
+        "bigSmall": [],
+        "canCant": [],
+        "food": [],
+        "iLike": [],
+        "iDontLike": [],
+        "days": [],
+        "dayParts": [],
+        "routine": [],
+        "classWords": [],
+        "questions": [],
+        "inOnUnder": [],
+        "house": [],
+        "checkpoint1": []
+      }
+    },
+    {
+      "version": 3,
+      "date": "2026-10-22",
+      "note": "Zones 01-06 and the pit stop published: the whole path, 34 pages",
+      "steps": {
+        "helloGoodbye": [
+          "helloGoodbye-arrive",
+          "helloGoodbye-listen-morning",
+          "helloGoodbye-hi-bye",
+          "helloGoodbye-night",
+          "helloGoodbye-true-false",
+          "helloGoodbye-fix",
+          "helloGoodbye-see-you"
+        ],
+        "howAreYou": [
+          "howAreYou-order-question",
+          "howAreYou-gap",
+          "howAreYou-listen",
+          "howAreYou-answer",
+          "howAreYou-odd",
+          "howAreYou-fix",
+          "howAreYou-and-you"
+        ],
+        "lookListenSay": [
+          "lookListenSay-listen-button",
+          "lookListenSay-slow-button",
+          "lookListenSay-listen-look",
+          "lookListenSay-listen-listen",
+          "lookListenSay-order",
+          "lookListenSay-no-grades",
+          "lookListenSay-album"
+        ],
+        "abcLetters": [
+          "abcLetters-listen-e",
+          "abcLetters-listen-i",
+          "abcLetters-listen-g",
+          "abcLetters-h",
+          "abcLetters-order",
+          "abcLetters-no-enye",
+          "abcLetters-fix"
+        ],
+        "abcVowels": [
+          "abcVowels-listen-apple",
+          "abcVowels-listen-umbrella",
+          "abcVowels-gap-a",
+          "abcVowels-gap-e",
+          "abcVowels-o",
+          "abcVowels-true",
+          "abcVowels-fix"
+        ],
+        "abcSpell": [
+          "abcSpell-cat",
+          "abcSpell-dog",
+          "abcSpell-listen",
+          "abcSpell-dog-choice",
+          "abcSpell-gap",
+          "abcSpell-ask",
+          "abcSpell-fix"
+        ],
+        "numbersTen": [
+          "numbersTen-listen-seven",
+          "numbersTen-listen-three",
+          "numbersTen-count",
+          "numbersTen-gap",
+          "numbersTen-odd",
+          "numbersTen-order",
+          "numbersTen-fix"
+        ],
+        "numbersTwenty": [
+          "numbersTwenty-listen-fifteen",
+          "numbersTwenty-listen-thirteen",
+          "numbersTwenty-sum",
+          "numbersTwenty-gap",
+          "numbersTwenty-true",
+          "numbersTwenty-order",
+          "numbersTwenty-fix"
+        ],
+        "numbersHowMany": [
+          "numbersHowMany-cats",
+          "numbersHowMany-gap",
+          "numbersHowMany-order",
+          "numbersHowMany-listen",
+          "numbersHowMany-read",
+          "numbersHowMany-fix"
+        ],
+        "myName": [
+          "myName-order",
+          "myName-gap",
+          "myName-listen",
+          "myName-answer",
+          "myName-same",
+          "myName-fix"
+        ],
+        "myAge": [
+          "myAge-listen",
+          "myAge-order",
+          "myAge-gap",
+          "myAge-answer",
+          "myAge-true",
+          "myAge-fix"
+        ],
+        "myFamily": [
+          "myFamily-grandma",
+          "myFamily-listen",
+          "myFamily-gap",
+          "myFamily-odd",
+          "myFamily-order",
+          "myFamily-fix"
+        ],
+        "myBody": [
+          "myBody-nose",
+          "myBody-ear-eye",
+          "myBody-gap",
+          "myBody-true",
+          "myBody-order",
+          "myBody-fix"
+        ],
+        "feelings": [
+          "feelings-sad",
+          "feelings-tired",
+          "feelings-listen",
+          "feelings-odd",
+          "feelings-read",
+          "feelings-fix"
+        ],
+        "iFeel": [
+          "iFeel-order",
+          "iFeel-gap",
+          "iFeel-read",
+          "iFeel-answer",
+          "iFeel-true",
+          "iFeel-fix"
+        ],
+        "colors": [
+          "colors-red",
+          "colors-blue",
+          "colors-listen",
+          "colors-blue-brown",
+          "colors-odd",
+          "colors-fix"
+        ],
+        "shapes": [
+          "shapes-circle",
+          "shapes-triangle",
+          "shapes-listen",
+          "shapes-heart",
+          "shapes-odd",
+          "shapes-fix"
+        ],
+        "itIsRed": [
+          "itIsRed-order",
+          "itIsRed-fix",
+          "itIsRed-gap",
+          "itIsRed-read",
+          "itIsRed-true",
+          "itIsRed-listen"
+        ],
+        "backpack": [
+          "backpack-pencil",
+          "backpack-ruler",
+          "backpack-listen",
+          "backpack-an",
+          "backpack-odd",
+          "backpack-fix"
+        ],
+        "thisThat": [
+          "thisThat-near",
+          "thisThat-far",
+          "thisThat-order",
+          "thisThat-answer",
+          "thisThat-true",
+          "thisThat-fix"
+        ],
+        "animals": [
+          "animals-rabbit",
+          "animals-lion",
+          "animals-listen-horse",
+          "animals-listen-duck",
+          "animals-odd",
+          "animals-fix"
+        ],
+        "bigSmall": [
+          "bigSmall-read",
+          "bigSmall-opposite",
+          "bigSmall-true",
+          "bigSmall-gap",
+          "bigSmall-order",
+          "bigSmall-fix"
+        ],
+        "canCant": [
+          "canCant-bird",
+          "canCant-true",
+          "canCant-read",
+          "canCant-order",
+          "canCant-gap",
+          "canCant-fix"
+        ],
+        "food": [
+          "food-banana",
+          "food-milk",
+          "food-listen",
+          "food-drink",
+          "food-eat-drink",
+          "food-fix"
+        ],
+        "iLike": [
+          "iLike-order",
+          "iLike-gap",
+          "iLike-read",
+          "iLike-true",
+          "iLike-listen",
+          "iLike-fix"
+        ],
+        "iDontLike": [
+          "iDontLike-order",
+          "iDontLike-gap",
+          "iDontLike-answer",
+          "iDontLike-read",
+          "iDontLike-true",
+          "iDontLike-fix"
+        ],
+        "days": [
+          "days-listen",
+          "days-gap",
+          "days-weekend",
+          "days-capital",
+          "days-order",
+          "days-fix"
+        ],
+        "dayParts": [
+          "dayParts-morning",
+          "dayParts-night",
+          "dayParts-gap",
+          "dayParts-listen",
+          "dayParts-true",
+          "dayParts-fix"
+        ],
+        "routine": [
+          "routine-first",
+          "routine-listen",
+          "routine-gap",
+          "routine-order",
+          "routine-read",
+          "routine-fix"
+        ],
+        "classWords": [
+          "classWords-sit",
+          "classWords-hand",
+          "classWords-open",
+          "classWords-odd",
+          "classWords-true",
+          "classWords-fix"
+        ],
+        "questions": [
+          "questions-who",
+          "questions-where",
+          "questions-what",
+          "questions-how-old",
+          "questions-order",
+          "questions-fix"
+        ],
+        "inOnUnder": [
+          "inOnUnder-in",
+          "inOnUnder-listen",
+          "inOnUnder-true",
+          "inOnUnder-gap",
+          "inOnUnder-order",
+          "inOnUnder-fix"
+        ],
+        "house": [
+          "house-bed",
+          "house-kitchen",
+          "house-listen",
+          "house-true",
+          "house-odd",
+          "house-fix"
+        ],
+        "checkpoint1": [
+          "checkpoint1-hello",
+          "checkpoint1-spell",
+          "checkpoint1-number",
+          "checkpoint1-age",
+          "checkpoint1-family",
+          "checkpoint1-color",
+          "checkpoint1-an",
+          "checkpoint1-can",
+          "checkpoint1-like",
+          "checkpoint1-day",
+          "checkpoint1-class",
+          "checkpoint1-where",
+          "checkpoint1-intro",
+          "checkpoint1-like-order"
+        ]
+      }
     }
   ]
 }
