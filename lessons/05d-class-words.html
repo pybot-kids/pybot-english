@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Las órdenes que se dicen en clase de inglés. ¡Así entiendes a quien enseña!" />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>Open, close, listen! En clase — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="classWords">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "classWords",
+  "mood": "determined",
+  "title": {
+    "es": "Open, close, listen! En clase",
+    "en": "Open, close, listen!"
+  },
+  "intro": {
+    "es": "Las órdenes que se dicen en clase de inglés. ¡Así entiendes a quien enseña!",
+    "en": "Commands used in English class. Now you'll understand the teacher!"
+  },
+  "pybot": {
+    "es": "Stand up! Sit down! ¡Uf, qué ejercicio!",
+    "en": "Stand up! Sit down! Phew, what a workout!"
+  },
+  "look": [
+    {
+      "icon": "📖",
+      "word": "open",
+      "meaning": {
+        "es": "abre, abran",
+        "en": "abre, abran"
+      }
+    },
+    {
+      "icon": "📕",
+      "word": "close",
+      "meaning": {
+        "es": "cierra, cierren",
+        "en": "cierra, cierren"
+      }
+    },
+    {
+      "icon": "👂",
+      "word": "listen",
+      "meaning": {
+        "es": "escucha, escuchen",
+        "en": "escucha, escuchen"
+      }
+    },
+    {
+      "icon": "👀",
+      "word": "look",
+      "meaning": {
+        "es": "mira, miren",
+        "en": "mira, miren"
+      }
+    },
+    {
+      "icon": "🪑",
+      "word": "sit down",
+      "meaning": {
+        "es": "siéntate, siéntense",
+        "en": "siéntate, siéntense"
+      }
+    },
+    {
+      "icon": "🧍",
+      "word": "stand up",
+      "meaning": {
+        "es": "ponte de pie",
+        "en": "ponte de pie"
+      }
+    },
+    {
+      "icon": "🤫",
+      "word": "be quiet",
+      "meaning": {
+        "es": "silencio",
+        "en": "silencio"
+      }
+    },
+    {
+      "icon": "✋",
+      "word": "raise your hand",
+      "meaning": {
+        "es": "levanta la mano",
+        "en": "levanta la mano"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "Open your books, please.",
+        "meaning": {
+          "es": "Abran sus libros, por favor.",
+          "en": "Abran sus libros, por favor."
+        }
+      },
+      {
+        "en": "Raise your hand.",
+        "meaning": {
+          "es": "Levanta la mano.",
+          "en": "Levanta la mano."
+        }
+      }
+    ],
+    "rule": {
+      "es": "Las órdenes empiezan directo con la acción: Open! Listen! Sit down! Con “please” suenan más amables.",
+      "en": "Commands start with the action: Open! Listen! Add “please” to sound kinder."
+    }
+  },
+  "activities": [
+    {
+      "id": "classWords-sit",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué tienes que hacer?",
+        "en": "Listen. What do you have to do?"
+      },
+      "options": [
+        {
+          "es": "🪑 Sentarte",
+          "en": "🪑 Sit"
+        },
+        {
+          "es": "🧍 Ponerte de pie",
+          "en": "🧍 Stand"
+        },
+        {
+          "es": "✋ Levantar la mano",
+          "en": "✋ Raise your hand"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "“Down” es abajo.",
+        "en": "“Down” means down."
+      },
+      "why": {
+        "es": "“Sit down”: siéntate.",
+        "en": "“Sit down.”"
+      },
+      "listen": "Sit down, please."
+    },
+    {
+      "id": "classWords-hand",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué tienes que hacer?",
+        "en": "Listen. What do you have to do?"
+      },
+      "options": [
+        {
+          "es": "✋ Levantar la mano",
+          "en": "✋ Raise your hand"
+        },
+        {
+          "es": "🤫 Hacer silencio",
+          "en": "🤫 Be quiet"
+        },
+        {
+          "es": "📕 Cerrar el libro",
+          "en": "📕 Close the book"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "“Hand” es mano.",
+        "en": "“Hand” means mano."
+      },
+      "why": {
+        "es": "“Raise your hand”: levanta la mano.",
+        "en": "“Raise your hand.”"
+      },
+      "listen": "Raise your hand."
+    },
+    {
+      "id": "classWords-open",
+      "type": "choice",
+      "prompt": {
+        "es": "📖 ¿Qué orden es?",
+        "en": "📖 Which command?"
+      },
+      "options": [
+        "open",
+        "close",
+        "be quiet"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "El libro está abierto.",
+        "en": "The book is open."
+      },
+      "why": {
+        "es": "“Open” es abrir.",
+        "en": "“Open.”"
+      }
+    },
+    {
+      "id": "classWords-odd",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Cuál NO es una orden de clase?",
+        "en": "Which one is NOT a class command?"
+      },
+      "options": [
+        "banana",
+        "open",
+        "close",
+        "listen"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Una es una fruta.",
+        "en": "One is a fruit."
+      },
+      "why": {
+        "es": "“Banana” no es una orden. 😄",
+        "en": "“Banana” isn't a command. 😄"
+      }
+    },
+    {
+      "id": "classWords-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? “Stand up” significa ponerse de pie.",
+        "en": "True or false? “Stand up” means to get up."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "“Up” es arriba.",
+        "en": "“Up” means arriba."
+      },
+      "why": {
+        "es": "Verdadero.",
+        "en": "True."
+      }
+    },
+    {
+      "id": "classWords-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot quiere que abran los libros y dice “Close your books”. ¿Qué debió decir?",
+        "en": "🤖 PyBot wants books opened but says “Close your books”. What should it say?"
+      },
+      "options": [
+        "Open your books.",
+        "Close your books.",
+        "Sit down."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Lo contrario de close.",
+        "en": "The opposite of close."
+      },
+      "why": {
+        "es": "¡Arreglado! Open your books.",
+        "en": "Fixed! Open your books."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "open",
+      "meaning": {
+        "es": "abre, abran",
+        "en": "abre, abran"
+      }
+    },
+    {
+      "en": "close",
+      "meaning": {
+        "es": "cierra, cierren",
+        "en": "cierra, cierren"
+      }
+    },
+    {
+      "en": "listen",
+      "meaning": {
+        "es": "escucha, escuchen",
+        "en": "escucha, escuchen"
+      }
+    },
+    {
+      "en": "look",
+      "meaning": {
+        "es": "mira, miren",
+        "en": "mira, miren"
+      }
+    },
+    {
+      "en": "sit down",
+      "meaning": {
+        "es": "siéntate, siéntense",
+        "en": "siéntate, siéntense"
+      }
+    },
+    {
+      "en": "stand up",
+      "meaning": {
+        "es": "ponte de pie",
+        "en": "ponte de pie"
+      }
+    },
+    {
+      "en": "be quiet",
+      "meaning": {
+        "es": "silencio",
+        "en": "silencio"
+      }
+    },
+    {
+      "en": "raise your hand",
+      "meaning": {
+        "es": "levanta la mano",
+        "en": "levanta la mano"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "PyBot dice… en clase",
+      "en": "PyBot says… in class"
+    },
+    "text": {
+      "es": "Juega a la escuelita: una persona da órdenes en inglés (Stand up! Sit down! Raise your hand!) y las demás obedecen.",
+      "en": "Play school: one person gives commands in English (Stand up! Sit down! Raise your hand!) and the others follow."
+    },
+    "adult": {
+      "es": "túrnense para que la niña o el niño también sea quien enseña.",
+      "en": "take turns so the child also gets to be the teacher."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

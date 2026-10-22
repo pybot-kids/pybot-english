@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Los números del uno al diez, para contar todo lo que ves." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>Cuenta del 1 al 10 — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="numbersTen">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "numbersTen",
+  "mood": "counting",
+  "title": {
+    "es": "Cuenta del 1 al 10",
+    "en": "Count from 1 to 10"
+  },
+  "intro": {
+    "es": "Los números del uno al diez, para contar todo lo que ves.",
+    "en": "Numbers one to ten, to count everything you see."
+  },
+  "pybot": {
+    "es": "One, two, three… ¡Me encanta contar!",
+    "en": "One, two, three… I love counting!"
+  },
+  "look": [
+    {
+      "icon": "1️⃣",
+      "word": "one",
+      "meaning": {
+        "es": "uno",
+        "en": "uno"
+      }
+    },
+    {
+      "icon": "2️⃣",
+      "word": "two",
+      "meaning": {
+        "es": "dos",
+        "en": "dos"
+      }
+    },
+    {
+      "icon": "3️⃣",
+      "word": "three",
+      "meaning": {
+        "es": "tres",
+        "en": "tres"
+      }
+    },
+    {
+      "icon": "4️⃣",
+      "word": "four",
+      "meaning": {
+        "es": "cuatro",
+        "en": "cuatro"
+      }
+    },
+    {
+      "icon": "5️⃣",
+      "word": "five",
+      "meaning": {
+        "es": "cinco",
+        "en": "cinco"
+      }
+    },
+    {
+      "icon": "6️⃣",
+      "word": "six",
+      "meaning": {
+        "es": "seis",
+        "en": "seis"
+      }
+    },
+    {
+      "icon": "7️⃣",
+      "word": "seven",
+      "meaning": {
+        "es": "siete",
+        "en": "siete"
+      }
+    },
+    {
+      "icon": "8️⃣",
+      "word": "eight",
+      "meaning": {
+        "es": "ocho",
+        "en": "ocho"
+      }
+    },
+    {
+      "icon": "9️⃣",
+      "word": "nine",
+      "meaning": {
+        "es": "nueve",
+        "en": "nueve"
+      }
+    },
+    {
+      "icon": "🔟",
+      "word": "ten",
+      "meaning": {
+        "es": "diez",
+        "en": "diez"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "One, two, three, four, five.",
+        "meaning": {
+          "es": "Uno, dos, tres, cuatro, cinco.",
+          "en": "Uno, dos, tres, cuatro, cinco."
+        }
+      },
+      {
+        "en": "I have two hands.",
+        "meaning": {
+          "es": "Tengo dos manos.",
+          "en": "Tengo dos manos."
+        }
+      }
+    ],
+    "rule": {
+      "es": "Cuenta en voz alta con los dedos. Así los números se quedan en tu memoria.",
+      "en": "Count out loud on your fingers. That way numbers stick."
+    }
+  },
+  "activities": [
+    {
+      "id": "numbersTen-listen-seven",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué número es?",
+        "en": "Listen. Which number?"
+      },
+      "options": [
+        {
+          "es": "7",
+          "en": "7"
+        },
+        {
+          "es": "6",
+          "en": "6"
+        },
+        {
+          "es": "9",
+          "en": "9"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es el número de días de la semana.",
+        "en": "Days in a week."
+      },
+      "why": {
+        "es": "“Seven” es 7.",
+        "en": "“Seven” is 7."
+      },
+      "listen": "seven"
+    },
+    {
+      "id": "numbersTen-listen-three",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué número es?",
+        "en": "Listen. Which number?"
+      },
+      "options": [
+        {
+          "es": "3",
+          "en": "3"
+        },
+        {
+          "es": "8",
+          "en": "8"
+        },
+        {
+          "es": "2",
+          "en": "2"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Suena «zri».",
+        "en": "It sounds like «three»."
+      },
+      "why": {
+        "es": "“Three” es 3.",
+        "en": "“Three” is 3."
+      },
+      "listen": "three"
+    },
+    {
+      "id": "numbersTen-count",
+      "type": "choice",
+      "prompt": {
+        "es": "🍎🍎🍎🍎 ¿Cuántas manzanas hay?",
+        "en": "🍎🍎🍎🍎 How many apples?"
+      },
+      "options": [
+        "four",
+        "five",
+        "three"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Cuéntalas con el dedo.",
+        "en": "Count them with your finger."
+      },
+      "why": {
+        "es": "Hay cuatro: “four”.",
+        "en": "There are four."
+      }
+    },
+    {
+      "id": "numbersTen-gap",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Qué número falta?",
+        "en": "Which number is missing?"
+      },
+      "options": [
+        "three",
+        "five",
+        "ten"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Va entre two y four.",
+        "en": "It goes between two and four."
+      },
+      "why": {
+        "es": "One, two, THREE, four.",
+        "en": "One, two, THREE, four."
+      },
+      "show": "one, two, ___, four"
+    },
+    {
+      "id": "numbersTen-odd",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Cuál NO es un número?",
+        "en": "Which one is NOT a number?"
+      },
+      "options": [
+        "cat",
+        "two",
+        "six",
+        "nine"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Uno de ellos es un animal.",
+        "en": "One of them is an animal."
+      },
+      "why": {
+        "es": "“Cat” es gato, no un número.",
+        "en": "“Cat” is an animal."
+      }
+    },
+    {
+      "id": "numbersTen-order",
+      "type": "order",
+      "prompt": {
+        "es": "Ordena del más pequeño al más grande.",
+        "en": "Order from smallest to biggest."
+      },
+      "tiles": [
+        "one",
+        "two",
+        "three",
+        "four"
+      ],
+      "hint": {
+        "es": "Empieza con one.",
+        "en": "Start with one."
+      },
+      "why": {
+        "es": "¡One, two, three, four!",
+        "en": "One, two, three, four!"
+      }
+    },
+    {
+      "id": "numbersTen-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot contó: “one, two, four”. ¿Cuál se le olvidó?",
+        "en": "🤖 PyBot counted: “one, two, four”. Which one did it skip?"
+      },
+      "options": [
+        "three",
+        "five",
+        "zero"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Va después de two.",
+        "en": "It comes after two."
+      },
+      "why": {
+        "es": "¡Gracias! Faltaba “three”.",
+        "en": "Thanks! “Three” was missing."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "one",
+      "meaning": {
+        "es": "uno",
+        "en": "uno"
+      }
+    },
+    {
+      "en": "two",
+      "meaning": {
+        "es": "dos",
+        "en": "dos"
+      }
+    },
+    {
+      "en": "three",
+      "meaning": {
+        "es": "tres",
+        "en": "tres"
+      }
+    },
+    {
+      "en": "four",
+      "meaning": {
+        "es": "cuatro",
+        "en": "cuatro"
+      }
+    },
+    {
+      "en": "five",
+      "meaning": {
+        "es": "cinco",
+        "en": "cinco"
+      }
+    },
+    {
+      "en": "six",
+      "meaning": {
+        "es": "seis",
+        "en": "seis"
+      }
+    },
+    {
+      "en": "seven",
+      "meaning": {
+        "es": "siete",
+        "en": "siete"
+      }
+    },
+    {
+      "en": "eight",
+      "meaning": {
+        "es": "ocho",
+        "en": "ocho"
+      }
+    },
+    {
+      "en": "nine",
+      "meaning": {
+        "es": "nueve",
+        "en": "nueve"
+      }
+    },
+    {
+      "en": "ten",
+      "meaning": {
+        "es": "diez",
+        "en": "diez"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Cuenta en inglés",
+      "en": "Count in English"
+    },
+    "text": {
+      "es": "Cuenta en inglés los escalones, tus juguetes o las cucharas de la mesa. ¿Hasta cuánto llegas?",
+      "en": "Count stairs, toys or spoons in English. How far can you go?"
+    },
+    "adult": {
+      "es": "cuenten juntos señalando cada cosa.",
+      "en": "count together, pointing at each thing."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

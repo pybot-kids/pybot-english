@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Diez animales: de la casa, de la granja y de la selva." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>Animales — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="animals">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "animals",
+  "mood": "starry",
+  "title": {
+    "es": "Animales",
+    "en": "Animals"
+  },
+  "intro": {
+    "es": "Diez animales: de la casa, de la granja y de la selva.",
+    "en": "Ten animals: pets, farm animals and wild animals."
+  },
+  "pybot": {
+    "es": "¡Me encantan los animals! Mi favorito es el monkey. 🐒",
+    "en": "I love animals! My favorite is the monkey. 🐒"
+  },
+  "look": [
+    {
+      "icon": "🐱",
+      "word": "cat",
+      "meaning": {
+        "es": "gato",
+        "en": "gato"
+      }
+    },
+    {
+      "icon": "🐶",
+      "word": "dog",
+      "meaning": {
+        "es": "perro",
+        "en": "perro"
+      }
+    },
+    {
+      "icon": "🐦",
+      "word": "bird",
+      "meaning": {
+        "es": "pájaro",
+        "en": "pájaro"
+      }
+    },
+    {
+      "icon": "🐟",
+      "word": "fish",
+      "meaning": {
+        "es": "pez",
+        "en": "pez"
+      }
+    },
+    {
+      "icon": "🐰",
+      "word": "rabbit",
+      "meaning": {
+        "es": "conejo",
+        "en": "conejo"
+      }
+    },
+    {
+      "icon": "🐴",
+      "word": "horse",
+      "meaning": {
+        "es": "caballo",
+        "en": "caballo"
+      }
+    },
+    {
+      "icon": "🐮",
+      "word": "cow",
+      "meaning": {
+        "es": "vaca",
+        "en": "vaca"
+      }
+    },
+    {
+      "icon": "🦆",
+      "word": "duck",
+      "meaning": {
+        "es": "pato",
+        "en": "pato"
+      }
+    },
+    {
+      "icon": "🦁",
+      "word": "lion",
+      "meaning": {
+        "es": "león",
+        "en": "león"
+      }
+    },
+    {
+      "icon": "🐒",
+      "word": "monkey",
+      "meaning": {
+        "es": "mono",
+        "en": "mono"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "I have a dog.",
+        "meaning": {
+          "es": "Tengo un perro.",
+          "en": "Tengo un perro."
+        }
+      },
+      {
+        "en": "The lion is big.",
+        "meaning": {
+          "es": "El león es grande.",
+          "en": "El león es grande."
+        }
+      }
+    ],
+    "rule": {
+      "es": "Para muchos animales agrega “-s”: two cats, three dogs. Ojo: fish no cambia (one fish, two fish).",
+      "en": "For many animals add “-s”: two cats. Careful: fish stays fish."
+    }
+  },
+  "activities": [
+    {
+      "id": "animals-rabbit",
+      "type": "choice",
+      "prompt": {
+        "es": "🐰 ¿Qué animal es?",
+        "en": "🐰 Which animal?"
+      },
+      "options": [
+        "rabbit",
+        "cat",
+        "duck"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Tiene orejas largas.",
+        "en": "It has long ears."
+      },
+      "why": {
+        "es": "“Rabbit” es conejo.",
+        "en": "“Rabbit.”"
+      }
+    },
+    {
+      "id": "animals-lion",
+      "type": "choice",
+      "prompt": {
+        "es": "🦁 ¿Qué animal es?",
+        "en": "🦁 Which animal?"
+      },
+      "options": [
+        "lion",
+        "horse",
+        "monkey"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es el rey de la selva.",
+        "en": "King of the jungle."
+      },
+      "why": {
+        "es": "“Lion” es león.",
+        "en": "“Lion.”"
+      }
+    },
+    {
+      "id": "animals-listen-horse",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué animal es?",
+        "en": "Listen. Which animal?"
+      },
+      "options": [
+        {
+          "es": "🐴",
+          "en": "🐴"
+        },
+        {
+          "es": "🐮",
+          "en": "🐮"
+        },
+        {
+          "es": "🐶",
+          "en": "🐶"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Se puede montar.",
+        "en": "You can ride it."
+      },
+      "why": {
+        "es": "“Horse” es caballo.",
+        "en": "“Horse.”"
+      },
+      "listen": "horse"
+    },
+    {
+      "id": "animals-listen-duck",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué animal es?",
+        "en": "Listen. Which animal?"
+      },
+      "options": [
+        {
+          "es": "🦆",
+          "en": "🦆"
+        },
+        {
+          "es": "🐟",
+          "en": "🐟"
+        },
+        {
+          "es": "🐦",
+          "en": "🐦"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Dice cuac.",
+        "en": "It says quack."
+      },
+      "why": {
+        "es": "“Duck” es pato.",
+        "en": "“Duck.”"
+      },
+      "listen": "duck"
+    },
+    {
+      "id": "animals-odd",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Cuál NO es un animal?",
+        "en": "Which one is NOT an animal?"
+      },
+      "options": [
+        "bread",
+        "cat",
+        "dog",
+        "bird"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Uno se come.",
+        "en": "You eat one of them."
+      },
+      "why": {
+        "es": "“Bread” es pan.",
+        "en": "“Bread” is food."
+      }
+    },
+    {
+      "id": "animals-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot dice que 🐮 es un “dog”. ¿Qué es de verdad?",
+        "en": "🤖 PyBot says 🐮 is a “dog”. What is it really?"
+      },
+      "options": [
+        "cow",
+        "dog",
+        "duck"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Da leche.",
+        "en": "It gives milk."
+      },
+      "why": {
+        "es": "¡Arreglado! Es una cow.",
+        "en": "Fixed! It's a cow."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "cat",
+      "meaning": {
+        "es": "gato",
+        "en": "gato"
+      }
+    },
+    {
+      "en": "dog",
+      "meaning": {
+        "es": "perro",
+        "en": "perro"
+      }
+    },
+    {
+      "en": "bird",
+      "meaning": {
+        "es": "pájaro",
+        "en": "pájaro"
+      }
+    },
+    {
+      "en": "fish",
+      "meaning": {
+        "es": "pez",
+        "en": "pez"
+      }
+    },
+    {
+      "en": "rabbit",
+      "meaning": {
+        "es": "conejo",
+        "en": "conejo"
+      }
+    },
+    {
+      "en": "horse",
+      "meaning": {
+        "es": "caballo",
+        "en": "caballo"
+      }
+    },
+    {
+      "en": "cow",
+      "meaning": {
+        "es": "vaca",
+        "en": "vaca"
+      }
+    },
+    {
+      "en": "duck",
+      "meaning": {
+        "es": "pato",
+        "en": "pato"
+      }
+    },
+    {
+      "en": "lion",
+      "meaning": {
+        "es": "león",
+        "en": "león"
+      }
+    },
+    {
+      "en": "monkey",
+      "meaning": {
+        "es": "mono",
+        "en": "mono"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Adivina el animal",
+      "en": "Guess the animal"
+    },
+    "text": {
+      "es": "Imita un animal con sonidos y gestos, y que tu familia adivine su nombre en inglés.",
+      "en": "Act out an animal with sounds and moves, and let your family guess its name in English."
+    },
+    "adult": {
+      "es": "cuando acierten, repitan juntos el nombre en inglés.",
+      "en": "when you guess, repeat the English name together."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

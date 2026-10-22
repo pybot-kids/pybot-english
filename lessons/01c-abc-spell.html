@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pregunta cómo se escribe una palabra y deletrea letra por letra." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>Deletrea tu nombre — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="abcSpell">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "abcSpell",
+  "mood": "focused",
+  "title": {
+    "es": "Deletrea tu nombre",
+    "en": "Spell your name"
+  },
+  "intro": {
+    "es": "Pregunta cómo se escribe una palabra y deletrea letra por letra.",
+    "en": "Ask how to spell a word and spell it letter by letter."
+  },
+  "pybot": {
+    "es": "How do you spell PyBot? P-Y-B-O-T. ¡Así se deletrea!",
+    "en": "How do you spell PyBot? P-Y-B-O-T!"
+  },
+  "look": [
+    {
+      "icon": "🔤",
+      "word": "spell",
+      "meaning": {
+        "es": "deletrear",
+        "en": "deletrear"
+      }
+    },
+    {
+      "icon": "🏷️",
+      "word": "name",
+      "meaning": {
+        "es": "nombre",
+        "en": "nombre"
+      }
+    },
+    {
+      "icon": "❓",
+      "word": "How do you spell it?",
+      "meaning": {
+        "es": "¿cómo se escribe?",
+        "en": "¿cómo se escribe?"
+      }
+    },
+    {
+      "icon": "🐱",
+      "word": "C-A-T",
+      "meaning": {
+        "es": "cat: gato",
+        "en": "cat: gato"
+      }
+    },
+    {
+      "icon": "🐶",
+      "word": "D-O-G",
+      "meaning": {
+        "es": "dog: perro",
+        "en": "dog: perro"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "How do you spell cat?",
+        "meaning": {
+          "es": "¿Cómo se escribe cat?",
+          "en": "¿Cómo se escribe cat?"
+        }
+      },
+      {
+        "en": "C-A-T.",
+        "meaning": {
+          "es": "C-A-T.",
+          "en": "C-A-T."
+        }
+      },
+      {
+        "en": "My name is Ana. A-N-A.",
+        "meaning": {
+          "es": "Me llamo Ana. A-N-A.",
+          "en": "Me llamo Ana. A-N-A."
+        }
+      }
+    ],
+    "rule": {
+      "es": "Para deletrear dices el nombre de cada letra en inglés, una por una.",
+      "en": "To spell, say each letter's English name, one by one."
+    }
+  },
+  "activities": [
+    {
+      "id": "abcSpell-cat",
+      "type": "order",
+      "prompt": {
+        "es": "Deletrea “cat” (gato).",
+        "en": "Spell “cat”."
+      },
+      "tiles": [
+        "C",
+        "A",
+        "T"
+      ],
+      "hint": {
+        "es": "Empieza con C.",
+        "en": "Start with C."
+      },
+      "why": {
+        "es": "¡C-A-T, cat!",
+        "en": "C-A-T, cat!"
+      }
+    },
+    {
+      "id": "abcSpell-dog",
+      "type": "order",
+      "prompt": {
+        "es": "Deletrea “dog” (perro).",
+        "en": "Spell “dog”."
+      },
+      "tiles": [
+        "D",
+        "O",
+        "G"
+      ],
+      "hint": {
+        "es": "Empieza con D.",
+        "en": "Start with D."
+      },
+      "why": {
+        "es": "¡D-O-G, dog!",
+        "en": "D-O-G, dog!"
+      }
+    },
+    {
+      "id": "abcSpell-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha el deletreo. ¿Qué palabra es?",
+        "en": "Listen to the spelling. Which word is it?"
+      },
+      "options": [
+        "sun",
+        "bus",
+        "cat"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Empieza con S.",
+        "en": "It starts with S."
+      },
+      "why": {
+        "es": "S-U-N es “sun”, sol.",
+        "en": "S-U-N is “sun”."
+      },
+      "listen": "S, U, N"
+    },
+    {
+      "id": "abcSpell-dog-choice",
+      "type": "choice",
+      "prompt": {
+        "es": "How do you spell “dog”?",
+        "en": "How do you spell “dog”?"
+      },
+      "options": [
+        "D-O-G",
+        "D-A-G",
+        "G-O-D"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Perro: d, o, g.",
+        "en": "d, o, g."
+      },
+      "why": {
+        "es": "D-O-G es correcto.",
+        "en": "D-O-G is right."
+      }
+    },
+    {
+      "id": "abcSpell-gap",
+      "type": "choice",
+      "prompt": {
+        "es": "Completa: “My ___ is Ana.”",
+        "en": "Fill in: “My ___ is Ana.”"
+      },
+      "options": [
+        "name",
+        "spell",
+        "hello"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es lo que dice cómo te llamas.",
+        "en": "It's what you are called."
+      },
+      "why": {
+        "es": "“My name is Ana”: me llamo Ana.",
+        "en": "“My name is Ana.”"
+      },
+      "show": "My ___ is Ana."
+    },
+    {
+      "id": "abcSpell-ask",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Qué preguntas para saber cómo se escribe una palabra?",
+        "en": "What do you ask to know how a word is spelled?"
+      },
+      "options": [
+        "How do you spell it?",
+        "How are you?",
+        "Good night!"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Usa la palabra “spell”.",
+        "en": "Use the word “spell”."
+      },
+      "why": {
+        "es": "“How do you spell it?”: ¿cómo se escribe?",
+        "en": "“How do you spell it?”"
+      }
+    },
+    {
+      "id": "abcSpell-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot escribió “How you spell cat?”. ¿Qué le falta?",
+        "en": "🤖 PyBot wrote “How you spell cat?”. What's missing?"
+      },
+      "options": [
+        "How do you spell cat?",
+        "How spell you cat?",
+        "You how spell cat?"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Falta la palabra “do”.",
+        "en": "The word “do” is missing."
+      },
+      "why": {
+        "es": "¡Arreglado! How do you spell cat?",
+        "en": "Fixed! How do you spell cat?"
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "spell",
+      "meaning": {
+        "es": "deletrear",
+        "en": "deletrear"
+      }
+    },
+    {
+      "en": "name",
+      "meaning": {
+        "es": "nombre",
+        "en": "nombre"
+      }
+    },
+    {
+      "en": "How do you spell it?",
+      "meaning": {
+        "es": "¿cómo se escribe?",
+        "en": "¿cómo se escribe?"
+      }
+    },
+    {
+      "en": "C-A-T",
+      "meaning": {
+        "es": "cat: gato",
+        "en": "cat: gato"
+      }
+    },
+    {
+      "en": "D-O-G",
+      "meaning": {
+        "es": "dog: perro",
+        "en": "dog: perro"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Deletrea los nombres de tu casa",
+      "en": "Spell the names at home"
+    },
+    "text": {
+      "es": "Deletrea en inglés tu nombre y el de cada persona de tu casa. ¿Quién tiene el nombre más largo?",
+      "en": "Spell your name and everyone's name at home in English. Who has the longest name?"
+    },
+    "adult": {
+      "es": "usen la página Las letras si dudan del nombre de alguna letra.",
+      "en": "use the Letters page if you forget a letter's name."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

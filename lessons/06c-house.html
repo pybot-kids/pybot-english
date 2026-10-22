@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Los cuartos de la casa y las cosas que hay en ellos." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>Las partes de la casa — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="house">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "house",
+  "mood": "welcoming",
+  "title": {
+    "es": "Las partes de la casa",
+    "en": "Rooms in a house"
+  },
+  "intro": {
+    "es": "Los cuartos de la casa y las cosas que hay en ellos.",
+    "en": "The rooms in a house and the things in them."
+  },
+  "pybot": {
+    "es": "Welcome to my house! Mi cuarto favorito es la cocina… ¡por los enchufes!",
+    "en": "Welcome to my house! My favorite room is the kitchen… for the plugs!"
+  },
+  "look": [
+    {
+      "icon": "🏠",
+      "word": "house",
+      "meaning": {
+        "es": "casa",
+        "en": "casa"
+      }
+    },
+    {
+      "icon": "🍳",
+      "word": "kitchen",
+      "meaning": {
+        "es": "cocina",
+        "en": "cocina"
+      }
+    },
+    {
+      "icon": "🛁",
+      "word": "bathroom",
+      "meaning": {
+        "es": "baño",
+        "en": "baño"
+      }
+    },
+    {
+      "icon": "🛏️",
+      "word": "bedroom",
+      "meaning": {
+        "es": "habitación, cuarto",
+        "en": "habitación, cuarto"
+      }
+    },
+    {
+      "icon": "🛋️",
+      "word": "living room",
+      "meaning": {
+        "es": "sala",
+        "en": "sala"
+      }
+    },
+    {
+      "icon": "🚪",
+      "word": "door",
+      "meaning": {
+        "es": "puerta",
+        "en": "puerta"
+      }
+    },
+    {
+      "icon": "🪟",
+      "word": "window",
+      "meaning": {
+        "es": "ventana",
+        "en": "ventana"
+      }
+    },
+    {
+      "icon": "🍽️",
+      "word": "table",
+      "meaning": {
+        "es": "mesa",
+        "en": "mesa"
+      }
+    },
+    {
+      "icon": "🪑",
+      "word": "chair",
+      "meaning": {
+        "es": "silla",
+        "en": "silla"
+      }
+    },
+    {
+      "icon": "💤",
+      "word": "bed",
+      "meaning": {
+        "es": "cama",
+        "en": "cama"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "The bed is in the bedroom.",
+        "meaning": {
+          "es": "La cama está en la habitación.",
+          "en": "La cama está en la habitación."
+        }
+      },
+      {
+        "en": "I'm in the kitchen.",
+        "meaning": {
+          "es": "Estoy en la cocina.",
+          "en": "Estoy en la cocina."
+        }
+      }
+    ],
+    "rule": {
+      "es": "Para decir en qué cuarto está algo: “in the” + el cuarto: in the kitchen, in the bathroom.",
+      "en": "Say which room with “in the”: in the kitchen."
+    }
+  },
+  "activities": [
+    {
+      "id": "house-bed",
+      "type": "choice",
+      "prompt": {
+        "es": "🛏️ ¿Qué es?",
+        "en": "🛏️ What is it?"
+      },
+      "options": [
+        "bed",
+        "chair",
+        "door"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Duermes en ella.",
+        "en": "You sleep on it."
+      },
+      "why": {
+        "es": "“Bed” es cama.",
+        "en": "“Bed.”"
+      }
+    },
+    {
+      "id": "house-kitchen",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Dónde se cocina?",
+        "en": "Where do you cook?"
+      },
+      "options": [
+        "kitchen",
+        "bedroom",
+        "bathroom"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Ahí están la estufa y la nevera.",
+        "en": "The stove and fridge are there."
+      },
+      "why": {
+        "es": "“Kitchen” es cocina.",
+        "en": "“Kitchen.”"
+      }
+    },
+    {
+      "id": "house-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué es?",
+        "en": "Listen. What is it?"
+      },
+      "options": [
+        {
+          "es": "🪟",
+          "en": "🪟"
+        },
+        {
+          "es": "🚪",
+          "en": "🚪"
+        },
+        {
+          "es": "🪑",
+          "en": "🪑"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Por ahí entra la luz.",
+        "en": "Light comes in through it."
+      },
+      "why": {
+        "es": "“Window” es ventana.",
+        "en": "“Window.”"
+      },
+      "listen": "window"
+    },
+    {
+      "id": "house-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? “The bed is in the bedroom.”",
+        "en": "True or false? “The bed is in the bedroom.”"
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Bedroom es el cuarto para dormir.",
+        "en": "Bedroom is where you sleep."
+      },
+      "why": {
+        "es": "Verdadero.",
+        "en": "True."
+      }
+    },
+    {
+      "id": "house-odd",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Cuál NO es un cuarto de la casa?",
+        "en": "Which one is NOT a room?"
+      },
+      "options": [
+        "banana",
+        "kitchen",
+        "bathroom",
+        "bedroom"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Una es una fruta.",
+        "en": "One is a fruit."
+      },
+      "why": {
+        "es": "“Banana” no es un cuarto. 😄",
+        "en": "“Banana” isn't a room. 😄"
+      }
+    },
+    {
+      "id": "house-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot escribió “The bed is in the kitchen”. ¿Dónde está la cama de verdad?",
+        "en": "🤖 PyBot wrote “The bed is in the kitchen”. Where is the bed really?"
+      },
+      "options": [
+        "The bed is in the bedroom.",
+        "The bed is in the kitchen.",
+        "The bed is in the bathroom."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Se duerme en el bedroom.",
+        "en": "You sleep in the bedroom."
+      },
+      "why": {
+        "es": "¡Arreglado! In the bedroom.",
+        "en": "Fixed! In the bedroom."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "house",
+      "meaning": {
+        "es": "casa",
+        "en": "casa"
+      }
+    },
+    {
+      "en": "kitchen",
+      "meaning": {
+        "es": "cocina",
+        "en": "cocina"
+      }
+    },
+    {
+      "en": "bathroom",
+      "meaning": {
+        "es": "baño",
+        "en": "baño"
+      }
+    },
+    {
+      "en": "bedroom",
+      "meaning": {
+        "es": "habitación, cuarto",
+        "en": "habitación, cuarto"
+      }
+    },
+    {
+      "en": "living room",
+      "meaning": {
+        "es": "sala",
+        "en": "sala"
+      }
+    },
+    {
+      "en": "door",
+      "meaning": {
+        "es": "puerta",
+        "en": "puerta"
+      }
+    },
+    {
+      "en": "window",
+      "meaning": {
+        "es": "ventana",
+        "en": "ventana"
+      }
+    },
+    {
+      "en": "table",
+      "meaning": {
+        "es": "mesa",
+        "en": "mesa"
+      }
+    },
+    {
+      "en": "chair",
+      "meaning": {
+        "es": "silla",
+        "en": "silla"
+      }
+    },
+    {
+      "en": "bed",
+      "meaning": {
+        "es": "cama",
+        "en": "cama"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Etiquetas en casa",
+      "en": "Labels at home"
+    },
+    "text": {
+      "es": "Pega papelitos en inglés por la casa: door, window, table, chair, bed… y léelos cada vez que pases.",
+      "en": "Stick notes in English around the house: door, window, table, chair, bed… and read them every time you walk by."
+    },
+    "adult": {
+      "es": "déjenlos una semana; se aprenden sin darse cuenta.",
+      "en": "leave them up for a week; words stick without noticing."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

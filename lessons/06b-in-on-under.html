@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Palabras para decir dónde están las cosas: dentro, encima, debajo, al lado y detrás." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>In, on, under: ¿dónde está? — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="inOnUnder">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "inOnUnder",
+  "mood": "deciding",
+  "title": {
+    "es": "In, on, under: ¿dónde está?",
+    "en": "In, on, under"
+  },
+  "intro": {
+    "es": "Palabras para decir dónde están las cosas: dentro, encima, debajo, al lado y detrás.",
+    "en": "Words for where things are: in, on, under, next to, behind."
+  },
+  "pybot": {
+    "es": "Where is the ball? It's under the bed! ⚽",
+    "en": "Where is the ball? It's under the bed! ⚽"
+  },
+  "look": [
+    {
+      "icon": "📦",
+      "word": "in",
+      "meaning": {
+        "es": "dentro de, en",
+        "en": "dentro de, en"
+      }
+    },
+    {
+      "icon": "🔝",
+      "word": "on",
+      "meaning": {
+        "es": "encima de, sobre",
+        "en": "encima de, sobre"
+      }
+    },
+    {
+      "icon": "⬇️",
+      "word": "under",
+      "meaning": {
+        "es": "debajo de",
+        "en": "debajo de"
+      }
+    },
+    {
+      "icon": "↔️",
+      "word": "next to",
+      "meaning": {
+        "es": "al lado de",
+        "en": "al lado de"
+      }
+    },
+    {
+      "icon": "🙈",
+      "word": "behind",
+      "meaning": {
+        "es": "detrás de",
+        "en": "detrás de"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "The cat is in the box.",
+        "meaning": {
+          "es": "El gato está dentro de la caja.",
+          "en": "El gato está dentro de la caja."
+        }
+      },
+      {
+        "en": "The book is on the table.",
+        "meaning": {
+          "es": "El libro está sobre la mesa.",
+          "en": "El libro está sobre la mesa."
+        }
+      },
+      {
+        "en": "The ball is under the bed.",
+        "meaning": {
+          "es": "La pelota está debajo de la cama.",
+          "en": "La pelota está debajo de la cama."
+        }
+      }
+    ],
+    "rule": {
+      "es": "Para decir dónde está algo: la cosa + is + in / on / under + el lugar.",
+      "en": "To say where something is: thing + is + in / on / under + place."
+    }
+  },
+  "activities": [
+    {
+      "id": "inOnUnder-in",
+      "type": "choice",
+      "prompt": {
+        "es": "📦🐱 El gato está dentro de la caja. ¿Cómo se dice?",
+        "en": "📦🐱 The cat is inside the box. How do you say it?"
+      },
+      "options": [
+        "The cat is in the box.",
+        "The cat is on the box.",
+        "The cat is under the box."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Dentro = in.",
+        "en": "Inside = in."
+      },
+      "why": {
+        "es": "“In the box.”",
+        "en": "“In the box.”"
+      }
+    },
+    {
+      "id": "inOnUnder-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha con atención. ¿Qué palabra suena?",
+        "en": "Listen carefully. Which word?"
+      },
+      "options": [
+        "on",
+        "in"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Suena «on».",
+        "en": "It sounds like «on»."
+      },
+      "why": {
+        "es": "“On” es encima.",
+        "en": "“On” means on top."
+      },
+      "listen": "on"
+    },
+    {
+      "id": "inOnUnder-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? “Under” significa encima.",
+        "en": "True or false? “Under” means on top."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 1,
+      "hint": {
+        "es": "Under es lo contrario de on.",
+        "en": "Under is the opposite of on."
+      },
+      "why": {
+        "es": "Falso: under es debajo.",
+        "en": "False: under is below."
+      }
+    },
+    {
+      "id": "inOnUnder-gap",
+      "type": "choice",
+      "prompt": {
+        "es": "El libro está encima de la mesa. Completa: “The book is ___ the table.”",
+        "en": "The book is on top of the table. Fill in: “The book is ___ the table.”"
+      },
+      "options": [
+        "on",
+        "in",
+        "under"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Encima = on.",
+        "en": "On top = on."
+      },
+      "why": {
+        "es": "“The book is on the table.”",
+        "en": "“The book is on the table.”"
+      },
+      "show": "The book is ___ the table."
+    },
+    {
+      "id": "inOnUnder-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma: “La pelota está dentro de la caja.”",
+        "en": "Build: “The ball is in the box.”"
+      },
+      "tiles": [
+        "The",
+        "ball",
+        "is",
+        "in",
+        "the box."
+      ],
+      "hint": {
+        "es": "Empieza con The.",
+        "en": "Start with The."
+      },
+      "why": {
+        "es": "“The ball is in the box.”",
+        "en": "“The ball is in the box.”"
+      }
+    },
+    {
+      "id": "inOnUnder-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 El gato está encima de la mesa y PyBot dice “The cat is in the table”. ¿Qué debió decir?",
+        "en": "🤖 The cat is on top of the table and PyBot says “The cat is in the table”. What should it say?"
+      },
+      "options": [
+        "The cat is on the table.",
+        "The cat is under the table.",
+        "The cat is in the table."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Encima = on.",
+        "en": "On top = on."
+      },
+      "why": {
+        "es": "¡Arreglado! On the table.",
+        "en": "Fixed! On the table."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "in",
+      "meaning": {
+        "es": "dentro de, en",
+        "en": "dentro de, en"
+      }
+    },
+    {
+      "en": "on",
+      "meaning": {
+        "es": "encima de, sobre",
+        "en": "encima de, sobre"
+      }
+    },
+    {
+      "en": "under",
+      "meaning": {
+        "es": "debajo de",
+        "en": "debajo de"
+      }
+    },
+    {
+      "en": "next to",
+      "meaning": {
+        "es": "al lado de",
+        "en": "al lado de"
+      }
+    },
+    {
+      "en": "behind",
+      "meaning": {
+        "es": "detrás de",
+        "en": "detrás de"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "¿Dónde está el tesoro?",
+      "en": "Where's the treasure?"
+    },
+    "text": {
+      "es": "Esconde un juguete y da pistas en inglés: “It's under the bed”, “It's in the box”, “It's next to the door”.",
+      "en": "Hide a toy and give clues in English: “It's under the bed”, “It's in the box”, “It's next to the door”."
+    },
+    "adult": {
+      "es": "luego cambien: que la niña o el niño esconda y dé las pistas.",
+      "en": "then swap: let the child hide it and give the clues."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

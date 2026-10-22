@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Las palabras para preguntar: qué, quién, dónde, cuántos y cuántos años." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>What? Who? Where? Las preguntas — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="questions">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "questions",
+  "mood": "curious",
+  "title": {
+    "es": "What? Who? Where? Las preguntas",
+    "en": "What? Who? Where?"
+  },
+  "intro": {
+    "es": "Las palabras para preguntar: qué, quién, dónde, cuántos y cuántos años.",
+    "en": "Question words: what, who, where, how many, how old."
+  },
+  "pybot": {
+    "es": "Where is my antenna? Who has it? What is that? ¡Tengo muchas preguntas!",
+    "en": "Where is my antenna? Who has it? What is that?"
+  },
+  "look": [
+    {
+      "icon": "❓",
+      "word": "what?",
+      "meaning": {
+        "es": "¿qué?",
+        "en": "¿qué?"
+      }
+    },
+    {
+      "icon": "🧑",
+      "word": "who?",
+      "meaning": {
+        "es": "¿quién?",
+        "en": "¿quién?"
+      }
+    },
+    {
+      "icon": "📍",
+      "word": "where?",
+      "meaning": {
+        "es": "¿dónde?",
+        "en": "¿dónde?"
+      }
+    },
+    {
+      "icon": "🔢",
+      "word": "how many?",
+      "meaning": {
+        "es": "¿cuántos?",
+        "en": "¿cuántos?"
+      }
+    },
+    {
+      "icon": "🎂",
+      "word": "how old?",
+      "meaning": {
+        "es": "¿cuántos años?",
+        "en": "¿cuántos años?"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "What is this?",
+        "meaning": {
+          "es": "¿Qué es esto?",
+          "en": "¿Qué es esto?"
+        }
+      },
+      {
+        "en": "Who is she?",
+        "meaning": {
+          "es": "¿Quién es ella?",
+          "en": "¿Quién es ella?"
+        }
+      },
+      {
+        "en": "Where is the cat?",
+        "meaning": {
+          "es": "¿Dónde está el gato?",
+          "en": "¿Dónde está el gato?"
+        }
+      }
+    ],
+    "rule": {
+      "es": "La palabra de pregunta va al principio: What…? Who…? Where…?",
+      "en": "The question word goes first: What…? Who…? Where…?"
+    }
+  },
+  "activities": [
+    {
+      "id": "questions-who",
+      "type": "choice",
+      "prompt": {
+        "es": "Pregunta: “Who is she?” ¿Cuál es la respuesta?",
+        "en": "Question: “Who is she?” Which answer fits?"
+      },
+      "options": [
+        "She's my sister.",
+        "It's a pen.",
+        "In the box."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "“Who” pregunta por una persona.",
+        "en": "“Who” asks about a person."
+      },
+      "why": {
+        "es": "“She's my sister.”",
+        "en": "“She's my sister.”"
+      }
+    },
+    {
+      "id": "questions-where",
+      "type": "choice",
+      "prompt": {
+        "es": "Pregunta: “Where is the cat?” ¿Cuál es la respuesta?",
+        "en": "Question: “Where is the cat?” Which answer fits?"
+      },
+      "options": [
+        "Under the table.",
+        "It's red.",
+        "I'm nine."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "“Where” pregunta por un lugar.",
+        "en": "“Where” asks about a place."
+      },
+      "why": {
+        "es": "“Under the table.”",
+        "en": "“Under the table.”"
+      }
+    },
+    {
+      "id": "questions-what",
+      "type": "choice",
+      "prompt": {
+        "es": "Completa: “___ is this? It's a book.”",
+        "en": "Fill in: “___ is this? It's a book.”"
+      },
+      "options": [
+        "What",
+        "Who",
+        "Where"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Preguntas qué cosa es.",
+        "en": "You ask what thing it is."
+      },
+      "why": {
+        "es": "“What is this?”",
+        "en": "“What is this?”"
+      },
+      "show": "___ is this? It's a book."
+    },
+    {
+      "id": "questions-how-old",
+      "type": "choice",
+      "prompt": {
+        "es": "Completa: “___ old are you?”",
+        "en": "Fill in: “___ old are you?”"
+      },
+      "options": [
+        "How",
+        "What",
+        "Where"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Ya la viste en la zona 02.",
+        "en": "You saw it in zone 02."
+      },
+      "why": {
+        "es": "“How old are you?”",
+        "en": "“How old are you?”"
+      },
+      "show": "___ old are you?"
+    },
+    {
+      "id": "questions-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma: “¿Dónde está mi lápiz?”",
+        "en": "Build: “Where is my pencil?”"
+      },
+      "tiles": [
+        "Where",
+        "is",
+        "my",
+        "pencil?"
+      ],
+      "hint": {
+        "es": "Empieza con la palabra de pregunta.",
+        "en": "Start with the question word."
+      },
+      "why": {
+        "es": "“Where is my pencil?”",
+        "en": "“Where is my pencil?”"
+      }
+    },
+    {
+      "id": "questions-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot preguntó por su hermana con “What is she?”. ¿Qué debió preguntar?",
+        "en": "🤖 PyBot asked about its sister with “What is she?”. What should it ask?"
+      },
+      "options": [
+        "Who is she?",
+        "Where is she?",
+        "What is she?"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Para personas se usa “who”.",
+        "en": "Use “who” for people."
+      },
+      "why": {
+        "es": "¡Arreglado! Who is she?",
+        "en": "Fixed! Who is she?"
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "what?",
+      "meaning": {
+        "es": "¿qué?",
+        "en": "¿qué?"
+      }
+    },
+    {
+      "en": "who?",
+      "meaning": {
+        "es": "¿quién?",
+        "en": "¿quién?"
+      }
+    },
+    {
+      "en": "where?",
+      "meaning": {
+        "es": "¿dónde?",
+        "en": "¿dónde?"
+      }
+    },
+    {
+      "en": "how many?",
+      "meaning": {
+        "es": "¿cuántos?",
+        "en": "¿cuántos?"
+      }
+    },
+    {
+      "en": "how old?",
+      "meaning": {
+        "es": "¿cuántos años?",
+        "en": "¿cuántos años?"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "20 preguntas",
+      "en": "20 questions"
+    },
+    "text": {
+      "es": "Piensa en algo de la casa. Tu familia hace preguntas: “Is it big?”, “Is it red?”, “Where is it?” hasta adivinar.",
+      "en": "Think of something at home. Your family asks questions: “Is it big?”, “Is it red?”, “Where is it?” until they guess."
+    },
+    "adult": {
+      "es": "está bien mezclar español e inglés al principio.",
+      "en": "mixing Spanish and English is fine at first."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

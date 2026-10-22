@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Describe cosas con “It&#x27;s”. En inglés el color va ANTES de la cosa." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>It is red. ¿Cómo es? — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="itIsRed">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "itIsRed",
+  "mood": "deciding",
+  "title": {
+    "es": "It is red. ¿Cómo es?",
+    "en": "It is red."
+  },
+  "intro": {
+    "es": "Describe cosas con “It's”. En inglés el color va ANTES de la cosa.",
+    "en": "Describe things with “It's”. In English the color goes BEFORE the thing."
+  },
+  "pybot": {
+    "es": "It's a red apple. ¡Al revés que en español!",
+    "en": "It's a red apple. The opposite of Spanish!"
+  },
+  "look": [
+    {
+      "icon": "👉",
+      "word": "it is / it's",
+      "meaning": {
+        "es": "es",
+        "en": "es"
+      }
+    },
+    {
+      "icon": "🍎",
+      "word": "a red apple",
+      "meaning": {
+        "es": "una manzana roja",
+        "en": "una manzana roja"
+      }
+    },
+    {
+      "icon": "⭐",
+      "word": "a yellow star",
+      "meaning": {
+        "es": "una estrella amarilla",
+        "en": "una estrella amarilla"
+      }
+    },
+    {
+      "icon": "🚙",
+      "word": "a blue car",
+      "meaning": {
+        "es": "un carro azul",
+        "en": "un carro azul"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "It's a red apple.",
+        "meaning": {
+          "es": "Es una manzana roja.",
+          "en": "Es una manzana roja."
+        }
+      },
+      {
+        "en": "It's a big star.",
+        "meaning": {
+          "es": "Es una estrella grande.",
+          "en": "Es una estrella grande."
+        }
+      }
+    ],
+    "rule": {
+      "es": "Orden en inglés: a + color + cosa (a red apple). En español es al revés (una manzana roja).",
+      "en": "English order: a + color + thing (a red apple)."
+    }
+  },
+  "activities": [
+    {
+      "id": "itIsRed-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma: “Es una manzana roja.”",
+        "en": "Build: “It's a red apple.”"
+      },
+      "tiles": [
+        "It's",
+        "a",
+        "red",
+        "apple."
+      ],
+      "hint": {
+        "es": "El color va antes de apple.",
+        "en": "The color goes before apple."
+      },
+      "why": {
+        "es": "“It's a red apple.”",
+        "en": "“It's a red apple.”"
+      }
+    },
+    {
+      "id": "itIsRed-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot escribió “an apple red”. ¿Cómo se escribe bien?",
+        "en": "🤖 PyBot wrote “an apple red”. What's right?"
+      },
+      "options": [
+        "a red apple",
+        "an apple red",
+        "apple a red"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "El color va primero.",
+        "en": "The color goes first."
+      },
+      "why": {
+        "es": "¡Arreglado! A red apple.",
+        "en": "Fixed! A red apple."
+      }
+    },
+    {
+      "id": "itIsRed-gap",
+      "type": "choice",
+      "prompt": {
+        "es": "🚙 Completa: “It's a ___ car.”",
+        "en": "🚙 Fill in: “It's a ___ car.”"
+      },
+      "options": [
+        "blue",
+        "red",
+        "yellow"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Mira el color del carro.",
+        "en": "Look at the car's color."
+      },
+      "why": {
+        "es": "“It's a blue car.”",
+        "en": "“It's a blue car.”"
+      },
+      "show": "It's a ___ car."
+    },
+    {
+      "id": "itIsRed-read",
+      "type": "choice",
+      "prompt": {
+        "es": "Lee: “a yellow star”. ¿Cuál es?",
+        "en": "Read: “a yellow star”. Which one?"
+      },
+      "options": [
+        {
+          "es": "⭐",
+          "en": "⭐"
+        },
+        {
+          "es": "🔵",
+          "en": "🔵"
+        },
+        {
+          "es": "🟥",
+          "en": "🟥"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Star es estrella.",
+        "en": "Star means estrella."
+      },
+      "why": {
+        "es": "⭐: a yellow star.",
+        "en": "⭐: a yellow star."
+      }
+    },
+    {
+      "id": "itIsRed-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? En inglés el color va antes de la cosa.",
+        "en": "True or false? In English the color goes before the thing."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Piensa en “a red apple”.",
+        "en": "Think of “a red apple”."
+      },
+      "why": {
+        "es": "Verdadero: a RED apple.",
+        "en": "True: a RED apple."
+      }
+    },
+    {
+      "id": "itIsRed-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué es?",
+        "en": "Listen. What is it?"
+      },
+      "options": [
+        {
+          "es": "🐸",
+          "en": "🐸"
+        },
+        {
+          "es": "🐱",
+          "en": "🐱"
+        },
+        {
+          "es": "🍎",
+          "en": "🍎"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es verde y salta.",
+        "en": "It's green and jumps."
+      },
+      "why": {
+        "es": "“It's a green frog”: una rana verde.",
+        "en": "“It's a green frog.”"
+      },
+      "listen": "It's a green frog."
+    }
+  ],
+  "words": [
+    {
+      "en": "it is / it's",
+      "meaning": {
+        "es": "es",
+        "en": "es"
+      }
+    },
+    {
+      "en": "a red apple",
+      "meaning": {
+        "es": "una manzana roja",
+        "en": "una manzana roja"
+      }
+    },
+    {
+      "en": "a yellow star",
+      "meaning": {
+        "es": "una estrella amarilla",
+        "en": "una estrella amarilla"
+      }
+    },
+    {
+      "en": "a blue car",
+      "meaning": {
+        "es": "un carro azul",
+        "en": "un carro azul"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Describe tus juguetes",
+      "en": "Describe your toys"
+    },
+    "text": {
+      "es": "Toma tres juguetes y descríbelos: “It's a blue car”, “It's a red ball”.",
+      "en": "Take three toys and describe them: “It's a blue car”, “It's a red ball”."
+    },
+    "adult": {
+      "es": "pregunten “What color is it?” para practicar juntos.",
+      "en": "ask “What color is it?” to practice together."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

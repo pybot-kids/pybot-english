@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Siete días, y en inglés siempre empiezan con mayúscula." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>Los días de la semana — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="days">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "days",
+  "mood": "counting",
+  "title": {
+    "es": "Los días de la semana",
+    "en": "The days of the week"
+  },
+  "intro": {
+    "es": "Siete días, y en inglés siempre empiezan con mayúscula.",
+    "en": "Seven days, and in English they always start with a capital letter."
+  },
+  "pybot": {
+    "es": "Today is… ¡un gran día para aprender!",
+    "en": "Today is… a great day to learn!"
+  },
+  "look": [
+    {
+      "icon": "1️⃣",
+      "word": "Monday",
+      "meaning": {
+        "es": "lunes",
+        "en": "lunes"
+      }
+    },
+    {
+      "icon": "2️⃣",
+      "word": "Tuesday",
+      "meaning": {
+        "es": "martes",
+        "en": "martes"
+      }
+    },
+    {
+      "icon": "3️⃣",
+      "word": "Wednesday",
+      "meaning": {
+        "es": "miércoles",
+        "en": "miércoles"
+      }
+    },
+    {
+      "icon": "4️⃣",
+      "word": "Thursday",
+      "meaning": {
+        "es": "jueves",
+        "en": "jueves"
+      }
+    },
+    {
+      "icon": "5️⃣",
+      "word": "Friday",
+      "meaning": {
+        "es": "viernes",
+        "en": "viernes"
+      }
+    },
+    {
+      "icon": "6️⃣",
+      "word": "Saturday",
+      "meaning": {
+        "es": "sábado",
+        "en": "sábado"
+      }
+    },
+    {
+      "icon": "7️⃣",
+      "word": "Sunday",
+      "meaning": {
+        "es": "domingo",
+        "en": "domingo"
+      }
+    },
+    {
+      "icon": "📅",
+      "word": "today",
+      "meaning": {
+        "es": "hoy",
+        "en": "hoy"
+      }
+    },
+    {
+      "icon": "🎉",
+      "word": "weekend",
+      "meaning": {
+        "es": "fin de semana",
+        "en": "fin de semana"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "Today is Monday.",
+        "meaning": {
+          "es": "Hoy es lunes.",
+          "en": "Hoy es lunes."
+        }
+      },
+      {
+        "en": "I love the weekend!",
+        "meaning": {
+          "es": "¡Me encanta el fin de semana!",
+          "en": "¡Me encanta el fin de semana!"
+        }
+      }
+    ],
+    "rule": {
+      "es": "Los días en inglés siempre van con mayúscula: Monday, Tuesday… aunque estén en medio de la frase.",
+      "en": "Days always start with a capital letter: Monday, Tuesday…"
+    }
+  },
+  "activities": [
+    {
+      "id": "days-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué día es?",
+        "en": "Listen. Which day?"
+      },
+      "options": [
+        {
+          "es": "miércoles",
+          "en": "Wednesday"
+        },
+        {
+          "es": "martes",
+          "en": "Tuesday"
+        },
+        {
+          "es": "jueves",
+          "en": "Thursday"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Se escribe con una “d” que no suena.",
+        "en": "It has a silent “d”."
+      },
+      "why": {
+        "es": "“Wednesday” es miércoles.",
+        "en": "“Wednesday.”"
+      },
+      "listen": "Wednesday"
+    },
+    {
+      "id": "days-gap",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Qué día sigue?",
+        "en": "Which day comes next?"
+      },
+      "options": [
+        "Wednesday",
+        "Friday",
+        "Sunday"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Va después de Tuesday.",
+        "en": "It comes after Tuesday."
+      },
+      "why": {
+        "es": "Monday, Tuesday, WEDNESDAY.",
+        "en": "Monday, Tuesday, WEDNESDAY."
+      },
+      "show": "Monday, Tuesday, ___"
+    },
+    {
+      "id": "days-weekend",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Qué días son el fin de semana?",
+        "en": "Which days are the weekend?"
+      },
+      "options": [
+        "Saturday and Sunday",
+        "Monday and Friday",
+        "Tuesday and Thursday"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Son los días sin colegio.",
+        "en": "Days without school."
+      },
+      "why": {
+        "es": "Weekend: Saturday and Sunday.",
+        "en": "Weekend: Saturday and Sunday."
+      }
+    },
+    {
+      "id": "days-capital",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? Los días en inglés empiezan con mayúscula.",
+        "en": "True or false? English days start with a capital letter."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Mira cómo se escribe Monday.",
+        "en": "Look at Monday."
+      },
+      "why": {
+        "es": "Verdadero: Monday, Friday…",
+        "en": "True: Monday, Friday…"
+      }
+    },
+    {
+      "id": "days-order",
+      "type": "order",
+      "prompt": {
+        "es": "Ordena los días.",
+        "en": "Put the days in order."
+      },
+      "tiles": [
+        "Monday",
+        "Tuesday",
+        "Wednesday"
+      ],
+      "hint": {
+        "es": "Empieza con lunes.",
+        "en": "Start with Monday."
+      },
+      "why": {
+        "es": "¡Monday, Tuesday, Wednesday!",
+        "en": "Monday, Tuesday, Wednesday!"
+      }
+    },
+    {
+      "id": "days-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot escribió “today is monday”. ¿Qué debe ir con mayúscula?",
+        "en": "🤖 PyBot wrote “today is monday”. What needs a capital letter?"
+      },
+      "options": [
+        "Today is Monday.",
+        "today is monday.",
+        "TODAY is monday."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "El día y el inicio de la frase.",
+        "en": "The day and the start of the sentence."
+      },
+      "why": {
+        "es": "¡Arreglado! Today is Monday.",
+        "en": "Fixed! Today is Monday."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "Monday",
+      "meaning": {
+        "es": "lunes",
+        "en": "lunes"
+      }
+    },
+    {
+      "en": "Tuesday",
+      "meaning": {
+        "es": "martes",
+        "en": "martes"
+      }
+    },
+    {
+      "en": "Wednesday",
+      "meaning": {
+        "es": "miércoles",
+        "en": "miércoles"
+      }
+    },
+    {
+      "en": "Thursday",
+      "meaning": {
+        "es": "jueves",
+        "en": "jueves"
+      }
+    },
+    {
+      "en": "Friday",
+      "meaning": {
+        "es": "viernes",
+        "en": "viernes"
+      }
+    },
+    {
+      "en": "Saturday",
+      "meaning": {
+        "es": "sábado",
+        "en": "sábado"
+      }
+    },
+    {
+      "en": "Sunday",
+      "meaning": {
+        "es": "domingo",
+        "en": "domingo"
+      }
+    },
+    {
+      "en": "today",
+      "meaning": {
+        "es": "hoy",
+        "en": "hoy"
+      }
+    },
+    {
+      "en": "weekend",
+      "meaning": {
+        "es": "fin de semana",
+        "en": "fin de semana"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Today is…",
+      "en": "Today is…"
+    },
+    "text": {
+      "es": "Cada mañana de esta semana, di en voz alta qué día es: “Today is Tuesday!”.",
+      "en": "Every morning this week, say out loud what day it is: “Today is Tuesday!”."
+    },
+    "adult": {
+      "es": "pueden pegar un calendario en inglés en la nevera.",
+      "en": "you can stick an English calendar on the fridge."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

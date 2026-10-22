@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pregunta y di la edad. En inglés no se “tienen” años: se “es” de esa edad." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>I am 9. ¿Cuántos años tienes? — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="myAge">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "myAge",
+  "mood": "proud",
+  "title": {
+    "es": "I am 9. ¿Cuántos años tienes?",
+    "en": "I am 9. How old are you?"
+  },
+  "intro": {
+    "es": "Pregunta y di la edad. En inglés no se “tienen” años: se “es” de esa edad.",
+    "en": "Ask and say ages. In English you “are” an age."
+  },
+  "pybot": {
+    "es": "How old are you? Yo tengo… ¡muchos circuitos!",
+    "en": "How old are you? I have… lots of circuits!"
+  },
+  "look": [
+    {
+      "icon": "🎂",
+      "word": "how old are you?",
+      "meaning": {
+        "es": "¿cuántos años tienes?",
+        "en": "¿cuántos años tienes?"
+      }
+    },
+    {
+      "icon": "9️⃣",
+      "word": "I'm nine",
+      "meaning": {
+        "es": "tengo nueve años",
+        "en": "tengo nueve años"
+      }
+    },
+    {
+      "icon": "📅",
+      "word": "years old",
+      "meaning": {
+        "es": "años (de edad)",
+        "en": "años (de edad)"
+      }
+    },
+    {
+      "icon": "🔟",
+      "word": "I'm ten",
+      "meaning": {
+        "es": "tengo diez años",
+        "en": "tengo diez años"
+      }
+    },
+    {
+      "icon": "8️⃣",
+      "word": "I'm eight",
+      "meaning": {
+        "es": "tengo ocho años",
+        "en": "tengo ocho años"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "How old are you?",
+        "meaning": {
+          "es": "¿Cuántos años tienes?",
+          "en": "¿Cuántos años tienes?"
+        }
+      },
+      {
+        "en": "I'm nine years old.",
+        "meaning": {
+          "es": "Tengo nueve años.",
+          "en": "Tengo nueve años."
+        }
+      },
+      {
+        "en": "I'm ten.",
+        "meaning": {
+          "es": "Tengo diez.",
+          "en": "Tengo diez."
+        }
+      }
+    ],
+    "rule": {
+      "es": "En inglés se dice “I'm nine” (soy de nueve años), nunca “I have nine years”.",
+      "en": "In English you say “I'm nine”, never “I have nine years”."
+    }
+  },
+  "activities": [
+    {
+      "id": "myAge-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Cuántos años tiene?",
+        "en": "Listen. How old is the person?"
+      },
+      "options": [
+        {
+          "es": "9",
+          "en": "9"
+        },
+        {
+          "es": "5",
+          "en": "5"
+        },
+        {
+          "es": "19",
+          "en": "19"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Escucha el número.",
+        "en": "Listen for the number."
+      },
+      "why": {
+        "es": "“I'm nine years old”: 9 años.",
+        "en": "“I'm nine years old.”"
+      },
+      "listen": "I'm nine years old."
+    },
+    {
+      "id": "myAge-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma la pregunta “¿Cuántos años tienes?”.",
+        "en": "Build “How old are you?”."
+      },
+      "tiles": [
+        "How",
+        "old",
+        "are",
+        "you?"
+      ],
+      "hint": {
+        "es": "Empieza con How.",
+        "en": "Start with How."
+      },
+      "why": {
+        "es": "“How old are you?”",
+        "en": "“How old are you?”"
+      }
+    },
+    {
+      "id": "myAge-gap",
+      "type": "choice",
+      "prompt": {
+        "es": "Completa: “I'm ten ___ old.”",
+        "en": "Fill in: “I'm ten ___ old.”"
+      },
+      "options": [
+        "years",
+        "name",
+        "fine"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Hablas de años.",
+        "en": "You're talking about years."
+      },
+      "why": {
+        "es": "“I'm ten years old.”",
+        "en": "“I'm ten years old.”"
+      },
+      "show": "I'm ten ___ old."
+    },
+    {
+      "id": "myAge-answer",
+      "type": "choice",
+      "prompt": {
+        "es": "Te preguntan “How old are you?”. ¿Qué respondes?",
+        "en": "Someone asks “How old are you?”. What do you answer?"
+      },
+      "options": [
+        "I'm eight.",
+        "I'm fine.",
+        "My name is Leo."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Responde con tu edad.",
+        "en": "Answer with your age."
+      },
+      "why": {
+        "es": "“I'm eight”: tengo ocho años.",
+        "en": "“I'm eight.”"
+      }
+    },
+    {
+      "id": "myAge-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? En inglés se dice “I have nine years”.",
+        "en": "True or false? In English you say “I have nine years”."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 1,
+      "hint": {
+        "es": "Recuerda: se usa “I'm”.",
+        "en": "Remember: use “I'm”."
+      },
+      "why": {
+        "es": "Falso: se dice “I'm nine”.",
+        "en": "False: you say “I'm nine”."
+      }
+    },
+    {
+      "id": "myAge-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot escribió “I have nine years”. ¿Cómo se dice bien?",
+        "en": "🤖 PyBot wrote “I have nine years”. What's right?"
+      },
+      "options": [
+        "I'm nine years old.",
+        "I have nine years old.",
+        "I nine years."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Empieza con “I'm”.",
+        "en": "Start with “I'm”."
+      },
+      "why": {
+        "es": "¡Arreglado! I'm nine years old.",
+        "en": "Fixed! I'm nine years old."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "how old are you?",
+      "meaning": {
+        "es": "¿cuántos años tienes?",
+        "en": "¿cuántos años tienes?"
+      }
+    },
+    {
+      "en": "I'm nine",
+      "meaning": {
+        "es": "tengo nueve años",
+        "en": "tengo nueve años"
+      }
+    },
+    {
+      "en": "years old",
+      "meaning": {
+        "es": "años (de edad)",
+        "en": "años (de edad)"
+      }
+    },
+    {
+      "en": "I'm ten",
+      "meaning": {
+        "es": "tengo diez años",
+        "en": "tengo diez años"
+      }
+    },
+    {
+      "en": "I'm eight",
+      "meaning": {
+        "es": "tengo ocho años",
+        "en": "tengo ocho años"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "¿Cuántos años tienen?",
+      "en": "How old are they?"
+    },
+    "text": {
+      "es": "Pregunta “How old are you?” a las personas de tu casa y anota sus respuestas.",
+      "en": "Ask people at home “How old are you?” and write down their answers."
+    },
+    "adult": {
+      "es": "respondan en inglés con “I'm…”, aunque sea un número grande.",
+      "en": "answer with “I'm…”, even if it's a big number."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

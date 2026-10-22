@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Las partes del cuerpo. Cuando hay dos, se agrega “-s”: eyes, ears, hands." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>Mi cuerpo — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="myBody">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "myBody",
+  "mood": "happy",
+  "title": {
+    "es": "Mi cuerpo",
+    "en": "My body"
+  },
+  "intro": {
+    "es": "Las partes del cuerpo. Cuando hay dos, se agrega “-s”: eyes, ears, hands.",
+    "en": "Body parts. When there are two, add “-s”: eyes, ears, hands."
+  },
+  "pybot": {
+    "es": "Touch your nose! Yo no tengo nariz… ¡pero tengo antena!",
+    "en": "Touch your nose! I don't have a nose… but I have an antenna!"
+  },
+  "look": [
+    {
+      "icon": "🙂",
+      "word": "head",
+      "meaning": {
+        "es": "cabeza",
+        "en": "cabeza"
+      }
+    },
+    {
+      "icon": "👀",
+      "word": "eyes",
+      "meaning": {
+        "es": "ojos",
+        "en": "ojos"
+      }
+    },
+    {
+      "icon": "👂",
+      "word": "ears",
+      "meaning": {
+        "es": "orejas",
+        "en": "orejas"
+      }
+    },
+    {
+      "icon": "👃",
+      "word": "nose",
+      "meaning": {
+        "es": "nariz",
+        "en": "nariz"
+      }
+    },
+    {
+      "icon": "👄",
+      "word": "mouth",
+      "meaning": {
+        "es": "boca",
+        "en": "boca"
+      }
+    },
+    {
+      "icon": "🖐️",
+      "word": "hands",
+      "meaning": {
+        "es": "manos",
+        "en": "manos"
+      }
+    },
+    {
+      "icon": "💪",
+      "word": "arms",
+      "meaning": {
+        "es": "brazos",
+        "en": "brazos"
+      }
+    },
+    {
+      "icon": "🦵",
+      "word": "legs",
+      "meaning": {
+        "es": "piernas",
+        "en": "piernas"
+      }
+    },
+    {
+      "icon": "🦶",
+      "word": "feet",
+      "meaning": {
+        "es": "pies",
+        "en": "pies"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "Touch your nose!",
+        "meaning": {
+          "es": "¡Toca tu nariz!",
+          "en": "¡Toca tu nariz!"
+        }
+      },
+      {
+        "en": "I have two eyes.",
+        "meaning": {
+          "es": "Tengo dos ojos.",
+          "en": "Tengo dos ojos."
+        }
+      },
+      {
+        "en": "One foot, two feet.",
+        "meaning": {
+          "es": "Un pie, dos pies.",
+          "en": "Un pie, dos pies."
+        }
+      }
+    ],
+    "rule": {
+      "es": "Casi siempre el plural lleva “-s” (hands). Ojo: foot → feet, sin “-s”.",
+      "en": "Plurals usually take “-s” (hands). Careful: foot → feet."
+    }
+  },
+  "activities": [
+    {
+      "id": "myBody-nose",
+      "type": "choice",
+      "prompt": {
+        "es": "👃 ¿Qué es?",
+        "en": "👃 What is it?"
+      },
+      "options": [
+        "nose",
+        "mouth",
+        "ears"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Con ella hueles.",
+        "en": "You smell with it."
+      },
+      "why": {
+        "es": "“Nose” es nariz.",
+        "en": "“Nose.”"
+      }
+    },
+    {
+      "id": "myBody-ear-eye",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha con atención. ¿Qué parte es?",
+        "en": "Listen carefully. Which part?"
+      },
+      "options": [
+        {
+          "es": "👂 orejas",
+          "en": "👂 ears"
+        },
+        {
+          "es": "👀 ojos",
+          "en": "👀 eyes"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Suena «irs».",
+        "en": "It sounds like «eers»."
+      },
+      "why": {
+        "es": "“Ears” son orejas. “Eyes” son ojos.",
+        "en": "“Ears.”"
+      },
+      "listen": "ears"
+    },
+    {
+      "id": "myBody-gap",
+      "type": "choice",
+      "prompt": {
+        "es": "👀 Completa: “I have two ___.”",
+        "en": "👀 Fill in: “I have two ___.”"
+      },
+      "options": [
+        "eyes",
+        "nose",
+        "mouth"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Tienes dos y ves con ellos.",
+        "en": "You have two and see with them."
+      },
+      "why": {
+        "es": "“I have two eyes.”",
+        "en": "“I have two eyes.”"
+      },
+      "show": "I have two ___."
+    },
+    {
+      "id": "myBody-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? “Feet” son las manos.",
+        "en": "True or false? “Feet” are hands."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 1,
+      "hint": {
+        "es": "Con los feet caminas.",
+        "en": "You walk on your feet."
+      },
+      "why": {
+        "es": "Falso: feet son los pies; hands son las manos.",
+        "en": "False: feet are pies."
+      }
+    },
+    {
+      "id": "myBody-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma la orden “¡Toca tu nariz!”.",
+        "en": "Build “Touch your nose!”."
+      },
+      "tiles": [
+        "Touch",
+        "your",
+        "nose!"
+      ],
+      "hint": {
+        "es": "Empieza con Touch.",
+        "en": "Start with Touch."
+      },
+      "why": {
+        "es": "“Touch your nose!”",
+        "en": "“Touch your nose!”"
+      }
+    },
+    {
+      "id": "myBody-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot escribió “two foot”. ¿Cómo se escribe bien?",
+        "en": "🤖 PyBot wrote “two foot”. What's right?"
+      },
+      "options": [
+        "two feet",
+        "two foots",
+        "two foot"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es un plural especial, sin “-s”.",
+        "en": "It's a special plural, no “-s”."
+      },
+      "why": {
+        "es": "¡Arreglado! Two feet.",
+        "en": "Fixed! Two feet."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "head",
+      "meaning": {
+        "es": "cabeza",
+        "en": "cabeza"
+      }
+    },
+    {
+      "en": "eyes",
+      "meaning": {
+        "es": "ojos",
+        "en": "ojos"
+      }
+    },
+    {
+      "en": "ears",
+      "meaning": {
+        "es": "orejas",
+        "en": "orejas"
+      }
+    },
+    {
+      "en": "nose",
+      "meaning": {
+        "es": "nariz",
+        "en": "nariz"
+      }
+    },
+    {
+      "en": "mouth",
+      "meaning": {
+        "es": "boca",
+        "en": "boca"
+      }
+    },
+    {
+      "en": "hands",
+      "meaning": {
+        "es": "manos",
+        "en": "manos"
+      }
+    },
+    {
+      "en": "arms",
+      "meaning": {
+        "es": "brazos",
+        "en": "brazos"
+      }
+    },
+    {
+      "en": "legs",
+      "meaning": {
+        "es": "piernas",
+        "en": "piernas"
+      }
+    },
+    {
+      "en": "feet",
+      "meaning": {
+        "es": "pies",
+        "en": "pies"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "“Touch your…!”",
+      "en": "“Touch your…!”"
+    },
+    "text": {
+      "es": "Juega con tu familia: una persona dice “Touch your head!”, “Touch your nose!” y las demás lo hacen rápido.",
+      "en": "Play with your family: one person says “Touch your head!”, “Touch your nose!” and the others do it fast."
+    },
+    "adult": {
+      "es": "vayan cada vez más rápido; equivocarse da risa, no pasa nada.",
+      "en": "go faster and faster; mistakes are funny, not a problem."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Di cómo te sientes hoy con “I feel…”." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>I feel happy. Así me siento — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="iFeel">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "iFeel",
+  "mood": "happy",
+  "title": {
+    "es": "I feel happy. Así me siento",
+    "en": "I feel happy."
+  },
+  "intro": {
+    "es": "Di cómo te sientes hoy con “I feel…”.",
+    "en": "Say how you feel today with “I feel…”."
+  },
+  "pybot": {
+    "es": "I feel happy today, ¡porque estoy aprendiendo contigo!",
+    "en": "I feel happy today, because I'm learning with you!"
+  },
+  "look": [
+    {
+      "icon": "💭",
+      "word": "I feel…",
+      "meaning": {
+        "es": "me siento…",
+        "en": "me siento…"
+      }
+    },
+    {
+      "icon": "📅",
+      "word": "today",
+      "meaning": {
+        "es": "hoy",
+        "en": "hoy"
+      }
+    },
+    {
+      "icon": "❓",
+      "word": "How do you feel?",
+      "meaning": {
+        "es": "¿cómo te sientes?",
+        "en": "¿cómo te sientes?"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "How do you feel?",
+        "meaning": {
+          "es": "¿Cómo te sientes?",
+          "en": "¿Cómo te sientes?"
+        }
+      },
+      {
+        "en": "I feel happy today.",
+        "meaning": {
+          "es": "Hoy me siento feliz.",
+          "en": "Hoy me siento feliz."
+        }
+      },
+      {
+        "en": "I feel tired.",
+        "meaning": {
+          "es": "Me siento cansado o cansada.",
+          "en": "Me siento cansado o cansada."
+        }
+      }
+    ],
+    "rule": {
+      "es": "“I feel” y “I'm” sirven para decir cómo estás: I feel happy = I'm happy.",
+      "en": "“I feel” and “I'm” both say how you are: I feel happy = I'm happy."
+    }
+  },
+  "activities": [
+    {
+      "id": "iFeel-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma: “Hoy me siento feliz.”",
+        "en": "Build: “I feel happy today.”"
+      },
+      "tiles": [
+        "I",
+        "feel",
+        "happy",
+        "today."
+      ],
+      "hint": {
+        "es": "Empieza con I.",
+        "en": "Start with I."
+      },
+      "why": {
+        "es": "“I feel happy today.”",
+        "en": "“I feel happy today.”"
+      }
+    },
+    {
+      "id": "iFeel-gap",
+      "type": "choice",
+      "prompt": {
+        "es": "Completa: “I ___ tired.”",
+        "en": "Fill in: “I ___ tired.”"
+      },
+      "options": [
+        "feel",
+        "name",
+        "have"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Significa “me siento”.",
+        "en": "It means how you feel."
+      },
+      "why": {
+        "es": "“I feel tired.”",
+        "en": "“I feel tired.”"
+      },
+      "show": "I ___ tired."
+    },
+    {
+      "id": "iFeel-read",
+      "type": "choice",
+      "prompt": {
+        "es": "Lee: “I feel scared.” ¿Qué cara es?",
+        "en": "Read: “I feel scared.” Which face?"
+      },
+      "options": [
+        {
+          "es": "😨",
+          "en": "😨"
+        },
+        {
+          "es": "😀",
+          "en": "😀"
+        },
+        {
+          "es": "🤩",
+          "en": "🤩"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "“Scared” es asustado.",
+        "en": "“Scared” means afraid."
+      },
+      "why": {
+        "es": "😨: I feel scared.",
+        "en": "😨: I feel scared."
+      }
+    },
+    {
+      "id": "iFeel-answer",
+      "type": "choice",
+      "prompt": {
+        "es": "Te preguntan “How do you feel?”. ¿Qué respondes?",
+        "en": "Someone asks “How do you feel?”. What do you answer?"
+      },
+      "options": [
+        "I feel happy.",
+        "My name is Ana.",
+        "I'm nine."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Responde con una emoción.",
+        "en": "Answer with a feeling."
+      },
+      "why": {
+        "es": "“I feel happy.”",
+        "en": "“I feel happy.”"
+      }
+    },
+    {
+      "id": "iFeel-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? “I feel happy” y “I'm happy” dicen lo mismo.",
+        "en": "True or false? “I feel happy” and “I'm happy” say the same."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Las dos dicen cómo estás.",
+        "en": "Both say how you are."
+      },
+      "why": {
+        "es": "Verdadero.",
+        "en": "True."
+      }
+    },
+    {
+      "id": "iFeel-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot escribió “I feeling sad”. ¿Cómo se escribe bien?",
+        "en": "🤖 PyBot wrote “I feeling sad”. What's right?"
+      },
+      "options": [
+        "I feel sad.",
+        "I feels sad.",
+        "I feeling sad."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Con “I” va “feel”, sin “-ing”.",
+        "en": "With “I”, use “feel”."
+      },
+      "why": {
+        "es": "¡Arreglado! I feel sad.",
+        "en": "Fixed! I feel sad."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "I feel…",
+      "meaning": {
+        "es": "me siento…",
+        "en": "me siento…"
+      }
+    },
+    {
+      "en": "today",
+      "meaning": {
+        "es": "hoy",
+        "en": "hoy"
+      }
+    },
+    {
+      "en": "How do you feel?",
+      "meaning": {
+        "es": "¿cómo te sientes?",
+        "en": "¿cómo te sientes?"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "¿Cómo te sientes hoy?",
+      "en": "How do you feel today?"
+    },
+    "text": {
+      "es": "En la cena, cada persona dice cómo se sintió hoy: “I feel happy”, “I feel tired”…",
+      "en": "At dinner, everyone says how they felt today: “I feel happy”, “I feel tired”…"
+    },
+    "adult": {
+      "es": "escuchen sin corregir; lo importante es animarse a decirlo.",
+      "en": "listen without correcting; what matters is trying."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

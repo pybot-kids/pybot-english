@@ -39,6 +39,13 @@ Object.assign(translations.es, {
   "lesson.next": "Siguiente →",
   "lesson.nextSoon": "La siguiente página llega muy pronto.",
   "lesson.toPath": "Volver al camino",
+  "lesson.pathEnd": "¡Llegaste al final del camino! Mira tus stickers y tus diplomas.",
+  "lesson.toAlbum": "Ir a mi álbum ★",
+  "lesson.selfTitle": "¿Cómo te fue en cada zona?",
+  "lesson.selfText": "Tú decides. Las zonas que marques para repasar aparecen en el camino.",
+  "lesson.selfGood": "😀 Lo sé",
+  "lesson.selfOkay": "🙂 Más o menos",
+  "lesson.selfReview": "🤔 Quiero repasar",
 });
 
 Object.assign(translations.en, {
@@ -76,6 +83,13 @@ Object.assign(translations.en, {
   "lesson.next": "Next →",
   "lesson.nextSoon": "The next page is coming soon.",
   "lesson.toPath": "Back to the path",
+  "lesson.pathEnd": "You reached the end of the path! See your stickers and diplomas.",
+  "lesson.toAlbum": "Go to my album ★",
+  "lesson.selfTitle": "How did each zone go?",
+  "lesson.selfText": "You decide. Zones you mark to review show up on the path.",
+  "lesson.selfGood": "😀 I know it",
+  "lesson.selfOkay": "🙂 More or less",
+  "lesson.selfReview": "🤔 I want to review",
 });
 
 const lesson = JSON.parse(document.getElementById("lesson-data")?.textContent ?? "null");
@@ -121,7 +135,11 @@ function listenButtons(english) {
   return group;
 }
 
-function section(key, number, extraClass = "") {
+let sectionNumber = 0;
+
+function section(key, extraClass = "") {
+  sectionNumber += 1;
+  const number = sectionNumber;
   const box = el("section", `lesson-section ${extraClass}`.trim());
   const heading = el("h2", "lesson-section-title");
   heading.append(el("span", "lesson-step-number", String(number)), el("span", "", textFor(key)));
@@ -315,6 +333,51 @@ function updateSummary() {
   }
 }
 
+// ---------- Pit stop self-check: the learner rates each zone, no grades ----------
+
+function storedSelfCheck() {
+  const ratings = {};
+  (readStored(SELF_CHECK_KEY) ?? "").split(",").forEach((pair) => {
+    const [id, rating] = pair.split(":");
+    if (isStep(id) && SELF_CHECK_RATINGS.includes(rating)) {
+      ratings[id] = rating;
+    }
+  });
+  return ratings;
+}
+
+function buildSelfCheck() {
+  const box = section("lesson.selfTitle", "lesson-selfcheck");
+  box.append(el("p", "lesson-help", textFor("lesson.selfText")));
+  const list = el("ul", "selfcheck-list");
+  const ratings = storedSelfCheck();
+  pathZones.filter((zone) => !zone.steps.includes(lesson.step)).forEach((zone) => {
+    const id = zone.steps[0];
+    const row = el("li", "selfcheck-row");
+    const name = el("b", "", `${zone.icon} ${zone.name}`);
+    name.lang = "en";
+    const options = el("div", "selfcheck-options");
+    options.setAttribute("role", "group");
+    options.setAttribute("aria-label", zone.name);
+    [["good", "lesson.selfGood"], ["okay", "lesson.selfOkay"], ["review", "lesson.selfReview"]].forEach(([rating, label]) => {
+      const button = el("button", "selfcheck-button", textFor(label));
+      button.type = "button";
+      button.setAttribute("aria-pressed", String(ratings[id] === rating));
+      button.addEventListener("click", () => {
+        const current = storedSelfCheck();
+        current[id] = rating;
+        writeStored(SELF_CHECK_KEY, Object.entries(current).map(([step, value]) => `${step}:${value}`).join(","));
+        options.querySelectorAll("button").forEach((other) => other.setAttribute("aria-pressed", String(other === button)));
+      });
+      options.append(button);
+    });
+    row.append(name, options);
+    list.append(row);
+  });
+  box.append(list);
+  return box;
+}
+
 // ---------- Page ----------
 
 function renderLesson() {
@@ -325,12 +388,13 @@ function renderLesson() {
   const pageIndex = zone.steps.indexOf(lesson.step);
   document.title = `${pick(lesson.title)} — PyBot English`;
   main.replaceChildren();
+  sectionNumber = 0;
 
   // Hero: where we are, the page question, and PyBot.
   const hero = el("header", "lesson-hero");
   const copy = el("div", "lesson-hero-copy");
   const crumb = el("p", "eyebrow eyebrow-magenta");
-  crumb.textContent = `${textFor("lesson.zone").replace("{number}", String(zoneIndex).padStart(2, "0")).replace("{name}", zone.name)} · ${textFor("lesson.page").replace("{page}", String(pageIndex + 1)).replace("{total}", String(zone.steps.length))}`;
+  crumb.textContent = lesson.review ? `🏁 ${textFor("pit.concept")}` : `${textFor("lesson.zone").replace("{number}", String(zoneIndex).padStart(2, "0")).replace("{name}", zone.name)} · ${textFor("lesson.page").replace("{page}", String(pageIndex + 1)).replace("{total}", String(zone.steps.length))}`;
   copy.append(crumb, el("h1", "", pick(lesson.title)), el("p", "lesson-intro", pick(lesson.intro)));
   const stage = el("div", "lesson-stage");
   const bubble = el("p", "lesson-bubble");
@@ -342,29 +406,31 @@ function renderLesson() {
   hero.append(copy, stage);
   main.append(hero);
 
-  // 1 Look + 2 Listen: picture cards with sound.
-  const look = section("lesson.lookTitle", 1, "lesson-look");
-  look.append(el("p", "lesson-help", textFor("lesson.listenText")));
-  const cards = el("ul", "look-grid");
-  lesson.look.forEach((item) => {
-    const card = el("li", "look-card");
-    card.append(el("span", "look-icon", item.icon));
-    const word = el("b", "look-word", item.word);
-    word.lang = "en";
-    card.append(word, el("span", "look-meaning", pick(item.meaning)), listenButtons(item.word));
-    cards.append(card);
-  });
-  look.append(cards);
-  main.append(look);
+  // Look and listen: picture cards with sound (review pages skip it).
+  if (lesson.look) {
+    const look = section("lesson.lookTitle", "lesson-look");
+    look.append(el("p", "lesson-help", textFor("lesson.listenText")));
+    const cards = el("ul", "look-grid");
+    lesson.look.forEach((item) => {
+      const card = el("li", "look-card");
+      card.append(el("span", "look-icon", item.icon));
+      const word = el("b", "look-word", item.word);
+      word.lang = "en";
+      card.append(word, el("span", "look-meaning", pick(item.meaning)), listenButtons(item.word));
+      cards.append(card);
+    });
+    look.append(cards);
+    main.append(look);
 
-  // 3 Say.
-  const sayBox = section("lesson.sayTitle", 2, "lesson-say");
-  sayBox.append(el("p", "", textFor("lesson.sayText")));
-  main.append(sayBox);
+    // Say.
+    const sayBox = section("lesson.sayTitle", "lesson-say");
+    sayBox.append(el("p", "", textFor("lesson.sayText")));
+    main.append(sayBox);
+  }
 
-  // 4 How to use it: model sentences and the rule in one line.
+  // How to use it: model sentences and the rule in one line.
   if (lesson.use) {
-    const use = section("lesson.useTitle", 3, "lesson-use");
+    const use = section("lesson.useTitle", "lesson-use");
     const models = el("ul", "use-models");
     lesson.use.models.forEach((model) => {
       const item = el("li", "use-model");
@@ -377,8 +443,8 @@ function renderLesson() {
     main.append(use);
   }
 
-  // 5 Check: activities with a done / not tried / review summary and a page reset.
-  const check = section("lesson.checkTitle", lesson.use ? 4 : 3, "lesson-check");
+  // Check: activities with a done / not tried / review summary and a page reset.
+  const check = section("lesson.checkTitle", "lesson-check");
   check.append(el("p", "lesson-help", textFor("lesson.checkText")));
   const summary = el("div", "lesson-summary");
   summary.dataset.lessonSummary = "";
@@ -417,18 +483,24 @@ function renderLesson() {
   check.append(resetRow);
   main.append(check);
 
+  if (lesson.selfcheck) {
+    main.append(buildSelfCheck());
+  }
+
   // New words, with sound.
-  const words = section("lesson.wordsTitle", lesson.use ? 5 : 4, "lesson-words");
-  const wordList = el("ul", "word-list");
-  lesson.words.forEach((entry) => {
-    const item = el("li", "word-item");
-    const word = el("b", "", entry.en);
-    word.lang = "en";
-    item.append(word, el("span", "look-meaning", pick(entry.meaning)), listenButtons(entry.en));
-    wordList.append(item);
-  });
-  words.append(wordList);
-  main.append(words);
+  if (lesson.words) {
+    const words = section("lesson.wordsTitle", "lesson-words");
+    const wordList = el("ul", "word-list");
+    lesson.words.forEach((entry) => {
+      const item = el("li", "word-item");
+      const word = el("b", "", entry.en);
+      word.lang = "en";
+      item.append(word, el("span", "look-meaning", pick(entry.meaning)), listenButtons(entry.en));
+      wordList.append(item);
+    });
+    words.append(wordList);
+    main.append(words);
+  }
 
   // Practice at home.
   const home = el("section", "lesson-home");
@@ -450,6 +522,12 @@ function renderLesson() {
     const forward = el("a", "button button-primary lesson-next", textFor("lesson.next"));
     forward.href = new URL(next.href, scriptBaseUrl).href;
     nav.append(forward);
+  } else if (!next) {
+    const end = el("p", "lesson-next-soon");
+    const album = el("a", "button button-primary", textFor("lesson.toAlbum"));
+    album.href = new URL("album.html", scriptBaseUrl).href;
+    end.append(el("span", "", textFor("lesson.pathEnd")), album);
+    nav.append(end);
   } else {
     const soon = el("p", "lesson-next-soon");
     const toPath = el("a", "button button-primary", textFor("lesson.toPath"));

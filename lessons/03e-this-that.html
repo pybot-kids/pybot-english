@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="“This” es para algo cerca. “That” es para algo lejos. Y pregunta: What&#x27;s this?" />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>This or that? ¿Esto o eso? — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="thisThat">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "thisThat",
+  "mood": "curious",
+  "title": {
+    "es": "This or that? ¿Esto o eso?",
+    "en": "This or that?"
+  },
+  "intro": {
+    "es": "“This” es para algo cerca. “That” es para algo lejos. Y pregunta: What's this?",
+    "en": "“This” is for something near. “That” is for something far. And ask: What's this?"
+  },
+  "pybot": {
+    "es": "What's this? 🤔 It's a pencil! What's that? ¡Es la luna!",
+    "en": "What's this? It's a pencil! What's that? It's the moon!"
+  },
+  "look": [
+    {
+      "icon": "👇",
+      "word": "this",
+      "meaning": {
+        "es": "esto, este, esta (cerca)",
+        "en": "esto, este, esta (cerca)"
+      }
+    },
+    {
+      "icon": "👉",
+      "word": "that",
+      "meaning": {
+        "es": "eso, ese, esa (lejos)",
+        "en": "eso, ese, esa (lejos)"
+      }
+    },
+    {
+      "icon": "❓",
+      "word": "What's this?",
+      "meaning": {
+        "es": "¿qué es esto?",
+        "en": "¿qué es esto?"
+      }
+    },
+    {
+      "icon": "💬",
+      "word": "It's a…",
+      "meaning": {
+        "es": "es un, es una…",
+        "en": "es un, es una…"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "What's this?",
+        "meaning": {
+          "es": "¿Qué es esto?",
+          "en": "¿Qué es esto?"
+        }
+      },
+      {
+        "en": "It's a pencil.",
+        "meaning": {
+          "es": "Es un lápiz.",
+          "en": "Es un lápiz."
+        }
+      },
+      {
+        "en": "What's that?",
+        "meaning": {
+          "es": "¿Qué es eso?",
+          "en": "¿Qué es eso?"
+        }
+      }
+    ],
+    "rule": {
+      "es": "Cerca de ti: this. Lejos de ti: that. Para responder: “It's a…”.",
+      "en": "Near you: this. Far from you: that. To answer: “It's a…”."
+    }
+  },
+  "activities": [
+    {
+      "id": "thisThat-near",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Cuál usas para algo que está en tu mano?",
+        "en": "Which do you use for something in your hand?"
+      },
+      "options": [
+        "this",
+        "that"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Está cerca de ti.",
+        "en": "It's near you."
+      },
+      "why": {
+        "es": "Cerca: “this”.",
+        "en": "Near: “this”."
+      }
+    },
+    {
+      "id": "thisThat-far",
+      "type": "choice",
+      "prompt": {
+        "es": "🌙 Señalas la luna. Completa: “What's ___?”",
+        "en": "🌙 You point at the moon. Fill in: “What's ___?”"
+      },
+      "options": [
+        "that",
+        "this"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "La luna está muy lejos.",
+        "en": "The moon is far away."
+      },
+      "why": {
+        "es": "Lejos: “What's that?”",
+        "en": "Far: “What's that?”"
+      },
+      "show": "What's ___?"
+    },
+    {
+      "id": "thisThat-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma la pregunta “¿Qué es esto?”.",
+        "en": "Build “What's this?”."
+      },
+      "tiles": [
+        "What's",
+        "this?"
+      ],
+      "hint": {
+        "es": "Empieza con What's.",
+        "en": "Start with What's."
+      },
+      "why": {
+        "es": "“What's this?”",
+        "en": "“What's this?”"
+      }
+    },
+    {
+      "id": "thisThat-answer",
+      "type": "choice",
+      "prompt": {
+        "es": "✏️ “What's this?” ¿Qué respondes?",
+        "en": "✏️ “What's this?” What do you answer?"
+      },
+      "options": [
+        "It's a pencil.",
+        "It's a book.",
+        "I'm fine."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Mira el dibujo.",
+        "en": "Look at the picture."
+      },
+      "why": {
+        "es": "“It's a pencil.”",
+        "en": "“It's a pencil.”"
+      }
+    },
+    {
+      "id": "thisThat-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? “This” es para algo que está cerca.",
+        "en": "True or false? “This” is for something near."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "This = esto, aquí.",
+        "en": "This = here."
+      },
+      "why": {
+        "es": "Verdadero.",
+        "en": "True."
+      }
+    },
+    {
+      "id": "thisThat-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot señala la luna 🌙 desde la Tierra y dice “This is the moon”. ¿Qué debió decir?",
+        "en": "🤖 PyBot points at the moon 🌙 and says “This is the moon”. What should it say?"
+      },
+      "options": [
+        "That is the moon.",
+        "This is the moon.",
+        "It's a this moon."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "La luna está lejos.",
+        "en": "The moon is far."
+      },
+      "why": {
+        "es": "¡Arreglado! That is the moon.",
+        "en": "Fixed! That is the moon."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "this",
+      "meaning": {
+        "es": "esto, este, esta (cerca)",
+        "en": "esto, este, esta (cerca)"
+      }
+    },
+    {
+      "en": "that",
+      "meaning": {
+        "es": "eso, ese, esa (lejos)",
+        "en": "eso, ese, esa (lejos)"
+      }
+    },
+    {
+      "en": "What's this?",
+      "meaning": {
+        "es": "¿qué es esto?",
+        "en": "¿qué es esto?"
+      }
+    },
+    {
+      "en": "It's a…",
+      "meaning": {
+        "es": "es un, es una…",
+        "en": "es un, es una…"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "¿Qué es esto? ¿Qué es eso?",
+      "en": "What's this? What's that?"
+    },
+    "text": {
+      "es": "Señala cosas cerca y lejos y pregunta “What's this?” o “What's that?”. Tu familia responde “It's a…”.",
+      "en": "Point at things near and far and ask “What's this?” or “What's that?”. Your family answers “It's a…”."
+    },
+    "adult": {
+      "es": "si no saben la palabra, pueden responder en español y buscarla juntos.",
+      "en": "if you don't know the word, answer in Spanish and look it up together."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

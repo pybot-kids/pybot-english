@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Di lo que te gusta con “I like” y lo que te encanta con “I love”." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>I like… Lo que me gusta — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="iLike">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "iLike",
+  "mood": "starry",
+  "title": {
+    "es": "I like… Lo que me gusta",
+    "en": "I like…"
+  },
+  "intro": {
+    "es": "Di lo que te gusta con “I like” y lo que te encanta con “I love”.",
+    "en": "Say what you like with “I like” and what you love with “I love”."
+  },
+  "pybot": {
+    "es": "I like music. I love dancing! ¿Y a ti qué te gusta?",
+    "en": "I like music. I love dancing! What do you like?"
+  },
+  "look": [
+    {
+      "icon": "👍",
+      "word": "I like…",
+      "meaning": {
+        "es": "me gusta…",
+        "en": "me gusta…"
+      }
+    },
+    {
+      "icon": "😍",
+      "word": "I love…",
+      "meaning": {
+        "es": "me encanta…",
+        "en": "me encanta…"
+      }
+    },
+    {
+      "icon": "😋",
+      "word": "yummy!",
+      "meaning": {
+        "es": "¡qué rico!",
+        "en": "¡qué rico!"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "I like apples.",
+        "meaning": {
+          "es": "Me gustan las manzanas.",
+          "en": "Me gustan las manzanas."
+        }
+      },
+      {
+        "en": "I love ice cream!",
+        "meaning": {
+          "es": "¡Me encanta el helado!",
+          "en": "¡Me encanta el helado!"
+        }
+      }
+    ],
+    "rule": {
+      "es": "Cuando hablas de algo en general, va en plural: I like apples, I like dogs.",
+      "en": "For things in general, use the plural: I like apples."
+    }
+  },
+  "activities": [
+    {
+      "id": "iLike-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma: “Me gustan las manzanas.”",
+        "en": "Build: “I like apples.”"
+      },
+      "tiles": [
+        "I",
+        "like",
+        "apples."
+      ],
+      "hint": {
+        "es": "Empieza con I.",
+        "en": "Start with I."
+      },
+      "why": {
+        "es": "“I like apples.”",
+        "en": "“I like apples.”"
+      }
+    },
+    {
+      "id": "iLike-gap",
+      "type": "choice",
+      "prompt": {
+        "es": "Completa: “I ___ pizza.”",
+        "en": "Fill in: “I ___ pizza.”"
+      },
+      "options": [
+        "like",
+        "am",
+        "feel"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Significa “me gusta”.",
+        "en": "It means you enjoy it."
+      },
+      "why": {
+        "es": "“I like pizza.”",
+        "en": "“I like pizza.”"
+      },
+      "show": "I ___ pizza."
+    },
+    {
+      "id": "iLike-read",
+      "type": "choice",
+      "prompt": {
+        "es": "Lee: “I love ice cream!” ¿Qué cara pone?",
+        "en": "Read: “I love ice cream!” Which face?"
+      },
+      "options": [
+        {
+          "es": "😍🍦",
+          "en": "😍🍦"
+        },
+        {
+          "es": "😢🍦",
+          "en": "😢🍦"
+        },
+        {
+          "es": "😴🍦",
+          "en": "😴🍦"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Love es encantar.",
+        "en": "Love is a big like."
+      },
+      "why": {
+        "es": "😍🍦: le encanta.",
+        "en": "😍🍦: loves it."
+      }
+    },
+    {
+      "id": "iLike-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? “I like” significa “me gusta”.",
+        "en": "True or false? “I like” means “me gusta”."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Piensa en “I like apples”.",
+        "en": "Think of “I like apples”."
+      },
+      "why": {
+        "es": "Verdadero.",
+        "en": "True."
+      }
+    },
+    {
+      "id": "iLike-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué le gusta?",
+        "en": "Listen. What does the person like?"
+      },
+      "options": [
+        {
+          "es": "🍌",
+          "en": "🍌"
+        },
+        {
+          "es": "🍎",
+          "en": "🍎"
+        },
+        {
+          "es": "🥛",
+          "en": "🥛"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es amarillo.",
+        "en": "It's yellow."
+      },
+      "why": {
+        "es": "“I like bananas.”",
+        "en": "“I like bananas.”"
+      },
+      "listen": "I like bananas."
+    },
+    {
+      "id": "iLike-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot quiso decir que le gustan las manzanas en general y escribió “I like apple”. ¿Qué falta?",
+        "en": "🤖 PyBot meant apples in general and wrote “I like apple”. What's missing?"
+      },
+      "options": [
+        "I like apples.",
+        "I likes apple.",
+        "I like a apples."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "En general va en plural.",
+        "en": "In general, use the plural."
+      },
+      "why": {
+        "es": "¡Arreglado! I like apples.",
+        "en": "Fixed! I like apples."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "I like…",
+      "meaning": {
+        "es": "me gusta…",
+        "en": "me gusta…"
+      }
+    },
+    {
+      "en": "I love…",
+      "meaning": {
+        "es": "me encanta…",
+        "en": "me encanta…"
+      }
+    },
+    {
+      "en": "yummy!",
+      "meaning": {
+        "es": "¡qué rico!",
+        "en": "¡qué rico!"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Encuesta de gustos",
+      "en": "Likes survey"
+    },
+    "text": {
+      "es": "Pregunta en casa “Do you like pizza?”, “Do you like dogs?” y escucha las respuestas.",
+      "en": "Ask at home “Do you like pizza?”, “Do you like dogs?” and listen to the answers."
+    },
+    "adult": {
+      "es": "respondan con “I like…” o “I love…”.",
+      "en": "answer with “I like…” or “I love…”."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

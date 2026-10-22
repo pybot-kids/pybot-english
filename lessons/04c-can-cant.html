@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Di qué puede hacer cada animal con “can”, y qué no con “can&#x27;t”." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>It can fly! Lo que pueden hacer — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="canCant">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "canCant",
+  "mood": "determined",
+  "title": {
+    "es": "It can fly! Lo que pueden hacer",
+    "en": "It can fly!"
+  },
+  "intro": {
+    "es": "Di qué puede hacer cada animal con “can”, y qué no con “can't”.",
+    "en": "Say what animals can do with “can”, and can't do with “can't”."
+  },
+  "pybot": {
+    "es": "A bird can fly. I can't fly… ¡pero puedo bailar!",
+    "en": "A bird can fly. I can't fly… but I can dance!"
+  },
+  "look": [
+    {
+      "icon": "✅",
+      "word": "can",
+      "meaning": {
+        "es": "puede, puedo",
+        "en": "puede, puedo"
+      }
+    },
+    {
+      "icon": "🚫",
+      "word": "can't",
+      "meaning": {
+        "es": "no puede, no puedo",
+        "en": "no puede, no puedo"
+      }
+    },
+    {
+      "icon": "🕊️",
+      "word": "fly",
+      "meaning": {
+        "es": "volar",
+        "en": "volar"
+      }
+    },
+    {
+      "icon": "🏊",
+      "word": "swim",
+      "meaning": {
+        "es": "nadar",
+        "en": "nadar"
+      }
+    },
+    {
+      "icon": "🏃",
+      "word": "run",
+      "meaning": {
+        "es": "correr",
+        "en": "correr"
+      }
+    },
+    {
+      "icon": "🦘",
+      "word": "jump",
+      "meaning": {
+        "es": "saltar",
+        "en": "saltar"
+      }
+    },
+    {
+      "icon": "🧗",
+      "word": "climb",
+      "meaning": {
+        "es": "trepar",
+        "en": "trepar"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "A bird can fly.",
+        "meaning": {
+          "es": "Un pájaro puede volar.",
+          "en": "Un pájaro puede volar."
+        }
+      },
+      {
+        "en": "A fish can't run.",
+        "meaning": {
+          "es": "Un pez no puede correr.",
+          "en": "Un pez no puede correr."
+        }
+      },
+      {
+        "en": "I can jump!",
+        "meaning": {
+          "es": "¡Puedo saltar!",
+          "en": "¡Puedo saltar!"
+        }
+      }
+    ],
+    "rule": {
+      "es": "Después de “can” o “can't” la acción va tal cual, sin “-s”: a dog can run.",
+      "en": "After “can” or “can't” the action stays the same: a dog can run."
+    }
+  },
+  "activities": [
+    {
+      "id": "canCant-bird",
+      "type": "choice",
+      "prompt": {
+        "es": "🐦 Completa: “A bird can ___.”",
+        "en": "🐦 Fill in: “A bird can ___.”"
+      },
+      "options": [
+        "fly",
+        "swim",
+        "climb"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Tiene alas.",
+        "en": "It has wings."
+      },
+      "why": {
+        "es": "“A bird can fly.”",
+        "en": "“A bird can fly.”"
+      },
+      "show": "A bird can ___."
+    },
+    {
+      "id": "canCant-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? “A fish can run.”",
+        "en": "True or false? “A fish can run.”"
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 1,
+      "hint": {
+        "es": "Los peces no tienen patas.",
+        "en": "Fish have no legs."
+      },
+      "why": {
+        "es": "Falso: a fish can't run. A fish can swim.",
+        "en": "False: a fish can't run."
+      }
+    },
+    {
+      "id": "canCant-read",
+      "type": "choice",
+      "prompt": {
+        "es": "Lee: “It can swim.” ¿Cuál es?",
+        "en": "Read: “It can swim.” Which one?"
+      },
+      "options": [
+        {
+          "es": "🐟",
+          "en": "🐟"
+        },
+        {
+          "es": "🐴",
+          "en": "🐴"
+        },
+        {
+          "es": "🦁",
+          "en": "🦁"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Vive en el agua.",
+        "en": "It lives in water."
+      },
+      "why": {
+        "es": "🐟 can swim.",
+        "en": "🐟 can swim."
+      }
+    },
+    {
+      "id": "canCant-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma: “Un mono puede trepar.”",
+        "en": "Build: “A monkey can climb.”"
+      },
+      "tiles": [
+        "A",
+        "monkey",
+        "can",
+        "climb."
+      ],
+      "hint": {
+        "es": "Empieza con A.",
+        "en": "Start with A."
+      },
+      "why": {
+        "es": "“A monkey can climb.”",
+        "en": "“A monkey can climb.”"
+      }
+    },
+    {
+      "id": "canCant-gap",
+      "type": "choice",
+      "prompt": {
+        "es": "Completa: “A fish ___ fly.”",
+        "en": "Fill in: “A fish ___ fly.”"
+      },
+      "options": [
+        "can't",
+        "can"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "¿Los peces vuelan?",
+        "en": "Do fish fly?"
+      },
+      "why": {
+        "es": "“A fish can't fly.”",
+        "en": "“A fish can't fly.”"
+      },
+      "show": "A fish ___ fly."
+    },
+    {
+      "id": "canCant-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot escribió “A dog can runs.” ¿Cómo se escribe bien?",
+        "en": "🤖 PyBot wrote “A dog can runs.” What's right?"
+      },
+      "options": [
+        "A dog can run.",
+        "A dog cans run.",
+        "A dog can runs."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Después de “can”, sin “-s”.",
+        "en": "After “can”, no “-s”."
+      },
+      "why": {
+        "es": "¡Arreglado! A dog can run.",
+        "en": "Fixed! A dog can run."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "can",
+      "meaning": {
+        "es": "puede, puedo",
+        "en": "puede, puedo"
+      }
+    },
+    {
+      "en": "can't",
+      "meaning": {
+        "es": "no puede, no puedo",
+        "en": "no puede, no puedo"
+      }
+    },
+    {
+      "en": "fly",
+      "meaning": {
+        "es": "volar",
+        "en": "volar"
+      }
+    },
+    {
+      "en": "swim",
+      "meaning": {
+        "es": "nadar",
+        "en": "nadar"
+      }
+    },
+    {
+      "en": "run",
+      "meaning": {
+        "es": "correr",
+        "en": "correr"
+      }
+    },
+    {
+      "en": "jump",
+      "meaning": {
+        "es": "saltar",
+        "en": "saltar"
+      }
+    },
+    {
+      "en": "climb",
+      "meaning": {
+        "es": "trepar",
+        "en": "trepar"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "I can… Can you?",
+      "en": "I can… Can you?"
+    },
+    "text": {
+      "es": "Haz algo y dilo: “I can jump!”. Luego pregunta: “Can you jump?”. Prueben saltar, correr en el sitio, aplaudir…",
+      "en": "Do something and say it: “I can jump!”. Then ask: “Can you jump?”. Try jumping, running in place, clapping…"
+    },
+    "adult": {
+      "es": "respondan “Yes, I can!” o “No, I can't!” con humor.",
+      "en": "answer “Yes, I can!” or “No, I can't!” with a smile."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

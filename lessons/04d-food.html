@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Lo que comes y lo que tomas, en inglés." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>Comida y bebida — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="food">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "food",
+  "mood": "happy",
+  "title": {
+    "es": "Comida y bebida",
+    "en": "Food and drinks"
+  },
+  "intro": {
+    "es": "Lo que comes y lo que tomas, en inglés.",
+    "en": "What you eat and drink, in English."
+  },
+  "pybot": {
+    "es": "¡Yummy! Yo solo tomo electricidad… pero me encanta oír de pizza.",
+    "en": "Yummy! I only drink electricity… but I love hearing about pizza."
+  },
+  "look": [
+    {
+      "icon": "🍎",
+      "word": "apple",
+      "meaning": {
+        "es": "manzana",
+        "en": "manzana"
+      }
+    },
+    {
+      "icon": "🍌",
+      "word": "banana",
+      "meaning": {
+        "es": "banano",
+        "en": "banano"
+      }
+    },
+    {
+      "icon": "🍞",
+      "word": "bread",
+      "meaning": {
+        "es": "pan",
+        "en": "pan"
+      }
+    },
+    {
+      "icon": "🥚",
+      "word": "egg",
+      "meaning": {
+        "es": "huevo",
+        "en": "huevo"
+      }
+    },
+    {
+      "icon": "🥛",
+      "word": "milk",
+      "meaning": {
+        "es": "leche",
+        "en": "leche"
+      }
+    },
+    {
+      "icon": "💧",
+      "word": "water",
+      "meaning": {
+        "es": "agua",
+        "en": "agua"
+      }
+    },
+    {
+      "icon": "🧃",
+      "word": "juice",
+      "meaning": {
+        "es": "jugo",
+        "en": "jugo"
+      }
+    },
+    {
+      "icon": "🍚",
+      "word": "rice",
+      "meaning": {
+        "es": "arroz",
+        "en": "arroz"
+      }
+    },
+    {
+      "icon": "🍕",
+      "word": "pizza",
+      "meaning": {
+        "es": "pizza",
+        "en": "pizza"
+      }
+    },
+    {
+      "icon": "🍦",
+      "word": "ice cream",
+      "meaning": {
+        "es": "helado",
+        "en": "helado"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "I eat bread.",
+        "meaning": {
+          "es": "Como pan.",
+          "en": "Como pan."
+        }
+      },
+      {
+        "en": "I drink water.",
+        "meaning": {
+          "es": "Tomo agua.",
+          "en": "Tomo agua."
+        }
+      }
+    ],
+    "rule": {
+      "es": "Para comida se usa “eat” (comer) y para bebidas “drink” (tomar).",
+      "en": "Use “eat” for food and “drink” for drinks."
+    }
+  },
+  "activities": [
+    {
+      "id": "food-banana",
+      "type": "choice",
+      "prompt": {
+        "es": "🍌 ¿Qué es?",
+        "en": "🍌 What is it?"
+      },
+      "options": [
+        "banana",
+        "apple",
+        "egg"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es amarillo y largo.",
+        "en": "Yellow and long."
+      },
+      "why": {
+        "es": "“Banana”.",
+        "en": "“Banana.”"
+      }
+    },
+    {
+      "id": "food-milk",
+      "type": "choice",
+      "prompt": {
+        "es": "🥛 ¿Qué es?",
+        "en": "🥛 What is it?"
+      },
+      "options": [
+        "milk",
+        "juice",
+        "water"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es blanca y viene de la vaca.",
+        "en": "White, from a cow."
+      },
+      "why": {
+        "es": "“Milk” es leche.",
+        "en": "“Milk.”"
+      }
+    },
+    {
+      "id": "food-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué es?",
+        "en": "Listen. What is it?"
+      },
+      "options": [
+        {
+          "es": "🍚",
+          "en": "🍚"
+        },
+        {
+          "es": "🍕",
+          "en": "🍕"
+        },
+        {
+          "es": "🥚",
+          "en": "🥚"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Son granitos blancos.",
+        "en": "Little white grains."
+      },
+      "why": {
+        "es": "“Rice” es arroz.",
+        "en": "“Rice.”"
+      },
+      "listen": "rice"
+    },
+    {
+      "id": "food-drink",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Cuál es una bebida?",
+        "en": "Which one is a drink?"
+      },
+      "options": [
+        "water",
+        "bread",
+        "egg"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Se toma, no se mastica.",
+        "en": "You drink it."
+      },
+      "why": {
+        "es": "“Water” es agua.",
+        "en": "“Water.”"
+      }
+    },
+    {
+      "id": "food-eat-drink",
+      "type": "choice",
+      "prompt": {
+        "es": "Completa: “I ___ juice.”",
+        "en": "Fill in: “I ___ juice.”"
+      },
+      "options": [
+        "drink",
+        "eat"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "El jugo es una bebida.",
+        "en": "Juice is a drink."
+      },
+      "why": {
+        "es": "“I drink juice.”",
+        "en": "“I drink juice.”"
+      },
+      "show": "I ___ juice."
+    },
+    {
+      "id": "food-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot dice que 🍦 es “pizza”. ¿Qué es de verdad?",
+        "en": "🤖 PyBot says 🍦 is “pizza”. What is it really?"
+      },
+      "options": [
+        "ice cream",
+        "pizza",
+        "bread"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es frío y dulce.",
+        "en": "Cold and sweet."
+      },
+      "why": {
+        "es": "¡Arreglado! Es ice cream.",
+        "en": "Fixed! It's ice cream."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "apple",
+      "meaning": {
+        "es": "manzana",
+        "en": "manzana"
+      }
+    },
+    {
+      "en": "banana",
+      "meaning": {
+        "es": "banano",
+        "en": "banano"
+      }
+    },
+    {
+      "en": "bread",
+      "meaning": {
+        "es": "pan",
+        "en": "pan"
+      }
+    },
+    {
+      "en": "egg",
+      "meaning": {
+        "es": "huevo",
+        "en": "huevo"
+      }
+    },
+    {
+      "en": "milk",
+      "meaning": {
+        "es": "leche",
+        "en": "leche"
+      }
+    },
+    {
+      "en": "water",
+      "meaning": {
+        "es": "agua",
+        "en": "agua"
+      }
+    },
+    {
+      "en": "juice",
+      "meaning": {
+        "es": "jugo",
+        "en": "jugo"
+      }
+    },
+    {
+      "en": "rice",
+      "meaning": {
+        "es": "arroz",
+        "en": "arroz"
+      }
+    },
+    {
+      "en": "pizza",
+      "meaning": {
+        "es": "pizza",
+        "en": "pizza"
+      }
+    },
+    {
+      "en": "ice cream",
+      "meaning": {
+        "es": "helado",
+        "en": "helado"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "¿Qué hay en el plato?",
+      "en": "What's on the plate?"
+    },
+    "text": {
+      "es": "En la comida, nombra en inglés lo que hay en tu plato y en tu vaso: “rice, egg, water”.",
+      "en": "At mealtime, name what's on your plate and in your glass in English: “rice, egg, water”."
+    },
+    "adult": {
+      "es": "pregunten “What's this?” señalando la comida.",
+      "en": "ask “What's this?” pointing at the food."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

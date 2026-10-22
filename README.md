@@ -149,11 +149,44 @@ Progress uses **the same scheme as PyBot** with its own `pybotenglish.` prefix, 
 | `pybotenglish.activity.<activity-id>` | `complete` or `review` | A finished activity, or one to review | Yes |
 | `pybotenglish.progress.version` | A whole number up to `PROGRESS_VERSION` | Course content version the saved progress belongs to | No; the file carries `progressVersion` |
 
-Registered activity IDs (each lesson adds its ids to its step in `pathSteps` and to this list):
+Registered activity IDs (written by `tools/build-lessons.py`; each lesson's ids also live in its step in `pathSteps`):
 
-- Zone 00, Hello and goodbye: `helloGoodbye-arrive`, `helloGoodbye-listen-morning`, `helloGoodbye-hi-bye`, `helloGoodbye-night`, `helloGoodbye-true-false`, `helloGoodbye-fix`, `helloGoodbye-see-you`
-- Zone 00, How are you?: `howAreYou-order-question`, `howAreYou-gap`, `howAreYou-listen`, `howAreYou-answer`, `howAreYou-odd`, `howAreYou-fix`, `howAreYou-and-you`
-- Zone 00, Look, listen, say: `lookListenSay-listen-button`, `lookListenSay-slow-button`, `lookListenSay-listen-look`, `lookListenSay-listen-listen`, `lookListenSay-order`, `lookListenSay-no-grades`, `lookListenSay-album`
+<!-- activity-registry:start -->
+- `helloGoodbye` (How do you say hello in English?): `helloGoodbye-arrive`, `helloGoodbye-listen-morning`, `helloGoodbye-hi-bye`, `helloGoodbye-night`, `helloGoodbye-true-false`, `helloGoodbye-fix`, `helloGoodbye-see-you`
+- `howAreYou` (How are you?): `howAreYou-order-question`, `howAreYou-gap`, `howAreYou-listen`, `howAreYou-answer`, `howAreYou-odd`, `howAreYou-fix`, `howAreYou-and-you`
+- `lookListenSay` (Look, listen, say: how learning works here): `lookListenSay-listen-button`, `lookListenSay-slow-button`, `lookListenSay-listen-look`, `lookListenSay-listen-listen`, `lookListenSay-order`, `lookListenSay-no-grades`, `lookListenSay-album`
+- `abcLetters` (English letters have different names): `abcLetters-listen-e`, `abcLetters-listen-i`, `abcLetters-listen-g`, `abcLetters-h`, `abcLetters-order`, `abcLetters-no-enye`, `abcLetters-fix`
+- `abcVowels` (Vowels: a, e, i, o, u): `abcVowels-listen-apple`, `abcVowels-listen-umbrella`, `abcVowels-gap-a`, `abcVowels-gap-e`, `abcVowels-o`, `abcVowels-true`, `abcVowels-fix`
+- `abcSpell` (Spell your name): `abcSpell-cat`, `abcSpell-dog`, `abcSpell-listen`, `abcSpell-dog-choice`, `abcSpell-gap`, `abcSpell-ask`, `abcSpell-fix`
+- `numbersTen` (Count from 1 to 10): `numbersTen-listen-seven`, `numbersTen-listen-three`, `numbersTen-count`, `numbersTen-gap`, `numbersTen-odd`, `numbersTen-order`, `numbersTen-fix`
+- `numbersTwenty` (From 11 to 20): `numbersTwenty-listen-fifteen`, `numbersTwenty-listen-thirteen`, `numbersTwenty-sum`, `numbersTwenty-gap`, `numbersTwenty-true`, `numbersTwenty-order`, `numbersTwenty-fix`
+- `numbersHowMany` (How many?): `numbersHowMany-cats`, `numbersHowMany-gap`, `numbersHowMany-order`, `numbersHowMany-listen`, `numbersHowMany-read`, `numbersHowMany-fix`
+- `myName` (My name is…): `myName-order`, `myName-gap`, `myName-listen`, `myName-answer`, `myName-same`, `myName-fix`
+- `myAge` (I am 9. How old are you?): `myAge-listen`, `myAge-order`, `myAge-gap`, `myAge-answer`, `myAge-true`, `myAge-fix`
+- `myFamily` (My family): `myFamily-grandma`, `myFamily-listen`, `myFamily-gap`, `myFamily-odd`, `myFamily-order`, `myFamily-fix`
+- `myBody` (My body): `myBody-nose`, `myBody-ear-eye`, `myBody-gap`, `myBody-true`, `myBody-order`, `myBody-fix`
+- `feelings` (Feelings): `feelings-sad`, `feelings-tired`, `feelings-listen`, `feelings-odd`, `feelings-read`, `feelings-fix`
+- `iFeel` (I feel happy.): `iFeel-order`, `iFeel-gap`, `iFeel-read`, `iFeel-answer`, `iFeel-true`, `iFeel-fix`
+- `colors` (Colors): `colors-red`, `colors-blue`, `colors-listen`, `colors-blue-brown`, `colors-odd`, `colors-fix`
+- `shapes` (Shapes): `shapes-circle`, `shapes-triangle`, `shapes-listen`, `shapes-heart`, `shapes-odd`, `shapes-fix`
+- `itIsRed` (It is red.): `itIsRed-order`, `itIsRed-fix`, `itIsRed-gap`, `itIsRed-read`, `itIsRed-true`, `itIsRed-listen`
+- `backpack` (My backpack): `backpack-pencil`, `backpack-ruler`, `backpack-listen`, `backpack-an`, `backpack-odd`, `backpack-fix`
+- `thisThat` (This or that?): `thisThat-near`, `thisThat-far`, `thisThat-order`, `thisThat-answer`, `thisThat-true`, `thisThat-fix`
+- `animals` (Animals): `animals-rabbit`, `animals-lion`, `animals-listen-horse`, `animals-listen-duck`, `animals-odd`, `animals-fix`
+- `bigSmall` (Big or small?): `bigSmall-read`, `bigSmall-opposite`, `bigSmall-true`, `bigSmall-gap`, `bigSmall-order`, `bigSmall-fix`
+- `canCant` (It can fly!): `canCant-bird`, `canCant-true`, `canCant-read`, `canCant-order`, `canCant-gap`, `canCant-fix`
+- `food` (Food and drinks): `food-banana`, `food-milk`, `food-listen`, `food-drink`, `food-eat-drink`, `food-fix`
+- `iLike` (I like…): `iLike-order`, `iLike-gap`, `iLike-read`, `iLike-true`, `iLike-listen`, `iLike-fix`
+- `iDontLike` (I don't like…): `iDontLike-order`, `iDontLike-gap`, `iDontLike-answer`, `iDontLike-read`, `iDontLike-true`, `iDontLike-fix`
+- `days` (The days of the week): `days-listen`, `days-gap`, `days-weekend`, `days-capital`, `days-order`, `days-fix`
+- `dayParts` (Morning, afternoon and night): `dayParts-morning`, `dayParts-night`, `dayParts-gap`, `dayParts-listen`, `dayParts-true`, `dayParts-fix`
+- `routine` (My routine): `routine-first`, `routine-listen`, `routine-gap`, `routine-order`, `routine-read`, `routine-fix`
+- `classWords` (Open, close, listen!): `classWords-sit`, `classWords-hand`, `classWords-open`, `classWords-odd`, `classWords-true`, `classWords-fix`
+- `questions` (What? Who? Where?): `questions-who`, `questions-where`, `questions-what`, `questions-how-old`, `questions-order`, `questions-fix`
+- `inOnUnder` (In, on, under): `inOnUnder-in`, `inOnUnder-listen`, `inOnUnder-true`, `inOnUnder-gap`, `inOnUnder-order`, `inOnUnder-fix`
+- `house` (Rooms in a house): `house-bed`, `house-kitchen`, `house-listen`, `house-true`, `house-odd`, `house-fix`
+- `checkpoint1` (Show what you know: pit stop): `checkpoint1-hello`, `checkpoint1-spell`, `checkpoint1-number`, `checkpoint1-age`, `checkpoint1-family`, `checkpoint1-color`, `checkpoint1-an`, `checkpoint1-can`, `checkpoint1-like`, `checkpoint1-day`, `checkpoint1-class`, `checkpoint1-where`, `checkpoint1-intro`, `checkpoint1-like-order`
+<!-- activity-registry:end -->
 
 Storage rules (same as PyBot): only a learner-chosen name or nickname; never store typed answers, audio, or other personal data; a missing key means its default; storage failure never blocks a page; every page that stores progress has a labeled reset; backup includes only registered keys and is fully validated on import.
 
@@ -199,7 +232,7 @@ A short foundation, **six broad zones**, and a pit stop. English is wide, so the
 
 **Growth rule:** a new topic becomes a new page in the route of the zone it belongs to. A new zone is added only for a theme no existing zone covers (for example, a future "Tell a story" zone for past tense). This keeps the map short even when the course grows.
 
-Lessons are not written yet; every page is marked `soon: true` in `pathSteps` until it ships.
+Every page of the path is published. A future page starts with `soon: true` in `pathSteps` until it ships.
 
 | Zone | Pages in its route | Goal |
 |---|---|---|
@@ -219,10 +252,10 @@ Lessons follow the page anatomy in [`CONTENT_PLAN.md`](CONTENT_PLAN.md): Look an
 - **Data:** each zone's lessons live in `tools/lessons/zoneNN.py` as plain data (texts as `{es, en}`; plain strings are the English being learned).
 - **Pages:** `python3 tools/build-lessons.py` checks every lesson (6+ activities, ids prefixed with the step id, ES and EN for every text, valid answers) and writes `lessons/*.html`: a short shell with the lesson as JSON. The generated pages are committed, so the site still has no build step.
 - **Drawing:** `lesson.js` draws the page from that JSON, reuses PyBot's figure, stores answers with the progress scheme (`complete` / `review`), shows done / not tried / review counters, offers a page-only reset, marks the step done when every activity is complete, and lets stickers, diplomas and the little PyBot react.
-- **Activity types today:** `choice` (picture-word, listen-pick, read-pick, gap-fill, odd-one-out, true-false, fix-pybot) and `order` (tap tiles to build a sentence).
+- **Activity types today:** `choice` (picture-word, listen-pick, read-pick, gap-fill, odd-one-out, true-false, fix-pybot) and `order` (tap tiles to build a sentence). The pit stop (`review: true`, `selfcheck: true`) skips Look and New words and ends with a self-check per zone (😀 / 🙂 / 🤔, stored in `pybotenglish.selfcheck`); zones marked 🤔 show **TO REVIEW** on the path.
 - **Publishing a page:** add its data, run the builder, remove `soon: true` from its step in `pathSteps`, add its activity ids there and to the registry above, then run `node tools/progress-version.mjs --bump "what changed"`.
 
-The path map shows the building state: published pages are links, each zone says how many of its pages are ready (🚧 In progress · 3 of 3 ready), and the course page shows how many pages of the whole path are ready.
+The path map shows the building state: published pages are links, each zone shows its state (▶ Ready to start, 🚧 In progress · 2 of 6 ready while a zone is being built, or ★ Zone finished), and the course page shows how many pages of the whole path are ready (✅ when the path is complete).
 
 ## Translator page
 
@@ -278,8 +311,7 @@ python -m http.server 8000
 - [x] Home page, learning path index, album, diploma, and FAQ (EN/ES)
 - [x] Progress, stickers, streaks, diplomas, backup, and reset on the PyBot scheme
 - [x] Long-term content plan ([`CONTENT_PLAN.md`](CONTENT_PLAN.md))
-- [x] Lesson engine and zone 00 (Hello!): 3 pages, 21 activities
-- [ ] Zones 01–06 and the pit stop
+- [x] Lesson engine and the whole path: zones 00–06 and the pit stop (34 pages, 220 activities)
 - [ ] Word list (“My words”) and the guide for families and teachers
 - [ ] Review with María Ángel and her friends
 - [ ] GitHub Pages publication

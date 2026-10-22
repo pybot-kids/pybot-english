@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pregunta cuántos hay y responde. Cuando hay más de uno, casi siempre se agrega “-s”." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>How many? ¿Cuántos hay? — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="numbersHowMany">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "numbersHowMany",
+  "mood": "curious",
+  "title": {
+    "es": "How many? ¿Cuántos hay?",
+    "en": "How many?"
+  },
+  "intro": {
+    "es": "Pregunta cuántos hay y responde. Cuando hay más de uno, casi siempre se agrega “-s”.",
+    "en": "Ask how many there are and answer. For more than one, you usually add “-s”."
+  },
+  "pybot": {
+    "es": "How many cats? Three cats! Miau, miau, miau.",
+    "en": "How many cats? Three cats! Meow, meow, meow."
+  },
+  "look": [
+    {
+      "icon": "❓",
+      "word": "how many?",
+      "meaning": {
+        "es": "¿cuántos?",
+        "en": "¿cuántos?"
+      }
+    },
+    {
+      "icon": "🐱",
+      "word": "cat → cats",
+      "meaning": {
+        "es": "gato → gatos",
+        "en": "gato → gatos"
+      }
+    },
+    {
+      "icon": "🐶",
+      "word": "dog → dogs",
+      "meaning": {
+        "es": "perro → perros",
+        "en": "perro → perros"
+      }
+    },
+    {
+      "icon": "🍎",
+      "word": "apple → apples",
+      "meaning": {
+        "es": "manzana → manzanas",
+        "en": "manzana → manzanas"
+      }
+    },
+    {
+      "icon": "📚",
+      "word": "book → books",
+      "meaning": {
+        "es": "libro → libros",
+        "en": "libro → libros"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "How many cats?",
+        "meaning": {
+          "es": "¿Cuántos gatos?",
+          "en": "¿Cuántos gatos?"
+        }
+      },
+      {
+        "en": "Three cats.",
+        "meaning": {
+          "es": "Tres gatos.",
+          "en": "Tres gatos."
+        }
+      },
+      {
+        "en": "One dog, two dogs.",
+        "meaning": {
+          "es": "Un perro, dos perros.",
+          "en": "Un perro, dos perros."
+        }
+      }
+    ],
+    "rule": {
+      "es": "Para más de uno, agrega “-s”: one cat, two cats.",
+      "en": "For more than one, add “-s”: one cat, two cats."
+    }
+  },
+  "activities": [
+    {
+      "id": "numbersHowMany-cats",
+      "type": "choice",
+      "prompt": {
+        "es": "🐱🐱🐱 How many cats?",
+        "en": "🐱🐱🐱 How many cats?"
+      },
+      "options": [
+        "Three cats.",
+        "Three cat.",
+        "Two cats."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Son tres, y más de uno lleva “-s”.",
+        "en": "Three, and more than one takes “-s”."
+      },
+      "why": {
+        "es": "“Three cats”: tres gatos.",
+        "en": "“Three cats.”"
+      }
+    },
+    {
+      "id": "numbersHowMany-gap",
+      "type": "choice",
+      "prompt": {
+        "es": "Completa: “two ___” 🐶🐶",
+        "en": "Fill in: “two ___” 🐶🐶"
+      },
+      "options": [
+        "dogs",
+        "dog"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Son dos perros.",
+        "en": "There are two."
+      },
+      "why": {
+        "es": "Two dogs, con “-s”.",
+        "en": "Two dogs, with “-s”."
+      },
+      "show": "two ___"
+    },
+    {
+      "id": "numbersHowMany-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma la pregunta “¿Cuántas manzanas?”.",
+        "en": "Build the question “How many apples?”."
+      },
+      "tiles": [
+        "How",
+        "many",
+        "apples?"
+      ],
+      "hint": {
+        "es": "Empieza con How.",
+        "en": "Start with How."
+      },
+      "why": {
+        "es": "“How many apples?”",
+        "en": "“How many apples?”"
+      }
+    },
+    {
+      "id": "numbersHowMany-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué ves?",
+        "en": "Listen. What do you see?"
+      },
+      "options": [
+        {
+          "es": "📚 5 libros",
+          "en": "📚 5 books"
+        },
+        {
+          "es": "📚 4 libros",
+          "en": "📚 4 books"
+        },
+        {
+          "es": "📚 9 libros",
+          "en": "📚 9 books"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Escucha el número.",
+        "en": "Listen for the number."
+      },
+      "why": {
+        "es": "“Five books”: cinco libros.",
+        "en": "“Five books.”"
+      },
+      "listen": "five books"
+    },
+    {
+      "id": "numbersHowMany-read",
+      "type": "choice",
+      "prompt": {
+        "es": "Lee: “Two dogs.” ¿Cuál es?",
+        "en": "Read: “Two dogs.” Which one?"
+      },
+      "options": [
+        {
+          "es": "🐶🐶",
+          "en": "🐶🐶"
+        },
+        {
+          "es": "🐶",
+          "en": "🐶"
+        },
+        {
+          "es": "🐶🐶🐶",
+          "en": "🐶🐶🐶"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Two es dos.",
+        "en": "Two is 2."
+      },
+      "why": {
+        "es": "Dos perros: 🐶🐶.",
+        "en": "Two dogs: 🐶🐶."
+      }
+    },
+    {
+      "id": "numbersHowMany-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot escribió “three cat”. ¿Cómo se escribe bien?",
+        "en": "🤖 PyBot wrote “three cat”. What's right?"
+      },
+      "options": [
+        "three cats",
+        "three cat",
+        "threes cat"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Más de uno lleva “-s”.",
+        "en": "More than one takes “-s”."
+      },
+      "why": {
+        "es": "¡Arreglado! Three cats.",
+        "en": "Fixed! Three cats."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "how many?",
+      "meaning": {
+        "es": "¿cuántos?",
+        "en": "¿cuántos?"
+      }
+    },
+    {
+      "en": "cat → cats",
+      "meaning": {
+        "es": "gato → gatos",
+        "en": "gato → gatos"
+      }
+    },
+    {
+      "en": "dog → dogs",
+      "meaning": {
+        "es": "perro → perros",
+        "en": "perro → perros"
+      }
+    },
+    {
+      "en": "apple → apples",
+      "meaning": {
+        "es": "manzana → manzanas",
+        "en": "manzana → manzanas"
+      }
+    },
+    {
+      "en": "book → books",
+      "meaning": {
+        "es": "libro → libros",
+        "en": "libro → libros"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Pregunta “How many…?”",
+      "en": "Ask “How many…?”"
+    },
+    "text": {
+      "es": "En la mesa, pregunta “How many spoons?”, “How many apples?” y responde con el número en inglés.",
+      "en": "At the table, ask “How many spoons?”, “How many apples?” and answer in English."
+    },
+    "adult": {
+      "es": "respondan con frases completas: “Two spoons”.",
+      "en": "answer with full phrases: “Two spoons”."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

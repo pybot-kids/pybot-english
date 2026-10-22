@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Las partes del día y el saludo para cada una." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>Mañana, tarde y noche — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="dayParts">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "dayParts",
+  "mood": "happy",
+  "title": {
+    "es": "Mañana, tarde y noche",
+    "en": "Morning, afternoon and night"
+  },
+  "intro": {
+    "es": "Las partes del día y el saludo para cada una.",
+    "en": "Parts of the day and the greeting for each."
+  },
+  "pybot": {
+    "es": "Good evening! Ojo: good night es para irte a dormir.",
+    "en": "Good evening! Careful: good night is for going to bed."
+  },
+  "look": [
+    {
+      "icon": "🌅",
+      "word": "morning",
+      "meaning": {
+        "es": "mañana",
+        "en": "mañana"
+      }
+    },
+    {
+      "icon": "☀️",
+      "word": "afternoon",
+      "meaning": {
+        "es": "tarde",
+        "en": "tarde"
+      }
+    },
+    {
+      "icon": "🌆",
+      "word": "evening",
+      "meaning": {
+        "es": "anochecer, noche temprano",
+        "en": "anochecer, noche temprano"
+      }
+    },
+    {
+      "icon": "🌙",
+      "word": "night",
+      "meaning": {
+        "es": "noche",
+        "en": "noche"
+      }
+    },
+    {
+      "icon": "👋",
+      "word": "good evening",
+      "meaning": {
+        "es": "buenas noches (al llegar)",
+        "en": "buenas noches (al llegar)"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "Good morning!",
+        "meaning": {
+          "es": "¡Buenos días!",
+          "en": "¡Buenos días!"
+        }
+      },
+      {
+        "en": "Good evening!",
+        "meaning": {
+          "es": "¡Buenas noches! (al llegar)",
+          "en": "¡Buenas noches! (al llegar)"
+        }
+      },
+      {
+        "en": "Good night!",
+        "meaning": {
+          "es": "¡Buenas noches! (al irte a dormir)",
+          "en": "¡Buenas noches! (al irte a dormir)"
+        }
+      }
+    ],
+    "rule": {
+      "es": "En la noche, al llegar se dice “good evening”; al despedirte o irte a dormir, “good night”.",
+      "en": "At night, say “good evening” when you arrive and “good night” when you leave or go to bed."
+    }
+  },
+  "activities": [
+    {
+      "id": "dayParts-morning",
+      "type": "choice",
+      "prompt": {
+        "es": "🌅 ¿Qué parte del día es?",
+        "en": "🌅 Which part of the day?"
+      },
+      "options": [
+        "morning",
+        "night",
+        "evening"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Sale el sol.",
+        "en": "The sun rises."
+      },
+      "why": {
+        "es": "“Morning” es la mañana.",
+        "en": "“Morning.”"
+      }
+    },
+    {
+      "id": "dayParts-night",
+      "type": "choice",
+      "prompt": {
+        "es": "🌙 ¿Qué parte del día es?",
+        "en": "🌙 Which part of the day?"
+      },
+      "options": [
+        "night",
+        "afternoon",
+        "morning"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Hay luna.",
+        "en": "The moon is out."
+      },
+      "why": {
+        "es": "“Night” es la noche.",
+        "en": "“Night.”"
+      }
+    },
+    {
+      "id": "dayParts-gap",
+      "type": "choice",
+      "prompt": {
+        "es": "Son las 3 de la tarde. Completa: “Good ___!”",
+        "en": "It's 3 p.m. Fill in: “Good ___!”"
+      },
+      "options": [
+        "afternoon",
+        "night",
+        "morning"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Después del almuerzo.",
+        "en": "After lunch."
+      },
+      "why": {
+        "es": "“Good afternoon!”",
+        "en": "“Good afternoon!”"
+      },
+      "show": "Good ___!"
+    },
+    {
+      "id": "dayParts-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Cuándo se dice?",
+        "en": "Listen. When do you say it?"
+      },
+      "options": [
+        {
+          "es": "🌆 Al llegar en la noche",
+          "en": "🌆 Arriving in the evening"
+        },
+        {
+          "es": "☀️ Por la mañana",
+          "en": "☀️ In the morning"
+        },
+        {
+          "es": "🛏️ Al irte a dormir",
+          "en": "🛏️ Going to bed"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es un saludo para llegar.",
+        "en": "It's a greeting for arriving."
+      },
+      "why": {
+        "es": "“Good evening” es para saludar en la noche.",
+        "en": "“Good evening” is for arriving."
+      },
+      "listen": "Good evening!"
+    },
+    {
+      "id": "dayParts-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? “Good night” es para saludar cuando llegas en la noche.",
+        "en": "True or false? “Good night” is for arriving at night."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 1,
+      "hint": {
+        "es": "Good night es para despedirte.",
+        "en": "Good night is for leaving."
+      },
+      "why": {
+        "es": "Falso: al llegar es “good evening”.",
+        "en": "False: arriving is “good evening”."
+      }
+    },
+    {
+      "id": "dayParts-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot llega a una fiesta a las 7 p.m. y dice “Good night!”. ¿Qué debió decir?",
+        "en": "🤖 PyBot arrives at a party at 7 p.m. and says “Good night!”. What should it say?"
+      },
+      "options": [
+        "Good evening!",
+        "Good morning!",
+        "Good night!"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Está llegando, no yéndose.",
+        "en": "It's arriving, not leaving."
+      },
+      "why": {
+        "es": "¡Arreglado! Good evening!",
+        "en": "Fixed! Good evening!"
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "morning",
+      "meaning": {
+        "es": "mañana",
+        "en": "mañana"
+      }
+    },
+    {
+      "en": "afternoon",
+      "meaning": {
+        "es": "tarde",
+        "en": "tarde"
+      }
+    },
+    {
+      "en": "evening",
+      "meaning": {
+        "es": "anochecer, noche temprano",
+        "en": "anochecer, noche temprano"
+      }
+    },
+    {
+      "en": "night",
+      "meaning": {
+        "es": "noche",
+        "en": "noche"
+      }
+    },
+    {
+      "en": "good evening",
+      "meaning": {
+        "es": "buenas noches (al llegar)",
+        "en": "buenas noches (al llegar)"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "El saludo correcto",
+      "en": "The right greeting"
+    },
+    "text": {
+      "es": "Hoy saluda según la hora: good morning, good afternoon, good evening… y al acostarte, good night.",
+      "en": "Today, greet by the time: good morning, good afternoon, good evening… and at bedtime, good night."
+    },
+    "adult": {
+      "es": "respondan con el mismo saludo.",
+      "en": "answer with the same greeting."
+    }
+  }
+}
+    </script>
+  </body>
+</html>
