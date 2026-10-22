@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Di lo que estás haciendo en este momento: “I&#x27;m” + una acción con “-ing”." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>What are you doing? ¿Qué estás haciendo? — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="whatAreYouDoing">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "whatAreYouDoing",
+  "mood": "curious",
+  "title": {
+    "es": "What are you doing? ¿Qué estás haciendo?",
+    "en": "What are you doing?"
+  },
+  "intro": {
+    "es": "Di lo que estás haciendo en este momento: “I'm” + una acción con “-ing”.",
+    "en": "Say what you are doing right now: “I'm” + an action with “-ing”."
+  },
+  "pybot": {
+    "es": "What are you doing? I'm learning English… ¡contigo!",
+    "en": "What are you doing? I'm learning English… with you!"
+  },
+  "look": [
+    {
+      "icon": "🎮",
+      "word": "I'm playing",
+      "meaning": {
+        "es": "estoy jugando",
+        "en": "estoy jugando"
+      }
+    },
+    {
+      "icon": "📖",
+      "word": "I'm reading",
+      "meaning": {
+        "es": "estoy leyendo",
+        "en": "estoy leyendo"
+      }
+    },
+    {
+      "icon": "🍽️",
+      "word": "I'm eating",
+      "meaning": {
+        "es": "estoy comiendo",
+        "en": "estoy comiendo"
+      }
+    },
+    {
+      "icon": "😴",
+      "word": "I'm sleeping",
+      "meaning": {
+        "es": "estoy durmiendo",
+        "en": "estoy durmiendo"
+      }
+    },
+    {
+      "icon": "🖍️",
+      "word": "I'm drawing",
+      "meaning": {
+        "es": "estoy dibujando",
+        "en": "estoy dibujando"
+      }
+    },
+    {
+      "icon": "🎵",
+      "word": "I'm singing",
+      "meaning": {
+        "es": "estoy cantando",
+        "en": "estoy cantando"
+      }
+    },
+    {
+      "icon": "❓",
+      "word": "What are you doing?",
+      "meaning": {
+        "es": "¿qué estás haciendo?",
+        "en": "¿qué estás haciendo?"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "What are you doing?",
+        "meaning": {
+          "es": "¿Qué estás haciendo?",
+          "en": "¿Qué estás haciendo?"
+        }
+      },
+      {
+        "en": "I'm reading a book.",
+        "meaning": {
+          "es": "Estoy leyendo un libro.",
+          "en": "Estoy leyendo un libro."
+        }
+      },
+      {
+        "en": "I'm playing with my dog.",
+        "meaning": {
+          "es": "Estoy jugando con mi perro.",
+          "en": "Estoy jugando con mi perro."
+        }
+      }
+    ],
+    "rule": {
+      "es": "Para lo que pasa ahora mismo: I'm + acción + “-ing”. Es como el “-ando / -iendo” del español: jugando = playing.",
+      "en": "For what's happening right now: I'm + action + “-ing”. Like Spanish “-ando / -iendo”: jugando = playing."
+    }
+  },
+  "activities": [
+    {
+      "id": "whatAreYouDoing-read",
+      "type": "choice",
+      "prompt": {
+        "es": "📖 ¿Qué está haciendo?",
+        "en": "📖 What is the person doing?"
+      },
+      "options": [
+        "I'm reading.",
+        "I'm sleeping.",
+        "I'm eating."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Tiene un libro.",
+        "en": "There's a book."
+      },
+      "why": {
+        "es": "“I'm reading”: estoy leyendo.",
+        "en": "“I'm reading.”"
+      }
+    },
+    {
+      "id": "whatAreYouDoing-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué está haciendo?",
+        "en": "Listen. What is the person doing?"
+      },
+      "options": [
+        {
+          "es": "🎵 Cantando",
+          "en": "🎵 Singing"
+        },
+        {
+          "es": "🎮 Jugando",
+          "en": "🎮 Playing"
+        },
+        {
+          "es": "😴 Durmiendo",
+          "en": "😴 Sleeping"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Escucha la palabra que termina en “-ing”.",
+        "en": "Listen for the “-ing” word."
+      },
+      "why": {
+        "es": "“I'm singing”: estoy cantando.",
+        "en": "“I'm singing.”"
+      },
+      "listen": "I'm singing."
+    },
+    {
+      "id": "whatAreYouDoing-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma la pregunta “¿Qué estás haciendo?”.",
+        "en": "Build “What are you doing?”."
+      },
+      "tiles": [
+        "What",
+        "are",
+        "you",
+        "doing?"
+      ],
+      "hint": {
+        "es": "Empieza con What.",
+        "en": "Start with What."
+      },
+      "why": {
+        "es": "“What are you doing?”",
+        "en": "“What are you doing?”"
+      }
+    },
+    {
+      "id": "whatAreYouDoing-gap",
+      "type": "choice",
+      "prompt": {
+        "es": "🖍️ Completa: “I'm ___.”",
+        "en": "🖍️ Fill in: “I'm ___.”"
+      },
+      "options": [
+        "drawing",
+        "draw",
+        "draws"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Lleva “-ing”.",
+        "en": "It takes “-ing”."
+      },
+      "why": {
+        "es": "“I'm drawing”: estoy dibujando.",
+        "en": "“I'm drawing.”"
+      },
+      "show": "I'm ___."
+    },
+    {
+      "id": "whatAreYouDoing-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? “I'm eating” significa “estoy comiendo”.",
+        "en": "True or false? “I'm eating” means “estoy comiendo”."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Eat es comer.",
+        "en": "Eat is comer."
+      },
+      "why": {
+        "es": "Verdadero: eating = comiendo.",
+        "en": "True: eating = comiendo."
+      }
+    },
+    {
+      "id": "whatAreYouDoing-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot escribió “I playing”. ¿Qué le falta?",
+        "en": "🤖 PyBot wrote “I playing”. What's missing?"
+      },
+      "options": [
+        "I'm playing.",
+        "I playing.",
+        "I play-ing am."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Falta “am” (o la forma corta “'m”).",
+        "en": "“am” is missing (or “'m”)."
+      },
+      "why": {
+        "es": "¡Arreglado! I'm playing.",
+        "en": "Fixed! I'm playing."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "I'm playing",
+      "meaning": {
+        "es": "estoy jugando",
+        "en": "estoy jugando"
+      }
+    },
+    {
+      "en": "I'm reading",
+      "meaning": {
+        "es": "estoy leyendo",
+        "en": "estoy leyendo"
+      }
+    },
+    {
+      "en": "I'm eating",
+      "meaning": {
+        "es": "estoy comiendo",
+        "en": "estoy comiendo"
+      }
+    },
+    {
+      "en": "I'm sleeping",
+      "meaning": {
+        "es": "estoy durmiendo",
+        "en": "estoy durmiendo"
+      }
+    },
+    {
+      "en": "I'm drawing",
+      "meaning": {
+        "es": "estoy dibujando",
+        "en": "estoy dibujando"
+      }
+    },
+    {
+      "en": "I'm singing",
+      "meaning": {
+        "es": "estoy cantando",
+        "en": "estoy cantando"
+      }
+    },
+    {
+      "en": "What are you doing?",
+      "meaning": {
+        "es": "¿qué estás haciendo?",
+        "en": "¿qué estás haciendo?"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "¿Qué estás haciendo?",
+      "en": "What are you doing?"
+    },
+    "text": {
+      "es": "Durante el día, pregunta en casa “What are you doing?” y responde tú también: “I'm reading”, “I'm eating”…",
+      "en": "During the day, ask at home “What are you doing?” and answer too: “I'm reading”, “I'm eating”…"
+    },
+    "adult": {
+      "es": "respondan con lo que están haciendo de verdad, aunque sea “I'm cooking”.",
+      "en": "answer with what you're really doing, even “I'm cooking”."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

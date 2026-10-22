@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Lo que te gusta hacer en tu tiempo libre. Truco: después de “I like” la acción va con “-ing”." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>Pasatiempos — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="hobbies">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "hobbies",
+  "mood": "starry",
+  "title": {
+    "es": "Pasatiempos",
+    "en": "Hobbies"
+  },
+  "intro": {
+    "es": "Lo que te gusta hacer en tu tiempo libre. Truco: después de “I like” la acción va con “-ing”.",
+    "en": "What you like to do in your free time. Tip: after “I like” the action takes “-ing”."
+  },
+  "pybot": {
+    "es": "I like dancing and singing. ¡Y contar chistes!",
+    "en": "I like dancing and singing. And telling jokes!"
+  },
+  "look": [
+    {
+      "icon": "🖍️",
+      "word": "drawing",
+      "meaning": {
+        "es": "dibujar",
+        "en": "dibujar"
+      }
+    },
+    {
+      "icon": "🎨",
+      "word": "painting",
+      "meaning": {
+        "es": "pintar",
+        "en": "pintar"
+      }
+    },
+    {
+      "icon": "🎤",
+      "word": "singing",
+      "meaning": {
+        "es": "cantar",
+        "en": "cantar"
+      }
+    },
+    {
+      "icon": "💃",
+      "word": "dancing",
+      "meaning": {
+        "es": "bailar",
+        "en": "bailar"
+      }
+    },
+    {
+      "icon": "📚",
+      "word": "reading",
+      "meaning": {
+        "es": "leer",
+        "en": "leer"
+      }
+    },
+    {
+      "icon": "🎮",
+      "word": "playing video games",
+      "meaning": {
+        "es": "jugar videojuegos",
+        "en": "jugar videojuegos"
+      }
+    },
+    {
+      "icon": "🎸",
+      "word": "playing the guitar",
+      "meaning": {
+        "es": "tocar la guitarra",
+        "en": "tocar la guitarra"
+      }
+    },
+    {
+      "icon": "🧩",
+      "word": "doing puzzles",
+      "meaning": {
+        "es": "armar rompecabezas",
+        "en": "armar rompecabezas"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "I like drawing.",
+        "meaning": {
+          "es": "Me gusta dibujar.",
+          "en": "Me gusta dibujar."
+        }
+      },
+      {
+        "en": "I love dancing!",
+        "meaning": {
+          "es": "¡Me encanta bailar!",
+          "en": "¡Me encanta bailar!"
+        }
+      },
+      {
+        "en": "Do you like reading?",
+        "meaning": {
+          "es": "¿Te gusta leer?",
+          "en": "¿Te gusta leer?"
+        }
+      }
+    ],
+    "rule": {
+      "es": "Después de “like” o “love”, la acción lleva “-ing”: I like drawing. Los instrumentos sí llevan “the”: play the guitar.",
+      "en": "After “like” or “love”, the action takes “-ing”: I like drawing. Instruments take “the”: play the guitar."
+    }
+  },
+  "activities": [
+    {
+      "id": "hobbies-paint",
+      "type": "choice",
+      "prompt": {
+        "es": "🎨 ¿Qué pasatiempo es?",
+        "en": "🎨 Which hobby?"
+      },
+      "options": [
+        "painting",
+        "singing",
+        "reading"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Se usa pincel.",
+        "en": "You use a brush."
+      },
+      "why": {
+        "es": "“Painting” es pintar.",
+        "en": "“Painting.”"
+      }
+    },
+    {
+      "id": "hobbies-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué le gusta?",
+        "en": "Listen. What does the person like?"
+      },
+      "options": [
+        {
+          "es": "🎸",
+          "en": "🎸"
+        },
+        {
+          "es": "📚",
+          "en": "📚"
+        },
+        {
+          "es": "🧩",
+          "en": "🧩"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es un instrumento.",
+        "en": "It's an instrument."
+      },
+      "why": {
+        "es": "“I like playing the guitar.”",
+        "en": "“I like playing the guitar.”"
+      },
+      "listen": "I like playing the guitar."
+    },
+    {
+      "id": "hobbies-gap",
+      "type": "choice",
+      "prompt": {
+        "es": "Completa: “I like ___.” 🖍️",
+        "en": "Fill in: “I like ___.” 🖍️"
+      },
+      "options": [
+        "drawing",
+        "draw",
+        "draws"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Después de like va “-ing”.",
+        "en": "After like use “-ing”."
+      },
+      "why": {
+        "es": "“I like drawing.”",
+        "en": "“I like drawing.”"
+      },
+      "show": "I like ___."
+    },
+    {
+      "id": "hobbies-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma: “Me encanta bailar.”",
+        "en": "Build: “I love dancing.”"
+      },
+      "tiles": [
+        "I",
+        "love",
+        "dancing."
+      ],
+      "hint": {
+        "es": "Empieza con I.",
+        "en": "Start with I."
+      },
+      "why": {
+        "es": "“I love dancing.”",
+        "en": "“I love dancing.”"
+      }
+    },
+    {
+      "id": "hobbies-odd",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Cuál NO es un pasatiempo?",
+        "en": "Which one is NOT a hobby?"
+      },
+      "options": [
+        "Monday",
+        "drawing",
+        "singing",
+        "reading"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Uno es un día.",
+        "en": "One is a day."
+      },
+      "why": {
+        "es": "“Monday” es lunes.",
+        "en": "“Monday” is a day."
+      }
+    },
+    {
+      "id": "hobbies-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot escribió “I like play the guitar”. ¿Cómo se escribe bien?",
+        "en": "🤖 PyBot wrote “I like play the guitar”. What's right?"
+      },
+      "options": [
+        "I like playing the guitar.",
+        "I like play the guitar.",
+        "I like plays the guitar."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Después de like va “-ing”.",
+        "en": "After like use “-ing”."
+      },
+      "why": {
+        "es": "¡Arreglado! I like playing the guitar.",
+        "en": "Fixed!"
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "drawing",
+      "meaning": {
+        "es": "dibujar",
+        "en": "dibujar"
+      }
+    },
+    {
+      "en": "painting",
+      "meaning": {
+        "es": "pintar",
+        "en": "pintar"
+      }
+    },
+    {
+      "en": "singing",
+      "meaning": {
+        "es": "cantar",
+        "en": "cantar"
+      }
+    },
+    {
+      "en": "dancing",
+      "meaning": {
+        "es": "bailar",
+        "en": "bailar"
+      }
+    },
+    {
+      "en": "reading",
+      "meaning": {
+        "es": "leer",
+        "en": "leer"
+      }
+    },
+    {
+      "en": "playing video games",
+      "meaning": {
+        "es": "jugar videojuegos",
+        "en": "jugar videojuegos"
+      }
+    },
+    {
+      "en": "playing the guitar",
+      "meaning": {
+        "es": "tocar la guitarra",
+        "en": "tocar la guitarra"
+      }
+    },
+    {
+      "en": "doing puzzles",
+      "meaning": {
+        "es": "armar rompecabezas",
+        "en": "armar rompecabezas"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Mis pasatiempos",
+      "en": "My hobbies"
+    },
+    "text": {
+      "es": "Dibuja tus tres pasatiempos favoritos y preséntalos: “I like drawing, singing and reading.”",
+      "en": "Draw your three favorite hobbies and present them: “I like drawing, singing and reading.”"
+    },
+    "adult": {
+      "es": "cuenten también los suyos: “I like cooking.”",
+      "en": "share yours too: “I like cooking.”"
+    }
+  }
+}
+    </script>
+  </body>
+</html>
