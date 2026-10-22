@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pregunta y di la hora: en punto y y media." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>What time is it? La hora — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="whatTime">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "whatTime",
+  "mood": "counting",
+  "title": {
+    "es": "What time is it? La hora",
+    "en": "What time is it?"
+  },
+  "intro": {
+    "es": "Pregunta y di la hora: en punto y y media.",
+    "en": "Ask and tell the time: o'clock and half past."
+  },
+  "pybot": {
+    "es": "What time is it? It's three o'clock… ¡hora de recargarme! 🔋",
+    "en": "What time is it? It's three o'clock… recharge time! 🔋"
+  },
+  "look": [
+    {
+      "icon": "❓",
+      "word": "What time is it?",
+      "meaning": {
+        "es": "¿qué hora es?",
+        "en": "¿qué hora es?"
+      }
+    },
+    {
+      "icon": "🕒",
+      "word": "It's three o'clock.",
+      "meaning": {
+        "es": "son las tres en punto",
+        "en": "son las tres en punto"
+      }
+    },
+    {
+      "icon": "🕞",
+      "word": "It's half past three.",
+      "meaning": {
+        "es": "son las tres y media",
+        "en": "son las tres y media"
+      }
+    },
+    {
+      "icon": "🕖",
+      "word": "at seven",
+      "meaning": {
+        "es": "a las siete",
+        "en": "a las siete"
+      }
+    },
+    {
+      "icon": "⏰",
+      "word": "clock",
+      "meaning": {
+        "es": "reloj",
+        "en": "reloj"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "What time is it? It's four o'clock.",
+        "meaning": {
+          "es": "¿Qué hora es? Son las cuatro en punto.",
+          "en": "¿Qué hora es? Son las cuatro en punto."
+        }
+      },
+      {
+        "en": "I wake up at seven.",
+        "meaning": {
+          "es": "Me despierto a las siete.",
+          "en": "Me despierto a las siete."
+        }
+      }
+    ],
+    "rule": {
+      "es": "En punto: número + o'clock. Y media: half past + número. Para decir cuándo pasa algo: at + la hora.",
+      "en": "On the hour: number + o'clock. Half past: half past + number. To say when: at + the time."
+    }
+  },
+  "activities": [
+    {
+      "id": "whatTime-three",
+      "type": "choice",
+      "prompt": {
+        "es": "🕒 ¿Qué hora es?",
+        "en": "🕒 What time is it?"
+      },
+      "options": [
+        "It's three o'clock.",
+        "It's half past three.",
+        "It's seven o'clock."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "La aguja larga está arriba.",
+        "en": "The long hand points up."
+      },
+      "why": {
+        "es": "Las tres en punto: three o'clock.",
+        "en": "Three o'clock."
+      }
+    },
+    {
+      "id": "whatTime-half",
+      "type": "choice",
+      "prompt": {
+        "es": "🕞 ¿Qué hora es?",
+        "en": "🕞 What time is it?"
+      },
+      "options": [
+        "It's half past three.",
+        "It's three o'clock.",
+        "It's half past seven."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "La aguja larga está abajo: y media.",
+        "en": "The long hand points down: half past."
+      },
+      "why": {
+        "es": "Las tres y media: half past three.",
+        "en": "Half past three."
+      }
+    },
+    {
+      "id": "whatTime-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué hora es?",
+        "en": "Listen. What time is it?"
+      },
+      "options": [
+        {
+          "es": "🕘 9:00",
+          "en": "🕘 9:00"
+        },
+        {
+          "es": "🕤 9:30",
+          "en": "🕤 9:30"
+        },
+        {
+          "es": "🕔 5:00",
+          "en": "🕔 5:00"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Escuchaste “o'clock”.",
+        "en": "You heard “o'clock”."
+      },
+      "why": {
+        "es": "“Nine o'clock”: las nueve en punto.",
+        "en": "“Nine o'clock.”"
+      },
+      "listen": "It's nine o'clock."
+    },
+    {
+      "id": "whatTime-gap",
+      "type": "choice",
+      "prompt": {
+        "es": "Completa: “I go to bed ___ nine.”",
+        "en": "Fill in: “I go to bed ___ nine.”"
+      },
+      "options": [
+        "at",
+        "in",
+        "on"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Con la hora se usa “at”.",
+        "en": "Use “at” with the time."
+      },
+      "why": {
+        "es": "“At nine”: a las nueve.",
+        "en": "“At nine.”"
+      },
+      "show": "I go to bed ___ nine."
+    },
+    {
+      "id": "whatTime-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma: “¿Qué hora es?”",
+        "en": "Build: “What time is it?”"
+      },
+      "tiles": [
+        "What",
+        "time",
+        "is",
+        "it?"
+      ],
+      "hint": {
+        "es": "Empieza con What.",
+        "en": "Start with What."
+      },
+      "why": {
+        "es": "“What time is it?”",
+        "en": "“What time is it?”"
+      }
+    },
+    {
+      "id": "whatTime-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? “Half past six” son las seis y media.",
+        "en": "True or false? “Half past six” is 6:30."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Half es mitad.",
+        "en": "Half means mitad."
+      },
+      "why": {
+        "es": "Verdadero: 6:30.",
+        "en": "True: 6:30."
+      }
+    },
+    {
+      "id": "whatTime-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot dijo “It's three and half”. ¿Cómo se dice?",
+        "en": "🤖 PyBot said “It's three and half”. What's right?"
+      },
+      "options": [
+        "It's half past three.",
+        "It's three and half.",
+        "It's half three o'clock."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Half past va primero.",
+        "en": "Half past goes first."
+      },
+      "why": {
+        "es": "¡Arreglado! It's half past three.",
+        "en": "Fixed! It's half past three."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "What time is it?",
+      "meaning": {
+        "es": "¿qué hora es?",
+        "en": "¿qué hora es?"
+      }
+    },
+    {
+      "en": "It's three o'clock.",
+      "meaning": {
+        "es": "son las tres en punto",
+        "en": "son las tres en punto"
+      }
+    },
+    {
+      "en": "It's half past three.",
+      "meaning": {
+        "es": "son las tres y media",
+        "en": "son las tres y media"
+      }
+    },
+    {
+      "en": "at seven",
+      "meaning": {
+        "es": "a las siete",
+        "en": "a las siete"
+      }
+    },
+    {
+      "en": "clock",
+      "meaning": {
+        "es": "reloj",
+        "en": "reloj"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "¿Qué hora es?",
+      "en": "What time is it?"
+    },
+    "text": {
+      "es": "Hoy pregunta la hora en inglés tres veces: “What time is it?”. Mira el reloj y respondan juntos: “It's five o'clock!”.",
+      "en": "Ask the time in English three times today: “What time is it?”. Look at the clock and answer together: “It's five o'clock!”."
+    },
+    "adult": {
+      "es": "un reloj de agujas ayuda más que uno digital.",
+      "en": "a clock with hands helps more than a digital one."
+    }
+  }
+}
+    </script>
+  </body>
+</html>
