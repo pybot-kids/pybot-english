@@ -183,7 +183,7 @@ Cada zona nueva lleva su sticker, su diploma y, cada 3 o 4 zonas, una parada nue
 
 | Fase | Entrega | Listo cuando… |
 |---|---|---|
-| A | Plantilla de lección + zona 00 completa + flujo de audio | Las 3 páginas cumplen la checklist; el niño termina la zona 00 sin ayuda |
+| A | Plantilla de lección + zona 00 completa + flujo de audio (✅ plantilla y zona 00; falta el audio pregenerado) | Las 3 páginas cumplen la checklist; el niño termina la zona 00 sin ayuda |
 | B | Zonas 01 y 02 | Ídem, más la prueba con María Ángel y 2–3 amigas o amigos (observación, sin recoger datos) |
 | C | Zonas 03 y 04 + "Mis palabras" | Ídem; "Mis palabras" lista todo lo publicado |
 | D | Zonas 05 y 06 + parada + diploma final | Ídem; el camino completo se puede terminar |

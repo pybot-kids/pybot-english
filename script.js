@@ -21,7 +21,7 @@ const BACKUP_SCHEMA_VERSION = 1;
 // every PR that adds, renames, or removes a step or activity id
 // (`node tools/progress-version.mjs --bump`), and add a migration below when an
 // id is renamed or removed.
-const PROGRESS_VERSION = 1;
+const PROGRESS_VERSION = 2;
 const PROGRESS_VERSION_KEY = "pybotenglish.progress.version";
 const BACKUP_MAX_BYTES = 100_000;
 // Preferences and the name survive an emergency progress reset.
@@ -33,9 +33,39 @@ const DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
 // Each step lists its activities. `soon: true` marks a step whose lesson page
 // is not written yet; remove it when the page ships.
 const pathSteps = [
-  { id: "helloGoodbye", page: "helloGoodbye", href: "lessons/00-hello-goodbye.html", soon: true, activities: [] },
-  { id: "howAreYou", page: "howAreYou", href: "lessons/00b-how-are-you.html", soon: true, activities: [] },
-  { id: "lookListenSay", page: "lookListenSay", href: "lessons/00c-look-listen-say.html", soon: true, activities: [] },
+  { id: "helloGoodbye", page: "helloGoodbye", href: "lessons/00-hello-goodbye.html",
+    activities: [
+      "helloGoodbye-arrive",
+      "helloGoodbye-listen-morning",
+      "helloGoodbye-hi-bye",
+      "helloGoodbye-night",
+      "helloGoodbye-true-false",
+      "helloGoodbye-fix",
+      "helloGoodbye-see-you",
+    ],
+  },
+  { id: "howAreYou", page: "howAreYou", href: "lessons/00b-how-are-you.html",
+    activities: [
+      "howAreYou-order-question",
+      "howAreYou-gap",
+      "howAreYou-listen",
+      "howAreYou-answer",
+      "howAreYou-odd",
+      "howAreYou-fix",
+      "howAreYou-and-you",
+    ],
+  },
+  { id: "lookListenSay", page: "lookListenSay", href: "lessons/00c-look-listen-say.html",
+    activities: [
+      "lookListenSay-listen-button",
+      "lookListenSay-slow-button",
+      "lookListenSay-listen-look",
+      "lookListenSay-listen-listen",
+      "lookListenSay-order",
+      "lookListenSay-no-grades",
+      "lookListenSay-album",
+    ],
+  },
   { id: "abcLetters", page: "abcLetters", href: "lessons/01-abc-letters.html", soon: true, activities: [] },
   { id: "abcVowels", page: "abcVowels", href: "lessons/01b-abc-vowels.html", soon: true, activities: [] },
   { id: "abcSpell", page: "abcSpell", href: "lessons/01c-abc-spell.html", soon: true, activities: [] },
@@ -203,6 +233,8 @@ const translations = {
     "path.start": "Empezar →",
     "path.continue": "Sigue aquí →",
     "path.soon": "Muy pronto",
+    "path.zoneReady": "🚧 En progreso · {ready} de {total} listas",
+    "path.building": "🚧 Camino en construcción: {ready} de {total} páginas listas. Las demás llegan pronto.",
     "path.zoneDone": "★ Zona terminada",
     "path.diploma": "Ver diploma",
     "status.done": "HECHO",
@@ -428,6 +460,8 @@ const translations = {
     "path.start": "Start →",
     "path.continue": "Continue here →",
     "path.soon": "Coming soon",
+    "path.zoneReady": "🚧 In progress · {ready} of {total} ready",
+    "path.building": "🚧 Path under construction: {ready} of {total} pages ready. The rest are coming soon.",
     "path.zoneDone": "★ Zone finished",
     "path.diploma": "See diploma",
     "status.done": "DONE",
@@ -1322,8 +1356,16 @@ function renderPathMap() {
   const visited = storedList(PATH_VISITED_KEY);
   const doneZones = zoneProgress().done;
 
+  // The path is being built: published pages become links, the rest stay "coming soon".
   document.querySelectorAll("[data-path-step]").forEach((item) => {
     const step = stepById(item.dataset.pathStep);
+    if (!step.soon && !item.querySelector("a")) {
+      const link = document.createElement("a");
+      link.href = new URL(step.href, scriptBaseUrl).href;
+      link.append(...item.childNodes);
+      item.append(link);
+      item.classList.add("is-ready");
+    }
     let status = item.querySelector("[data-path-status]");
     if (!status) {
       status = document.createElement("small");
@@ -1344,19 +1386,32 @@ function renderPathMap() {
       return;
     }
     const isDone = doneZones.has(zone);
-    const isSoon = zone.steps.every((id) => stepById(id).soon);
-    label.dataset.i18n = isDone ? "path.zoneDone" : "path.soon";
-    label.textContent = textFor(label.dataset.i18n);
-    label.hidden = !isDone && !isSoon;
+    const ready = zone.steps.filter((id) => !stepById(id).soon).length;
+    if (isDone) {
+      label.textContent = textFor("path.zoneDone");
+    } else if (ready === 0) {
+      label.textContent = textFor("path.soon");
+    } else {
+      label.textContent = textFor("path.zoneReady").replace("{ready}", String(ready)).replace("{total}", String(zone.steps.length));
+    }
+    label.classList.toggle("is-building", !isDone && ready > 0 && ready < zone.steps.length);
+    label.classList.toggle("is-ready", !isDone && ready === zone.steps.length);
     card.classList.toggle("is-done", isDone);
+    card.classList.toggle("is-open", ready > 0);
+  });
+
+  const readyCount = pathSteps.filter((step) => !step.soon).length;
+  document.querySelectorAll("[data-path-progress]").forEach((element) => {
+    element.textContent = textFor("path.building").replace("{ready}", String(readyCount)).replace("{total}", String(pathSteps.length));
   });
 
   if (continueNote) {
-    const next = stepById(current) ?? pathSteps.find((step) => !step.soon);
-    if (next && !next.soon) {
+    const saved = stepById(current);
+    const next = saved && !saved.soon ? saved : pathSteps.find((step) => !step.soon);
+    if (next) {
       continueNote.replaceChildren(Object.assign(document.createElement("a"), {
-        href: next.href,
-        textContent: textFor(current ? "path.continue" : "path.start"),
+        href: new URL(next.href, scriptBaseUrl).href,
+        textContent: textFor(saved && !saved.soon ? "path.continue" : "path.start"),
       }));
     }
   }
@@ -1678,15 +1733,10 @@ function updateBuddyButton() {
   buddy?.querySelector(".buddy-hide")?.setAttribute("aria-label", textFor("buddy.hide"));
 }
 
-function createBuddy() {
-  const element = document.createElement("div");
-  element.className = "pybot-buddy";
-  element.hidden = true;
-  element.innerHTML = `
-    <p class="buddy-bubble" aria-hidden="true"></p>
-    <button class="buddy-hide" type="button">×</button>
-    <div class="buddy-body" aria-hidden="true">
-      <div class="pybot-wrap" data-mood="welcoming">
+// PyBot's HTML/CSS anatomy, shared by the little companion and the lesson pages.
+function pybotFigureHTML(mood = "happy") {
+  return `
+      <div class="pybot-wrap" data-mood="${mood}">
         <div class="pybot">
           <div class="antenna"><span></span></div>
           <div class="ear ear-left"></div>
@@ -1710,7 +1760,17 @@ function createBuddy() {
             <span class="chest-code">Hi!</span>
           </div>
         </div>
-      </div>
+      </div>`;
+}
+
+function createBuddy() {
+  const element = document.createElement("div");
+  element.className = "pybot-buddy";
+  element.hidden = true;
+  element.innerHTML = `
+    <p class="buddy-bubble" aria-hidden="true"></p>
+    <button class="buddy-hide" type="button">×</button>
+    <div class="buddy-body" aria-hidden="true">${pybotFigureHTML("welcoming")}
     </div>`;
   element.querySelector(".buddy-hide").addEventListener("click", () => {
     setBuddyEnabled(false);

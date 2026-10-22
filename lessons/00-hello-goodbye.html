@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Aprende a saludar y a despedirte, según la hora del día." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>¿Cómo se saluda en inglés? — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="helloGoodbye">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "helloGoodbye",
+  "mood": "welcoming",
+  "title": {
+    "es": "¿Cómo se saluda en inglés?",
+    "en": "How do you say hello in English?"
+  },
+  "intro": {
+    "es": "Aprende a saludar y a despedirte, según la hora del día.",
+    "en": "Learn to say hello and goodbye, depending on the time of day."
+  },
+  "pybot": {
+    "es": "¡Hello! Así saludo yo. ¿Me ayudas a saludar a todo el mundo?",
+    "en": "Hello! That's how I say hi. Will you help me greet everyone?"
+  },
+  "look": [
+    {
+      "icon": "👋",
+      "word": "hello",
+      "meaning": {
+        "es": "hola",
+        "en": "hola (hello)"
+      }
+    },
+    {
+      "icon": "🙋",
+      "word": "hi",
+      "meaning": {
+        "es": "hola (más relajado)",
+        "en": "hola (more relaxed)"
+      }
+    },
+    {
+      "icon": "🚪",
+      "word": "goodbye",
+      "meaning": {
+        "es": "adiós",
+        "en": "adiós (goodbye)"
+      }
+    },
+    {
+      "icon": "✋",
+      "word": "bye",
+      "meaning": {
+        "es": "chao (más corto)",
+        "en": "chao (shorter)"
+      }
+    },
+    {
+      "icon": "☀️",
+      "word": "good morning",
+      "meaning": {
+        "es": "buenos días",
+        "en": "buenos días"
+      }
+    },
+    {
+      "icon": "🌇",
+      "word": "good afternoon",
+      "meaning": {
+        "es": "buenas tardes",
+        "en": "buenas tardes"
+      }
+    },
+    {
+      "icon": "🌙",
+      "word": "good night",
+      "meaning": {
+        "es": "buenas noches (al despedirte o ir a dormir)",
+        "en": "buenas noches (to say bye or go to sleep)"
+      }
+    },
+    {
+      "icon": "🔜",
+      "word": "see you",
+      "meaning": {
+        "es": "nos vemos",
+        "en": "nos vemos"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "Hello! I'm PyBot.",
+        "meaning": {
+          "es": "¡Hola! Soy PyBot.",
+          "en": "¡Hola! Soy PyBot."
+        }
+      },
+      {
+        "en": "Good morning, Mom!",
+        "meaning": {
+          "es": "¡Buenos días, mamá!",
+          "en": "¡Buenos días, mamá!"
+        }
+      },
+      {
+        "en": "Goodbye! See you!",
+        "meaning": {
+          "es": "¡Adiós! ¡Nos vemos!",
+          "en": "¡Adiós! ¡Nos vemos!"
+        }
+      }
+    ],
+    "rule": {
+      "es": "“Hello” y “hi” son para llegar. “Goodbye”, “bye” y “see you” son para irte. “Good night” es para la noche, cuando te vas o te vas a dormir.",
+      "en": "“Hello” and “hi” are for arriving. “Goodbye”, “bye” and “see you” are for leaving. “Good night” is for the night, when you leave or go to sleep."
+    }
+  },
+  "activities": [
+    {
+      "id": "helloGoodbye-arrive",
+      "type": "choice",
+      "prompt": {
+        "es": "👋 Llegas al colegio y ves a tu amiga. ¿Qué le dices?",
+        "en": "👋 You arrive at school and see your friend. What do you say?"
+      },
+      "options": [
+        "Hello!",
+        "Goodbye!",
+        "Good night!"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Estás llegando, no te estás yendo.",
+        "en": "You are arriving, not leaving."
+      },
+      "why": {
+        "es": "“Hello!” es para saludar cuando llegas.",
+        "en": "“Hello!” is for greeting when you arrive."
+      }
+    },
+    {
+      "id": "helloGoodbye-listen-morning",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿A qué hora del día se dice?",
+        "en": "Listen. What time of day is it for?"
+      },
+      "listen": "Good morning!",
+      "options": [
+        {
+          "es": "☀️ Por la mañana",
+          "en": "☀️ In the morning"
+        },
+        {
+          "es": "🌇 Por la tarde",
+          "en": "🌇 In the afternoon"
+        },
+        {
+          "es": "🌙 Por la noche",
+          "en": "🌙 At night"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "“Morning” es la mañana.",
+        "en": "“Morning” means mañana."
+      },
+      "why": {
+        "es": "“Good morning” significa buenos días.",
+        "en": "“Good morning” means buenos días."
+      }
+    },
+    {
+      "id": "helloGoodbye-hi-bye",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha con atención. ¿Qué palabra suena?",
+        "en": "Listen carefully. Which word do you hear?"
+      },
+      "listen": "bye",
+      "options": [
+        "hi",
+        "bye"
+      ],
+      "answer": 1,
+      "hint": {
+        "es": "Empieza con el sonido de la “b”.",
+        "en": "It starts with a “b” sound."
+      },
+      "why": {
+        "es": "“Bye” es la forma corta de “goodbye”.",
+        "en": "“Bye” is the short way to say “goodbye”."
+      }
+    },
+    {
+      "id": "helloGoodbye-night",
+      "type": "choice",
+      "prompt": {
+        "es": "🌙 Son las 8 de la noche y te vas a dormir. ¿Qué le dices a tu familia?",
+        "en": "🌙 It's 8 p.m. and you are going to bed. What do you say to your family?"
+      },
+      "options": [
+        "Good morning!",
+        "Good night!",
+        "Hello!"
+      ],
+      "answer": 1,
+      "hint": {
+        "es": "Busca la palabra “night”, la noche.",
+        "en": "Look for the word “night”."
+      },
+      "why": {
+        "es": "“Good night” se dice al irte a dormir.",
+        "en": "You say “good night” when you go to sleep."
+      }
+    },
+    {
+      "id": "helloGoodbye-true-false",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? “Goodbye” sirve para saludar cuando llegas.",
+        "en": "True or false? “Goodbye” is for greeting when you arrive."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 1,
+      "hint": {
+        "es": "Piensa: ¿“goodbye” es hola o adiós?",
+        "en": "Think: is “goodbye” hello or goodbye?"
+      },
+      "why": {
+        "es": "Falso: “goodbye” es para irte. Para llegar dices “hello”.",
+        "en": "False: “goodbye” is for leaving. To arrive you say “hello”."
+      }
+    },
+    {
+      "id": "helloGoodbye-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot dijo “Good night!” a las 8 de la mañana. ¿Qué debió decir?",
+        "en": "🤖 PyBot said “Good night!” at 8 in the morning. What should it say?"
+      },
+      "options": [
+        "Good morning!",
+        "Good afternoon!",
+        "Goodbye!"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es por la mañana: morning.",
+        "en": "It's in the morning."
+      },
+      "why": {
+        "es": "¡Gracias por arreglarlo! En la mañana se dice “good morning”.",
+        "en": "Thanks for fixing it! In the morning you say “good morning”."
+      }
+    },
+    {
+      "id": "helloGoodbye-see-you",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Cuál es otra forma de decir “goodbye”?",
+        "en": "Which is another way to say “goodbye”?"
+      },
+      "options": [
+        "See you!",
+        "Good morning!",
+        "Hi!"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Significa “nos vemos”.",
+        "en": "It means “see you later”."
+      },
+      "why": {
+        "es": "“See you!” también es una despedida.",
+        "en": "“See you!” is also a way to say bye."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "hello",
+      "meaning": {
+        "es": "hola",
+        "en": "hola"
+      }
+    },
+    {
+      "en": "hi",
+      "meaning": {
+        "es": "hola",
+        "en": "hola"
+      }
+    },
+    {
+      "en": "goodbye",
+      "meaning": {
+        "es": "adiós",
+        "en": "adiós"
+      }
+    },
+    {
+      "en": "bye",
+      "meaning": {
+        "es": "chao",
+        "en": "chao"
+      }
+    },
+    {
+      "en": "good morning",
+      "meaning": {
+        "es": "buenos días",
+        "en": "buenos días"
+      }
+    },
+    {
+      "en": "good afternoon",
+      "meaning": {
+        "es": "buenas tardes",
+        "en": "buenas tardes"
+      }
+    },
+    {
+      "en": "good night",
+      "meaning": {
+        "es": "buenas noches",
+        "en": "buenas noches"
+      }
+    },
+    {
+      "en": "see you",
+      "meaning": {
+        "es": "nos vemos",
+        "en": "nos vemos"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Saluda a tu familia en inglés",
+      "en": "Greet your family in English"
+    },
+    "text": {
+      "es": "Hoy, cada vez que llegues o te vayas, saluda en inglés: “Hello!”, “Good morning!”, “Bye!”. En la noche, di “Good night!”.",
+      "en": "Today, every time you arrive or leave, greet in English: “Hello!”, “Good morning!”, “Bye!”. At night, say “Good night!”."
+    },
+    "adult": {
+      "es": "respondan también en inglés. Si no recuerdan la palabra, toquen 🔊 juntos.",
+      "en": "answer in English too. If you forget a word, press 🔊 together."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

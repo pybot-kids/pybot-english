@@ -40,6 +40,71 @@
         "house": [],
         "checkpoint1": []
       }
+    },
+    {
+      "version": 2,
+      "date": "2026-10-22",
+      "note": "Zone 00 (Hello!) published: 3 pages with 21 activities",
+      "steps": {
+        "helloGoodbye": [
+          "helloGoodbye-arrive",
+          "helloGoodbye-listen-morning",
+          "helloGoodbye-hi-bye",
+          "helloGoodbye-night",
+          "helloGoodbye-true-false",
+          "helloGoodbye-fix",
+          "helloGoodbye-see-you"
+        ],
+        "howAreYou": [
+          "howAreYou-order-question",
+          "howAreYou-gap",
+          "howAreYou-listen",
+          "howAreYou-answer",
+          "howAreYou-odd",
+          "howAreYou-fix",
+          "howAreYou-and-you"
+        ],
+        "lookListenSay": [
+          "lookListenSay-listen-button",
+          "lookListenSay-slow-button",
+          "lookListenSay-listen-look",
+          "lookListenSay-listen-listen",
+          "lookListenSay-order",
+          "lookListenSay-no-grades",
+          "lookListenSay-album"
+        ],
+        "abcLetters": [],
+        "abcVowels": [],
+        "abcSpell": [],
+        "numbersTen": [],
+        "numbersTwenty": [],
+        "numbersHowMany": [],
+        "myName": [],
+        "myAge": [],
+        "myFamily": [],
+        "myBody": [],
+        "feelings": [],
+        "iFeel": [],
+        "colors": [],
+        "shapes": [],
+        "itIsRed": [],
+        "backpack": [],
+        "thisThat": [],
+        "animals": [],
+        "bigSmall": [],
+        "canCant": [],
+        "food": [],
+        "iLike": [],
+        "iDontLike": [],
+        "days": [],
+        "dayParts": [],
+        "routine": [],
+        "classWords": [],
+        "questions": [],
+        "inOnUnder": [],
+        "house": [],
+        "checkpoint1": []
+      }
     }
   ]
 }
