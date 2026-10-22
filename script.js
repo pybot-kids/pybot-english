@@ -117,6 +117,7 @@ const translations = {
     "nav.faq": "Preguntas",
     "nav.translator": "Traductor",
     "nav.menu": "Menú",
+    "support.aria": "Apoya a PyBot en Patreon (se abre en una pestaña nueva)",
     "credit.voiceSummary": "La voz de PyBot viene de tu navegador ♥",
     "credit.voiceText": "Usamos la Web Speech API: cada navegador o sistema trae sus propias voces (de Google, Apple, Microsoft u otras). PyBot English no incluye ni modifica ninguna voz.",
     "credit.voiceLink": "Qué es la Web Speech API",
@@ -332,6 +333,7 @@ const translations = {
     "nav.faq": "Questions",
     "nav.translator": "Translator",
     "nav.menu": "Menu",
+    "support.aria": "Support PyBot on Patreon (opens in a new tab)",
     "credit.voiceSummary": "PyBot's voice comes from your browser ♥",
     "credit.voiceText": "We use the Web Speech API: each browser or system brings its own voices (from Google, Apple, Microsoft or others). PyBot English doesn't bundle or change any voice.",
     "credit.voiceLink": "What the Web Speech API is",
@@ -2088,6 +2090,7 @@ function startBuddy() {
 // Same strategy as PyBot: page links on the left, compact controls on the right,
 // and below 900px the links move into a menu so the header stays one row.
 // To add a page to the menu, add one line here; no HTML page needs editing.
+const PATREON_URL = "https://www.patreon.com/pybot";
 const headerPages = [
   { page: "course", href: "course.html", icon: "🗺️", label: "nav.path" },
   { page: "album", href: "album.html", icon: "★", label: "nav.album" },
@@ -2118,6 +2121,18 @@ function arrangeHeader() {
     links.append(link);
   });
 
+  // Donations go to PyBot's Patreon, shared by the whole PyBot family.
+  const support = document.createElement("a");
+  support.className = "header-icon-button support-link";
+  support.href = PATREON_URL;
+  support.target = "_blank";
+  support.rel = "noopener noreferrer";
+  support.dataset.i18nAriaLabel = "support.aria";
+  support.innerHTML = '<span class="support-link-icon" aria-hidden="true">♥</span>';
+  languageRenderers.push(() => {
+    support.title = textFor("support.aria");
+  });
+
   const menuButton = document.createElement("button");
   menuButton.className = "header-icon-button header-menu-button";
   menuButton.type = "button";
@@ -2128,7 +2143,7 @@ function arrangeHeader() {
 
   const actions = document.createElement("div");
   actions.className = "header-actions";
-  actions.append(...[buddyToggle, tools.querySelector(".language-switch"), menuButton].filter(Boolean));
+  actions.append(...[support, buddyToggle, tools.querySelector(".language-switch"), menuButton].filter(Boolean));
   buddyToggle?.classList.add("header-icon-button");
   tools.replaceWith(links, actions);
 

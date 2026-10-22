@@ -217,6 +217,8 @@ button { font: inherit; }
 }
 .header-icon-button:hover,
 .header-icon-button:focus-visible { border-color: var(--cobalt); color: var(--cobalt-dark); }
+.support-link { text-decoration: none; }
+.support-link-icon { color: var(--magenta); font-size: 1.15rem; line-height: 1; }
 .header-menu-button { display: none; }
 .header-menu-icon,
 .header-menu-icon::before,
@@ -2074,6 +2076,12 @@ a.extras-card:hover { transform: translateY(-3px); }
 }
 .faq-item[open] { border-color: var(--cobalt); }
 .faq-item p { padding: 0 20px 18px; color: var(--ink-soft); }
+.faq-link {
+  display: inline-block;
+  margin: -6px 20px 18px;
+  color: var(--cobalt-dark);
+  font-weight: 800;
+}
 
 .reward-toast {
   position: fixed;

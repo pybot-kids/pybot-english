@@ -114,7 +114,7 @@ Today that covers the browser voices (Web Speech API), the browser translator (T
 
 ### Shared header
 
-Same strategy as PyBot, so the menu can grow without breaking on phones: `arrangeHeader()` in `script.js` builds the header on every page from one list, `headerPages`. Page links (icon + name, current page highlighted) sit on the left and compact icon controls (little PyBot, language, menu) on the right. Below 900px the links move into a ☰ menu, so the header always stays one row. To add a page to the menu, add one line to `headerPages`; no HTML file needs editing.
+Same strategy as PyBot, so the menu can grow without breaking on phones: `arrangeHeader()` in `script.js` builds the header on every page from one list, `headerPages`. Page links (icon + name, current page highlighted) sit on the left and compact icon controls (♥ support, little PyBot, language, menu) on the right. The ♥ button opens PyBot's Patreon (`https://www.patreon.com/pybot`, `PATREON_URL` in `script.js`), shared by the whole PyBot family; support is always optional and every lesson stays free and ad-free. Below 900px the links move into a ☰ menu, so the header always stays one row. To add a page to the menu, add one line to `headerPages`; no HTML file needs editing.
 
 ### Local-first progress
 
