@@ -36,11 +36,28 @@ Unchanged from PyBot: one idea per page, one dominant button, headings under abo
 
 1. **Look (Mira):** PyBot shows one word or phrase with a picture.
 2. **Listen (Escucha):** the learner presses a button and hears it in English.
-3. **Say (Dila):** the learner repeats it out loud, then uses it in a tiny sentence.
-4. **Check:** a small multiple-choice or matching activity confirms the idea.
-5. **Continue:** progress is saved and the next step opens.
+3. **Say (Dila):** the learner repeats it out loud. Nobody grades it.
+4. **Check:** a small reading, vocabulary, or grammar activity confirms the idea.
+5. **Practice at home:** one tiny idea to try with mom, dad, siblings, or friends.
+6. **Continue:** progress is saved and the next step opens.
 
-Listening uses the browser's Web Speech API (`speechSynthesis`, `en-US`, slightly slow). There is no microphone and no speech recognition.
+## Speaking and listening: what PyBot does and does not do
+
+PyBot **teaches how things sound**; it **never evaluates speaking**.
+
+- **Does:** plays the sound of every new word and phrase, shows the Spanish meaning, and checks understanding with text activities only (reading, vocabulary, grammar, word order).
+- **Does not:** use the microphone, record, run speech recognition, or score pronunciation. No page asks for microphone permission.
+- **Speaking is social:** every lesson ends with a **Practice at home** card: a short game to do out loud with family or friends (teach someone the word, the echo game, labels around the house). The card speaks to the grown-up too: they don't need to know English, because the 🔊 button says the word.
+- **Feedback on activities** stays gentle: a wrong choice gets one short hint, never a grade.
+
+Audio today comes from the browser's Web Speech API (`speechSynthesis`, `en-US`, slightly slow). The plan is to pre-generate one audio file per word and phrase with an openly licensed voice (for example Kokoro-82M, Apache 2.0), ship the files with the site, and credit the voice in `THIRD_PARTY_NOTICES.md` and the FAQ, the way PyBot credits Pyodide. `speechSynthesis` stays as the fallback.
+
+### Lesson rule: Practice at home card
+
+- One idea per lesson, doable in under five minutes, with no screen needed after the first listen.
+- Uses only the words from that lesson.
+- Written for the child, with one short line for the grown-up.
+- Never asks anyone to judge pronunciation; it celebrates trying.
 
 ## PyBot here
 

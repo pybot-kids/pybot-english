@@ -1444,6 +1444,18 @@ button { font: inherit; }
   font-weight: 700;
 }
 
+/* Practice at home */
+.home-practice {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 56px 24px;
+}
+.practice-teach { --accent: var(--magenta); }
+.practice-echo { --accent: var(--cobalt); }
+.practice-labels { --accent: var(--sun); }
+.practice-labels .extras-icon { color: var(--ink); }
+.practice-note { margin-top: 22px; }
+
 /* Extras */
 .extras-strip {
   max-width: 1180px;
@@ -1910,6 +1922,7 @@ a.extras-card:hover { transform: translateY(-3px); }
   .path,
   .local-first,
   .lesson-preview,
+  .home-practice,
   .extras-strip { padding-left: 16px; padding-right: 16px; }
   .hero-stage { min-height: 600px; border-radius: 38px; }
   .speech-bubble { top: 16px; right: 16px; left: 16px; max-width: none; }
