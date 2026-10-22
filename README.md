@@ -67,6 +67,12 @@ PyBot is the same character, built from the same HTML/CSS anatomy and moods (`ha
 - The home page's first mission replaces the Python runner: the learner picks a kind phrase (“Hello, PyBot!”, “Thank you!”, “You are my friend.”…) and PyBot answers in English with a matching mood and the Spanish meaning.
 - If the learner saved a name, PyBot uses it (“Hello, Sam! I'm so happy to see you.”).
 
+### The little PyBot in the corner
+
+Like in PyBot, a small PyBot keeps the learner company on every page (computer and tablet screens; hidden on phones so it never covers a lesson). It can be dragged and remembers its spot, its eyes follow the pointer, it naps after a while without movement, gets dizzy if shaken, and can be hidden with the header button or its ×. It says hello once per visit and reacts to the learner (name saved, kind phrases, and later right or wrong answers).
+
+Its lines are **for kids, never about code**: classic children's jokes, English riddles (“How do you say «gato» in English? Cat!”), tiny facts about English, home-practice tips, and gentle cheers. Jokes are written separately for each interface language so the punchline works.
+
 ## Visual language
 
 ### Brand colors
@@ -105,6 +111,9 @@ Progress uses **the same scheme as PyBot** with its own `pybotenglish.` prefix, 
 | Key | Allowed value | Purpose | Include in backup |
 |---|---|---|---|
 | `pybotenglish.language` | `en` or `es` | Interface language; defaults to `es` | Yes |
+| `pybotenglish.buddy.enabled` | `true` or `false` | Shows the little PyBot in the corner; defaults to `true` | Yes |
+| `pybotenglish.buddy.position` | Two numbers from 0 to 1, comma-separated (for example `1.000,1.000`) | Where the learner dragged the little PyBot, as fractions of the free screen space; this device only | No |
+| `pybotenglish.buddy.greeted` | `true` (session storage, cleared when the tab closes) | Lets the little PyBot say hello once per visit | No |
 | `pybotenglish.learner.name` | A trimmed name or nickname of 1–24 characters | Lets PyBot greet the learner; stored only in this browser | Yes |
 | `pybotenglish.path.current` | A step id from `pathSteps` | The learner's current place on the path | Yes |
 | `pybotenglish.path.visited` | Comma-separated step ids | Pages the learner has opened | Yes |
@@ -145,7 +154,7 @@ Same rule as PyBot: if a pull request adds, renames, or removes a step or activi
 
 #### Emergency progress reset
 
-A collapsed **For adults: erase all progress** section on the home page offers to save a backup first, asks for confirmation, and keeps only the language and the name.
+A collapsed **For adults: erase all progress** section on the home page offers to save a backup first, asks for confirmation, and keeps only the language, the little PyBot preference, and the name.
 
 ### Rewards: stickers, streaks and diplomas
 

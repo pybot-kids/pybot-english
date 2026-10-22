@@ -1900,6 +1900,723 @@ a.extras-card:hover { transform: translateY(-3px); }
   .diploma { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
 
+/* More PyBot moods used by the little companion (same as PyBot). */
+.pybot-wrap[data-mood="proud"] .bot-head {
+  transform: translateY(-3px);
+}
+
+.pybot-wrap[data-mood="proud"] .eye {
+  height: 17px;
+  border-top: 7px solid var(--ink);
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  background: transparent;
+  transform: translateY(12px);
+}
+
+.pybot-wrap[data-mood="proud"] .eye span {
+  opacity: 0;
+}
+
+.pybot-wrap[data-mood="proud"] .cheek {
+  background: rgba(194, 40, 126, 0.58);
+}
+
+.pybot-wrap[data-mood="proud"] .mouth {
+  top: 80px;
+  left: calc(50% - 31px);
+  width: 62px;
+  height: 30px;
+  border-bottom-width: 8px;
+}
+
+.pybot-wrap[data-mood="proud"] .arm-left {
+  transform: rotate(-38deg) translate(4px, -8px);
+}
+
+.pybot-wrap[data-mood="proud"] .arm-right {
+  transform: rotate(38deg) translate(-4px, -8px);
+}
+
+.pybot-wrap[data-mood="deciding"] .bot-head {
+  transform: rotate(4deg);
+}
+
+.pybot-wrap[data-mood="deciding"] .brow {
+  opacity: 1;
+}
+
+.pybot-wrap[data-mood="deciding"] .brow-left {
+  transform: translate(10px, 3px);
+}
+
+.pybot-wrap[data-mood="deciding"] .brow-right {
+  transform: rotate(12deg) translate(10px, -6px);
+}
+
+.pybot-wrap[data-mood="deciding"] .eye {
+  transform: translateX(10px);
+}
+
+.pybot-wrap[data-mood="deciding"] .mouth {
+  top: 94px;
+  left: calc(50% - 12px);
+  width: 30px;
+  height: 7px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--magenta-dark);
+  transform: rotate(-8deg);
+}
+
+.pybot-wrap[data-mood="deciding"] .arm-right {
+  transform: rotate(-96deg) translateY(-6px);
+}
+
+.pybot-wrap[data-mood="counting"] .bot-head {
+  transform: rotate(-3deg);
+}
+
+.pybot-wrap[data-mood="counting"] .eye {
+  transform: translateY(-8px);
+}
+
+.pybot-wrap[data-mood="counting"] .mouth {
+  top: 86px;
+  left: calc(50% - 17px);
+  width: 34px;
+  height: 18px;
+  border-bottom-width: 6px;
+}
+
+.pybot-wrap[data-mood="counting"] .arm-right {
+  animation: arm-count 1.8s ease-in-out infinite;
+  transform: rotate(-165deg);
+}
+
+.pybot-wrap[data-mood="determined"] .brow {
+  opacity: 1;
+}
+
+.pybot-wrap[data-mood="determined"] .brow-left {
+  transform: rotate(14deg) translateY(6px);
+}
+
+.pybot-wrap[data-mood="determined"] .brow-right {
+  transform: rotate(-14deg) translateY(6px);
+}
+
+.pybot-wrap[data-mood="determined"] .eye {
+  height: 26px;
+  transform: translateY(5px);
+}
+
+.pybot-wrap[data-mood="determined"] .mouth {
+  top: 86px;
+  left: calc(50% - 29px);
+  width: 58px;
+  height: 18px;
+  border: 0;
+  border-radius: 5px 5px 30px 30px;
+  background: var(--magenta-dark);
+}
+
+.pybot-wrap[data-mood="determined"] .arm-left {
+  transform: rotate(28deg);
+}
+
+.pybot-wrap[data-mood="determined"] .arm-right {
+  transform: rotate(-125deg) translateY(-4px);
+}
+
+
+/* Dizzy: swirly spinning eyes, an "o" mouth and a wobble. */
+.pybot-wrap[data-mood="dizzy"] .eye {
+  top: 38px;
+  width: 42px;
+  height: 42px;
+  margin-left: -6px;
+  border: 8px solid var(--ink);
+  border-right-color: transparent;
+  border-radius: 50%;
+  background: transparent;
+  animation: buddy-dizzy-eyes 0.8s linear infinite;
+}
+
+.pybot-wrap[data-mood="dizzy"] .eye span {
+  display: none;
+}
+
+.pybot-wrap[data-mood="dizzy"] .mouth {
+  top: 88px;
+  left: calc(50% - 14px);
+  width: 28px;
+  height: 24px;
+  border: 6px solid var(--magenta-dark);
+  border-radius: 50%;
+}
+
+.pybot-wrap[data-mood="dizzy"] .pybot {
+  transform-origin: 50% 100%;
+  animation: buddy-wobble 1.4s ease-in-out infinite;
+}
+
+.pybot-wrap[data-mood="dizzy"] .antenna {
+  animation: antenna-wave 0.5s ease-in-out infinite;
+}
+
+.pybot-wrap[data-mood="dizzy"] .arm-left {
+  transform: rotate(40deg);
+}
+
+.pybot-wrap[data-mood="dizzy"] .arm-right {
+  transform: rotate(-40deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pybot-wrap[data-mood="dizzy"] .eye,
+  .pybot-wrap[data-mood="dizzy"] .pybot,
+  .pybot-wrap[data-mood="dizzy"] .antenna {
+    animation: none;
+  }
+}
+
+/* The little PyBot companion in the corner of every page. */
+.pybot-buddy {
+  position: fixed;
+  right: 14px;
+  bottom: 14px;
+  z-index: 60;
+  width: 112px;
+  height: 124px;
+  pointer-events: none;
+}
+
+.pybot-buddy[hidden] {
+  display: none;
+}
+
+.buddy-body {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 102px;
+  height: 117px;
+  cursor: pointer;
+  pointer-events: auto;
+  animation: buddy-float 3.4s ease-in-out infinite;
+}
+
+.pybot-buddy .pybot-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 340px;
+  height: 390px;
+  margin: 0;
+  transform: scale(0.3);
+  transform-origin: 0 0;
+}
+
+.pybot-buddy .pybot {
+  filter: drop-shadow(0 14px 10px rgba(26, 31, 78, 0.22));
+}
+
+.pybot-buddy[data-move="hop"] .pybot {
+  animation: buddy-hop 0.6s ease-in-out 2;
+}
+
+.pybot-buddy[data-move="dance"] .pybot {
+  animation: buddy-dance 0.5s ease-in-out 5;
+}
+
+.pybot-buddy[data-move="spin"] .pybot {
+  animation: buddy-spin 0.9s ease-in-out 1;
+}
+
+.pybot-buddy[data-move="look"] .pybot {
+  animation: buddy-look 1.8s ease-in-out 1;
+}
+
+.pybot-buddy[data-move="nod"] .pybot {
+  animation: buddy-nod 0.5s ease-in-out 3;
+}
+
+.pybot-buddy[data-move="wave"] .arm-right {
+  animation: buddy-wave 0.42s ease-in-out 5;
+}
+
+.pybot-buddy[data-move="blink"] .eye {
+  animation: buddy-blink 0.5s ease-in-out 2;
+}
+
+.buddy-bubble {
+  position: absolute;
+  right: 6px;
+  bottom: calc(100% + 6px);
+  width: max-content;
+  max-width: 230px;
+  margin: 0;
+  padding: 10px 14px;
+  border: 2px solid var(--ink);
+  border-radius: 16px 16px 5px 16px;
+  background: var(--white);
+  box-shadow: 5px 6px 0 rgba(26, 31, 78, 0.14);
+  color: var(--ink);
+  font-size: 0.84rem;
+  font-weight: 900;
+  line-height: 1.3;
+  opacity: 0;
+  transform: translateY(8px) scale(0.92);
+  transform-origin: 90% 100%;
+  transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.buddy-bubble.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.buddy-hide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: grid;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  place-items: center;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 900;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: auto;
+  transition: opacity 160ms ease;
+}
+
+.pybot-buddy:hover .buddy-hide,
+.buddy-hide:focus-visible {
+  opacity: 1;
+}
+
+.buddy-body {
+  touch-action: none;
+  cursor: grab;
+}
+
+.pybot-buddy.is-dragging .buddy-body {
+  cursor: grabbing;
+  animation: none;
+  transform: scale(1.08) rotate(-6deg);
+}
+
+.pybot-buddy.bubble-right .buddy-bubble {
+  right: auto;
+  left: 6px;
+  border-radius: 16px 16px 16px 5px;
+  transform-origin: 10% 100%;
+}
+
+.pybot-buddy.bubble-below .buddy-bubble {
+  top: calc(100% + 6px);
+  bottom: auto;
+}
+
+/* The eyes follow the pointer; `translate` adds to each mood's own transform. */
+.pybot-buddy .eye {
+  translate: var(--look-x, 0) var(--look-y, 0);
+}
+
+.pybot-buddy[data-move="peek"] .pybot {
+  animation: buddy-peek 1.4s ease-in-out 1;
+}
+
+.pybot-buddy[data-move="stretch"] .pybot {
+  animation: buddy-stretch 1.2s ease-in-out 1;
+  transform-origin: 50% 100%;
+}
+
+.pybot-buddy[data-move="stretch"] .arm-left {
+  animation: buddy-reach-left 1.2s ease-in-out 1;
+}
+
+.pybot-buddy[data-move="stretch"] .arm-right {
+  animation: buddy-reach-right 1.2s ease-in-out 1;
+}
+
+.pybot-buddy[data-move="scan"] .chest-light,
+.pybot-buddy[data-move="scan"] .antenna span {
+  animation: buddy-glow 0.35s ease-in-out 6;
+}
+
+.pybot-buddy[data-move="flip"] .pybot {
+  animation: buddy-flip 1s ease-in-out 1;
+}
+
+.pybot-buddy[data-move="wiggle"] .pybot {
+  animation: buddy-wiggle 0.18s ease-in-out 6;
+}
+
+.pybot-buddy[data-move="sleep"] .eye {
+  height: 6px;
+  border-radius: 6px;
+  transform: translateY(16px);
+}
+
+.pybot-buddy[data-move="sleep"] .eye span {
+  display: none;
+}
+
+.pybot-buddy[data-move="sleep"] .pybot {
+  animation: buddy-snore 3.2s ease-in-out infinite;
+  transform-origin: 50% 100%;
+}
+
+.pybot-buddy.is-shaking .buddy-body {
+  animation: buddy-shake 0.12s linear infinite;
+}
+
+.pybot-buddy.is-shaking .eye,
+.pybot-buddy[data-move="dizzy"] .eye {
+  top: 38px;
+  width: 44px;
+  height: 44px;
+  margin-left: -7px;
+  border: 9px solid var(--ink);
+  border-right-color: transparent;
+  border-radius: 50%;
+  background: transparent;
+  animation: buddy-dizzy-eyes 0.7s linear infinite;
+}
+
+.pybot-buddy.is-shaking .eye span,
+.pybot-buddy[data-move="dizzy"] .eye span {
+  display: none;
+}
+
+.pybot-buddy[data-move="dizzy"] .mouth {
+  left: calc(50% - 14px);
+  width: 28px;
+  height: 22px;
+  border: 6px solid var(--magenta-dark);
+  border-radius: 50%;
+}
+
+.pybot-buddy[data-move="dizzy"] .pybot {
+  animation: buddy-wobble 0.9s ease-in-out 4;
+  transform-origin: 50% 100%;
+}
+
+@keyframes buddy-shake {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0);
+  }
+  25% {
+    transform: translate(-3px, 2px) rotate(-6deg);
+  }
+  75% {
+    transform: translate(3px, -2px) rotate(6deg);
+  }
+}
+
+@keyframes buddy-dizzy-eyes {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes buddy-wobble {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-12deg) translateX(-10px);
+  }
+  75% {
+    transform: rotate(12deg) translateX(10px);
+  }
+}
+
+.buddy-particle {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  color: var(--magenta);
+  font-size: 1.05rem;
+  font-weight: 900;
+  opacity: 0;
+  pointer-events: none;
+  animation: buddy-particle 1.6s ease-out var(--particle-delay, 0ms) 1 forwards;
+}
+
+@keyframes buddy-particle {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(0.6);
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--particle-x, 0), -70px) scale(1.15);
+  }
+}
+
+@keyframes buddy-peek {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  35%,
+  55% {
+    transform: translateY(120px);
+  }
+  75% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes buddy-stretch {
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+  45%,
+  60% {
+    transform: scaleY(1.12) scaleX(0.95);
+  }
+}
+
+@keyframes buddy-reach-left {
+  0%,
+  100% {
+    transform: rotate(13deg);
+  }
+  45%,
+  60% {
+    transform: rotate(165deg);
+  }
+}
+
+@keyframes buddy-reach-right {
+  0%,
+  100% {
+    transform: rotate(-44deg);
+  }
+  45%,
+  60% {
+    transform: rotate(-165deg);
+  }
+}
+
+@keyframes buddy-glow {
+  0%,
+  100% {
+    background: var(--sun);
+  }
+  50% {
+    background: var(--magenta);
+  }
+}
+
+@keyframes buddy-flip {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-60px) rotate(180deg);
+  }
+  100% {
+    transform: translateY(0) rotate(360deg);
+  }
+}
+
+@keyframes buddy-wiggle {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes buddy-snore {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03, 0.97);
+  }
+}
+
+@keyframes buddy-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes buddy-hop {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-46px);
+  }
+}
+
+@keyframes buddy-dance {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-8deg) translateY(-12px);
+  }
+  75% {
+    transform: rotate(8deg) translateY(-12px);
+  }
+}
+
+@keyframes buddy-spin {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes buddy-look {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  25%,
+  40% {
+    transform: rotate(-7deg) translateX(-14px);
+  }
+  60%,
+  75% {
+    transform: rotate(7deg) translateX(14px);
+  }
+}
+
+@keyframes buddy-nod {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(4deg) translateY(10px);
+  }
+}
+
+@keyframes buddy-wave {
+  0%,
+  100% {
+    transform: rotate(-135deg);
+  }
+  50% {
+    transform: rotate(-168deg);
+  }
+}
+
+@keyframes buddy-blink {
+  0%,
+  100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.1);
+  }
+}
+
+/* Phones: the companion would cover the lesson, so it and its button stay away. */
+@media (max-width: 760px), (max-height: 480px) {
+  .buddy-toggle,
+  .pybot-buddy {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pybot-buddy *,
+  .pybot-buddy *::before,
+  .pybot-buddy *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media print {
+  .pybot-buddy {
+    display: none;
+  }
+}
+
+/* Header button that shows or hides the little PyBot */
+.buddy-toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 2px solid var(--line);
+  border-radius: 999px;
+  background: var(--white);
+  cursor: pointer;
+}
+.buddy-toggle:hover { border-color: var(--cobalt); }
+.buddy-toggle-icon {
+  position: relative;
+  width: 22px;
+  height: 18px;
+  border: 2px solid var(--ink);
+  border-radius: 7px;
+  background: var(--magenta);
+}
+.buddy-toggle-icon::before {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 4px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--white);
+  box-shadow: 6px 0 0 var(--white);
+  content: "";
+}
+.buddy-toggle:not(.is-on) > * { opacity: 0.45; }
+.buddy-toggle:not(.is-on)::after {
+  position: absolute;
+  width: 28px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--ink-soft);
+  transform: rotate(-35deg);
+  content: "";
+}
+.buddy-toggle { position: relative; }
+@media (max-width: 760px), (max-height: 480px) {
+  .buddy-toggle { display: none; }
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; }

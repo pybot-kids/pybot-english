@@ -99,6 +99,8 @@ Object.assign(translations.en, {
   "faq.languageA": "Yes. Press EN or ES at the top of any page. Your progress stays the same. The words you learn are always in English.",
   "faq.albumQ": "Where are my stickers and diplomas?",
   "faq.albumA": "In your album. Press ★ Album at the top. Each finished zone gives you a sticker and a diploma with your name that you can print.",
+  "faq.buddyQ": "Can I hide the little PyBot in the corner?",
+  "faq.buddyA": "Yes. Press the PyBot button at the top, or the × next to it. Press the button again to bring it back. You can also drag it to another spot, and it remembers. On phones it stays hidden so it doesn't cover the lesson.",
   "faq.streakQ": "What is a streak?",
   "faq.streakA": "It is when you learn on several days in a row. PyBot counts your learning days kindly. If you miss a day, you lose nothing: your days and stickers stay.",
   "faq.friendsQ": "Can I learn with my friends?",

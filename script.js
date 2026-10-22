@@ -25,7 +25,7 @@ const PROGRESS_VERSION = 1;
 const PROGRESS_VERSION_KEY = "pybotenglish.progress.version";
 const BACKUP_MAX_BYTES = 100_000;
 // Preferences and the name survive an emergency progress reset.
-const RESET_KEPT_KEYS = [LANGUAGE_KEY, LEARNER_NAME_KEY];
+const RESET_KEPT_KEYS = [LANGUAGE_KEY, "pybotenglish.buddy.enabled", LEARNER_NAME_KEY];
 const DEFAULT_LANGUAGE = "es";
 const DAYS_KEPT = 400;
 const DATE_PATTERN = /^\d{4}-\d{2}-\d{2}$/;
@@ -792,6 +792,7 @@ function backupValidators() {
   const isStepList = (value) => value === "" || value.split(",").every(isStep);
   const validators = {
     [LANGUAGE_KEY]: (value) => Boolean(translations[value]),
+    [BUDDY_PREFERENCE_KEY]: (value) => value === "true" || value === "false",
     [LEARNER_NAME_KEY]: (value) => value.length > 0 && normalizeLearnerName(value) === value,
     [PATH_CURRENT_KEY]: isStep,
     [PATH_VISITED_KEY]: (value) => value.split(",").every(isStep),
@@ -1170,6 +1171,7 @@ function setupPybot() {
       renderAnswer();
       showPybotLine(kindAnswers[chosen]);
       say(answer.textContent);
+      buddyReact("kindPhrase");
     });
   });
   languageRenderers.push(() => {
@@ -1211,6 +1213,7 @@ function setupNamePanel() {
     render(false);
     showPybotLine(pybotGreetings[0]);
     say(document.querySelector("[data-pybot-english]").textContent);
+    buddyReact("nameSaved");
   });
   document.querySelector("[data-name-edit]").addEventListener("click", () => {
     input.value = learnerName;
@@ -1278,6 +1281,789 @@ function renderPathMap() {
   }
 }
 
+// ---------- The little PyBot companion in the corner ----------
+// Same behavior as PyBot's buddy: it can be dragged, remembers its spot, follows
+// the pointer with its eyes, naps when nobody moves, and gets dizzy when shaken.
+// Its lines are kids' jokes, English riddles and tiny facts: no code talk.
+
+Object.assign(translations.es, {
+  "buddy.turnOn": "Mostrar al PyBot pequeño",
+  "buddy.turnOff": "Esconder al PyBot pequeño",
+  "buddy.hide": "Esconder al PyBot pequeño",
+  "buddy.greetMorning": "Good morning",
+  "buddy.greetAfternoon": "Good afternoon",
+  "buddy.greetEvening": "Good evening",
+  "buddy.greet": "{greet}! ¡Qué bueno verte!",
+  "buddy.greetNamed": "{greet}, {name}! ¡Qué bueno verte!",
+  "buddy.hover1": "¡Hola! Hi!",
+  "buddy.hover2": "¿Me buscabas?",
+  "buddy.hover3": "Hello, friend!",
+  "buddy.correct1": "Yes! ¡Muy bien!",
+  "buddy.correct2": "¡Lo lograste!",
+  "buddy.correct3": "Great job!",
+  "buddy.correct4": "¡Mis circuitos bailan de alegría!",
+  "buddy.correctNamed": "Well done, {name}!",
+  "buddy.wrong1": "¡Casi! Prueba otra.",
+  "buddy.wrong2": "Equivocarse ayuda a aprender.",
+  "buddy.wrong3": "Léelo otra vez. ¡Tú puedes!",
+  "buddy.wrong4": "Mmm, pensemos juntos.",
+  "buddy.pageDone": "¡Terminaste todo aquí! Hooray!",
+  "buddy.pageDoneNamed": "{name}, ¡terminaste todo aquí! Hooray!",
+  "buddy.nameSaved": "Nice to meet you, {name}!",
+  "buddy.tip1": "Di la palabra en voz alta tres veces. ¡Ayuda mucho!",
+  "buddy.tip2": "Enséñale a alguien de tu casa la palabra de hoy.",
+  "buddy.tip3": "Toca 🔊 todas las veces que quieras. ¡No se gasta!",
+  "buddy.tip4": "Equivocarse es parte de aprender. ¡Yo también me equivoco!",
+  "buddy.tip5": "Respira hondo. Lo estás haciendo muy bien.",
+  "buddy.tip6": "Los robots necesitan aceite y los niños agua. ¡Toma un poquito!",
+  "buddy.tip7": "Busca algo rojo en tu casa. En inglés es red!",
+  "buddy.tip8": "¡Me encanta aprender contigo!",
+  "buddy.tip9": "Puedes moverme. ¡Arrástrame a donde quieras!",
+  "buddy.tip10": "Canta una canción en inglés con tu familia.",
+  "buddy.tip11": "Un poquito cada día es mejor que mucho un solo día.",
+  "buddy.tip12": "Pega un papelito con una palabra en inglés en tu cuarto.",
+  "buddy.joke1Q": "¿Qué le dijo un semáforo a otro?",
+  "buddy.joke1A": "¡No me mires, que me estoy cambiando!",
+  "buddy.joke2Q": "¿Por qué el libro de matemáticas estaba triste?",
+  "buddy.joke2A": "¡Porque tenía muchos problemas!",
+  "buddy.joke3Q": "¿Qué hace una abeja en el gimnasio?",
+  "buddy.joke3A": "¡Zum-ba!",
+  "buddy.joke4Q": "¿Qué le dijo el 1 al 10?",
+  "buddy.joke4A": "¡Para ser como yo, tienes que ser sincero!",
+  "buddy.joke5Q": "¿Cuál es el colmo de un jardinero?",
+  "buddy.joke5A": "¡Que lo dejen plantado!",
+  "buddy.joke6Q": "¿Qué le dijo la luna al sol?",
+  "buddy.joke6A": "¡Tan grande y no te dejan salir de noche!",
+  "buddy.riddle1Q": "Adivina: ¿cómo se dice «gato» en inglés?",
+  "buddy.riddle1A": "Cat! 🐱",
+  "buddy.riddle2Q": "Adivina: ¿cómo se dice «perro» en inglés?",
+  "buddy.riddle2A": "Dog! 🐶",
+  "buddy.riddle3Q": "Adivina: ¿cómo se dice «rojo» en inglés?",
+  "buddy.riddle3A": "Red! 🔴",
+  "buddy.riddle4Q": "Adivina: ¿cómo se dice «gracias» en inglés?",
+  "buddy.riddle4A": "Thank you! 💛",
+  "buddy.riddle5Q": "Adivina: ¿cómo se dice «tres» en inglés?",
+  "buddy.riddle5A": "Three! 3️⃣",
+  "buddy.riddle6Q": "Adivina: ¿cómo se dice «manzana» en inglés?",
+  "buddy.riddle6A": "Apple! 🍎",
+  "buddy.riddle7Q": "Adivina: ¿cómo se dice «hola» en inglés?",
+  "buddy.riddle7A": "Hello! 👋",
+  "buddy.riddle8Q": "Adivina: ¿cómo se dice «amigo» en inglés?",
+  "buddy.riddle8A": "Friend! 🤝",
+  "buddy.fact1": "En inglés, «I» (yo) siempre se escribe con mayúscula.",
+  "buddy.fact2": "El inglés tiene 26 letras. ¡No tiene la «ñ»!",
+  "buddy.fact3": "«Hello» y «hi» significan lo mismo. «Hi» es más relajado.",
+  "buddy.fact4": "En inglés, los días empiezan con mayúscula: Monday, Tuesday…",
+  "buddy.fact5": "«Animal», «chocolate» y «hotel» se escriben igual en inglés.",
+  "buddy.fact6": "En inglés el color va primero: red apple es manzana roja.",
+  "buddy.fact7": "«You» sirve para decir «tú» y también «ustedes».",
+  "buddy.fact8": "La palabra que más se usa en inglés es «the».",
+  "buddy.cheer1": "You are awesome! ¡Eres genial!",
+  "buddy.cheer2": "Keep going! ¡Sigue así!",
+  "buddy.cheer3": "¡Paso a paso se llega lejos!",
+  "buddy.cheer4": "¡Qué bien lo haces!",
+  "buddy.cheer5": "¡Estoy feliz de aprender contigo!",
+  "buddy.cheer6": "Great job! ¡Muy bien hecho!",
+  "buddy.sing": "La la la… I love English!",
+  "buddy.stretch": "¡A estirarse! Up, up, up!",
+  "buddy.scan": "Escaneando… ¡veo a alguien que aprende mucho!",
+  "buddy.bottom": "¡Llegaste al final! The end!",
+  "buddy.wake": "¡Uy! Me quedé dormido. Good morning!",
+  "buddy.dragging": "¡Wiii! ¿A dónde vamos?",
+  "buddy.dropped1": "¡Aquí me quedo!",
+  "buddy.dropped2": "¡Buen lugar!",
+  "buddy.dropped3": "Nice! ¡Me gusta aquí!",
+  "buddy.shaking": "¡Ay, ay, ay! ¡Despacito!",
+  "buddy.dizzy1": "Todo da vueltas…",
+  "buddy.dizzy2": "¡Estoy mareado! Dizzy!",
+  "buddy.dizzy3": "¡Uf! Veo estrellitas.",
+  "buddy.poke1": "¡Jiji, cosquillas!",
+  "buddy.poke2": "Hi! ¿Qué pasó?",
+  "buddy.poke3": "¡Boop!",
+  "buddy.pokeLots": "¡Jajaja! ¡Me rindo!",
+});
+
+Object.assign(translations.en, {
+  "buddy.turnOn": "Show the little PyBot",
+  "buddy.turnOff": "Hide the little PyBot",
+  "buddy.hide": "Hide the little PyBot",
+  "buddy.greetMorning": "Good morning",
+  "buddy.greetAfternoon": "Good afternoon",
+  "buddy.greetEvening": "Good evening",
+  "buddy.greet": "{greet}! So nice to see you!",
+  "buddy.greetNamed": "{greet}, {name}! So nice to see you!",
+  "buddy.hover1": "Hi there!",
+  "buddy.hover2": "Were you looking for me?",
+  "buddy.hover3": "Hello, friend!",
+  "buddy.correct1": "Yes! Well done!",
+  "buddy.correct2": "You got it!",
+  "buddy.correct3": "Great job!",
+  "buddy.correct4": "My circuits are dancing!",
+  "buddy.correctNamed": "Well done, {name}!",
+  "buddy.wrong1": "Almost! Try another one.",
+  "buddy.wrong2": "Mistakes help us learn.",
+  "buddy.wrong3": "Read it again. You can do it!",
+  "buddy.wrong4": "Hmm, let's think together.",
+  "buddy.pageDone": "You finished everything here! Hooray!",
+  "buddy.pageDoneNamed": "{name}, you finished everything here! Hooray!",
+  "buddy.nameSaved": "Nice to meet you, {name}!",
+  "buddy.tip1": "Say the word out loud three times. It really helps!",
+  "buddy.tip2": "Teach today's word to someone at home.",
+  "buddy.tip3": "Press 🔊 as many times as you like. It never runs out!",
+  "buddy.tip4": "Mistakes are part of learning. I make them too!",
+  "buddy.tip5": "Take a deep breath. You are doing great.",
+  "buddy.tip6": "Robots need oil. Kids need water. Drink some!",
+  "buddy.tip7": "Find something red at home. In English it's red!",
+  "buddy.tip8": "I love learning with you!",
+  "buddy.tip9": "You can move me! Drag me wherever you like.",
+  "buddy.tip10": "Sing a song in English with your family.",
+  "buddy.tip11": "A little every day beats a lot on one day.",
+  "buddy.tip12": "Stick a note with an English word in your room.",
+  "buddy.joke1Q": "Why did the teddy bear say no to dessert?",
+  "buddy.joke1A": "It was already stuffed!",
+  "buddy.joke2Q": "What do you call a sleeping dinosaur?",
+  "buddy.joke2A": "A dino-snore!",
+  "buddy.joke3Q": "Why are fish so smart?",
+  "buddy.joke3A": "They live in schools!",
+  "buddy.joke4Q": "What has ears but cannot hear?",
+  "buddy.joke4A": "A cornfield!",
+  "buddy.joke5Q": "What do you call a bear with no teeth?",
+  "buddy.joke5A": "A gummy bear!",
+  "buddy.joke6Q": "What did the ocean say to the beach?",
+  "buddy.joke6A": "Nothing. It just waved!",
+  "buddy.riddle1Q": "Guess: how do you say «gato» in English?",
+  "buddy.riddle1A": "Cat! 🐱",
+  "buddy.riddle2Q": "Guess: how do you say «perro» in English?",
+  "buddy.riddle2A": "Dog! 🐶",
+  "buddy.riddle3Q": "Guess: how do you say «rojo» in English?",
+  "buddy.riddle3A": "Red! 🔴",
+  "buddy.riddle4Q": "Guess: how do you say «gracias» in English?",
+  "buddy.riddle4A": "Thank you! 💛",
+  "buddy.riddle5Q": "Guess: how do you say «tres» in English?",
+  "buddy.riddle5A": "Three! 3️⃣",
+  "buddy.riddle6Q": "Guess: how do you say «manzana» in English?",
+  "buddy.riddle6A": "Apple! 🍎",
+  "buddy.riddle7Q": "Guess: how do you say «hola» in English?",
+  "buddy.riddle7A": "Hello! 👋",
+  "buddy.riddle8Q": "Guess: how do you say «amigo» in English?",
+  "buddy.riddle8A": "Friend! 🤝",
+  "buddy.fact1": "In English, “I” is always a capital letter.",
+  "buddy.fact2": "English has 26 letters. There is no “ñ”!",
+  "buddy.fact3": "“Hello” and “hi” mean the same. “Hi” is more relaxed.",
+  "buddy.fact4": "In English, days start with a capital: Monday, Tuesday…",
+  "buddy.fact5": "“Animal”, “chocolate” and “hotel” are spelled the same in Spanish.",
+  "buddy.fact6": "In English the color comes first: a red apple.",
+  "buddy.fact7": "“You” works for one person and for many people.",
+  "buddy.fact8": "The most used word in English is “the”.",
+  "buddy.cheer1": "You are awesome!",
+  "buddy.cheer2": "Keep going!",
+  "buddy.cheer3": "Step by step, you go far!",
+  "buddy.cheer4": "You're doing so well!",
+  "buddy.cheer5": "I'm happy to learn with you!",
+  "buddy.cheer6": "Great job!",
+  "buddy.sing": "La la la… I love English!",
+  "buddy.stretch": "Stretch time! Up, up, up!",
+  "buddy.scan": "Scanning… I see a great learner!",
+  "buddy.bottom": "You reached the end! The end!",
+  "buddy.wake": "Oops! I fell asleep. Good morning!",
+  "buddy.dragging": "Wheee! Where are we going?",
+  "buddy.dropped1": "I'll stay here!",
+  "buddy.dropped2": "Nice spot!",
+  "buddy.dropped3": "I like it here!",
+  "buddy.shaking": "Whoa, whoa! Gently!",
+  "buddy.dizzy1": "Everything is spinning…",
+  "buddy.dizzy2": "I'm dizzy!",
+  "buddy.dizzy3": "Phew! I see little stars.",
+  "buddy.poke1": "Hee hee, that tickles!",
+  "buddy.poke2": "Hi! What's up?",
+  "buddy.poke3": "Boop!",
+  "buddy.pokeLots": "Ha ha ha! I give up!",
+});
+
+const BUDDY_PREFERENCE_KEY = "pybotenglish.buddy.enabled";
+const BUDDY_POSITION_KEY = "pybotenglish.buddy.position";
+const BUDDY_GREETED_KEY = "pybotenglish.buddy.greeted";
+const buddyScreenQuery = window.matchMedia("(min-width: 761px) and (min-height: 481px)");
+const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+const BUDDY_TIP_COUNT = 12;
+const BUDDY_JOKE_COUNT = 6;
+const BUDDY_RIDDLE_COUNT = 8;
+const BUDDY_FACT_COUNT = 8;
+const BUDDY_CHEER_COUNT = 6;
+const BUDDY_MARGIN = 14;
+// After this long without the learner moving or typing, PyBot takes a nap.
+const BUDDY_NAP_AFTER_MS = 75_000;
+// Idle antics: a mood, a body move, optional floating particles, and what PyBot may say.
+const BUDDY_IDLE_ANTICS = [
+  { mood: "happy", move: "wave" },
+  { mood: "wink", move: "hop" },
+  { mood: "curious", move: "look", tip: true },
+  { mood: "counting", move: "", tip: true },
+  { mood: "starry", move: "spin", particles: "✦" },
+  { mood: "thinking", move: "", tip: true },
+  { mood: "deciding", move: "look" },
+  { mood: "welcoming", move: "wave", tip: true },
+  { mood: "proud", move: "dance", particles: "♪", say: "buddy.sing" },
+  { mood: "happy", move: "blink", tip: true },
+  { mood: "surprised", move: "peek" },
+  { mood: "happy", move: "stretch", say: "buddy.stretch" },
+  { mood: "welcoming", move: "hop", particles: "♥" },
+  { mood: "focused", move: "scan", say: "buddy.scan" },
+  { mood: "celebrating", move: "flip" },
+  { mood: "wink", move: "wiggle", tip: true },
+  { mood: "wink", move: "hop", joke: true },
+  { mood: "happy", move: "", joke: true },
+  { mood: "thinking", move: "", riddle: true },
+  { mood: "curious", move: "look", riddle: true },
+  { mood: "curious", move: "look", fact: true },
+  { mood: "starry", move: "", fact: true },
+  { mood: "proud", move: "wave", cheer: true, particles: "♥" },
+];
+let buddyToggle = null;
+let buddy = null;
+let buddyEnabled = true;
+let buddyIdleTimer = null;
+let buddyRestTimer = null;
+let buddyBubbleTimer = null;
+let buddyBusyUntil = 0;
+let buddyBubbleUntil = 0;
+let buddyHovered = false;
+let buddyAsleep = false;
+let buddyLastInput = Date.now();
+let buddyPosition = null;
+let buddyLookFrame = 0;
+let buddySpeechId = 0;
+let buddyHoverAfter = 0;
+let buddyPokes = [];
+let buddySaidBottom = false;
+
+// The spot is kept as fractions of the free space, so it survives resizing.
+function storedBuddyPosition() {
+  const [x, y] = (readStored(BUDDY_POSITION_KEY) ?? "").split(",").map(Number);
+  return x >= 0 && x <= 1 && y >= 0 && y <= 1 ? { x, y } : { x: 1, y: 1 };
+}
+
+function buddyFreeSpace() {
+  return {
+    width: Math.max(0, window.innerWidth - buddy.offsetWidth - BUDDY_MARGIN * 2),
+    height: Math.max(0, window.innerHeight - buddy.offsetHeight - BUDDY_MARGIN * 2),
+  };
+}
+
+function placeBuddy(left, top) {
+  const space = buddyFreeSpace();
+  const x = Math.min(Math.max(left - BUDDY_MARGIN, 0), space.width);
+  const y = Math.min(Math.max(top - BUDDY_MARGIN, 0), space.height);
+  buddy.style.left = `${x + BUDDY_MARGIN}px`;
+  buddy.style.top = `${y + BUDDY_MARGIN}px`;
+  buddyPosition = { x: space.width ? x / space.width : 1, y: space.height ? y / space.height : 1 };
+  // Keep the speech bubble on the screen.
+  buddy.classList.toggle("bubble-right", x + BUDDY_MARGIN + buddy.offsetWidth / 2 < window.innerWidth / 2);
+  buddy.classList.toggle("bubble-below", y + BUDDY_MARGIN < 150);
+}
+
+function restoreBuddyPosition() {
+  if (!buddy || buddy.hidden) {
+    return;
+  }
+  const space = buddyFreeSpace();
+  const position = buddyPosition ?? storedBuddyPosition();
+  placeBuddy(BUDDY_MARGIN + position.x * space.width, BUDDY_MARGIN + position.y * space.height);
+}
+
+function createBuddyToggle() {
+  const nav = document.querySelector(".site-nav");
+  if (!nav) {
+    return null;
+  }
+  const button = document.createElement("button");
+  button.className = "buddy-toggle";
+  button.type = "button";
+  button.innerHTML = '<span class="buddy-toggle-icon" aria-hidden="true"></span>';
+  nav.insertBefore(button, nav.querySelector(".language-switch"));
+  button.addEventListener("click", () => setBuddyEnabled(!buddyEnabled));
+  return button;
+}
+
+function updateBuddyButton() {
+  if (!buddyToggle) {
+    return;
+  }
+  const label = textFor(buddyEnabled ? "buddy.turnOff" : "buddy.turnOn");
+  buddyToggle.classList.toggle("is-on", buddyEnabled);
+  buddyToggle.setAttribute("aria-pressed", String(buddyEnabled));
+  buddyToggle.setAttribute("aria-label", label);
+  buddyToggle.title = label;
+  buddy?.querySelector(".buddy-hide")?.setAttribute("aria-label", textFor("buddy.hide"));
+}
+
+function createBuddy() {
+  const element = document.createElement("div");
+  element.className = "pybot-buddy";
+  element.hidden = true;
+  element.innerHTML = `
+    <p class="buddy-bubble" aria-hidden="true"></p>
+    <button class="buddy-hide" type="button">×</button>
+    <div class="buddy-body" aria-hidden="true">
+      <div class="pybot-wrap" data-mood="welcoming">
+        <div class="pybot">
+          <div class="antenna"><span></span></div>
+          <div class="ear ear-left"></div>
+          <div class="ear ear-right"></div>
+          <div class="bot-head">
+            <div class="bot-screen">
+              <div class="brow brow-left"></div>
+              <div class="brow brow-right"></div>
+              <div class="eye eye-left"><span></span></div>
+              <div class="eye eye-right"><span></span></div>
+              <div class="cheek cheek-left"></div>
+              <div class="cheek cheek-right"></div>
+              <div class="mouth"></div>
+            </div>
+          </div>
+          <div class="bot-neck"></div>
+          <div class="arm arm-left"><span class="hand"></span></div>
+          <div class="arm arm-right"><span class="hand"></span></div>
+          <div class="bot-body">
+            <div class="chest-light"></div>
+            <span class="chest-code">Hi!</span>
+          </div>
+        </div>
+      </div>
+    </div>`;
+  element.querySelector(".buddy-hide").addEventListener("click", () => {
+    setBuddyEnabled(false);
+    buddyToggle?.focus();
+  });
+  element.addEventListener("pointerenter", () => {
+    buddyHovered = true;
+    window.clearTimeout(buddyBubbleTimer);
+    buddyHoverHello();
+  });
+  element.addEventListener("pointerleave", () => {
+    buddyHovered = false;
+    buddyHideBubbleLater(Math.max(1800, buddyBubbleUntil - Date.now()));
+  });
+  armBuddyDrag(element.querySelector(".buddy-body"));
+  document.body.append(element);
+  return element;
+}
+
+// Dragging moves PyBot; a tap without moving pokes it.
+function armBuddyDrag(handle) {
+  let drag = null;
+
+  handle.addEventListener("pointerdown", (event) => {
+    if (event.button !== 0) {
+      return;
+    }
+    const box = buddy.getBoundingClientRect();
+    drag = {
+      id: event.pointerId, startX: event.clientX, startY: event.clientY, dx: event.clientX - box.left, dy: event.clientY - box.top,
+      moved: false, lastX: event.clientX, lastY: event.clientY, dirX: 0, dirY: 0, turns: [], shook: false,
+    };
+    handle.setPointerCapture(event.pointerId);
+  });
+
+  handle.addEventListener("pointermove", (event) => {
+    if (!drag || event.pointerId !== drag.id) {
+      return;
+    }
+    if (!drag.moved && Math.hypot(event.clientX - drag.startX, event.clientY - drag.startY) < 6) {
+      return;
+    }
+    if (!drag.moved) {
+      drag.moved = true;
+      buddyWake(false);
+      buddy.classList.add("is-dragging");
+      buddyAct("surprised", "", textFor("buddy.dragging"), 60_000);
+    }
+    placeBuddy(event.clientX - drag.dx, event.clientY - drag.dy);
+    noteBuddyShake(drag, event.clientX, event.clientY);
+  });
+
+  const end = (event) => {
+    if (!drag || event.pointerId !== drag.id) {
+      return;
+    }
+    const { moved, shook } = drag;
+    drag = null;
+    buddy.classList.remove("is-dragging", "is-shaking");
+    if (moved) {
+      writeStored(BUDDY_POSITION_KEY, `${buddyPosition.x.toFixed(3)},${buddyPosition.y.toFixed(3)}`);
+      if (shook) {
+        buddyAct("happy", "dizzy", buddyPick("buddy.dizzy", 3), 3800);
+        buddyParticles("★", 5);
+        return;
+      }
+      buddyAct("happy", "hop", buddyPick("buddy.dropped", 3), 2400);
+    } else if (event.type === "pointerup") {
+      buddyPoke();
+    }
+  };
+  handle.addEventListener("pointerup", end);
+  handle.addEventListener("pointercancel", end);
+}
+
+// Quick back-and-forth while dragging counts as shaking, and makes PyBot dizzy.
+function noteBuddyShake(drag, x, y) {
+  const now = Date.now();
+  [["X", x - drag.lastX], ["Y", y - drag.lastY]].forEach(([axis, delta]) => {
+    if (Math.abs(delta) < 4) {
+      return;
+    }
+    const direction = Math.sign(delta);
+    if (drag[`dir${axis}`] && direction !== drag[`dir${axis}`]) {
+      drag.turns.push(now);
+    }
+    drag[`dir${axis}`] = direction;
+  });
+  drag.lastX = x;
+  drag.lastY = y;
+  drag.turns = drag.turns.filter((time) => now - time < 1200);
+
+  const shaking = drag.turns.length >= 5;
+  buddy.classList.toggle("is-shaking", shaking);
+  if (shaking && !drag.shook) {
+    drag.shook = true;
+    buddyShowBubble(textFor("buddy.shaking"));
+  }
+}
+
+function buddyActive() {
+  return Boolean(buddy) && buddyEnabled && buddyScreenQuery.matches && !document.hidden;
+}
+
+// Long messages stay longer, so there is time to read them.
+function buddyReadingTime(text) {
+  return Math.min(13_000, Math.max(4000, 1800 + text.length * 80));
+}
+
+function buddyHideBubbleLater(delay) {
+  window.clearTimeout(buddyBubbleTimer);
+  if (buddyHovered) {
+    return;
+  }
+  buddyBubbleTimer = window.setTimeout(() => buddy?.querySelector(".buddy-bubble")?.classList.remove("is-visible"), delay);
+}
+
+function buddyShowBubble(text) {
+  const bubble = buddy?.querySelector(".buddy-bubble");
+  if (!bubble) {
+    return;
+  }
+  const duration = buddyReadingTime(text);
+  buddySpeechId += 1;
+  bubble.textContent = text;
+  bubble.classList.remove("is-visible");
+  void bubble.offsetWidth;
+  bubble.classList.add("is-visible");
+  buddyBubbleUntil = Date.now() + duration;
+  buddyHideBubbleLater(duration);
+}
+
+function buddyParticles(symbol, count = 5) {
+  if (!buddy || reducedMotionQuery.matches) {
+    return;
+  }
+  for (let index = 0; index < count; index += 1) {
+    const particle = document.createElement("span");
+    particle.className = "buddy-particle";
+    particle.textContent = symbol;
+    particle.style.setProperty("--particle-x", `${Math.round((Math.random() - 0.5) * 90)}px`);
+    particle.style.setProperty("--particle-delay", `${index * 140}ms`);
+    buddy.append(particle);
+    window.setTimeout(() => particle.remove(), 1800 + index * 140);
+  }
+}
+
+// Sets a mood and a move for a while, then PyBot goes back to resting.
+function buddyAct(mood, move = "", text = "", duration = 2600) {
+  if (!buddyActive()) {
+    return;
+  }
+  const wrap = buddy.querySelector(".pybot-wrap");
+  wrap.dataset.mood = mood;
+  buddy.dataset.move = "";
+  void buddy.offsetWidth;
+  buddy.dataset.move = move;
+  if (text) {
+    buddyShowBubble(text);
+  }
+  // Wait until the learner had time to read before the next antic.
+  buddyBusyUntil = Date.now() + Math.max(duration, text ? buddyReadingTime(text) : 0);
+  window.clearTimeout(buddyRestTimer);
+  buddyRestTimer = window.setTimeout(() => {
+    wrap.dataset.mood = "happy";
+    buddy.dataset.move = "";
+  }, duration);
+  scheduleBuddyIdle();
+}
+
+function buddyPick(prefix, count) {
+  return fillName(textFor(`${prefix}${1 + Math.floor(Math.random() * count)}`));
+}
+
+function buddyPoke() {
+  if (buddyAsleep) {
+    buddyWake();
+    return;
+  }
+  // Lots of quick pokes in a row: PyBot gives up, giggling.
+  const now = Date.now();
+  buddyPokes = buddyPokes.filter((time) => now - time < 4000).concat(now);
+  if (buddyPokes.length >= 5) {
+    buddyPokes = [];
+    buddyAct("celebrating", "dance", textFor("buddy.pokeLots"), 3000);
+    buddyParticles("♥", 6);
+    return;
+  }
+  const roll = Math.random();
+  if (roll < 0.3) {
+    buddyAct("wink", "wiggle", buddyPick("buddy.poke", 3), 2200);
+    buddyParticles("♥", 3);
+  } else if (roll < 0.55) {
+    buddyTellTwoPart("buddy.joke", BUDDY_JOKE_COUNT, "wink");
+  } else if (roll < 0.8) {
+    buddyTellTwoPart("buddy.riddle", BUDDY_RIDDLE_COUNT, "thinking");
+  } else {
+    buddyIdleAntic(true);
+  }
+}
+
+// A joke or riddle: the question first, the answer once there was time to think.
+function buddyTellTwoPart(prefix, count, mood) {
+  const number = 1 + Math.floor(Math.random() * count);
+  const question = textFor(`${prefix}${number}Q`);
+  const wait = Math.max(3500, buddyReadingTime(question) - 500);
+  buddyAct(mood, "", question, wait + 2000);
+  const speech = buddySpeechId;
+  window.setTimeout(() => {
+    // Skip the answer when something else already took the bubble.
+    if (speech !== buddySpeechId || !buddyActive() || buddyAsleep) {
+      return;
+    }
+    buddyAct("celebrating", "hop", textFor(`${prefix}${number}A`), 3000);
+    buddyParticles(prefix === "buddy.joke" ? "♪" : "✦", 4);
+  }, wait);
+}
+
+function buddyHoverHello() {
+  const now = Date.now();
+  if (!buddyActive() || buddyAsleep || now < buddyBusyUntil || now < buddyHoverAfter || buddy.classList.contains("is-dragging")) {
+    return;
+  }
+  buddyHoverAfter = now + 30_000;
+  if (Math.random() < 0.6) {
+    buddyAct("happy", "wave", buddyPick("buddy.hover", 3), 2000);
+  }
+}
+
+function buddyGreeting() {
+  const hour = new Date().getHours();
+  const part = hour < 12 ? "Morning" : hour < 18 ? "Afternoon" : "Evening";
+  const text = textFor(learnerName ? "buddy.greetNamed" : "buddy.greet");
+  return fillName(text).replaceAll("{greet}", textFor(`buddy.greet${part}`));
+}
+
+// A small one-time reaction when the learner reaches the end of a long page.
+function buddyNoticeScroll() {
+  if (!buddyActive() || buddyAsleep || buddySaidBottom || Date.now() < buddyBusyUntil) {
+    return;
+  }
+  const page = document.documentElement;
+  if (page.scrollHeight > window.innerHeight * 1.5 && window.innerHeight + window.scrollY >= page.scrollHeight - 40) {
+    buddySaidBottom = true;
+    buddyAct("starry", "spin", textFor("buddy.bottom"), 2600);
+    buddyParticles("✦", 5);
+  }
+}
+
+function buddyIdleAntic(poked = false) {
+  if (!buddyActive() || buddyAsleep || (!poked && Date.now() < buddyBusyUntil)) {
+    scheduleBuddyIdle();
+    return;
+  }
+  if (!poked && Date.now() - buddyLastInput > BUDDY_NAP_AFTER_MS) {
+    buddySleep();
+    return;
+  }
+  const antic = BUDDY_IDLE_ANTICS[Math.floor(Math.random() * BUDDY_IDLE_ANTICS.length)];
+  if (antic.joke || antic.riddle) {
+    buddyTellTwoPart(antic.joke ? "buddy.joke" : "buddy.riddle", antic.joke ? BUDDY_JOKE_COUNT : BUDDY_RIDDLE_COUNT, antic.mood);
+    return;
+  }
+  let text = "";
+  if (antic.say) {
+    text = textFor(antic.say);
+  } else if (antic.fact) {
+    text = buddyPick("buddy.fact", BUDDY_FACT_COUNT);
+  } else if (antic.cheer) {
+    text = buddyPick("buddy.cheer", BUDDY_CHEER_COUNT);
+  } else if (antic.tip && (poked || Math.random() < 0.6)) {
+    text = buddyPick("buddy.tip", BUDDY_TIP_COUNT);
+  }
+  buddyAct(antic.mood, antic.move, text, 2400);
+  if (antic.particles) {
+    buddyParticles(antic.particles);
+  }
+}
+
+function buddySleep() {
+  buddyAsleep = true;
+  buddy.querySelector(".pybot-wrap").dataset.mood = "happy";
+  buddy.dataset.move = "sleep";
+  buddy.querySelector(".buddy-bubble").classList.remove("is-visible");
+  buddyParticles("z", 3);
+  window.clearTimeout(buddyIdleTimer);
+  // Little snores while napping.
+  buddyIdleTimer = window.setInterval(() => buddyParticles("z", 3), 4000);
+}
+
+function buddyWake(greet = true) {
+  if (!buddyAsleep) {
+    return;
+  }
+  buddyAsleep = false;
+  window.clearInterval(buddyIdleTimer);
+  buddy.dataset.move = "";
+  if (greet) {
+    buddyAct("surprised", "hop", textFor("buddy.wake"), 2400);
+  } else {
+    scheduleBuddyIdle();
+  }
+}
+
+function scheduleBuddyIdle() {
+  if (buddyAsleep) {
+    return;
+  }
+  window.clearTimeout(buddyIdleTimer);
+  if (!buddyActive()) {
+    return;
+  }
+  // Calmer when the learner prefers less motion.
+  const delay = (reducedMotionQuery.matches ? 22000 : 9000) + Math.random() * 8000;
+  buddyIdleTimer = window.setTimeout(buddyIdleAntic, delay);
+}
+
+// PyBot's eyes follow the pointer.
+function buddyLookAt(clientX, clientY) {
+  if (!buddyActive() || buddy.hidden || buddyLookFrame) {
+    return;
+  }
+  buddyLookFrame = window.requestAnimationFrame(() => {
+    buddyLookFrame = 0;
+    const box = buddy.querySelector(".buddy-body").getBoundingClientRect();
+    const dx = clientX - (box.left + box.width / 2);
+    const dy = clientY - (box.top + box.height * 0.3);
+    const distance = Math.hypot(dx, dy) || 1;
+    const reach = Math.min(1, distance / 160);
+    buddy.style.setProperty("--look-x", `${((dx / distance) * 11 * reach).toFixed(1)}px`);
+    buddy.style.setProperty("--look-y", `${((dy / distance) * 8 * reach).toFixed(1)}px`);
+  });
+}
+
+function noteBuddyInput(event) {
+  buddyLastInput = Date.now();
+  // A tap on PyBot itself wakes it through the poke.
+  if (buddyAsleep && buddyActive() && !buddy.contains(event.target)) {
+    buddyWake();
+  }
+}
+
+// Called from the places that already tell the learner how they did.
+// `pageDone` is true when the last activity of a lesson page was just finished.
+function buddyReact(event, { pageDone = false } = {}) {
+  if (!buddyActive()) {
+    return;
+  }
+  buddyWake(false);
+
+  if (event === "correct") {
+    if (pageDone) {
+      buddyAct("celebrating", "dance", fillName(textFor(learnerName ? "buddy.pageDoneNamed" : "buddy.pageDone")), 4200);
+      buddyParticles("✦", 8);
+      return;
+    }
+    const roll = Math.random();
+    let text = buddyPick("buddy.correct", 4);
+    if (learnerName && roll < 0.25) {
+      text = fillName(textFor("buddy.correctNamed"));
+    } else if (roll > 0.8) {
+      text = buddyPick("buddy.cheer", BUDDY_CHEER_COUNT);
+    }
+    const mood = ["celebrating", "starry", "proud"][Math.floor(Math.random() * 3)];
+    buddyAct(mood, "hop", text, 3000);
+    buddyParticles("✦", 4);
+  } else if (event === "wrong") {
+    buddyAct("encouraging", "nod", buddyPick("buddy.wrong", 4), 3000);
+  } else if (event === "nameSaved") {
+    buddyAct("welcoming", "wave", fillName(textFor("buddy.nameSaved")), 3200);
+    buddyParticles("♥", 4);
+  } else if (event === "kindPhrase") {
+    // The big PyBot answers; the little one just smiles along.
+    buddyAct("wink", "hop", "", 1800);
+    buddyParticles("♥", 3);
+  }
+}
+
+function syncBuddy() {
+  if (!buddy) {
+    return;
+  }
+  const visible = buddyEnabled && buddyScreenQuery.matches;
+  buddy.hidden = !visible;
+  if (!visible || document.hidden) {
+    window.clearTimeout(buddyIdleTimer);
+    window.clearInterval(buddyIdleTimer);
+    window.clearTimeout(buddyRestTimer);
+    buddyAsleep = false;
+    return;
+  }
+  restoreBuddyPosition();
+  scheduleBuddyIdle();
+}
+
+function setBuddyEnabled(enabled) {
+  buddyEnabled = enabled;
+  writeStored(BUDDY_PREFERENCE_KEY, String(enabled));
+  updateBuddyButton();
+  syncBuddy();
+  if (enabled) {
+    buddyAct("welcoming", "wave", buddyGreeting(), 2800);
+  }
+}
+
+function startBuddy() {
+  buddyEnabled = readStored(BUDDY_PREFERENCE_KEY) !== "false";
+  buddyToggle = createBuddyToggle();
+  buddy = createBuddy();
+  updateBuddyButton();
+  syncBuddy();
+  buddyScreenQuery.addEventListener("change", syncBuddy);
+  document.addEventListener("visibilitychange", syncBuddy);
+  window.addEventListener("resize", restoreBuddyPosition);
+  document.addEventListener("pointermove", (event) => {
+    noteBuddyInput(event);
+    buddyLookAt(event.clientX, event.clientY);
+  }, { passive: true });
+  ["keydown", "scroll", "pointerdown"].forEach((type) => document.addEventListener(type, noteBuddyInput, { passive: true }));
+  document.addEventListener("scroll", buddyNoticeScroll, { passive: true });
+  languageRenderers.push(updateBuddyButton);
+  // Say hello once per visit, not on every page.
+  let greeted = false;
+  try {
+    greeted = sessionStorage.getItem(BUDDY_GREETED_KEY) === "true";
+    sessionStorage.setItem(BUDDY_GREETED_KEY, "true");
+  } catch {
+    // Without storage PyBot greets on every page.
+  }
+  if (!greeted) {
+    window.setTimeout(() => buddyAct("welcoming", "wave", buddyGreeting(), 3000), 900);
+  }
+}
+
 // ---------- Start ----------
 
 const scriptBaseUrl = document.currentScript?.src ?? window.location.href;
@@ -1299,6 +2085,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupPybot();
   setupNamePanel();
   setupBackupTools();
+  startBuddy();
   languageRenderers.push(renderStreak, renderPathMap);
   setLanguage(currentLanguage, false);
   checkRewards();
