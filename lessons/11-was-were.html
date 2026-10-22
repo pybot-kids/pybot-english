@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Di cómo estabas o dónde estabas antes. Es el pasado de am, is y are." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>Was, were: cómo estaba — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="wasWere">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "wasWere",
+  "mood": "thinking",
+  "title": {
+    "es": "Was, were: cómo estaba",
+    "en": "Was, were"
+  },
+  "intro": {
+    "es": "Di cómo estabas o dónde estabas antes. Es el pasado de am, is y are.",
+    "en": "Say how or where you were before. It's the past of am, is and are."
+  },
+  "pybot": {
+    "es": "Yesterday I was tired. Today I'm happy! 🔋",
+    "en": "Yesterday I was tired. Today I'm happy! 🔋"
+  },
+  "look": [
+    {
+      "icon": "🙋",
+      "word": "I was",
+      "meaning": {
+        "es": "yo estaba, yo era",
+        "en": "yo estaba, yo era"
+      }
+    },
+    {
+      "icon": "👧",
+      "word": "she was",
+      "meaning": {
+        "es": "ella estaba",
+        "en": "ella estaba"
+      }
+    },
+    {
+      "icon": "👦",
+      "word": "he was",
+      "meaning": {
+        "es": "él estaba",
+        "en": "él estaba"
+      }
+    },
+    {
+      "icon": "👫",
+      "word": "they were",
+      "meaning": {
+        "es": "ellos estaban",
+        "en": "ellos estaban"
+      }
+    },
+    {
+      "icon": "👉",
+      "word": "you were",
+      "meaning": {
+        "es": "tú estabas",
+        "en": "tú estabas"
+      }
+    },
+    {
+      "icon": "❓",
+      "word": "Was it…?",
+      "meaning": {
+        "es": "¿estuvo…?, ¿fue…?",
+        "en": "¿estuvo…?, ¿fue…?"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "I was at home.",
+        "meaning": {
+          "es": "Yo estaba en la casa.",
+          "en": "Yo estaba en la casa."
+        }
+      },
+      {
+        "en": "They were at the park.",
+        "meaning": {
+          "es": "Ellos estaban en el parque.",
+          "en": "Ellos estaban en el parque."
+        }
+      },
+      {
+        "en": "Was it fun? — Yes, it was!",
+        "meaning": {
+          "es": "¿Fue divertido? — ¡Sí!",
+          "en": "¿Fue divertido? — ¡Sí!"
+        }
+      }
+    ],
+    "rule": {
+      "es": "Am e is pasan a was: I was, she was, it was. Are pasa a were: you were, we were, they were.",
+      "en": "Am and is become was: I was, she was, it was. Are becomes were: you were, we were, they were."
+    }
+  },
+  "activities": [
+    {
+      "id": "wasWere-i",
+      "type": "choice",
+      "prompt": {
+        "es": "Ayer estabas cansado o cansada. Completa: “Yesterday I ___ tired.”",
+        "en": "Yesterday you were tired. Fill in: “Yesterday I ___ tired.”"
+      },
+      "options": [
+        "was",
+        "were",
+        "am"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Con I en pasado: was.",
+        "en": "With I in the past: was."
+      },
+      "why": {
+        "es": "“I was tired.”",
+        "en": "“I was tired.”"
+      },
+      "show": "Yesterday I ___ tired."
+    },
+    {
+      "id": "wasWere-they",
+      "type": "choice",
+      "prompt": {
+        "es": "👫 Completa: “They ___ at the park.”",
+        "en": "👫 Fill in: “They ___ at the park.”"
+      },
+      "options": [
+        "were",
+        "was",
+        "is"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Con they: were.",
+        "en": "With they: were."
+      },
+      "why": {
+        "es": "“They were at the park.”",
+        "en": "“They were at the park.”"
+      },
+      "show": "They ___ at the park."
+    },
+    {
+      "id": "wasWere-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué significa?",
+        "en": "Listen. What does it mean?"
+      },
+      "options": [
+        {
+          "es": "La película fue muy chistosa.",
+          "en": "The movie was very funny."
+        },
+        {
+          "es": "La película es muy chistosa.",
+          "en": "The movie is very funny."
+        },
+        {
+          "es": "¿La película es chistosa?",
+          "en": "Is the movie funny?"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Escuchaste “was”: es pasado.",
+        "en": "You heard “was”: it's the past."
+      },
+      "why": {
+        "es": "“The movie was very funny.”",
+        "en": "“The movie was very funny.”"
+      },
+      "listen": "The movie was very funny."
+    },
+    {
+      "id": "wasWere-answer",
+      "type": "choice",
+      "prompt": {
+        "es": "Te preguntan “Was it fun?” y sí fue divertido. ¿Qué respondes?",
+        "en": "“Was it fun?” It was. What do you answer?"
+      },
+      "options": [
+        "Yes, it was!",
+        "Yes, it is!",
+        "Yes, it were!"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Responde con was.",
+        "en": "Answer with was."
+      },
+      "why": {
+        "es": "“Yes, it was!”",
+        "en": "“Yes, it was!”"
+      }
+    },
+    {
+      "id": "wasWere-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma: “Ella estaba en el colegio.”",
+        "en": "Build: “She was at school.”"
+      },
+      "tiles": [
+        "She",
+        "was",
+        "at",
+        "school."
+      ],
+      "hint": {
+        "es": "Empieza con She.",
+        "en": "Start with She."
+      },
+      "why": {
+        "es": "“She was at school.”",
+        "en": "“She was at school.”"
+      }
+    },
+    {
+      "id": "wasWere-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? “Were” es el pasado de “are”.",
+        "en": "True or false? “Were” is the past of “are”."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "They are → they were.",
+        "en": "They are → they were."
+      },
+      "why": {
+        "es": "Verdadero.",
+        "en": "True."
+      }
+    },
+    {
+      "id": "wasWere-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot escribió “We was happy”. ¿Cómo se escribe bien?",
+        "en": "🤖 PyBot wrote “We was happy”. What's right?"
+      },
+      "options": [
+        "We were happy.",
+        "We was happy.",
+        "We are happy yesterday."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Con we: were.",
+        "en": "With we: were."
+      },
+      "why": {
+        "es": "¡Arreglado! We were happy.",
+        "en": "Fixed! We were happy."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "I was",
+      "meaning": {
+        "es": "yo estaba, yo era",
+        "en": "yo estaba, yo era"
+      }
+    },
+    {
+      "en": "she was",
+      "meaning": {
+        "es": "ella estaba",
+        "en": "ella estaba"
+      }
+    },
+    {
+      "en": "he was",
+      "meaning": {
+        "es": "él estaba",
+        "en": "él estaba"
+      }
+    },
+    {
+      "en": "they were",
+      "meaning": {
+        "es": "ellos estaban",
+        "en": "ellos estaban"
+      }
+    },
+    {
+      "en": "you were",
+      "meaning": {
+        "es": "tú estabas",
+        "en": "tú estabas"
+      }
+    },
+    {
+      "en": "Was it…?",
+      "meaning": {
+        "es": "¿estuvo…?, ¿fue…?",
+        "en": "¿estuvo…?, ¿fue…?"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "¿Dónde estabas?",
+      "en": "Where were you?"
+    },
+    "text": {
+      "es": "En la noche, cuenta dónde estuviste hoy: “I was at school. I was at grandma's house.”. Pregunta: “Where were you?”.",
+      "en": "At night, say where you were today: “I was at school. I was at grandma's house.”. Ask: “Where were you?”."
+    },
+    "adult": {
+      "es": "respondan con “I was…”.",
+      "en": "answer with “I was…”."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

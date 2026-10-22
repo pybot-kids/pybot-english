@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cuenta una historia en orden: primero, luego, después y al final." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>First, then, finally: mi historia — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="myStory">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "myStory",
+  "mood": "starry",
+  "title": {
+    "es": "First, then, finally: mi historia",
+    "en": "First, then, finally"
+  },
+  "intro": {
+    "es": "Cuenta una historia en orden: primero, luego, después y al final.",
+    "en": "Tell a story in order: first, then, after that and finally."
+  },
+  "pybot": {
+    "es": "First I cleaned. Then I danced. Finally I rested. ¡Gran día! 🌟",
+    "en": "First I cleaned. Then I danced. Finally I rested. Great day! 🌟"
+  },
+  "look": [
+    {
+      "icon": "1️⃣",
+      "word": "first",
+      "meaning": {
+        "es": "primero",
+        "en": "primero"
+      }
+    },
+    {
+      "icon": "2️⃣",
+      "word": "then",
+      "meaning": {
+        "es": "luego",
+        "en": "luego"
+      }
+    },
+    {
+      "icon": "3️⃣",
+      "word": "after that",
+      "meaning": {
+        "es": "después de eso",
+        "en": "después de eso"
+      }
+    },
+    {
+      "icon": "🏁",
+      "word": "finally",
+      "meaning": {
+        "es": "al final",
+        "en": "al final"
+      }
+    },
+    {
+      "icon": "📖",
+      "word": "story",
+      "meaning": {
+        "es": "historia",
+        "en": "historia"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "First I cleaned my room.",
+        "meaning": {
+          "es": "Primero limpié mi cuarto.",
+          "en": "Primero limpié mi cuarto."
+        }
+      },
+      {
+        "en": "Then I played with my dog.",
+        "meaning": {
+          "es": "Luego jugué con mi perro.",
+          "en": "Luego jugué con mi perro."
+        }
+      },
+      {
+        "en": "Finally I watched a movie.",
+        "meaning": {
+          "es": "Al final vi una película.",
+          "en": "Al final vi una película."
+        }
+      }
+    ],
+    "rule": {
+      "es": "Para contar en orden: First…, Then…, After that…, Finally… Cada parte va en pasado.",
+      "en": "To tell things in order: First…, Then…, After that…, Finally… Each part goes in the past."
+    }
+  },
+  "activities": [
+    {
+      "id": "myStory-first",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Con qué palabra empieza una historia?",
+        "en": "Which word starts a story?"
+      },
+      "options": [
+        "First",
+        "Finally",
+        "Then"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es el número uno.",
+        "en": "It's number one."
+      },
+      "why": {
+        "es": "“First”: primero.",
+        "en": "“First.”"
+      }
+    },
+    {
+      "id": "myStory-finally",
+      "type": "choice",
+      "prompt": {
+        "es": "Completa el final: “___ I rested.”",
+        "en": "Fill in the end: “___ I rested.”"
+      },
+      "options": [
+        "Finally",
+        "First",
+        "Yesterday"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Es lo último.",
+        "en": "It's the last part."
+      },
+      "why": {
+        "es": "“Finally”: al final.",
+        "en": "“Finally.”"
+      },
+      "show": "___ I rested."
+    },
+    {
+      "id": "myStory-which",
+      "type": "choice",
+      "prompt": {
+        "es": "Lee: “First I washed my hands. Then I cooked.” ¿Qué hizo primero?",
+        "en": "Read: “First I washed my hands. Then I cooked.” What came first?"
+      },
+      "options": [
+        {
+          "es": "🧼 Lavarse las manos",
+          "en": "🧼 Washing hands"
+        },
+        {
+          "es": "🍳 Cocinar",
+          "en": "🍳 Cooking"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Mira la palabra First.",
+        "en": "Look at First."
+      },
+      "why": {
+        "es": "Primero se lavó las manos.",
+        "en": "First: washing hands."
+      }
+    },
+    {
+      "id": "myStory-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué pasó después?",
+        "en": "Listen. What happened after that?"
+      },
+      "options": [
+        {
+          "es": "🎨",
+          "en": "🎨"
+        },
+        {
+          "es": "🍦",
+          "en": "🍦"
+        },
+        {
+          "es": "🛏️",
+          "en": "🛏️"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Escuchaste “picture”.",
+        "en": "You heard “picture”."
+      },
+      "why": {
+        "es": "“After that, I painted a picture.”",
+        "en": "“After that, I painted a picture.”"
+      },
+      "listen": "After that, I painted a picture."
+    },
+    {
+      "id": "myStory-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma: “Luego visité a mi abuela.”",
+        "en": "Build: “Then I visited my grandma.”"
+      },
+      "tiles": [
+        "Then",
+        "I",
+        "visited",
+        "my grandma."
+      ],
+      "hint": {
+        "es": "Empieza con Then.",
+        "en": "Start with Then."
+      },
+      "why": {
+        "es": "“Then I visited my grandma.”",
+        "en": "“Then I visited my grandma.”"
+      }
+    },
+    {
+      "id": "myStory-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? “Finally” va al principio de la historia.",
+        "en": "True or false? “Finally” goes at the start of a story."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 1,
+      "hint": {
+        "es": "Finally es al final.",
+        "en": "Finally is for the end."
+      },
+      "why": {
+        "es": "Falso: va al final.",
+        "en": "False: it goes at the end."
+      }
+    },
+    {
+      "id": "myStory-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot contó: “Finally I cooked. First I washed the plates.” ¿Qué está al revés?",
+        "en": "🤖 PyBot told: “Finally I cooked. First I washed the plates.” What's backwards?"
+      },
+      "options": [
+        "First I cooked. Finally I washed the plates.",
+        "Finally I cooked. First I washed the plates.",
+        "Then I cooked. Then I washed the plates."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Primero se cocina y al final se lavan los platos.",
+        "en": "You cook first and wash the plates last."
+      },
+      "why": {
+        "es": "¡Arreglado! First I cooked. Finally I washed the plates.",
+        "en": "Fixed! First I cooked. Finally I washed the plates."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "first",
+      "meaning": {
+        "es": "primero",
+        "en": "primero"
+      }
+    },
+    {
+      "en": "then",
+      "meaning": {
+        "es": "luego",
+        "en": "luego"
+      }
+    },
+    {
+      "en": "after that",
+      "meaning": {
+        "es": "después de eso",
+        "en": "después de eso"
+      }
+    },
+    {
+      "en": "finally",
+      "meaning": {
+        "es": "al final",
+        "en": "al final"
+      }
+    },
+    {
+      "en": "story",
+      "meaning": {
+        "es": "historia",
+        "en": "historia"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "Mi historia en 4 cuadros",
+      "en": "My story in 4 boxes"
+    },
+    "text": {
+      "es": "Dibuja un sábado en cuatro cuadros y cuéntalo: “First… Then… After that… Finally…”.",
+      "en": "Draw a Saturday in four boxes and tell it: “First… Then… After that… Finally…”."
+    },
+    "adult": {
+      "es": "aplaudan al final, como en un cuento.",
+      "en": "clap at the end, like after a story."
+    }
+  }
+}
+    </script>
+  </body>
+</html>

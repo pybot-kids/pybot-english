@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Muchas acciones forman el pasado agregando “-ed”." />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>play → played: el pasado con “-ed” — PyBot English</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../script.js" defer></script>
+    <script src="../lesson.js" defer></script>
+  </head>
+  <body class="lesson-page" data-page="addEd">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="lesson-main" id="main-content" data-lesson>
+      <noscript><p>Esta lección necesita JavaScript. / This lesson needs JavaScript.</p></noscript>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="../index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <p class="footer-credit"><span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span></p>
+    </footer>
+
+    <script type="application/json" id="lesson-data">
+{
+  "step": "addEd",
+  "mood": "focused",
+  "title": {
+    "es": "play → played: el pasado con “-ed”",
+    "en": "play → played"
+  },
+  "intro": {
+    "es": "Muchas acciones forman el pasado agregando “-ed”.",
+    "en": "Many actions make the past by adding “-ed”."
+  },
+  "pybot": {
+    "es": "I played, I danced, I jumped… ¡y me desarmé! 🔩",
+    "en": "I played, I danced, I jumped… and I fell apart! 🔩"
+  },
+  "look": [
+    {
+      "icon": "⚽",
+      "word": "play → played",
+      "meaning": {
+        "es": "jugar → jugué",
+        "en": "jugar → jugué"
+      }
+    },
+    {
+      "icon": "📺",
+      "word": "watch → watched",
+      "meaning": {
+        "es": "mirar → miré",
+        "en": "mirar → miré"
+      }
+    },
+    {
+      "icon": "💃",
+      "word": "dance → danced",
+      "meaning": {
+        "es": "bailar → bailé",
+        "en": "bailar → bailé"
+      }
+    },
+    {
+      "icon": "🛑",
+      "word": "stop → stopped",
+      "meaning": {
+        "es": "parar → paré",
+        "en": "parar → paré"
+      }
+    },
+    {
+      "icon": "📚",
+      "word": "study → studied",
+      "meaning": {
+        "es": "estudiar → estudié",
+        "en": "estudiar → estudié"
+      }
+    },
+    {
+      "icon": "🧹",
+      "word": "clean → cleaned",
+      "meaning": {
+        "es": "limpiar → limpié",
+        "en": "limpiar → limpié"
+      }
+    }
+  ],
+  "use": {
+    "models": [
+      {
+        "en": "I played soccer.",
+        "meaning": {
+          "es": "Jugué fútbol.",
+          "en": "Jugué fútbol."
+        }
+      },
+      {
+        "en": "She watched a movie.",
+        "meaning": {
+          "es": "Ella vio una película.",
+          "en": "Ella vio una película."
+        }
+      },
+      {
+        "en": "We danced at the party.",
+        "meaning": {
+          "es": "Bailamos en la fiesta.",
+          "en": "Bailamos en la fiesta."
+        }
+      }
+    ],
+    "rule": {
+      "es": "Casi siempre: acción + “-ed”. Si termina en “e”, solo “-d” (danced). Si termina en consonante + “y”, cambia a “-ied” (studied). Es igual para todas las personas: I played, she played.",
+      "en": "Most actions: add “-ed”. Ending in “e”: just “-d” (danced). Consonant + “y”: “-ied” (studied). Same for everyone: I played, she played."
+    }
+  },
+  "activities": [
+    {
+      "id": "addEd-play",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Cuál es el pasado de “play”?",
+        "en": "What's the past of “play”?"
+      },
+      "options": [
+        "played",
+        "plaied",
+        "playd"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Vocal + y: solo “-ed”.",
+        "en": "Vowel + y: just “-ed”."
+      },
+      "why": {
+        "es": "“Played.”",
+        "en": "“Played.”"
+      }
+    },
+    {
+      "id": "addEd-dance",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Cuál es el pasado de “dance”?",
+        "en": "What's the past of “dance”?"
+      },
+      "options": [
+        "danced",
+        "danceed",
+        "dancing"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Ya termina en “e”.",
+        "en": "It already ends in “e”."
+      },
+      "why": {
+        "es": "“Danced”: solo se agrega “-d”.",
+        "en": "“Danced”: just add “-d”."
+      }
+    },
+    {
+      "id": "addEd-study",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Cuál es el pasado de “study”?",
+        "en": "What's the past of “study”?"
+      },
+      "options": [
+        "studied",
+        "studyed",
+        "studed"
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Consonante + y: cambia a “-ied”.",
+        "en": "Consonant + y: change to “-ied”."
+      },
+      "why": {
+        "es": "“Studied.”",
+        "en": "“Studied.”"
+      }
+    },
+    {
+      "id": "addEd-listen",
+      "type": "choice",
+      "prompt": {
+        "es": "Escucha. ¿Qué hizo?",
+        "en": "Listen. What did she do?"
+      },
+      "options": [
+        {
+          "es": "🧹",
+          "en": "🧹"
+        },
+        {
+          "es": "⚽",
+          "en": "⚽"
+        },
+        {
+          "es": "📺",
+          "en": "📺"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Tiene que ver con el cuarto limpio.",
+        "en": "It's about a clean room."
+      },
+      "why": {
+        "es": "“She cleaned her room”: limpió su cuarto.",
+        "en": "“She cleaned her room.”"
+      },
+      "listen": "She cleaned her room."
+    },
+    {
+      "id": "addEd-order",
+      "type": "order",
+      "prompt": {
+        "es": "Arma: “Vimos una película.”",
+        "en": "Build: “We watched a movie.”"
+      },
+      "tiles": [
+        "We",
+        "watched",
+        "a",
+        "movie."
+      ],
+      "hint": {
+        "es": "Primero quién, luego la acción en pasado.",
+        "en": "First who, then the past action."
+      },
+      "why": {
+        "es": "“We watched a movie.”",
+        "en": "“We watched a movie.”"
+      }
+    },
+    {
+      "id": "addEd-true",
+      "type": "choice",
+      "prompt": {
+        "es": "¿Verdadero o falso? En pasado, he y she NO llevan “-s”: he played.",
+        "en": "True or false? In the past, he and she take no “-s”: he played."
+      },
+      "options": [
+        {
+          "es": "Verdadero",
+          "en": "True"
+        },
+        {
+          "es": "Falso",
+          "en": "False"
+        }
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "El pasado es igual para todos.",
+        "en": "The past is the same for everyone."
+      },
+      "why": {
+        "es": "Verdadero: he played, she played.",
+        "en": "True: he played, she played."
+      }
+    },
+    {
+      "id": "addEd-fix",
+      "type": "choice",
+      "prompt": {
+        "es": "🤖 PyBot escribió “I stoped”. ¿Cómo se escribe bien?",
+        "en": "🤖 PyBot wrote “I stoped”. What's right?"
+      },
+      "options": [
+        "I stopped.",
+        "I stoped.",
+        "I stopt."
+      ],
+      "answer": 0,
+      "hint": {
+        "es": "Stop duplica la p, como swimming.",
+        "en": "Stop doubles the p, like swimming."
+      },
+      "why": {
+        "es": "¡Arreglado! I stopped.",
+        "en": "Fixed! I stopped."
+      }
+    }
+  ],
+  "words": [
+    {
+      "en": "play → played",
+      "meaning": {
+        "es": "jugar → jugué",
+        "en": "jugar → jugué"
+      }
+    },
+    {
+      "en": "watch → watched",
+      "meaning": {
+        "es": "mirar → miré",
+        "en": "mirar → miré"
+      }
+    },
+    {
+      "en": "dance → danced",
+      "meaning": {
+        "es": "bailar → bailé",
+        "en": "bailar → bailé"
+      }
+    },
+    {
+      "en": "stop → stopped",
+      "meaning": {
+        "es": "parar → paré",
+        "en": "parar → paré"
+      }
+    },
+    {
+      "en": "study → studied",
+      "meaning": {
+        "es": "estudiar → estudié",
+        "en": "estudiar → estudié"
+      }
+    },
+    {
+      "en": "clean → cleaned",
+      "meaning": {
+        "es": "limpiar → limpié",
+        "en": "limpiar → limpié"
+      }
+    }
+  ],
+  "home": {
+    "title": {
+      "es": "El juego del -ed",
+      "en": "The -ed game"
+    },
+    "text": {
+      "es": "Una persona dice una acción (play, jump, cook) y la otra la dice en pasado y la actúa: “I jumped!”.",
+      "en": "One person says an action (play, jump, cook) and the other says it in the past and acts it out: “I jumped!”."
+    },
+    "adult": {
+      "es": "si una acción no lleva -ed, ¡pasen a la zona 12!",
+      "en": "if an action doesn't take -ed, that's zone 12!"
+    }
+  }
+}
+    </script>
+  </body>
+</html>
