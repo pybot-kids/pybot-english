@@ -164,22 +164,34 @@ A collapsed **For adults: erase all progress** section on the home page offers t
 
 ## Learning path index
 
-A short foundation, ten small zones, and a pit stop. Each zone has three pages. Lessons are not written yet; every step is marked `soon: true` in `pathSteps` until its page ships.
+A short foundation, **six broad zones**, and a pit stop. English is wide, so the path grows **inside** zones, like PyBot's Python zones: each zone is a big theme with its own route of pages on the map, and the learner moves through that route before the next zone.
 
-| Zone | Pages | Goal |
+**Growth rule:** a new topic becomes a new page in the route of the zone it belongs to. A new zone is added only for a theme no existing zone covers (for example, a future "Tell a story" zone for past tense). This keeps the map short even when the course grows.
+
+Lessons are not written yet; every page is marked `soon: true` in `pathSteps` until it ships.
+
+| Zone | Pages in its route | Goal |
 |---|---|---|
 | 00 **Hello!** (before we start) | Hello and goodbye · How are you? · Look, listen, say | Greet, say goodbye, and learn how the site works |
-| 01 **The ABC** | The letters · Vowels · Spell your name | Letter names and sounds; spell your own name |
-| 02 **Numbers** | 1–10 · 11–20 · How many? | Count to 20 and ask how many |
-| 03 **Colors & Shapes** | Colors · Shapes · It is red. | Name and describe colors and shapes |
-| 04 **Me & My Family** | My name is… · I am 9. · My family | Introduce yourself and your family |
-| 05 **My Body & Feelings** | My body · Feelings · I feel happy. | Body parts and how you feel |
-| 06 **At School** | My backpack · This or that? · Open, close, listen! | Classroom things and classroom instructions |
-| 07 **Animals** | Animals · Big or small? · It can fly! | Animals, size words, can / can't |
-| 08 **Food** | Food and drinks · I like… · I don't like… | Food words and likes |
-| 09 **My Day** | The days · Morning, afternoon, night · My routine | Days of the week and daily routines |
-| 10 **Where is it?** | What? Who? Where? · In, on, under · Rooms in a house | Question words and place words |
-| 🏁 **Show what you know** (pit stop) | One page | Mixed review, then a self-check and a diploma |
+| 01 **Letters & Numbers** | The letters · Vowels · Spell your name · 1–10 · 11–20 · How many? | The alphabet and its sounds; count to 20 |
+| 02 **All About Me** | My name is… · I am 9. · My family · My body · Feelings · I feel happy. | Introduce yourself, your family, your body, and how you feel |
+| 03 **Colors & Things** | Colors · Shapes · It is red. · My backpack · This or that? | Describe things around you |
+| 04 **Animals & Food** | Animals · Big or small? · It can fly! · Food and drinks · I like… · I don't like… | Animals, can / can't, food, and likes |
+| 05 **My Day** | The days · Morning, afternoon, night · My routine · Open, close, listen! | Days, routines, and classroom instructions |
+| 06 **Where is it?** | What? Who? Where? · In, on, under · Rooms in a house | Question words and place words |
+| 🏁 **Show what you know** (pit stop) | Final review | Mixed review, then a self-check and a diploma |
+
+## Translator page
+
+`translator.html` has two tools:
+
+- **Translator** (Spanish → English or English → Spanish). It answers in this order:
+  1. **PyBot English's own word list** (`pybotWords` in `extras.js`): every word on the path plus everyday basics. Instant, offline, nothing leaves the site. The same list will feed the future "My words" page.
+  2. **The browser's built-in translator** (the Translator API in recent desktop Chrome). It runs on the device; the first use may download the language.
+  3. Otherwise, a **link to Google Translate** with the text filled in. It only opens in a new tab if someone taps it, and the page asks the child to check with an adult first.
+- **Type and listen:** the learner types English and hears it at normal speed or slower (🐢), with example phrases to tap.
+
+Rules: no microphone, nothing typed is stored, a 200-character limit, and a visible note that automatic translations can be wrong.
 
 ## Project structure
 
@@ -189,9 +201,10 @@ course.html       The learning path map
 album.html        Stickers and the learning-days streak
 diploma.html      Printable zone diplomas (and a sample)
 faq.html          Questions for learners and grown-ups
+translator.html   Translator and type-and-listen tool
 styles.css        All styles (PyBot anatomy and moods included)
 script.js         Translations, PyBot, progress, rewards, backup
-extras.js         Album, diploma and FAQ rendering and copy
+extras.js         Album, diploma, FAQ and translator logic and copy
 tools/            progress-version.mjs
 progress-versions.json
 ```

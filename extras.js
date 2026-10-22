@@ -113,6 +113,8 @@ Object.assign(translations.en, {
   "faq.micA": "No. PyBot never listens to or records anyone. It teaches how each word sounds with audio, and its activities only check reading, vocabulary and grammar. Speaking is practiced at home, without grades or pressure.",
   "faq.homeQ": "How can we help at home if we don't speak English?",
   "faq.homeA": "You don't need to. Press 🔊 together and repeat the word. Ask the child to teach you what they learned, play the echo game, or stick notes with English words around the house. Celebrate the try, not perfection.",
+  "faq.translatorQ": "Does the translator send what kids type?",
+  "faq.translatorA": "First it looks in PyBot English's own word list, which lives inside the site. If the browser has its own translator (recent Chrome on a computer), it translates on the device. If not, a link to Google Translate appears that only opens if someone taps it; that text does reach Google. PyBot English never saves what is typed.",
   "faq.whereQ": "Where is the progress saved?",
   "faq.whereA": "Only in this browser, on this device. PyBot English has no server or database.",
   "faq.loseQ": "Can the progress get lost?",
@@ -241,6 +243,242 @@ function renderDiplomaName() {
   document.querySelector("[data-diploma-name]").textContent = value || textFor("diploma.sampleName");
 }
 
+// ---------- Translator page ----------
+
+Object.assign(translations.es, {
+  "tool.eyebrow": "MI TRADUCTOR",
+  "tool.title": "Escribe, traduce y escucha",
+  "tool.intro": "Escribe una palabra o una frase corta. PyBot te dice cómo se dice y cómo suena.",
+  "tool.translateTitle": "Traductor",
+  "tool.direction": "Dirección de la traducción",
+  "tool.esEn": "Español → Inglés",
+  "tool.enEs": "Inglés → Español",
+  "tool.typeSpanish": "Escribe en español",
+  "tool.typeEnglish": "Escribe en inglés",
+  "tool.translate": "Traducir",
+  "tool.resultLabel": "ASÍ SE DICE",
+  "tool.listenEnglish": "Escuchar en inglés",
+  "tool.external": "Traducir en Google Translate ↗",
+  "tool.externalNote": "Se abre en otra pestaña. Pide permiso a un adulto.",
+  "tool.warning": "Las traducciones automáticas a veces se equivocan. Si algo suena raro, pregúntale a un adulto.",
+  "tool.listenTitle": "Escribe en inglés y escúchalo",
+  "tool.examples": "Ejemplos",
+  "tool.listen": "Escuchar",
+  "tool.slow": "Más despacio",
+  "tool.privacy": "PyBot English no guarda lo que escribes.",
+  "tool.empty": "Escribe algo primero.",
+  "tool.fromWords": "De la lista de palabras de PyBot English.",
+  "tool.onDevice": "Traducido dentro de tu navegador. Nada salió de aquí.",
+  "tool.downloading": "Tu navegador está descargando el idioma… {percent}%",
+  "tool.working": "Traduciendo…",
+  "tool.fallback": "No encontré esa frase. Prueba con una palabra más corta o usa el enlace de abajo.",
+});
+
+Object.assign(translations.en, {
+  "tool.eyebrow": "MY TRANSLATOR",
+  "tool.title": "Type, translate and listen",
+  "tool.intro": "Type a word or a short phrase. PyBot tells you how to say it and how it sounds.",
+  "tool.translateTitle": "Translator",
+  "tool.direction": "Translation direction",
+  "tool.esEn": "Spanish → English",
+  "tool.enEs": "English → Spanish",
+  "tool.typeSpanish": "Type in Spanish",
+  "tool.typeEnglish": "Type in English",
+  "tool.translate": "Translate",
+  "tool.resultLabel": "HOW TO SAY IT",
+  "tool.listenEnglish": "Listen in English",
+  "tool.external": "Translate in Google Translate ↗",
+  "tool.externalNote": "Opens in a new tab. Ask an adult first.",
+  "tool.warning": "Automatic translations are sometimes wrong. If something sounds strange, ask an adult.",
+  "tool.listenTitle": "Type in English and hear it",
+  "tool.examples": "Examples",
+  "tool.listen": "Listen",
+  "tool.slow": "Slower",
+  "tool.privacy": "PyBot English doesn't save what you type.",
+  "tool.empty": "Type something first.",
+  "tool.fromWords": "From PyBot English's word list.",
+  "tool.onDevice": "Translated inside your browser. Nothing left this device.",
+  "tool.downloading": "Your browser is downloading the language… {percent}%",
+  "tool.working": "Translating…",
+  "tool.fallback": "I couldn't find that phrase. Try a shorter word, or use the link below.",
+});
+
+// PyBot English's own word list: every word on the path plus everyday basics.
+// It answers instantly and offline, and later feeds the "My words" page.
+// Each entry is "spanish forms|english"; extra Spanish forms are separated by commas.
+const pybotWords = [
+  "hola|hello", "adiós,chao|goodbye", "por favor|please", "gracias|thank you", "de nada|you're welcome",
+  "¿cómo estás?,cómo estás|how are you?", "bien|fine", "buenos días|good morning", "buenas tardes|good afternoon",
+  "buenas noches|good night", "sí|yes", "no|no", "amigo,amiga|friend", "lo siento|I'm sorry", "mucho gusto|nice to meet you",
+  "uno|one", "dos|two", "tres|three", "cuatro|four", "cinco|five", "seis|six", "siete|seven", "ocho|eight", "nueve|nine",
+  "diez|ten", "once|eleven", "doce|twelve", "veinte|twenty", "¿cuántos?,cuántos,cuántas|how many?",
+  "rojo,roja|red", "azul|blue", "amarillo,amarilla|yellow", "verde|green", "rosado,rosada,rosa|pink", "morado,morada|purple",
+  "naranja,anaranjado|orange", "negro,negra|black", "blanco,blanca|white", "café,marrón|brown",
+  "círculo|circle", "cuadrado|square", "triángulo|triangle", "estrella|star", "corazón|heart",
+  "me llamo,mi nombre es|my name is", "tengo nueve años|I am nine years old",
+  "mamá|mom", "papá|dad", "hermano|brother", "hermana|sister", "abuelo|grandpa", "abuela|grandma", "familia|family", "bebé|baby",
+  "cabeza|head", "manos,mano|hands", "ojos,ojo|eyes", "nariz|nose", "boca|mouth", "orejas,oreja|ears", "pies,pie|feet",
+  "feliz,contento,contenta|happy", "triste|sad", "cansado,cansada|tired", "enojado,enojada|angry", "asustado,asustada|scared",
+  "lápiz|pencil", "libro|book", "mochila|backpack", "cuaderno|notebook", "borrador|eraser", "tijeras|scissors", "escuela,colegio|school",
+  "profesor,profesora,profe|teacher", "esto,este,esta|this", "eso,ese,esa|that",
+  "abre,abrir|open", "cierra,cerrar|close", "escucha,escuchar|listen", "mira,mirar|look", "siéntate|sit down", "levántate|stand up",
+  "gato|cat", "perro|dog", "pájaro|bird", "pez|fish", "conejo|rabbit", "caballo|horse", "vaca|cow", "pato|duck", "león|lion",
+  "grande|big", "pequeño,pequeña|small", "puede volar|it can fly", "puedo|I can", "no puedo|I can't",
+  "manzana|apple", "pan|bread", "agua|water", "leche|milk", "banano,banana,plátano|banana", "huevo|egg", "jugo|juice",
+  "me gusta|I like", "no me gusta|I don't like", "pizza|pizza", "helado|ice cream",
+  "lunes|Monday", "martes|Tuesday", "miércoles|Wednesday", "jueves|Thursday", "viernes|Friday", "sábado|Saturday", "domingo|Sunday",
+  "mañana|morning", "tarde|afternoon", "noche|night", "me despierto|I wake up", "desayuno|breakfast", "almuerzo|lunch", "cena|dinner",
+  "¿qué?,qué|what?", "¿quién?,quién|who?", "¿dónde?,dónde|where?", "¿dónde está?,dónde está|where is it?",
+  "en,dentro|in", "sobre,encima|on", "debajo,abajo de|under", "casa|house", "cocina|kitchen", "baño|bathroom",
+  "cuarto,habitación|bedroom", "sala|living room", "puerta|door", "mesa|table", "ventana|window", "silla|chair", "cama|bed",
+];
+
+const plainWord = (text) => text.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "")
+  .replace(/[¿?¡!.,;:"]/g, "").replace(/\s+/g, " ").trim();
+
+const wordLookup = { "es-en": new Map(), "en-es": new Map() };
+pybotWords.forEach((entry) => {
+  const [spanish, english] = entry.split("|");
+  const forms = spanish.split(",");
+  forms.forEach((form) => wordLookup["es-en"].set(plainWord(form), english));
+  const key = plainWord(english);
+  // A question shows its main form; other words show up to two forms (amigo, amiga).
+  const shown = forms[0].startsWith("¿") ? forms[0] : forms.slice(0, 2).join(", ");
+  if (!wordLookup["en-es"].has(key)) {
+    wordLookup["en-es"].set(key, shown);
+  }
+});
+
+function googleTranslateUrl(text, direction) {
+  const [source, target] = direction.split("-");
+  const params = new URLSearchParams({ sl: source, tl: target, text, op: "translate" });
+  return `https://translate.google.com/?${params}`;
+}
+
+// Chrome on computers ships an on-device translator. Other browsers fall back to the word list and a link.
+const browserTranslators = {};
+// A first use may download the language; a browser that never answers falls back to the link.
+const TRANSLATOR_CHECK_MS = 4000;
+const TRANSLATOR_WORK_MS = 45_000;
+
+const withTimeout = (promise, ms) => Promise.race([
+  promise,
+  new Promise((_, reject) => window.setTimeout(() => reject(new Error("timeout")), ms)),
+]);
+
+async function translateOnDevice(text, direction, onProgress) {
+  if (!("Translator" in self)) {
+    return null;
+  }
+  const [sourceLanguage, targetLanguage] = direction.split("-");
+  try {
+    if (!browserTranslators[direction]) {
+      const availability = await withTimeout(Translator.availability({ sourceLanguage, targetLanguage }), TRANSLATOR_CHECK_MS);
+      if (availability === "unavailable") {
+        return null;
+      }
+      browserTranslators[direction] = await withTimeout(Translator.create({
+        sourceLanguage,
+        targetLanguage,
+        monitor(monitor) {
+          monitor.addEventListener("downloadprogress", (event) => onProgress(Math.round(event.loaded * 100)));
+        },
+      }), TRANSLATOR_WORK_MS);
+    }
+    return await withTimeout(browserTranslators[direction].translate(text), TRANSLATOR_WORK_MS);
+  } catch {
+    return null;
+  }
+}
+
+function setupTranslator() {
+  let direction = "es-en";
+  let resultEnglish = "";
+  const input = document.querySelector("[data-translate-input]");
+  const label = document.querySelector("[data-translate-label]");
+  const result = document.querySelector("[data-translate-result]");
+  const note = document.querySelector("[data-translate-note]");
+  const listen = document.querySelector("[data-translate-listen]");
+  const external = document.querySelector("[data-translate-external]");
+  const translateButton = document.querySelector("[data-translate]");
+
+  const updateExternal = () => {
+    external.href = input.value.trim() ? googleTranslateUrl(input.value.trim(), direction) : "https://translate.google.com/";
+  };
+  const showResult = (text, noteKey, english) => {
+    result.textContent = text;
+    result.lang = direction === "es-en" ? "en" : "es";
+    resultEnglish = english;
+    listen.hidden = !english;
+    setStatus(note, noteKey);
+  };
+
+  document.querySelectorAll("[data-direction]").forEach((button) => {
+    button.addEventListener("click", () => {
+      direction = button.dataset.direction;
+      document.querySelectorAll("[data-direction]").forEach((other) => other.setAttribute("aria-pressed", String(other === button)));
+      label.dataset.i18n = direction === "es-en" ? "tool.typeSpanish" : "tool.typeEnglish";
+      label.textContent = textFor(label.dataset.i18n);
+      input.lang = direction === "es-en" ? "es" : "en";
+      input.placeholder = direction === "es-en" ? "Hola, ¿cómo estás?" : "Hello, how are you?";
+      showResult("…", "", "");
+      updateExternal();
+    });
+  });
+  input.addEventListener("input", updateExternal);
+  input.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" && !event.shiftKey) {
+      event.preventDefault();
+      translateButton.click();
+    }
+  });
+
+  translateButton.addEventListener("click", async () => {
+    const text = input.value.trim();
+    if (!text) {
+      showResult("…", "tool.empty", "");
+      return;
+    }
+    const sourceEnglish = direction === "en-es" ? text : "";
+    const known = wordLookup[direction].get(plainWord(text));
+    if (known) {
+      showResult(known, "tool.fromWords", direction === "es-en" ? known : sourceEnglish);
+      return;
+    }
+    showResult("…", "tool.working", "");
+    translateButton.disabled = true;
+    const translated = await translateOnDevice(text, direction, (percent) => setStatus(note, "tool.downloading", { percent: String(percent) }));
+    translateButton.disabled = false;
+    if (translated) {
+      showResult(translated, "tool.onDevice", direction === "es-en" ? translated : sourceEnglish);
+      return;
+    }
+    showResult("…", "tool.fallback", sourceEnglish);
+  });
+  listen.addEventListener("click", () => say(resultEnglish, listen));
+
+  const listenInput = document.querySelector("[data-listen-input]");
+  const listenNote = document.querySelector("[data-listen-note]");
+  const speakTyped = (button, rate) => {
+    const text = listenInput.value.trim();
+    if (!text) {
+      setStatus(listenNote, "tool.empty");
+      listenInput.focus();
+      return;
+    }
+    setStatus(listenNote, "");
+    say(text, button, rate);
+  };
+  document.querySelector("[data-listen-normal]").addEventListener("click", (event) => speakTyped(event.currentTarget, 0.85));
+  document.querySelector("[data-listen-slow]").addEventListener("click", (event) => speakTyped(event.currentTarget, 0.55));
+  document.querySelectorAll("[data-fill]").forEach((button) => {
+    button.addEventListener("click", () => {
+      listenInput.value = button.dataset.fill;
+      speakTyped(button, 0.85);
+    });
+  });
+}
+
 const extrasRenderers = { album: renderAlbum, diploma: renderDiploma };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -250,4 +488,7 @@ document.addEventListener("DOMContentLoaded", () => {
     render();
   }
   document.querySelector("[data-print]")?.addEventListener("click", () => window.print());
+  if (document.body.dataset.page === "translator") {
+    setupTranslator();
+  }
 });

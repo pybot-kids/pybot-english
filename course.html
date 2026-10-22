@@ -6,7 +6,7 @@
     <meta
       id="meta-description"
       name="description"
-      content="Una base y diez zonas pequeñas para aprender inglés con PyBot."
+      content="Una base y seis zonas amplias para aprender inglés con PyBot."
       data-i18n-content="meta.courseDescription"
     />
     <meta name="theme-color" content="#f4f6ff" />
@@ -28,6 +28,7 @@
         <a class="nav-pill" href="index.html" data-i18n="nav.home">Inicio</a>
         <a class="nav-pill nav-album" href="album.html"><span aria-hidden="true">★</span> <span data-i18n="nav.album">Álbum</span></a>
         <a class="nav-pill" href="faq.html" data-i18n="nav.faq">Preguntas</a>
+        <a class="nav-pill" href="translator.html" data-i18n="nav.translator">Traductor</a>
         <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
           <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
           <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
@@ -39,12 +40,12 @@
       <section class="path" id="path" aria-labelledby="path-title">
         <div class="course-intro">
           <div>
-            <p class="eyebrow"><span aria-hidden="true">00—10</span> <b data-i18n="path.eyebrow">TU CAMINO</b></p>
+            <p class="eyebrow"><span aria-hidden="true">00—06</span> <b data-i18n="path.eyebrow">TU CAMINO</b></p>
             <h1 id="path-title">
               <span data-i18n="path.titleStart">Primero, lo básico.</span>
-              <span data-i18n="path.titleEnd">Luego 10 zonas pequeñas y una parada.</span>
+              <span data-i18n="path.titleEnd">Luego 6 zonas y una parada.</span>
             </h1>
-            <p data-i18n="path.intro">Ve despacio. Cada zona tiene una idea y una actividad pequeña. Toca una palabra para escucharla.</p>
+            <p data-i18n="path.intro">Cada zona es un tema grande con su propio camino de páginas. Ve despacio y toca una palabra para escucharla.</p>
             <p class="streak-note" data-streak hidden></p>
           </div>
           <div class="course-rule">
@@ -70,7 +71,7 @@
               <li><button type="button" data-say="please">please</button></li>
               <li><button type="button" data-say="thank you">thank you</button></li>
             </ul>
-            <ol class="zone-route">
+            <ol class="zone-route" aria-label="Páginas de la zona" data-i18n-aria-label="a11y.zonePages">
               <li data-path-step="helloGoodbye"><span>1</span><b data-i18n="route.helloGoodbye">Hola y adiós</b></li>
               <li data-path-step="howAreYou"><span>2</span><b lang="en">How are you?</b></li>
               <li data-path-step="lookListenSay"><span>3</span><b data-i18n="route.lookListenSay">Mira, escucha, dila</b></li>
@@ -78,199 +79,129 @@
             <span class="zone-status" data-i18n="path.soon">Muy pronto</span>
           </li>
 
-          <li class="zone-card zone-blue" data-zone="abc">
+          <li class="zone-card zone-blue" data-zone="lettersNumbers">
             <span class="zone-number">01</span>
             <div class="zone-copy">
-              <span class="zone-concept" data-i18n="zone1.concept">LETRAS Y SONIDOS</span>
-              <h3 lang="en">The ABC</h3>
-              <p data-i18n="zone1.text">Las 26 letras, cómo suenan y cómo deletrear tu nombre.</p>
+              <span class="zone-concept" data-i18n="zone1.concept">LETRAS Y NÚMEROS</span>
+              <h3 lang="en">Letters &amp; Numbers</h3>
+              <p data-i18n="zone1.text">El abecedario, cómo suena cada letra y los números del 1 al 20.</p>
             </div>
             <ul class="word-chips" aria-label="Palabras" data-i18n-aria-label="a11y.words">
               <li><button type="button" data-say="A, B, C">A B C</button></li>
               <li><button type="button" data-say="apple">apple</button></li>
-              <li><button type="button" data-say="ball">ball</button></li>
+              <li><button type="button" data-say="one">one</button></li>
+              <li><button type="button" data-say="ten">ten</button></li>
             </ul>
-            <ol class="zone-route">
+            <ol class="zone-route" aria-label="Páginas de la zona" data-i18n-aria-label="a11y.zonePages">
               <li data-path-step="abcLetters"><span>1</span><b data-i18n="route.abcLetters">Las letras</b></li>
               <li data-path-step="abcVowels"><span>2</span><b data-i18n="route.abcVowels">Vocales: a, e, i, o, u</b></li>
               <li data-path-step="abcSpell"><span>3</span><b data-i18n="route.abcSpell">Deletrea tu nombre</b></li>
+              <li data-path-step="numbersTen"><span>4</span><b data-i18n="route.numbersTen">Del 1 al 10</b></li>
+              <li data-path-step="numbersTwenty"><span>5</span><b data-i18n="route.numbersTwenty">Del 11 al 20</b></li>
+              <li data-path-step="numbersHowMany"><span>6</span><b lang="en">How many?</b></li>
             </ol>
             <span class="zone-status" data-i18n="path.soon">Muy pronto</span>
           </li>
 
-          <li class="zone-card zone-magenta" data-zone="numbers">
+          <li class="zone-card zone-magenta" data-zone="aboutMe">
             <span class="zone-number">02</span>
             <div class="zone-copy">
-              <span class="zone-concept" data-i18n="zone2.concept">CONTAR</span>
-              <h3 lang="en">Numbers</h3>
-              <p data-i18n="zone2.text">Cuenta del 1 al 20 y pregunta cuántos hay.</p>
-            </div>
-            <ul class="word-chips" aria-label="Palabras" data-i18n-aria-label="a11y.words">
-              <li><button type="button" data-say="one">one</button></li>
-              <li><button type="button" data-say="two">two</button></li>
-              <li><button type="button" data-say="three">three</button></li>
-              <li><button type="button" data-say="ten">ten</button></li>
-            </ul>
-            <ol class="zone-route">
-              <li data-path-step="numbersTen"><span>1</span><b data-i18n="route.numbersTen">Del 1 al 10</b></li>
-              <li data-path-step="numbersTwenty"><span>2</span><b data-i18n="route.numbersTwenty">Del 11 al 20</b></li>
-              <li data-path-step="numbersHowMany"><span>3</span><b lang="en">How many?</b></li>
-            </ol>
-            <span class="zone-status" data-i18n="path.soon">Muy pronto</span>
-          </li>
-
-          <li class="zone-card zone-sun" data-zone="colors">
-            <span class="zone-number">03</span>
-            <div class="zone-copy">
-              <span class="zone-concept" data-i18n="zone3.concept">VER Y DESCRIBIR</span>
-              <h3 lang="en">Colors &amp; Shapes</h3>
-              <p data-i18n="zone3.text">Nombra colores y formas. Di de qué color es algo.</p>
-            </div>
-            <ul class="word-chips" aria-label="Palabras" data-i18n-aria-label="a11y.words">
-              <li><button type="button" data-say="red">red</button></li>
-              <li><button type="button" data-say="blue">blue</button></li>
-              <li><button type="button" data-say="circle">circle</button></li>
-              <li><button type="button" data-say="square">square</button></li>
-            </ul>
-            <ol class="zone-route">
-              <li data-path-step="colors"><span>1</span><b data-i18n="route.colors">Los colores</b></li>
-              <li data-path-step="shapes"><span>2</span><b data-i18n="route.shapes">Las formas</b></li>
-              <li data-path-step="itIsRed"><span>3</span><b lang="en">It is red.</b></li>
-            </ol>
-            <span class="zone-status" data-i18n="path.soon">Muy pronto</span>
-          </li>
-
-          <li class="zone-card zone-blue" data-zone="family">
-            <span class="zone-number">04</span>
-            <div class="zone-copy">
-              <span class="zone-concept" data-i18n="zone4.concept">PRESENTARSE</span>
-              <h3 lang="en">Me &amp; My Family</h3>
-              <p data-i18n="zone4.text">Di tu nombre y tu edad. Presenta a tu familia.</p>
+              <span class="zone-concept" data-i18n="zone2.concept">TODO SOBRE MÍ</span>
+              <h3 lang="en">All About Me</h3>
+              <p data-i18n="zone2.text">Preséntate y habla de tu familia, tu cuerpo y cómo te sientes.</p>
             </div>
             <ul class="word-chips" aria-label="Palabras" data-i18n-aria-label="a11y.words">
               <li><button type="button" data-say="mom">mom</button></li>
-              <li><button type="button" data-say="dad">dad</button></li>
               <li><button type="button" data-say="sister">sister</button></li>
-              <li><button type="button" data-say="brother">brother</button></li>
+              <li><button type="button" data-say="head">head</button></li>
+              <li><button type="button" data-say="happy">happy</button></li>
             </ul>
-            <ol class="zone-route">
+            <ol class="zone-route" aria-label="Páginas de la zona" data-i18n-aria-label="a11y.zonePages">
               <li data-path-step="myName"><span>1</span><b lang="en">My name is…</b></li>
               <li data-path-step="myAge"><span>2</span><b lang="en">I am 9.</b></li>
               <li data-path-step="myFamily"><span>3</span><b data-i18n="route.myFamily">Mi familia</b></li>
+              <li data-path-step="myBody"><span>4</span><b data-i18n="route.myBody">Mi cuerpo</b></li>
+              <li data-path-step="feelings"><span>5</span><b data-i18n="route.feelings">Emociones</b></li>
+              <li data-path-step="iFeel"><span>6</span><b lang="en">I feel happy.</b></li>
             </ol>
             <span class="zone-status" data-i18n="path.soon">Muy pronto</span>
           </li>
 
-          <li class="zone-card zone-magenta" data-zone="body">
-            <span class="zone-number">05</span>
+          <li class="zone-card zone-sun" data-zone="colorsThings">
+            <span class="zone-number">03</span>
             <div class="zone-copy">
-              <span class="zone-concept" data-i18n="zone5.concept">CUERPO Y EMOCIONES</span>
-              <h3 lang="en">My Body &amp; Feelings</h3>
-              <p data-i18n="zone5.text">Las partes del cuerpo y cómo te sientes hoy.</p>
+              <span class="zone-concept" data-i18n="zone3.concept">COSAS Y COLORES</span>
+              <h3 lang="en">Colors &amp; Things</h3>
+              <p data-i18n="zone3.text">Colores, formas y las cosas de tu mochila. Di cómo son.</p>
             </div>
             <ul class="word-chips" aria-label="Palabras" data-i18n-aria-label="a11y.words">
-              <li><button type="button" data-say="head">head</button></li>
-              <li><button type="button" data-say="hands">hands</button></li>
-              <li><button type="button" data-say="happy">happy</button></li>
-              <li><button type="button" data-say="tired">tired</button></li>
-            </ul>
-            <ol class="zone-route">
-              <li data-path-step="myBody"><span>1</span><b data-i18n="route.myBody">Mi cuerpo</b></li>
-              <li data-path-step="feelings"><span>2</span><b data-i18n="route.feelings">Emociones</b></li>
-              <li data-path-step="iFeel"><span>3</span><b lang="en">I feel happy.</b></li>
-            </ol>
-            <span class="zone-status" data-i18n="path.soon">Muy pronto</span>
-          </li>
-
-          <li class="zone-card zone-sun" data-zone="school">
-            <span class="zone-number">06</span>
-            <div class="zone-copy">
-              <span class="zone-concept" data-i18n="zone6.concept">EN CLASE</span>
-              <h3 lang="en">At School</h3>
-              <p data-i18n="zone6.text">Objetos del salón y lo que dice quien enseña.</p>
-            </div>
-            <ul class="word-chips" aria-label="Palabras" data-i18n-aria-label="a11y.words">
+              <li><button type="button" data-say="red">red</button></li>
+              <li><button type="button" data-say="circle">circle</button></li>
               <li><button type="button" data-say="pencil">pencil</button></li>
               <li><button type="button" data-say="book">book</button></li>
-              <li><button type="button" data-say="open">open</button></li>
-              <li><button type="button" data-say="listen">listen</button></li>
             </ul>
-            <ol class="zone-route">
-              <li data-path-step="backpack"><span>1</span><b data-i18n="route.backpack">Mi mochila</b></li>
-              <li data-path-step="thisThat"><span>2</span><b lang="en">This or that?</b></li>
-              <li data-path-step="classWords"><span>3</span><b lang="en">Open, close, listen!</b></li>
+            <ol class="zone-route" aria-label="Páginas de la zona" data-i18n-aria-label="a11y.zonePages">
+              <li data-path-step="colors"><span>1</span><b data-i18n="route.colors">Los colores</b></li>
+              <li data-path-step="shapes"><span>2</span><b data-i18n="route.shapes">Las formas</b></li>
+              <li data-path-step="itIsRed"><span>3</span><b lang="en">It is red.</b></li>
+              <li data-path-step="backpack"><span>4</span><b data-i18n="route.backpack">Mi mochila</b></li>
+              <li data-path-step="thisThat"><span>5</span><b lang="en">This or that?</b></li>
             </ol>
             <span class="zone-status" data-i18n="path.soon">Muy pronto</span>
           </li>
 
-          <li class="zone-card zone-blue" data-zone="animals">
-            <span class="zone-number">07</span>
+          <li class="zone-card zone-blue" data-zone="animalsFood">
+            <span class="zone-number">04</span>
             <div class="zone-copy">
-              <span class="zone-concept" data-i18n="zone7.concept">PUEDE O NO PUEDE</span>
-              <h3 lang="en">Animals</h3>
-              <p data-i18n="zone7.text">Animales, grandes y pequeños, y lo que pueden hacer.</p>
+              <span class="zone-concept" data-i18n="zone4.concept">ANIMALES Y COMIDA</span>
+              <h3 lang="en">Animals &amp; Food</h3>
+              <p data-i18n="zone4.text">Animales y lo que pueden hacer. Comidas y lo que te gusta.</p>
             </div>
             <ul class="word-chips" aria-label="Palabras" data-i18n-aria-label="a11y.words">
               <li><button type="button" data-say="cat">cat</button></li>
               <li><button type="button" data-say="dog">dog</button></li>
-              <li><button type="button" data-say="bird">bird</button></li>
-              <li><button type="button" data-say="big">big</button></li>
+              <li><button type="button" data-say="apple">apple</button></li>
+              <li><button type="button" data-say="I like it!">I like it!</button></li>
             </ul>
-            <ol class="zone-route">
+            <ol class="zone-route" aria-label="Páginas de la zona" data-i18n-aria-label="a11y.zonePages">
               <li data-path-step="animals"><span>1</span><b data-i18n="route.animals">Animales</b></li>
               <li data-path-step="bigSmall"><span>2</span><b lang="en">Big or small?</b></li>
               <li data-path-step="canCant"><span>3</span><b lang="en">It can fly!</b></li>
+              <li data-path-step="food"><span>4</span><b data-i18n="route.food">Comida y bebida</b></li>
+              <li data-path-step="iLike"><span>5</span><b lang="en">I like…</b></li>
+              <li data-path-step="iDontLike"><span>6</span><b lang="en">I don&#x27;t like…</b></li>
             </ol>
             <span class="zone-status" data-i18n="path.soon">Muy pronto</span>
           </li>
 
-          <li class="zone-card zone-magenta" data-zone="food">
-            <span class="zone-number">08</span>
+          <li class="zone-card zone-magenta" data-zone="myDay">
+            <span class="zone-number">05</span>
             <div class="zone-copy">
-              <span class="zone-concept" data-i18n="zone8.concept">GUSTOS</span>
-              <h3 lang="en">Food</h3>
-              <p data-i18n="zone8.text">Comidas y bebidas. Di lo que te gusta y lo que no.</p>
-            </div>
-            <ul class="word-chips" aria-label="Palabras" data-i18n-aria-label="a11y.words">
-              <li><button type="button" data-say="apple">apple</button></li>
-              <li><button type="button" data-say="bread">bread</button></li>
-              <li><button type="button" data-say="water">water</button></li>
-              <li><button type="button" data-say="I like it!">I like it!</button></li>
-            </ul>
-            <ol class="zone-route">
-              <li data-path-step="food"><span>1</span><b data-i18n="route.food">Comida y bebida</b></li>
-              <li data-path-step="iLike"><span>2</span><b lang="en">I like…</b></li>
-              <li data-path-step="iDontLike"><span>3</span><b lang="en">I don't like…</b></li>
-            </ol>
-            <span class="zone-status" data-i18n="path.soon">Muy pronto</span>
-          </li>
-
-          <li class="zone-card zone-sun" data-zone="day">
-            <span class="zone-number">09</span>
-            <div class="zone-copy">
-              <span class="zone-concept" data-i18n="zone9.concept">RUTINAS</span>
+              <span class="zone-concept" data-i18n="zone5.concept">MI DÍA</span>
               <h3 lang="en">My Day</h3>
-              <p data-i18n="zone9.text">Los días de la semana y lo que haces cada día.</p>
+              <p data-i18n="zone5.text">Los días, tu rutina y lo que se dice en clase.</p>
             </div>
             <ul class="word-chips" aria-label="Palabras" data-i18n-aria-label="a11y.words">
               <li><button type="button" data-say="Monday">Monday</button></li>
               <li><button type="button" data-say="morning">morning</button></li>
-              <li><button type="button" data-say="I wake up.">I wake up.</button></li>
+              <li><button type="button" data-say="open">open</button></li>
+              <li><button type="button" data-say="listen">listen</button></li>
             </ul>
-            <ol class="zone-route">
+            <ol class="zone-route" aria-label="Páginas de la zona" data-i18n-aria-label="a11y.zonePages">
               <li data-path-step="days"><span>1</span><b data-i18n="route.days">Los días</b></li>
               <li data-path-step="dayParts"><span>2</span><b data-i18n="route.dayParts">Mañana, tarde y noche</b></li>
               <li data-path-step="routine"><span>3</span><b data-i18n="route.routine">Mi rutina</b></li>
+              <li data-path-step="classWords"><span>4</span><b lang="en">Open, close, listen!</b></li>
             </ol>
             <span class="zone-status" data-i18n="path.soon">Muy pronto</span>
           </li>
 
-          <li class="zone-card zone-blue" data-zone="where">
-            <span class="zone-number">10</span>
+          <li class="zone-card zone-sun" data-zone="where">
+            <span class="zone-number">06</span>
             <div class="zone-copy">
-              <span class="zone-concept" data-i18n="zone10.concept">PREGUNTAR Y ENCONTRAR</span>
+              <span class="zone-concept" data-i18n="zone6.concept">PREGUNTAR Y ENCONTRAR</span>
               <h3 lang="en">Where is it?</h3>
-              <p data-i18n="zone10.text">Pregunta qué, quién y dónde. Encuentra cosas en casa.</p>
+              <p data-i18n="zone6.text">Pregunta qué, quién y dónde. Encuentra cosas en casa.</p>
             </div>
             <ul class="word-chips" aria-label="Palabras" data-i18n-aria-label="a11y.words">
               <li><button type="button" data-say="in">in</button></li>
@@ -278,7 +209,7 @@
               <li><button type="button" data-say="under">under</button></li>
               <li><button type="button" data-say="Where is it?">where?</button></li>
             </ul>
-            <ol class="zone-route">
+            <ol class="zone-route" aria-label="Páginas de la zona" data-i18n-aria-label="a11y.zonePages">
               <li data-path-step="questions"><span>1</span><b lang="en">What? Who? Where?</b></li>
               <li data-path-step="inOnUnder"><span>2</span><b lang="en">In, on, under</b></li>
               <li data-path-step="house"><span>3</span><b data-i18n="route.house">Las partes de la casa</b></li>
@@ -293,6 +224,9 @@
               <h3 lang="en">Show what you know</h3>
               <p data-i18n="pit.text">Un repaso corto con todo lo aprendido. Luego tu diploma.</p>
             </div>
+            <ol class="zone-route" aria-label="Páginas de la zona" data-i18n-aria-label="a11y.zonePages">
+              <li data-path-step="checkpoint1"><span>1</span><b data-i18n="route.checkpoint1">Repaso final</b></li>
+            </ol>
             <span class="zone-status" data-i18n="path.soon">Muy pronto</span>
           </li>
         </ol>

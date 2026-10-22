@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      id="meta-description"
+      name="description"
+      content="Escribe, traduce y escucha palabras en inglés con PyBot."
+      data-i18n-content="meta.translatorDescription"
+    />
+    <meta name="theme-color" content="#f4f6ff" />
+    <title>Traductor — PyBot English</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <script src="extras.js" defer></script>
+  </head>
+  <body class="translator-page" data-page="translator">
+    <a class="skip-link" href="#main-content" data-i18n="a11y.skip">Saltar al contenido</a>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="PyBot English, inicio" data-i18n-aria-label="a11y.home">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+
+      <nav class="site-nav" aria-label="Navegación principal" data-i18n-aria-label="a11y.mainNav">
+        <a class="nav-pill" href="course.html" data-i18n="nav.path">El camino</a>
+        <a class="nav-pill nav-album" href="album.html"><span aria-hidden="true">★</span> <span data-i18n="nav.album">Álbum</span></a>
+        <a class="nav-pill" href="faq.html" data-i18n="nav.faq">Preguntas</a>
+        <a class="nav-pill" href="translator.html" data-i18n="nav.translator">Traductor</a>
+        <div class="language-switch" role="group" aria-label="Elige el idioma" data-i18n-aria-label="a11y.language">
+          <button class="language-button" type="button" data-language="en" aria-pressed="false">EN</button>
+          <button class="language-button is-active" type="button" data-language="es" aria-pressed="true">ES</button>
+        </div>
+      </nav>
+    </header>
+
+      <main class="extras-main" id="main-content">
+      <header class="page-intro">
+        <p class="eyebrow eyebrow-magenta" data-i18n="tool.eyebrow">MI TRADUCTOR</p>
+        <h1 data-i18n="tool.title">Escribe, traduce y escucha</h1>
+        <p data-i18n="tool.intro">Escribe una palabra o una frase corta. PyBot te dice cómo se dice y cómo suena.</p>
+      </header>
+
+      <div class="tool-grid">
+        <section class="tool-card tool-translate" aria-labelledby="translate-title">
+          <h2 id="translate-title" data-i18n="tool.translateTitle">Traductor</h2>
+          <div class="direction-switch" role="group" aria-label="Dirección" data-i18n-aria-label="tool.direction">
+            <button type="button" data-direction="es-en" aria-pressed="true" data-i18n="tool.esEn">Español → Inglés</button>
+            <button type="button" data-direction="en-es" aria-pressed="false" data-i18n="tool.enEs">Inglés → Español</button>
+          </div>
+          <label class="tool-label" for="translate-text" data-translate-label data-i18n="tool.typeSpanish">Escribe en español</label>
+          <textarea id="translate-text" rows="3" maxlength="200" spellcheck="true" placeholder="Hola, ¿cómo estás?" data-translate-input></textarea>
+          <div class="tool-actions">
+            <button class="tool-primary" type="button" data-translate data-i18n="tool.translate">Traducir</button>
+          </div>
+          <div class="tool-result" role="status" aria-live="polite">
+            <span class="output-label" data-i18n="tool.resultLabel">ASÍ SE DICE</span>
+            <p class="tool-result-text" data-translate-result>…</p>
+            <button class="speech-listen" type="button" data-translate-listen hidden>
+              <span aria-hidden="true">🔊</span>
+              <span data-i18n="tool.listenEnglish">Escuchar en inglés</span>
+            </button>
+            <p class="tool-note" data-translate-note></p>
+          </div>
+          <p class="tool-external" data-translate-external-wrap>
+            <a href="https://translate.google.com/" target="_blank" rel="noopener noreferrer" data-translate-external data-i18n="tool.external">Traducir en Google Translate ↗</a>
+            <small data-i18n="tool.externalNote">Se abre en otra pestaña. Pide permiso a un adulto.</small>
+          </p>
+          <p class="tool-warning" data-i18n="tool.warning">Las traducciones automáticas a veces se equivocan. Si algo suena raro, pregúntale a un adulto.</p>
+        </section>
+
+        <section class="tool-card tool-listen" aria-labelledby="listen-title">
+          <h2 id="listen-title" data-i18n="tool.listenTitle">Escribe en inglés y escúchalo</h2>
+          <label class="tool-label" for="listen-text" data-i18n="tool.typeEnglish">Escribe en inglés</label>
+          <textarea id="listen-text" rows="3" maxlength="200" lang="en" spellcheck="true" placeholder="Hello, my name is…" data-listen-input></textarea>
+          <ul class="word-chips" aria-label="Ejemplos" data-i18n-aria-label="tool.examples">
+            <li><button type="button" data-fill="Good morning!">Good morning!</button></li>
+            <li><button type="button" data-fill="My name is PyBot.">My name is PyBot.</button></li>
+            <li><button type="button" data-fill="I like apples.">I like apples.</button></li>
+            <li><button type="button" data-fill="Where is my cat?">Where is my cat?</button></li>
+          </ul>
+          <div class="tool-actions">
+            <button class="tool-primary" type="button" data-listen-normal>
+              <span aria-hidden="true">🔊</span> <span data-i18n="tool.listen">Escuchar</span>
+            </button>
+            <button class="tool-secondary" type="button" data-listen-slow>
+              <span aria-hidden="true">🐢</span> <span data-i18n="tool.slow">Más despacio</span>
+            </button>
+          </div>
+          <p class="tool-note" data-listen-note></p>
+          <p class="tool-warning" data-i18n="tool.privacy">PyBot English no guarda lo que escribes.</p>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="index.html" aria-label="PyBot English, volver arriba" data-i18n-aria-label="a11y.backTop">
+        <span class="brand-mark" aria-hidden="true"><span></span></span>
+        <span>PyBot <em>English</em></span>
+      </a>
+      <p data-i18n="footer.line">Pasos pequeños. Inglés de verdad.</p>
+      <span class="footer-status" data-i18n="footer.status">Primer prototipo</span>
+      <p class="footer-story" data-i18n="footer.story">Nació de una idea de María Ángel: ella aprendió inglés por su cuenta y quiere ayudar a sus amigos a aprenderlo también.</p>
+      <p class="footer-credit">
+        <span data-i18n="footer.credit">© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.</span>
+        <span data-i18n="footer.family">De la familia de</span> <a href="https://pybot-kids.github.io/" target="_blank" rel="noopener noreferrer">PyBot</a>.
+      </p>
+    </footer>
+  </body>
+</html>
