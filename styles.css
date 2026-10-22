@@ -725,7 +725,7 @@ button { font: inherit; }
   height: 35px;
   border: 6px solid var(--ink);
   border-radius: 18px;
-  background: var(--magenta);
+  background: var(--sun);
 }
 
 .pybot-wrap[data-mood="happy"] .antenna {
