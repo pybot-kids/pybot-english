@@ -102,6 +102,20 @@ PyBot keeps its roles: shell (head, arms) in **cobalt**, body in **magenta**, ea
 
 A static site, like PyBot: plain HTML, CSS and JavaScript, no build step, hosted on GitHub Pages, no server, no database, no accounts, no analytics.
 
+### Third-party components and credit
+
+Every outside component gets credit, the way PyBot credits Pyodide:
+
+- It is listed in [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) with what it does, where it comes from, its license or terms, and where it is credited on the site.
+- It is credited **next to the place where it is used**, in a small "♥" details block, and in the FAQ answer "What outside tools does PyBot English use?".
+- It is used only under a license or terms compatible with the project, never implies affiliation, and is never bundled without its required notices.
+
+Today that covers the browser voices (Web Speech API), the browser translator (Translator API, by Google in Chrome), and the Google Translate link. PyBot English bundles no outside code, fonts, images, or audio.
+
+### Shared header
+
+Same strategy as PyBot, so the menu can grow without breaking on phones: `arrangeHeader()` in `script.js` builds the header on every page from one list, `headerPages`. Page links (icon + name, current page highlighted) sit on the left and compact icon controls (little PyBot, language, menu) on the right. Below 900px the links move into a ☰ menu, so the header always stays one row. To add a page to the menu, add one line to `headerPages`; no HTML file needs editing.
+
 ### Local-first progress
 
 Progress uses **the same scheme as PyBot** with its own `pybotenglish.` prefix, so both sites can live on `pybot-kids.github.io` without mixing their progress.
@@ -200,12 +214,13 @@ index.html        Home: PyBot, name, kind-phrase mission, backup and reset
 course.html       The learning path map
 album.html        Stickers and the learning-days streak
 diploma.html      Printable zone diplomas (and a sample)
-faq.html          Questions for learners and grown-ups
+faq.html          Questions for learners and grown-ups (credits at #credits)
 translator.html   Translator and type-and-listen tool
 styles.css        All styles (PyBot anatomy and moods included)
 script.js         Translations, PyBot, progress, rewards, backup
 extras.js         Album, diploma, FAQ and translator logic and copy
 tools/            progress-version.mjs
+THIRD_PARTY_NOTICES.md  Credits and terms for every outside component
 progress-versions.json
 ```
 

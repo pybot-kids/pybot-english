@@ -154,6 +154,112 @@ button { font: inherit; }
   color: var(--white);
 }
 
+/* Shared header: page links on the left, same-size icon controls on the right.
+   Below 900px the links move into a menu opened by the last button (same as PyBot). */
+.site-header { position: relative; gap: 18px; }
+.header-links {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 4px;
+}
+.header-link {
+  display: inline-flex;
+  height: 44px;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px 0 6px;
+  border-radius: 14px;
+  color: var(--ink);
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.header-link:hover,
+.header-link:focus-visible { background: var(--sky-soft); color: var(--cobalt-dark); }
+.header-link[aria-current="page"] { background: var(--cobalt); color: var(--white); }
+.header-link-icon {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  flex: none;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--sky-soft);
+  color: var(--cobalt);
+  font-size: 0.9rem;
+  font-weight: 800;
+  line-height: 1;
+}
+.header-link-album .header-link-icon,
+.header-link-faq .header-link-icon { background: var(--magenta-soft); color: var(--magenta-dark); }
+.header-link[aria-current="page"] .header-link-icon { background: var(--white); }
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.header-icon-button {
+  position: relative;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  flex: none;
+  place-items: center;
+  padding: 0;
+  border: 2px solid var(--line);
+  border-radius: 14px;
+  background: var(--white);
+  color: var(--ink-soft);
+  font: inherit;
+  cursor: pointer;
+}
+.header-icon-button:hover,
+.header-icon-button:focus-visible { border-color: var(--cobalt); color: var(--cobalt-dark); }
+.header-menu-button { display: none; }
+.header-menu-icon,
+.header-menu-icon::before,
+.header-menu-icon::after {
+  display: block;
+  width: 18px;
+  height: 2.5px;
+  border-radius: 2px;
+  background: currentColor;
+}
+.header-menu-icon { position: relative; }
+.header-menu-icon::before,
+.header-menu-icon::after { position: absolute; left: 0; content: ""; }
+.header-menu-icon::before { top: -6px; }
+.header-menu-icon::after { top: 6px; }
+.is-menu-open .header-menu-button { border-color: var(--cobalt); color: var(--cobalt-dark); }
+
+@media (max-width: 900px) {
+  .header-menu-button { display: grid; }
+  .header-actions { margin-left: auto; }
+  .header-links {
+    position: absolute;
+    top: calc(100% - 8px);
+    right: 16px;
+    z-index: 70;
+    display: none;
+    width: min(260px, calc(100% - 32px));
+    flex-direction: column;
+    align-items: stretch;
+    padding: 8px;
+    border: 2px solid var(--line);
+    border-radius: 20px;
+    background: var(--white);
+    box-shadow: var(--shadow);
+  }
+  .is-menu-open .header-links { display: flex; }
+  .header-link { height: 48px; font-size: 1rem; }
+}
+
+@media (max-width: 520px) {
+  .site-header .brand > span:not(.brand-mark) { display: none; }
+}
+
 /* Hero */
 .hero {
   display: grid;
@@ -1531,6 +1637,23 @@ button { font: inherit; }
 .tool-external small,
 .tool-warning { color: var(--ink-soft); font-size: 0.85rem; }
 
+/* Credits for outside components, next to where they are used (like PyBot's Pyodide credit) */
+.runtime-credit {
+  padding: 12px 16px;
+  border-radius: 14px;
+  background: var(--mist);
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+}
+.phrase-window .runtime-credit { margin: 0 18px 18px; }
+.runtime-credit summary {
+  color: var(--ink);
+  font-weight: 800;
+  cursor: pointer;
+}
+.runtime-credit p { margin-top: 8px; line-height: 1.45; }
+.runtime-credit a { color: var(--cobalt-dark); font-weight: 800; }
+
 /* Practice at home */
 .home-practice {
   max-width: 1180px;
@@ -2658,18 +2781,6 @@ a.extras-card:hover { transform: translateY(-3px); }
 }
 
 /* Header button that shows or hides the little PyBot */
-.buddy-toggle {
-  display: inline-grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
-  padding: 0;
-  border: 2px solid var(--line);
-  border-radius: 999px;
-  background: var(--white);
-  cursor: pointer;
-}
-.buddy-toggle:hover { border-color: var(--cobalt); }
 .buddy-toggle-icon {
   position: relative;
   width: 22px;
@@ -2716,9 +2827,7 @@ a.extras-card:hover { transform: translateY(-3px); }
 }
 
 @media (max-width: 560px) {
-  .site-header { flex-wrap: wrap; padding: 16px; }
-  .site-nav { flex-wrap: wrap; gap: 8px; }
-  .nav-pill { min-height: 40px; padding: 0 12px; font-size: 0.95rem; }
+  .site-header { padding: 16px; }
   .extras-main { padding-left: 16px; padding-right: 16px; }
   .diploma { padding: 40px 18px 24px; }
   .album-streak { align-items: flex-start; }

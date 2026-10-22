@@ -116,6 +116,19 @@ const translations = {
     "nav.album": "Álbum",
     "nav.faq": "Preguntas",
     "nav.translator": "Traductor",
+    "nav.menu": "Menú",
+    "credit.voiceSummary": "La voz de PyBot viene de tu navegador ♥",
+    "credit.voiceText": "Usamos la Web Speech API: cada navegador o sistema trae sus propias voces (de Google, Apple, Microsoft u otras). PyBot English no incluye ni modifica ninguna voz.",
+    "credit.voiceLink": "Qué es la Web Speech API",
+    "credit.allCredits": "Todos los créditos",
+    "credit.translatorSummary": "Gracias a quienes hacen posible este traductor ♥",
+    "credit.wordsTitle": "Lista de palabras:",
+    "credit.wordsText": "hecha por PyBot English. Funciona sin internet.",
+    "credit.browserTitle": "Traductor del navegador:",
+    "credit.browserText": "la Translator API que trae tu navegador. En Chrome, el modelo es de Google y traduce dentro de tu dispositivo.",
+    "credit.learnMore": "Más información",
+    "credit.googleText": "un servicio de Google. Aquí solo aparece como enlace. Google Translate es una marca de Google LLC.",
+    "credit.notAffiliated": "PyBot English no está afiliado a Google ni a ningún proveedor nombrado aquí.",
     "meta.translatorTitle": "Traductor — PyBot English",
     "meta.translatorDescription": "Escribe, traduce y escucha palabras en inglés con PyBot.",
     "extras.translator": "Mi traductor",
@@ -318,6 +331,19 @@ const translations = {
     "nav.album": "Album",
     "nav.faq": "Questions",
     "nav.translator": "Translator",
+    "nav.menu": "Menu",
+    "credit.voiceSummary": "PyBot's voice comes from your browser ♥",
+    "credit.voiceText": "We use the Web Speech API: each browser or system brings its own voices (from Google, Apple, Microsoft or others). PyBot English doesn't bundle or change any voice.",
+    "credit.voiceLink": "What the Web Speech API is",
+    "credit.allCredits": "All credits",
+    "credit.translatorSummary": "Thanks to everyone who makes this translator possible ♥",
+    "credit.wordsTitle": "Word list:",
+    "credit.wordsText": "made by PyBot English. Works offline.",
+    "credit.browserTitle": "Browser translator:",
+    "credit.browserText": "the Translator API built into your browser. In Chrome, the model is Google's and translates on your device.",
+    "credit.learnMore": "Learn more",
+    "credit.googleText": "a Google service. It only appears here as a link. Google Translate is a trademark of Google LLC.",
+    "credit.notAffiliated": "PyBot English is not affiliated with Google or any provider named here.",
     "meta.translatorTitle": "Translator — PyBot English",
     "meta.translatorDescription": "Type, translate and listen to English words with PyBot.",
     "extras.translator": "My translator",
@@ -2058,6 +2084,72 @@ function startBuddy() {
   }
 }
 
+// ---------- Shared header ----------
+// Same strategy as PyBot: page links on the left, compact controls on the right,
+// and below 900px the links move into a menu so the header stays one row.
+// To add a page to the menu, add one line here; no HTML page needs editing.
+const headerPages = [
+  { page: "course", href: "course.html", icon: "🗺️", label: "nav.path" },
+  { page: "album", href: "album.html", icon: "★", label: "nav.album" },
+  { page: "translator", href: "translator.html", icon: "Aa", label: "nav.translator" },
+  { page: "faq", href: "faq.html", icon: "?", label: "nav.faq" },
+];
+
+function arrangeHeader() {
+  const header = document.querySelector(".site-header");
+  const tools = header?.querySelector(".site-nav");
+  if (!tools) {
+    return;
+  }
+
+  const links = document.createElement("nav");
+  links.className = "header-links";
+  links.id = "header-links";
+  links.dataset.i18nAriaLabel = "a11y.mainNav";
+  headerPages.forEach(({ page, href, icon, label }) => {
+    const link = document.createElement("a");
+    link.className = `header-link header-link-${page}`;
+    link.href = new URL(href, scriptBaseUrl).href;
+    if (document.body.dataset.page === page) {
+      link.setAttribute("aria-current", "page");
+    }
+    link.innerHTML = `<span class="header-link-icon" aria-hidden="true"></span><span class="header-link-label" data-i18n="${label}"></span>`;
+    link.querySelector(".header-link-icon").textContent = icon;
+    links.append(link);
+  });
+
+  const menuButton = document.createElement("button");
+  menuButton.className = "header-icon-button header-menu-button";
+  menuButton.type = "button";
+  menuButton.dataset.i18nAriaLabel = "nav.menu";
+  menuButton.setAttribute("aria-controls", links.id);
+  menuButton.setAttribute("aria-expanded", "false");
+  menuButton.innerHTML = '<span class="header-menu-icon" aria-hidden="true"></span>';
+
+  const actions = document.createElement("div");
+  actions.className = "header-actions";
+  actions.append(...[buddyToggle, tools.querySelector(".language-switch"), menuButton].filter(Boolean));
+  buddyToggle?.classList.add("header-icon-button");
+  tools.replaceWith(links, actions);
+
+  const setMenuOpen = (open) => {
+    header.classList.toggle("is-menu-open", open);
+    menuButton.setAttribute("aria-expanded", String(open));
+  };
+  menuButton.addEventListener("click", () => setMenuOpen(!header.classList.contains("is-menu-open")));
+  document.addEventListener("click", (event) => {
+    if (event.target instanceof Node && !header.contains(event.target)) {
+      setMenuOpen(false);
+    }
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && header.classList.contains("is-menu-open")) {
+      setMenuOpen(false);
+      menuButton.focus();
+    }
+  });
+}
+
 // ---------- Start ----------
 
 const scriptBaseUrl = document.currentScript?.src ?? window.location.href;
@@ -2080,6 +2172,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupNamePanel();
   setupBackupTools();
   startBuddy();
+  arrangeHeader();
   languageRenderers.push(renderStreak, renderPathMap);
   setLanguage(currentLanguage, false);
   checkRewards();
