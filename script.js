@@ -303,6 +303,15 @@ const translations = {
     "footer.story": "Nació de una idea de María Ángel: ella aprendió inglés por su cuenta y quiere ayudar a sus amigos a aprenderlo también.",
     "footer.credit": "© 2026 Sorey Garcia. Código bajo MIT, contenido bajo CC BY 4.0.",
     "footer.family": "De la familia de",
+    "family.eyebrow": "LA FAMILIA PYBOT",
+    "family.title": "¿Quieres aprender algo más?",
+    "family.pythonAsk": "¿Quieres aprender Python?",
+    "family.pythonText": "programa de verdad, un paso a la vez.",
+    "family.englishAsk": "¿Quieres aprender inglés?",
+    "family.englishText": "una palabra a la vez, con PyBot.",
+    "family.blocksAsk": "¿Quieres aprender a usar Scratch?",
+    "family.blocksText": "una guía sencilla para niños y papás.",
+    "family.visit": "Visitar →",
     "voice.missing": "Este navegador no tiene voz. Pide ayuda a un adulto.",
   },
   en: {
@@ -519,6 +528,15 @@ const translations = {
     "footer.story": "It started with María Ángel's idea: she taught herself English and wants to help her friends learn it too.",
     "footer.credit": "© 2026 Sorey Garcia. Code under MIT, content under CC BY 4.0.",
     "footer.family": "Part of the family of",
+    "family.eyebrow": "THE PYBOT FAMILY",
+    "family.title": "Want to learn something else?",
+    "family.pythonAsk": "Want to learn Python?",
+    "family.pythonText": "real code, one step at a time.",
+    "family.englishAsk": "Want to learn English?",
+    "family.englishText": "one word at a time, with PyBot.",
+    "family.blocksAsk": "Want to learn to use Scratch?",
+    "family.blocksText": "a simple guide for kids and parents.",
+    "family.visit": "Visit →",
     "voice.missing": "This browser has no voice. Ask an adult for help.",
   },
 };
@@ -796,6 +814,47 @@ function showRewardToast(earned) {
   document.body.append(toast);
   window.setTimeout(() => toast.classList.add("is-leaving"), 7000);
   window.setTimeout(() => toast.remove(), 7600);
+}
+
+// ---------- The PyBot family: each site gently points to its siblings ----------
+// The same list lives in every PyBot site; each one hides itself with THIS_SITE.
+// A sibling that is not published yet stays as "coming soon", without a link.
+const THIS_SITE = "english";
+const pybotFamily = [
+  { id: "python", name: "PyBot", url: "https://pybot-kids.github.io/", icon: "</>", ask: "family.pythonAsk", text: "family.pythonText" },
+  { id: "english", name: "PyBot English", url: "https://pybot-kids.github.io/pybot-english/", icon: "Aa", ask: "family.englishAsk", text: "family.englishText" },
+  { id: "blocks", name: "PyBot Blocks", url: "https://pybot-kids.github.io/pybot-blocks/", icon: "🧩", ask: "family.blocksAsk", text: "family.blocksText", soon: true },
+];
+
+function renderFamily() {
+  const list = document.querySelector("[data-pybot-family]");
+  if (!list) {
+    return;
+  }
+  list.replaceChildren(...pybotFamily.filter((site) => site.id !== THIS_SITE).map((site) => {
+    const item = document.createElement("li");
+    const card = document.createElement(site.soon ? "div" : "a");
+    card.className = `family-card family-${site.id}`;
+    if (!site.soon) {
+      card.href = site.url;
+    }
+    const icon = document.createElement("span");
+    icon.className = "family-icon";
+    icon.setAttribute("aria-hidden", "true");
+    icon.textContent = site.icon;
+    const copy = document.createElement("span");
+    copy.className = "family-copy";
+    const ask = document.createElement("b");
+    ask.textContent = textFor(site.ask);
+    const text = document.createElement("span");
+    text.textContent = `${site.name}: ${textFor(site.text)}`;
+    const action = document.createElement("small");
+    action.textContent = textFor(site.soon ? "path.soon" : "family.visit");
+    copy.append(ask, text, action);
+    card.append(icon, copy);
+    item.append(card);
+    return item;
+  }));
 }
 
 function renderStreak() {
@@ -2188,7 +2247,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupBackupTools();
   startBuddy();
   arrangeHeader();
-  languageRenderers.push(renderStreak, renderPathMap);
+  languageRenderers.push(renderStreak, renderPathMap, renderFamily);
   setLanguage(currentLanguage, false);
   checkRewards();
 });

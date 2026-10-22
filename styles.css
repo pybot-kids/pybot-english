@@ -1656,6 +1656,59 @@ button { font: inherit; }
 .runtime-credit p { margin-top: 8px; line-height: 1.45; }
 .runtime-credit a { color: var(--cobalt-dark); font-weight: 800; }
 
+/* The PyBot family: quiet cards that point to the sibling sites */
+.pybot-family {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 8px 24px 48px;
+}
+.pybot-family h2 { font-size: 1.4rem; margin-bottom: 16px; }
+.family-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.family-card {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  height: 100%;
+  padding: 14px 16px;
+  border: 2px solid var(--line);
+  border-radius: 18px;
+  background: var(--white);
+  color: var(--ink);
+  text-decoration: none;
+}
+a.family-card:hover,
+a.family-card:focus-visible { border-color: var(--cobalt); }
+.family-icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  background: var(--family-color);
+  color: var(--white);
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+/* Each sibling keeps a hint of its own brand color. */
+.family-python { --family-color: #ff7a45; }
+.family-python .family-icon { color: var(--ink); }
+.family-english { --family-color: var(--magenta); }
+.family-blocks { --family-color: #2e9e5b; }
+.family-copy { display: grid; gap: 2px; }
+.family-copy b { font-size: 1rem; }
+.family-copy span { color: var(--ink-soft); font-size: 0.92rem; }
+.family-copy small { color: var(--cobalt-dark); font-weight: 800; font-size: 0.85rem; }
+div.family-card small { color: var(--ink-soft); }
+
 /* Practice at home */
 .home-practice {
   max-width: 1180px;
@@ -2845,6 +2898,7 @@ a.extras-card:hover { transform: translateY(-3px); }
   .local-first,
   .lesson-preview,
   .home-practice,
+  .pybot-family,
   .extras-strip { padding-left: 16px; padding-right: 16px; }
   .hero-stage { min-height: 600px; border-radius: 38px; }
   .speech-bubble { top: 16px; right: 16px; left: 16px; max-width: none; }

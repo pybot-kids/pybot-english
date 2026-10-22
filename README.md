@@ -116,6 +116,16 @@ Today that covers the browser voices (Web Speech API), the browser translator (T
 
 Same strategy as PyBot, so the menu can grow without breaking on phones: `arrangeHeader()` in `script.js` builds the header on every page from one list, `headerPages`. Page links (icon + name, current page highlighted) sit on the left and compact icon controls (♥ support, little PyBot, language, menu) on the right. The ♥ button opens PyBot's Patreon (`https://www.patreon.com/pybot`, `PATREON_URL` in `script.js`), shared by the whole PyBot family; support is always optional and every lesson stays free and ad-free. Below 900px the links move into a ☰ menu, so the header always stays one row. To add a page to the menu, add one line to `headerPages`; no HTML file needs editing.
 
+### The PyBot family
+
+Every PyBot site gently points to its siblings with a quiet "The PyBot family" section near the end of the home page ("Want to learn Python? / Scratch?"). The siblings come from one list, `pybotFamily` in `script.js`, shared by every site; each site hides itself with `THIS_SITE`. A sibling that is not published yet has `soon: true` and shows "Coming soon" without a link; remove the flag once it is live.
+
+| Site | Address |
+|---|---|
+| PyBot (Python) | https://pybot-kids.github.io/ |
+| PyBot English | https://pybot-kids.github.io/pybot-english/ |
+| PyBot Blocks (Scratch guide) | https://pybot-kids.github.io/pybot-blocks/ (coming soon) |
+
 ### Local-first progress
 
 Progress uses **the same scheme as PyBot** with its own `pybotenglish.` prefix, so both sites can live on `pybot-kids.github.io` without mixing their progress.
